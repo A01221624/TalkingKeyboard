@@ -12,7 +12,7 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _unityContainer;
 
-        public SingleKeyBoardModule(RegionManager regionManager, UnityContainer unityContainer)
+        public SingleKeyBoardModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
             _regionManager = regionManager;
             _unityContainer = unityContainer;

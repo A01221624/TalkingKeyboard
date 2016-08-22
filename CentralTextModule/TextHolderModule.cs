@@ -12,7 +12,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _unityContainer;
 
-        public TextHolderModule(RegionManager regionManager, UnityContainer unityContainer)
+        public TextHolderModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
             _regionManager = regionManager;
             _unityContainer = unityContainer;

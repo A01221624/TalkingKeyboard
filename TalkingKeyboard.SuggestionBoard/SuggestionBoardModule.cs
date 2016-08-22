@@ -12,7 +12,7 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _unityContainer;
 
-        public SuggestionBoardModule(RegionManager regionManager, UnityContainer unityContainer)
+        public SuggestionBoardModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
             _regionManager = regionManager;
             _unityContainer = unityContainer;

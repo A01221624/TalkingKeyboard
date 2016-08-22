@@ -8,7 +8,7 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
     {
         IRegionManager _regionManager;
 
-        public MultiKeyBoardModule(RegionManager regionManager)
+        public MultiKeyBoardModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }

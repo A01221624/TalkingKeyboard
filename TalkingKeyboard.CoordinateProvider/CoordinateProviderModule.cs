@@ -8,7 +8,7 @@ namespace TalkingKeyboard.Modules.CoordinateProvider
     {
         IRegionManager _regionManager;
 
-        public CoordinateProviderModule(RegionManager regionManager)
+        public CoordinateProviderModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
