@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shell", "Shell", "{461163E7-2D39-411D-AE72-0582EACD640E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Shell", "Base\TalkingKeyboard.Shell.csproj", "{6F77BEB1-085E-4F50-84A7-20B7A704CA68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{F682E76A-ECC4-49AE-B125-9AB299ECDB20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.SingleKeyBoard", "TalkingKeyboard.SingleKeyBoard\TalkingKeyboard.Modules.SingleKeyBoard.csproj", "{AB8B448C-DD74-4D60-A041-3E5D03A32180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.MultiKeyBoard", "TalkingKeyboard.MultiKeyBoard\TalkingKeyboard.Modules.MultiKeyBoard.csproj", "{95557AE2-EF50-4F7C-AA23-4AD1A8BFB295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.CommandBoard", "TalkingKeyboard.CommandBoard\TalkingKeyboard.Modules.CommandBoard.csproj", "{962599D1-A8C7-45BC-BFB4-E3637ED48AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.SuggestionBoard", "TalkingKeyboard.SuggestionBoard\TalkingKeyboard.Modules.SuggestionBoard.csproj", "{D5203982-3E0F-4AF5-8EF2-E7C207D5529B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.CoordinateProvider", "TalkingKeyboard.CoordinateProvider\TalkingKeyboard.Modules.CoordinateProvider.csproj", "{75E9595D-C9DD-43BB-A3CE-62995566B671}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.TextHolder", "CentralTextModule\TalkingKeyboard.Modules.TextHolder.csproj", "{3B1CF9EB-D2E8-4E7C-A402-23F5C85A2518}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6A20A3E3-5B53-49ED-B399-02C9417A017A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Infrastructure", "TalkingKeyboard.Infrastructure\TalkingKeyboard.Infrastructure.csproj", "{297FB3B3-9765-4E70-9C50-8ED512954AC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F77BEB1-085E-4F50-84A7-20B7A704CA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F77BEB1-085E-4F50-84A7-20B7A704CA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F77BEB1-085E-4F50-84A7-20B7A704CA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F77BEB1-085E-4F50-84A7-20B7A704CA68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95557AE2-EF50-4F7C-AA23-4AD1A8BFB295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95557AE2-EF50-4F7C-AA23-4AD1A8BFB295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95557AE2-EF50-4F7C-AA23-4AD1A8BFB295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95557AE2-EF50-4F7C-AA23-4AD1A8BFB295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962599D1-A8C7-45BC-BFB4-E3637ED48AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962599D1-A8C7-45BC-BFB4-E3637ED48AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962599D1-A8C7-45BC-BFB4-E3637ED48AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962599D1-A8C7-45BC-BFB4-E3637ED48AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5203982-3E0F-4AF5-8EF2-E7C207D5529B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5203982-3E0F-4AF5-8EF2-E7C207D5529B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5203982-3E0F-4AF5-8EF2-E7C207D5529B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5203982-3E0F-4AF5-8EF2-E7C207D5529B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E9595D-C9DD-43BB-A3CE-62995566B671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E9595D-C9DD-43BB-A3CE-62995566B671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E9595D-C9DD-43BB-A3CE-62995566B671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E9595D-C9DD-43BB-A3CE-62995566B671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1CF9EB-D2E8-4E7C-A402-23F5C85A2518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1CF9EB-D2E8-4E7C-A402-23F5C85A2518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1CF9EB-D2E8-4E7C-A402-23F5C85A2518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1CF9EB-D2E8-4E7C-A402-23F5C85A2518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297FB3B3-9765-4E70-9C50-8ED512954AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297FB3B3-9765-4E70-9C50-8ED512954AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297FB3B3-9765-4E70-9C50-8ED512954AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297FB3B3-9765-4E70-9C50-8ED512954AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F77BEB1-085E-4F50-84A7-20B7A704CA68} = {461163E7-2D39-411D-AE72-0582EACD640E}
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{95557AE2-EF50-4F7C-AA23-4AD1A8BFB295} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{962599D1-A8C7-45BC-BFB4-E3637ED48AEB} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{D5203982-3E0F-4AF5-8EF2-E7C207D5529B} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{75E9595D-C9DD-43BB-A3CE-62995566B671} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{3B1CF9EB-D2E8-4E7C-A402-23F5C85A2518} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{297FB3B3-9765-4E70-9C50-8ED512954AC9} = {6A20A3E3-5B53-49ED-B399-02C9417A017A}
+	EndGlobalSection
+EndGlobal
