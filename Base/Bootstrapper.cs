@@ -37,7 +37,7 @@ namespace TalkingKeyboard.Shell
         {
             ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
             moduleCatalog.AddModule(typeof(CommandBoardModule), InitializationMode.OnDemand);
-            moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.OnDemand);
+            moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MultiKeyBoardModule), InitializationMode.OnDemand);
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);

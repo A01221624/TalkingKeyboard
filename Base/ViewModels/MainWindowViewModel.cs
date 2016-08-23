@@ -1,4 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Events;
+using Prism.Mvvm;
+using TalkingKeyboard.Infrastructure;
 
 namespace TalkingKeyboard.Shell.ViewModels
 {
@@ -11,9 +13,8 @@ namespace TalkingKeyboard.Shell.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IEventAggregator eventAggregator)
         {
-
         }
     }
 }
