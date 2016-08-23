@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <TextBlock>
-        Aquí va el texto ;)
-    </TextBlock>
+    <TextBox FontSize="25"
+             Text="{Binding CurrentText, FallbackValue=Hola mundo}">
+    </TextBox>
 </UserControl>
