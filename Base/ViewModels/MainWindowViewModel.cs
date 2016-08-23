@@ -13,7 +13,7 @@ namespace TalkingKeyboard.Shell.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainWindowViewModel(IEventAggregator eventAggregator)
+        public MainWindowViewModel()
         {
         }
     }
