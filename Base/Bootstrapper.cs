@@ -7,6 +7,7 @@ using TalkingKeyboard.Modules.CentralTextModule;
 using TalkingKeyboard.Modules.CommandBoard;
 using TalkingKeyboard.Modules.CoordinateProvider;
 using TalkingKeyboard.Modules.MultiKeyBoard;
+using TalkingKeyboard.Modules.SelectableControls;
 using TalkingKeyboard.Modules.SingleKeyBoard;
 using TalkingKeyboard.Modules.SuggestionBoard;
 using TalkingKeyboard.Shell.Views;
@@ -39,6 +40,7 @@ namespace TalkingKeyboard.Shell
             moduleCatalog.AddModule(typeof(CommandBoardModule), InitializationMode.OnDemand);
             moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MultiKeyBoardModule), InitializationMode.OnDemand);
+            moduleCatalog.AddModule(typeof(SelectableControlsModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
