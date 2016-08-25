@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"
              xmlns:v="clr-namespace:TalkingKeyboard.Modules.SuggestionBoard.Views"
-             xmlns:sc="clr-namespace:TalkingKeyboard.Modules.SelectableControls.Views;assembly=TalkingKeyboard.Modules.SelectableControls"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <Style x:Key="SuggestionTextBoxStyle"

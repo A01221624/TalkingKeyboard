@@ -130,10 +130,6 @@
       <Project>{297fb3b3-9765-4e70-9c50-8ed512954ac9}</Project>
       <Name>TalkingKeyboard.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.Modules.SelectableControls\TalkingKeyboard.Modules.SelectableControls.csproj">
-      <Project>{987C31BB-F87B-404A-8680-606C7F3F596F}</Project>
-      <Name>TalkingKeyboard.Modules.SelectableControls</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -171,10 +171,6 @@
       <Project>{297fb3b3-9765-4e70-9c50-8ed512954ac9}</Project>
       <Name>TalkingKeyboard.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.Modules.SelectableControls\TalkingKeyboard.Modules.SelectableControls.csproj">
-      <Project>{987c31bb-f87b-404a-8680-606c7f3f596f}</Project>
-      <Name>TalkingKeyboard.Modules.SelectableControls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TalkingKeyboard.MultiKeyBoard\TalkingKeyboard.Modules.MultiKeyBoard.csproj">
       <Project>{95557ae2-ef50-4f7c-aa23-4ad1a8bfb295}</Project>
       <Name>TalkingKeyboard.Modules.MultiKeyBoard</Name>
