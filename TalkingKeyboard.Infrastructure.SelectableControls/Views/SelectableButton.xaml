@@ -1,0 +1,12 @@
+﻿<sc:SelectableControl x:Class="TalkingKeyboard.Infrastructure.SelectableControls.Views.SelectableButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TalkingKeyboard.Infrastructure.SelectableControls.Views"
+             xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.SelectableControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Button Content="Hola" />
+</sc:SelectableControl>
+

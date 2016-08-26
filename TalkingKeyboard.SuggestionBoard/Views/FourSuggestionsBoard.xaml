@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"
              xmlns:v="clr-namespace:TalkingKeyboard.Modules.SuggestionBoard.Views"
+             xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
+             xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <Style x:Key="SuggestionTextBoxStyle"
@@ -22,6 +24,9 @@
         <v:SuggestionControl Grid.Column="0" DataContext="{Binding SuggestionCollection[0]}"/>
         <v:SuggestionControl Grid.Column="1" DataContext="{Binding SuggestionCollection[1]}"/>
         <v:SuggestionControl Grid.Column="2" DataContext="{Binding SuggestionCollection[2]}"/>
-        <v:SuggestionControl Grid.Column="3" DataContext="{Binding SuggestionCollection[3]}"/>
+        <sc:SelectableButton Grid.Column="3" Width="100"
+                             Command="{x:Static infrastructure:Commands.SetTextCommand}"
+                             CommandParameter="Hola Mundo"
+                             Text="Hola Mundo"></sc:SelectableButton>
     </Grid>
 </UserControl>

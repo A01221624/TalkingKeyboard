@@ -1,9 +1,8 @@
 ﻿<UserControl x:Class="TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:prism="http://prismlibrary.com/"             
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <TextBlock>
-         Qwerty
-    </TextBlock>
+    <!--<sc:SelectableButton></sc:SelectableButton>-->
 </UserControl>
