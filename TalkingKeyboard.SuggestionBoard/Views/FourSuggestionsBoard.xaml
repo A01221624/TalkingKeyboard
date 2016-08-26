@@ -5,7 +5,12 @@
              xmlns:v="clr-namespace:TalkingKeyboard.Modules.SuggestionBoard.Views"
              xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
              xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
-             prism:ViewModelLocator.AutoWireViewModel="True">
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="500"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             >
     <UserControl.Resources>
         <Style x:Key="SuggestionTextBoxStyle"
                    TargetType="TextBlock">
@@ -21,12 +26,21 @@
             <ColumnDefinition Width="*"  />
             <ColumnDefinition Width="*"  />
         </Grid.ColumnDefinitions>
-        <v:SuggestionControl Grid.Column="0" DataContext="{Binding SuggestionCollection[0]}"/>
-        <v:SuggestionControl Grid.Column="1" DataContext="{Binding SuggestionCollection[1]}"/>
-        <v:SuggestionControl Grid.Column="2" DataContext="{Binding SuggestionCollection[2]}"/>
-        <sc:SelectableButton Grid.Column="3" Width="100"
+        <sc:SelectableButton Grid.Column="0" HorizontalAlignment="Stretch"
                              Command="{x:Static infrastructure:Commands.SetTextCommand}"
-                             CommandParameter="Hola Mundo"
-                             Text="Hola Mundo"></sc:SelectableButton>
+                             CommandParameter="One"
+                             Text="One"/>
+        <sc:SelectableButton Grid.Column="1" HorizontalAlignment="Stretch"
+                             Command="{x:Static infrastructure:Commands.SetTextCommand}"
+                             CommandParameter="Two"
+                             Text="Two"/>
+        <sc:SelectableButton Grid.Column="2" HorizontalAlignment="Stretch"
+                             Command="{x:Static infrastructure:Commands.SetTextCommand}"
+                             CommandParameter="Three"
+                             Text="Three"/>
+        <sc:SelectableButton Grid.Column="3" HorizontalAlignment="Stretch"
+                             Command="{x:Static infrastructure:Commands.SetTextCommand}"
+                             CommandParameter="Four"
+                             Text="Four"/>
     </Grid>
 </UserControl>

@@ -112,6 +112,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Filters\AmountOfPointsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\PointFilter.cs" />
+    <Compile Include="Filters\TimeSpanWithMinimumPointsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\TwoPointsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="FixedSizeQueue.cs" />
+    <Compile Include="Helpers\HitTestHelper.cs" />
     <Compile Include="Logging\NLogLogger.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

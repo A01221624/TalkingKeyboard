@@ -46,5 +46,20 @@ namespace TalkingKeyboard.Infrastructure.Controls
             get { return (IInputElement) GetValue(CommandTargetProperty); }
             set { SetValue(CommandTargetProperty, value); }
         }
+
+        public static readonly DependencyProperty LastSelectedTimeProperty = DependencyProperty.Register(
+            "LastSelectedTime", typeof(DateTime), typeof(SelectableControl), new PropertyMetadata(default(DateTime)));
+
+        public DateTime LastSelectedTime
+        {
+            get { return (DateTime) GetValue(LastSelectedTimeProperty); }
+            set { SetValue(LastSelectedTimeProperty, value); }
+        }
+
+        public void Select()
+        {
+            Command?.Execute(CommandParameter);
+            LastSelectedTime = DateTime.Now;
+        }
     }
 }
