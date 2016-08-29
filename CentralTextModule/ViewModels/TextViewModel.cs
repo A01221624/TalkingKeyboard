@@ -11,7 +11,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 	{
         public TextViewModel()
         {
-            _addTextCommand = new DelegateCommand<string>(s => CurrentText = s);
+            _addTextCommand = new DelegateCommand<string>(s => CurrentText += s);
             Infrastructure.Commands.SetTextCommand.RegisterCommand(_addTextCommand);
         }
 
