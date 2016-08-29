@@ -49,11 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Controls\SelectableButton.xaml.cs">
       <DependentUpon>SelectableButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\SelectableControl.cs" />
+    <Compile Include="DataContainers\TimedPoints.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

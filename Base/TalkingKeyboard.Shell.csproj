@@ -112,6 +112,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="DataContainers\TimedControlsWithPoint.cs" />
     <Compile Include="Filters\AmountOfPointsDuringTimeFrameSelectionFilter.cs" />
     <Compile Include="Filters\PointFilter.cs" />
     <Compile Include="Filters\TimeSpanWithMinimumPointsDuringTimeFrameSelectionFilter.cs" />
