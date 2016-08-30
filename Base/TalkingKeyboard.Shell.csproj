@@ -112,11 +112,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="DataContainers\GazeTimePerControl.cs" />
     <Compile Include="DataContainers\TimedControlsWithPoint.cs" />
-    <Compile Include="Filters\AmountOfPointsDuringTimeFrameSelectionFilter.cs" />
-    <Compile Include="Filters\PointFilter.cs" />
-    <Compile Include="Filters\TimeSpanWithMinimumPointsDuringTimeFrameSelectionFilter.cs" />
-    <Compile Include="Filters\TwoPointsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\AmountOfSelectionsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\AveragingFilter.cs" />
+    <Compile Include="Filters\AveragingLastNpointsWithinTimeSpanFilter.cs" />
+    <Compile Include="Filters\SelectionFilter.cs" />
+    <Compile Include="Filters\TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\TwoSelectionsDuringTimeFrameSelectionFilter.cs" />
     <Compile Include="FixedSizeQueue.cs" />
     <Compile Include="Helpers\HitTestHelper.cs" />
     <Compile Include="Logging\NLogLogger.cs" />

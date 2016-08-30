@@ -10,13 +10,16 @@ namespace TalkingKeyboard.Shell.Helpers
         private static SelectableControl _selectableControlSeen;
         public static SelectableControl SelectableControlUnderPoint(Point point, Window window)
         {
-            if (PresentationSource.FromVisual(window) == null) return null;
+            _selectableControlSeen = null;
+            window.Dispatcher.Invoke(() =>
+            {
+                if (PresentationSource.FromVisual(window) == null) return;
             var pt = window.PointFromScreen(point);
 
-            _selectableControlSeen = null;
             VisualTreeHelper.HitTest(window, null,
                 FindSelectableControlSeen,
                 new PointHitTestParameters(pt));
+            });
             return _selectableControlSeen;
         }
 

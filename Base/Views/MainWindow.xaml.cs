@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Prism.Events;
 using TalkingKeyboard.Infrastructure;
 using TalkingKeyboard.Infrastructure.Controls;
+using TalkingKeyboard.Infrastructure.DataContainers;
+using TalkingKeyboard.Shell.DataContainers;
 using TalkingKeyboard.Shell.Filters;
 using TimedPoint = System.Tuple<System.DateTime, System.Windows.Point>;
 
@@ -18,22 +22,27 @@ namespace TalkingKeyboard.Shell.Views
     public partial class MainWindow
     {
         private readonly IEventAggregator _eventAggregator;
-        private PointFilter _selectionFilter;
+        private SelectionFilter<TimedControlsWithPoint> _selectionFilter;
+        private AveragingFilter _averagingFilter;
 
         public MainWindow(IEventAggregator eventAggregator)
         {
             InitializeComponent();
             _eventAggregator = eventAggregator;
 
-            RecentGazePoints = new FixedSizeQueue<TimedPoint>(360);
-            _selectionFilter = new TimeSpanWithMinimumPointsDuringTimeFrameSelectionFilter(this, 
+            RecentGazePoints = new TimedPoints(Configuration.PointKeepAliveTimeSpan);
+            TimedPointsByControl = new TimedControlsWithPoint(Configuration.PointKeepAliveTimeSpan, this);
+            GazeTimePerControl = new GazeTimePerControl(TimeSpan.FromMilliseconds(100), this);
+            _selectionFilter = new TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter(this, 
                 TimeSpan.FromMilliseconds(GazeTimeMilliseconds), 10);
+            _averagingFilter = new AveragingLastNpointsWithinTimeSpanFilter(3,TimeSpan.FromMilliseconds(70));
+
             eventAggregator.GetEvent<NewCoordinateEvent>().Subscribe(OnNewCoordinate);
             Closing += (sender, args) => _eventAggregator.GetEvent<NewCoordinateEvent>().Unsubscribe(OnNewCoordinate);
         }
 
         public static readonly DependencyProperty GazeTimeMillisecondsProperty = DependencyProperty.Register(
-            "GazeTimeMilliseconds", typeof(int), typeof(MainWindow), new PropertyMetadata(800));
+            "GazeTimeMilliseconds", typeof(int), typeof(MainWindow), new PropertyMetadata(Configuration.InitialGazeTime));
 
         public int GazeTimeMilliseconds
         {
@@ -41,12 +50,36 @@ namespace TalkingKeyboard.Shell.Views
             set { SetValue(GazeTimeMillisecondsProperty, value); }
         }
 
-        private FixedSizeQueue<TimedPoint> RecentGazePoints { get; set; }
+        private TimedPoints RecentGazePoints { get; set; }
+
+        private TimedControlsWithPoint TimedPointsByControl { get; set; }
+
+        private GazeTimePerControl GazeTimePerControl { get; set; }
 
         private void OnNewCoordinate(Point point)
         {
-            RecentGazePoints.Enqueue(new TimedPoint(DateTime.Now, point));
-            RecentGazePoints = _selectionFilter.Filter(RecentGazePoints);
+            //RecentGazePoints =
+            //    RecentGazePoints.SkipWhile(tp =>  DateTime.Now - tp.Key > Configuration.PointKeepAliveTimeSpan );
+            // TODO: Decouple filtering. Use a piping mechanism.
+            /* Filters & Point/Control Processing Design Decision:
+            A change is never expected to be done in-place.
+            -You should always either return or out a copy of
+            -either the modified instance or the same instance
+            -if unmodified.
+            SelectionFilters have the same rules as filters and
+            may also activate zero or more SelectableControls.
+            */
+
+            RecentGazePoints.Maintain();
+            RecentGazePoints.AddPoint(point);
+            var averagePoint = _averagingFilter.Filter(RecentGazePoints);
+            if (averagePoint == null) return;
+            point = averagePoint.Value;
+            TimedPointsByControl.Maintain();
+            TimedPointsByControl.AddPoint(point);
+            GazeTimePerControl.Maintain();
+            GazeTimePerControl.AddPoint(point);
+            TimedPointsByControl = _selectionFilter.SelectAndUpdate(TimedPointsByControl);
         }
 
         private void MetroWindow_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)

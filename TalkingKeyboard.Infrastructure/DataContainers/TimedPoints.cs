@@ -15,15 +15,19 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
         {
             if (DateTime.Now - LastMaintainedTime < PointKeepAliveTimeSpan) return;
             var oldestAcceptable = DateTime.Now - PointKeepAliveTimeSpan;
-            Collection =
-                new SortedList<DateTime, Point>(Collection.SkipWhile(e => e.Key > oldestAcceptable)
-                    .ToDictionary(e => e.Key, e => e.Value));
+            var acceptableValues = this.Where(pair => pair.Key <= oldestAcceptable).ToList();
+            Clear();
+            foreach (var e in acceptableValues)
+            {
+                TryAdd(e.Key, e.Value);
+            }
             LastMaintainedTime = DateTime.Now;
         }
 
-        public override void Add(Point point)
+        public override void AddPoint(Point point)
         {
-            Collection.Add(DateTime.Now, point);
+            var currentTime = DateTime.Now;
+            AddOrUpdate(currentTime, point, (_, __) => point);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
     /// <summary>
     /// Interaction logic for SelectableControl.xaml
     /// </summary>
-    public abstract class SelectableControl : ContentControl, ICommandSource
+    public abstract class SelectableControl : ContentControl, ICommandSource, IComparable
     {
         public static readonly DependencyProperty CommandProperty = DependencyProperty.Register(
             "Command", typeof(ICommand), typeof(SelectableControl), new PropertyMetadata(default(ICommand)));
@@ -60,6 +60,14 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             Command?.Execute(CommandParameter);
             LastSelectedTime = DateTime.Now;
+        }
+
+        public int CompareTo(object obj)
+        {
+            var other = obj as SelectableControl;
+            if (other == null) return -1;
+            if (other.Uid == this.Uid) return 0;
+            return 1;
         }
     }
 }

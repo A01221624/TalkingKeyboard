@@ -20,25 +20,22 @@ namespace TalkingKeyboard.Shell.DataContainers
         public override void Maintain()
         {
             if (DateTime.Now - LastMaintainedTime < PointKeepAliveTimeSpan) return;
-            foreach (var tp in Collection.Values)
+            foreach (var tp in Values)
             {
                 tp.Maintain();
             }
             LastMaintainedTime = DateTime.Now;
         }
 
-        public override void Add(Point point)
+        public override void AddPoint(Point point)
         {
-            _window.Dispatcher.Invoke(() =>
-            {
                 var seenControl = HitTestHelper.SelectableControlUnderPoint(point, _window);
                 if (seenControl == null) return;
-                if (!Collection.ContainsKey(seenControl))
+                if (!ContainsKey(seenControl))
                 {
-                    Collection.Add(seenControl, new TimedPoints(PointKeepAliveTimeSpan));
+                    TryAdd(seenControl, new TimedPoints(PointKeepAliveTimeSpan));
                 }
-                Collection[seenControl].Add(point);
-            });
+                this[seenControl].AddPoint(point);
         }
     }
 }

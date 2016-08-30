@@ -37,6 +37,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -55,7 +59,10 @@
       <DependentUpon>SelectableButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\SelectableControl.cs" />
+    <Compile Include="DataContainers\IMaintainable.cs" />
+    <Compile Include="DataContainers\MaintainablePointCollection.cs" />
     <Compile Include="DataContainers\TimedPoints.cs" />
+    <Compile Include="DataContainers\TimePointPair.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
