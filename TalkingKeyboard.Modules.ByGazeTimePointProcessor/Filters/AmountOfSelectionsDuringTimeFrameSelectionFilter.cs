@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows;
-using TalkingKeyboard.Infrastructure.Controls;
-using TalkingKeyboard.Shell.Helpers;
-using TimedPoint = System.Tuple<System.DateTime, System.Windows.Point>;
+﻿using TimedPoint = System.Tuple<System.DateTime, System.Windows.Point>;
 
-namespace TalkingKeyboard.Shell.Filters
+namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     //public class AmountOfSelectionsDuringTimeFrameSelectionFilter : SelectionFilter<,>
     //{

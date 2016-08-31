@@ -13,7 +13,7 @@
                    ShowMaxRestoreButton="True"
                    ShowCloseButton="True"
                    ResizeMode="CanResizeWithGrip"
-                   ShowIconOnTitleBar="True" MouseMove="MetroWindow_MouseMove">
+                   ShowIconOnTitleBar="True">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

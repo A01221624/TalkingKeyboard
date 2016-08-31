@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6F77BEB1-085E-4F50-84A7-20B7A704CA68}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{3A25A2A8-EF5B-4490-9457-50BE3AC5EBA1}</ProjectGuid>
+    <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TalkingKeyboard.Shell</RootNamespace>
-    <AssemblyName>TalkingKeyboard.Shell</AssemblyName>
+    <RootNamespace>TalkingKeyboard.Modules.ByGazeTimePointProcessor</RootNamespace>
+    <AssemblyName>TalkingKeyboard.Modules.ByGazeTimePointProcessor</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
-      <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -55,16 +48,8 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.3.7\lib\net45\NLog.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.2.0\lib\net45\Prism.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Prism.Unity.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Unity.6.2.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Prism.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
@@ -74,7 +59,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
@@ -91,35 +76,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="Resources\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\IconsNonShared.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Logging\NLogLogger.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="ByGazeTimePointProcessorModule.cs" />
+    <Compile Include="DataContainers\GazeTimePerControl.cs" />
+    <Compile Include="Filters\AmountOfSelectionsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\AveragingFilter.cs" />
+    <Compile Include="Filters\AveragingLastNpointsWithinTimeSpanFilter.cs" />
+    <Compile Include="Filters\SelectionFilter.cs" />
+    <Compile Include="Filters\TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="Filters\TwoSelectionsDuringTimeFrameSelectionFilter.cs" />
+    <Compile Include="GazeSelectionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -143,49 +108,15 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Resource Include="Resources\Entypo.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\WindowsIcons-license.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Entypo-license.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CentralTextModule\TalkingKeyboard.Modules.TextHolder.csproj">
-      <Project>{3b1cf9eb-d2e8-4e7c-a402-23f5c85a2518}</Project>
-      <Name>TalkingKeyboard.Modules.TextHolder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.CommandBoard\TalkingKeyboard.Modules.CommandBoard.csproj">
-      <Project>{962599d1-a8c7-45bc-bfb4-e3637ed48aeb}</Project>
-      <Name>TalkingKeyboard.Modules.CommandBoard</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.CoordinateProvider\TalkingKeyboard.Modules.CoordinateProvider.csproj">
-      <Project>{75e9595d-c9dd-43bb-a3ce-62995566b671}</Project>
-      <Name>TalkingKeyboard.Modules.CoordinateProvider</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TalkingKeyboard.Infrastructure\TalkingKeyboard.Infrastructure.csproj">
-      <Project>{297fb3b3-9765-4e70-9c50-8ed512954ac9}</Project>
+      <Project>{297FB3B3-9765-4E70-9C50-8ED512954AC9}</Project>
       <Name>TalkingKeyboard.Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.Modules.ByGazeTimePointProcessor\TalkingKeyboard.Modules.ByGazeTimePointProcessor.csproj">
-      <Project>{3A25A2A8-EF5B-4490-9457-50BE3AC5EBA1}</Project>
-      <Name>TalkingKeyboard.Modules.ByGazeTimePointProcessor</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.MultiKeyBoard\TalkingKeyboard.Modules.MultiKeyBoard.csproj">
-      <Project>{95557ae2-ef50-4f7c-aa23-4ad1a8bfb295}</Project>
-      <Name>TalkingKeyboard.Modules.MultiKeyBoard</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.SingleKeyBoard\TalkingKeyboard.Modules.SingleKeyBoard.csproj">
-      <Project>{ab8b448c-dd74-4d60-a041-3e5d03a32180}</Project>
-      <Name>TalkingKeyboard.Modules.SingleKeyBoard</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.SuggestionBoard\TalkingKeyboard.Modules.SuggestionBoard.csproj">
-      <Project>{d5203982-3e0f-4af5-8ef2-e7c207d5529b}</Project>
-      <Name>TalkingKeyboard.Modules.SuggestionBoard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

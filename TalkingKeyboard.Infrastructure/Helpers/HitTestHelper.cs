@@ -2,8 +2,9 @@
 using System.Windows.Media;
 using TalkingKeyboard.Infrastructure.Controls;
 
-namespace TalkingKeyboard.Shell.Helpers
+namespace TalkingKeyboard.Infrastructure.Helpers
 {
+
     /* Not thread safe, but only makes sense to be called from UI Thread anyway. */
     public static class HitTestHelper
     {
@@ -14,11 +15,11 @@ namespace TalkingKeyboard.Shell.Helpers
             window.Dispatcher.Invoke(() =>
             {
                 if (PresentationSource.FromVisual(window) == null) return;
-            var pt = window.PointFromScreen(point);
+                var pt = window.PointFromScreen(point);
 
-            VisualTreeHelper.HitTest(window, null,
-                FindSelectableControlSeen,
-                new PointHitTestParameters(pt));
+                VisualTreeHelper.HitTest(window, null,
+                    FindSelectableControlSeen,
+                    new PointHitTestParameters(pt));
             });
             return _selectableControlSeen;
         }

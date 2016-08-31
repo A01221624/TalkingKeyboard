@@ -3,6 +3,7 @@ using Microsoft.Practices.Unity;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Unity;
+using TalkingKeyboard.Modules.ByGazeTimePointProcessor;
 using TalkingKeyboard.Modules.CentralTextModule;
 using TalkingKeyboard.Modules.CommandBoard;
 using TalkingKeyboard.Modules.CoordinateProvider;
@@ -28,6 +29,15 @@ namespace TalkingKeyboard.Shell
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
+            //ViewModelLocationProvider.SetDefaultViewModelFactory((view, viewModelType) =>
+            //{
+            //    if (viewModelType == typeof(SelectableButtonViewModel))
+            //    {
+            //        Container.RegisterInstance<ISelectableControlViewModel>(view.GetHashCode().ToString(), new SelectableButtonViewModel());
+            //        return Container.Resolve<ISelectableControlViewModel>(view.GetHashCode().ToString());
+            //    }
+            //    return Container.Resolve(viewModelType);
+            //});
 
             //Container.RegisterTypeForNavigation<>("ViewA");
             //Container.RegisterTypeForNavigation<ViewB>("ViewB");
@@ -42,6 +52,7 @@ namespace TalkingKeyboard.Shell
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
+            moduleCatalog.AddModule(typeof(ByGazeTimePointProcessorModule), InitializationMode.WhenAvailable);
         }
 
         /// <summary>

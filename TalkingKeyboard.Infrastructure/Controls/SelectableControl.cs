@@ -9,9 +9,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TalkingKeyboard.Infrastructure.Enums;
 
 namespace TalkingKeyboard.Infrastructure.Controls
 {
@@ -47,19 +49,38 @@ namespace TalkingKeyboard.Infrastructure.Controls
             set { SetValue(CommandTargetProperty, value); }
         }
 
-        public static readonly DependencyProperty LastSelectedTimeProperty = DependencyProperty.Register(
-            "LastSelectedTime", typeof(DateTime), typeof(SelectableControl), new PropertyMetadata(default(DateTime)));
+        public static readonly DependencyProperty AnimationProperty = DependencyProperty.Register(
+            "Animation", typeof(Storyboard), typeof(SelectableControl), new PropertyMetadata(default(Storyboard)));
 
-        public DateTime LastSelectedTime
+        public Storyboard Animation
         {
-            get { return (DateTime) GetValue(LastSelectedTimeProperty); }
-            set { SetValue(LastSelectedTimeProperty, value); }
+            get { return (Storyboard) GetValue(AnimationProperty); }
+            set { SetValue(AnimationProperty, value); }
+        }
+
+        public void PlayAnimation()
+        {
+            Animation.Begin();
+        }
+
+        public void PauseAnimation()
+        {
+            Animation.Pause();
+        }
+
+        public void StopAnimation()
+        {
+            Animation.Stop();
+        }
+
+        public void ResumeAnimation()
+        {
+            Animation.Resume();
         }
 
         public void Select()
         {
             Command?.Execute(CommandParameter);
-            LastSelectedTime = DateTime.Now;
         }
 
         public int CompareTo(object obj)

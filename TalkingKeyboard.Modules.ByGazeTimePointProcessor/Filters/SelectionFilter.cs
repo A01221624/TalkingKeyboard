@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using TalkingKeyboard.Infrastructure.DataContainers;
+﻿using System.Windows;
 using TimedPoint = System.Tuple<System.DateTime, System.Windows.Point>;
 
-namespace TalkingKeyboard.Shell.Filters
+namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     public abstract class SelectionFilter<T>
     {

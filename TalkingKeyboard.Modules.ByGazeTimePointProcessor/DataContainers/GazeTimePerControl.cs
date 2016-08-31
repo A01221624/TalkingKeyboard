@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Windows;
 using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Infrastructure.DataContainers;
-using TalkingKeyboard.Shell.Helpers;
+using TalkingKeyboard.Infrastructure.Helpers;
 
-namespace TalkingKeyboard.Shell.DataContainers
+namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.DataContainers
 {
     internal class GazeTimePerControl : MaintainablePointCollection<SelectableControl, TimeSpan>
     {

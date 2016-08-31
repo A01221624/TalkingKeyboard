@@ -1,17 +1,11 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 using TalkingKeyboard.Infrastructure;
-using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Infrastructure.DataContainers;
-using TalkingKeyboard.Shell.DataContainers;
-using TalkingKeyboard.Shell.Helpers;
 using TimedPoint = System.Tuple<System.DateTime, System.Windows.Point>;
 
-namespace TalkingKeyboard.Shell.Filters
+namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     public class TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter : SelectionFilter<TimedControlsWithPoint>
     {

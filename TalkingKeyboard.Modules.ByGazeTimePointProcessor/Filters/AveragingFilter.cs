@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using TalkingKeyboard.Infrastructure.DataContainers;
 
-namespace TalkingKeyboard.Shell.Filters
+namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     public abstract class AveragingFilter
     {

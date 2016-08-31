@@ -3,13 +3,15 @@ using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Practices.Unity;
+using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Modules.SuggestionBoard.Model;
 
 namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
 {
     public class FourSuggestionsBoardViewModel : BindableBase
     {
-        public FourSuggestionsBoardViewModel()
+        public FourSuggestionsBoardViewModel(IUnityContainer unityContainer)
         {
             SuggestionCollection = new List<SuggestionControlViewModel>(4)
             {

@@ -1,6 +1,4 @@
-﻿using Prism.Events;
-using Prism.Mvvm;
-using TalkingKeyboard.Infrastructure;
+﻿using Prism.Mvvm;
 
 namespace TalkingKeyboard.Shell.ViewModels
 {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows;
 using TalkingKeyboard.Infrastructure.DataContainers;
 
-namespace TalkingKeyboard.Shell.Filters
+namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     public class AveragingLastNpointsWithinTimeSpanFilter : AveragingFilter
     {

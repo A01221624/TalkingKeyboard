@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows;
 using TalkingKeyboard.Infrastructure.Controls;
-using TalkingKeyboard.Infrastructure.DataContainers;
-using TalkingKeyboard.Shell.Helpers;
+using TalkingKeyboard.Infrastructure.Helpers;
 
-namespace TalkingKeyboard.Shell.DataContainers
+namespace TalkingKeyboard.Infrastructure.DataContainers
 {
     public class TimedControlsWithPoint : MaintainablePointCollection<SelectableControl, TimedPoints>
     {
