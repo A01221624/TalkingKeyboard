@@ -12,12 +12,12 @@
     <local:SelectableControl.Resources>
         <Storyboard x:Key="ArcSelectionAnimation">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(ed:Arc.EndAngle)" Storyboard.TargetName="arc">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.55" Value="360"/>
+                <EasingDoubleKeyFrame KeyTime="{Binding Path=AnimationBeginTime}" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="{Binding Path=AnimationEndTime}" Value="360"/>
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="arc">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.55" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="{Binding Path=AnimationBeginTime}" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="{Binding Path=AnimationEndTime}" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </local:SelectableControl.Resources>

@@ -24,6 +24,8 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private ICommand _command;
         private object _commandParameter;
         private IInputElement _commandTarget;
+        private KeyTime _animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
+        private KeyTime _animationEndTime = KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(550));
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string ButtonText
@@ -160,6 +162,28 @@ namespace TalkingKeyboard.Infrastructure.Controls
             {
                 if (value.Equals(_gazeTimeSpanBeforeCooldown)) return;
                 _gazeTimeSpanBeforeCooldown = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public KeyTime AnimationBeginTime
+        {
+            get { return _animationBeginTime; }
+            set
+            {
+                if (value.Equals(_animationBeginTime)) return;
+                _animationBeginTime = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public KeyTime AnimationEndTime
+        {
+            get { return _animationEndTime; }
+            set
+            {
+                if (value.Equals(_animationEndTime)) return;
+                _animationEndTime = value;
                 OnPropertyChanged();
             }
         }
