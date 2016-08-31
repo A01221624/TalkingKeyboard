@@ -14,18 +14,18 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private string _buttonText;
         private DateTime _lastSelectedTime = DateTime.MinValue;
         private DateTime _lastSeenTime = DateTime.MinValue;
-        private TimeSpan _gazeTimeSpan = TimeSpan.FromMilliseconds(550);
+        private TimeSpan _currentGazeTimeSpan = TimeSpan.Zero;
         private SelectableState _state = SelectableState.Idle;
-        private TimeSpan _gazeKeepAliveTimeSpan = TimeSpan.FromMilliseconds(100);
-        private TimeSpan _gazeTimeSpanBeforeAnimationBegins = TimeSpan.FromMilliseconds(50);
-        private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = TimeSpan.FromMilliseconds(550);
-        private TimeSpan _gazeTimeSpanBeforeCooldown = TimeSpan.FromMilliseconds(600);
+        private TimeSpan _gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
+        private TimeSpan _gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
+        private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private TimeSpan _gazeTimeSpanBeforeCooldown = Configuration.GazeTimeSpanBeforeCooldownazeTimeSpanBeforeSelectionOccurs;
         private Storyboard _animation;
         private ICommand _command;
         private object _commandParameter;
         private IInputElement _commandTarget;
         private KeyTime _animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
-        private KeyTime _animationEndTime = KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(550));
+        private KeyTime _animationEndTime = Configuration.GazeTimeSpanBeforeSelectionOccurs;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string ButtonText
@@ -100,13 +100,13 @@ namespace TalkingKeyboard.Infrastructure.Controls
             }
         }
 
-        public TimeSpan GazeTimeSpan
+        public TimeSpan CurrentGazeTimeSpan
         {
-            get { return _gazeTimeSpan; }
+            get { return _currentGazeTimeSpan; }
             set
             {
-                if (value.Equals(_gazeTimeSpan)) return;
-                _gazeTimeSpan = value;
+                if (value.Equals(_currentGazeTimeSpan)) return;
+                _currentGazeTimeSpan = value;
                 OnPropertyChanged();
             }
         }

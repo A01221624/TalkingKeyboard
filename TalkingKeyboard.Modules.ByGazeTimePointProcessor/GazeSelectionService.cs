@@ -56,9 +56,9 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                 if (data == null) continue;
                 KnownControls.Add(seenControl);
                 var oldestAcceptable = DateTime.Now - data.GazeKeepAliveTimeSpan;
-                data.GazeTimeSpan = oldestAcceptable > data.LastSeenTime
+                data.CurrentGazeTimeSpan = oldestAcceptable > data.LastSeenTime
                     ? TimeSpan.Zero
-                    : data.GazeTimeSpan + (DateTime.Now - data.LastSeenTime);
+                    : data.CurrentGazeTimeSpan + (DateTime.Now - data.LastSeenTime);
                 data.LastSeenTime = DateTime.Now;
 
                 foreach (var control in KnownControls)
@@ -70,7 +70,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                     controlData.State = SelectableState.AnimationOnHold;
                 }
 
-                if (data.GazeTimeSpan == TimeSpan.Zero)
+                if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
                 {
                     data.State = SelectableState.Idle;
                     window.Dispatcher.Invoke(() => seenControl.StopAnimation());
@@ -81,14 +81,14 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                         data.State = SelectableState.SeenButWaiting;
                         break;
                     case SelectableState.SeenButWaiting:
-                        if (data.GazeTimeSpan >= data.GazeTimeSpanBeforeAnimationBegins)
+                        if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeAnimationBegins)
                         {
                             window.Dispatcher.Invoke(() => seenControl.PlayAnimation());
                             data.State = SelectableState.AnimationRunning;
                         }
                         break;
                     case SelectableState.AnimationRunning:
-                        if (data.GazeTimeSpan >= data.GazeTimeSpanBeforeSelectionOccurs)
+                        if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeSelectionOccurs)
                         {
                             window.Dispatcher.Invoke(() => seenControl.Select());
                             data.State = SelectableState.RecentlySelected;
@@ -99,8 +99,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                         data.State = SelectableState.AnimationRunning;
                         break;
                     case SelectableState.RecentlySelected:
-                        if (data.GazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
-                            data.GazeTimeSpan = TimeSpan.Zero;
+                        if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
+                            data.CurrentGazeTimeSpan = TimeSpan.Zero;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
