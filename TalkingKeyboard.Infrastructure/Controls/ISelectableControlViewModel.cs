@@ -9,7 +9,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
     {
         DateTime LastSelectedTime { get; set; }
         DateTime LastSeenTime { get; set; }
-        TimeSpan GazeTimeSpan { get; set; }
+        TimeSpan CurrentGazeTimeSpan { get; set; }
         SelectableState State { get; set; }
         TimeSpan GazeKeepAliveTimeSpan { get; set; }
         TimeSpan GazeTimeSpanBeforeAnimationBegins { get; set; }
