@@ -81,6 +81,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         public void Select()
         {
             Command?.Execute(CommandParameter);
+            System.Media.SystemSounds.Hand.Play();
         }
 
         public int CompareTo(object obj)
