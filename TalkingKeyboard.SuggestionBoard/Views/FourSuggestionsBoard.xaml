@@ -18,10 +18,6 @@
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
-        <sc:SelectableButtonViewModel x:Key="One" />
-        <sc:SelectableButtonViewModel x:Key="Two" />
-        <sc:SelectableButtonViewModel x:Key="Three" />
-        <sc:SelectableButtonViewModel x:Key="Four" />
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -31,24 +27,20 @@
             <ColumnDefinition Width="*"  />
         </Grid.ColumnDefinitions>
         <sc:SelectableButton Grid.Column="0" HorizontalAlignment="Stretch"
-                             DataContext="{StaticResource One}"
                              Command="{x:Static infrastructure:Commands.SetTextCommand}"
-                             CommandParameter="One"
-                             Text="One"/>
+                             CommandParameter="{Binding ButtonText}"
+                             Text="{Binding ButtonText}"/>
         <sc:SelectableButton Grid.Column="1" HorizontalAlignment="Stretch"
-                             DataContext="{StaticResource Two}"
                              Command="{x:Static infrastructure:Commands.SetTextCommand}"
-                             CommandParameter="Two"
-                             Text="Two"/>
+                             CommandParameter="{Binding ButtonText}"
+                             Text="{Binding ButtonText}"/>
         <sc:SelectableButton Grid.Column="2" HorizontalAlignment="Stretch"
-                             DataContext="{StaticResource Three}"
                              Command="{x:Static infrastructure:Commands.SetTextCommand}"
-                             CommandParameter="Three"
-                             Text="Three"/>
+                             CommandParameter="{Binding ButtonText}"
+                             Text="{Binding ButtonText}"/>
         <sc:SelectableButton Grid.Column="3" HorizontalAlignment="Stretch"
-                             DataContext="{StaticResource Four}"
                              Command="{x:Static infrastructure:Commands.SetTextCommand}"
-                             CommandParameter="Four"
-                             Text="Four"/>
+                             CommandParameter="{Binding ButtonText}"
+                             Text="{Binding ButtonText}"/>
     </Grid>
 </UserControl>
