@@ -16,8 +16,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
     public class GazeSelectionService : IControlActivationService
     {
         private readonly IUnityContainer _container;
-        private AveragingFilter _averagingFilter;
-        private TimedPoints _timedPoints;
+        private readonly AveragingFilter _averagingFilter;
+        private readonly TimedPoints _timedPoints;
 
         public GazeSelectionService(IEventAggregator eventAggregator, IUnityContainer container)
         {
@@ -39,7 +39,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         ///     The duration a control has been gazed at depends on the last time it was seen and the time established as a maximum
         ///     to keep alive an inactive gaze.
         /// </remarks>
-        /// <param name="point"></param>
+        /// <param name="p"></param>
         public void ProcessPoint(Point p)
         {
             _timedPoints.Maintain();
@@ -65,46 +65,80 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                 {
                     SelectableButtonViewModel controlData = null;
                     window.Dispatcher.Invoke(() => controlData = control.DataContext as SelectableButtonViewModel);
-                    if (controlData?.State != SelectableState.AnimationRunning || control.Equals(seenControl)) continue;
-                    window.Dispatcher.Invoke(() => control.PauseAnimation());
-                    controlData.State = SelectableState.AnimationOnHold;
+                    if (controlData == null) continue;
+                    if (control.Equals(seenControl)) StateMachineUpdateForSeenControl(control, data, window);
+                    else StateMachineUpdateForOtherControls(control, data, window);
                 }
+            }
+        }
 
-                if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
-                {
-                    data.State = SelectableState.Idle;
-                    window.Dispatcher.Invoke(() => seenControl.StopAnimation());
-                }
-                switch (data.State)
-                {
-                    case SelectableState.Idle:
-                        data.State = SelectableState.SeenButWaiting;
-                        break;
-                    case SelectableState.SeenButWaiting:
-                        if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeAnimationBegins)
-                        {
-                            window.Dispatcher.Invoke(() => seenControl.PlayAnimation());
-                            data.State = SelectableState.AnimationRunning;
-                        }
-                        break;
-                    case SelectableState.AnimationRunning:
-                        if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeSelectionOccurs)
-                        {
-                            window.Dispatcher.Invoke(() => seenControl.Select());
-                            data.State = SelectableState.RecentlySelected;
-                        }
-                        break;
-                    case SelectableState.AnimationOnHold:
-                        window.Dispatcher.Invoke(() => seenControl.ResumeAnimation());
+        private void StateMachineUpdateForOtherControls(SelectableControl control, SelectableButtonViewModel data, Window window)
+        {
+            switch (data.State)
+            {
+                case SelectableState.Idle:
+                    break;
+                case SelectableState.SeenButWaiting:
+                    break;
+                case SelectableState.AnimationRunning:
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                    {
+                        data.State = SelectableState.Idle;
+                        window.Dispatcher.Invoke(control.StopAnimation);
+                    }
+                    else
+                    {
+                        data.State = SelectableState.AnimationOnHold;
+                        window.Dispatcher.Invoke(control.PauseAnimation);
+                    }
+                    break;
+                case SelectableState.AnimationOnHold:
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                    {
+                        data.State = SelectableState.Idle;
+                        window.Dispatcher.Invoke(control.StopAnimation);
+                    }
+                    break;
+                case SelectableState.RecentlySelected:
+                    if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
+                        data.CurrentGazeTimeSpan = TimeSpan.Zero;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void StateMachineUpdateForSeenControl(SelectableControl seenControl, SelectableButtonViewModel data, Window window)
+        {
+            switch (data.State)
+            {
+                case SelectableState.Idle:
+                    data.State = SelectableState.SeenButWaiting;
+                    break;
+                case SelectableState.SeenButWaiting:
+                    if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeAnimationBegins)
+                    {
+                        window.Dispatcher.Invoke(seenControl.PlayAnimation);
                         data.State = SelectableState.AnimationRunning;
-                        break;
-                    case SelectableState.RecentlySelected:
-                        if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
-                            data.CurrentGazeTimeSpan = TimeSpan.Zero;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+                    }
+                    break;
+                case SelectableState.AnimationRunning:
+                    if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeSelectionOccurs)
+                    {
+                        window.Dispatcher.Invoke(seenControl.Select);
+                        data.State = SelectableState.RecentlySelected;
+                    }
+                    break;
+                case SelectableState.AnimationOnHold:
+                    window.Dispatcher.Invoke(seenControl.ResumeAnimation);
+                    data.State = SelectableState.AnimationRunning;
+                    break;
+                case SelectableState.RecentlySelected:
+                    if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
+                        data.CurrentGazeTimeSpan = TimeSpan.Zero;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
