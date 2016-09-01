@@ -26,6 +26,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private IInputElement _commandTarget;
         private KeyTime _animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
         private KeyTime _animationEndTime = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private double _fontSize = 40;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string ButtonText
@@ -74,6 +75,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
             {
                 if (Equals(value, _commandTarget)) return;
                 _commandTarget = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double FontSize
+        {
+            get { return _fontSize; }
+            set
+            {
+                if (value.Equals(_fontSize)) return;
+                _fontSize = value;
                 OnPropertyChanged();
             }
         }

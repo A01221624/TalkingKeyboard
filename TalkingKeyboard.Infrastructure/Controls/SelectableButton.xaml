@@ -22,12 +22,13 @@
         </Storyboard>
     </local:SelectableControl.Resources>
     <Grid>
-        <Button
+        <Button Name="Button"
 			Command="{Binding Command, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
 			CommandParameter="{Binding CommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
-			Content="{Binding Text, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}, FallbackValue=Button}"
+                Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
+                FontSize="{Binding FontSize, FallbackValue=40}"
+                
         />
-        <!--Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"-->
         <ed:Arc x:Name="arc" 
                     Grid.Column="1"
                     Grid.Row="1"
