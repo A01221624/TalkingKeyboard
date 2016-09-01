@@ -79,6 +79,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                 case SelectableState.Idle:
                     break;
                 case SelectableState.SeenButWaiting:
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                        data.State = SelectableState.Idle;
                     break;
                 case SelectableState.AnimationRunning:
                     if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
@@ -102,6 +104,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                 case SelectableState.RecentlySelected:
                     if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
                         data.CurrentGazeTimeSpan = TimeSpan.Zero;
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                        data.State = SelectableState.Idle;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -116,6 +120,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                     data.State = SelectableState.SeenButWaiting;
                     break;
                 case SelectableState.SeenButWaiting:
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                        data.State = SelectableState.Idle;
                     if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeAnimationBegins)
                     {
                         window.Dispatcher.Invoke(seenControl.PlayAnimation);
@@ -128,14 +134,26 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                         window.Dispatcher.Invoke(seenControl.Select);
                         data.State = SelectableState.RecentlySelected;
                     }
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                    {
+                        data.State = SelectableState.Idle;
+                        window.Dispatcher.Invoke(seenControl.StopAnimation);
+                    }
                     break;
                 case SelectableState.AnimationOnHold:
                     window.Dispatcher.Invoke(seenControl.ResumeAnimation);
                     data.State = SelectableState.AnimationRunning;
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                    {
+                        data.State = SelectableState.Idle;
+                        window.Dispatcher.Invoke(seenControl.StopAnimation);
+                    }
                     break;
                 case SelectableState.RecentlySelected:
                     if (data.CurrentGazeTimeSpan >= data.GazeTimeSpanBeforeCooldown)
                         data.CurrentGazeTimeSpan = TimeSpan.Zero;
+                    if (data.CurrentGazeTimeSpan == TimeSpan.Zero)
+                        data.State = SelectableState.Idle;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
