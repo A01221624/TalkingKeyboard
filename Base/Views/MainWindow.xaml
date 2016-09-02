@@ -7,13 +7,15 @@
                    prism:ViewModelLocator.AutoWireViewModel="True"
                    
                    Title="{Binding Title}"
-                   Height="600" Width="900"
+                   Height="900" Width="1280"
+                   WindowStartupLocation="CenterScreen"
                    ShowTitleBar="True"
                    ShowMinButton="True"
                    ShowMaxRestoreButton="True"
                    ShowCloseButton="True"
                    ResizeMode="CanResizeWithGrip"
-                   ShowIconOnTitleBar="True">
+                   ShowIconOnTitleBar="True"
+                   metro:ControlsHelper.ContentCharacterCasing="Normal">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -57,9 +59,10 @@
                 </Rectangle.OpacityMask>
             </Rectangle>
         </Button>
-        
+
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -90,20 +93,20 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}"
+            <ContentControl 
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}"
 				Grid.Column="1" Grid.Row="1"
 				Grid.ColumnSpan="11" Grid.RowSpan="2">
+            </ContentControl>
+            <ContentControl 
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.BoardViewRegion}"
+				Grid.Column="1" Grid.Row="4"
+				Grid.ColumnSpan="11" Grid.RowSpan="7">
                 <!--<Canvas Background="Aquamarine" />-->
             </ContentControl>
-
-            <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.BoardViewRegion}"
-				Grid.Column="2" Grid.Row="4"
-				Grid.ColumnSpan="9" Grid.RowSpan="5">
-                <!--<Canvas Background="Aquamarine" />-->
-            </ContentControl>
-
-            <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.SuggestionRegion}"
-				Grid.Column="1" Grid.Row="11"
+            <ContentControl 
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.SuggestionRegion}"
+				Grid.Column="1" Grid.Row="12"
 				Grid.ColumnSpan="11" Grid.RowSpan="2">
                 <!--<Canvas Background="Aquamarine" />-->
             </ContentControl>
