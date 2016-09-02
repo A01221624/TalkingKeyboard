@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
+using TalkingKeyboard.Infrastructure.Controls;
 
 namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 {
-	public class TextViewModel : BindableBase
-	{
+	public class TextViewModel : BindableBase, ITextModel
+    {
         public TextViewModel()
         {
             _addTextCommand = new DelegateCommand<string>(s => CurrentText += s);
