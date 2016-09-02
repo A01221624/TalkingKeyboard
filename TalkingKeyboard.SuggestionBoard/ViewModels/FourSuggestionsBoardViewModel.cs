@@ -2,32 +2,36 @@
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Microsoft.Practices.Unity;
+using Prism.Events;
+using TalkingKeyboard.Infrastructure;
 using TalkingKeyboard.Infrastructure.Controls;
+using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 using TalkingKeyboard.Modules.SuggestionBoard.Model;
 
 namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
 {
-    public class FourSuggestionsBoardViewModel : BindableBase
+    public class FourSuggestionsBoardViewModel : BindableBase, ISuggestionsViewModel
     {
-        public FourSuggestionsBoardViewModel(IUnityContainer unityContainer)
+        public FourSuggestionsBoardViewModel(IUnityContainer unityContainer, ISuggestionService suggestionService, ITextModel textModel, IEventAggregator eventAggregator)
         {
-            SuggestionCollection = new List<SuggestionControlViewModel>(4)
-            {
-                new SuggestionControlViewModel("hola"),
-                new SuggestionControlViewModel("lola"),
-                new SuggestionControlViewModel("gol"),
-                new SuggestionControlViewModel("ola")
-            };
+            Suggestions = new ObservableCollection<string>() {"1", "2", "3", "4"};
+            eventAggregator.GetEvent<TextUpdatedEvent>()
+                .Subscribe(() =>
+                {
+                    Suggestions = suggestionService.ProvideSuggestions(textModel.CurrentText);
+                    
+                }, ThreadOption.BackgroundThread, true);
         }
 
-        private List<SuggestionControlViewModel> _suggestionCollection;
+        private ObservableCollection<string> _suggestions;
 
-        public List<SuggestionControlViewModel> SuggestionCollection
+        public ObservableCollection<string> Suggestions
         {
-            get { return _suggestionCollection; }
-            set { SetProperty(ref _suggestionCollection, value); }
+            get { return _suggestions; }
+            set { SetProperty(ref _suggestions, value); }
         }
     }
 }

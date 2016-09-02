@@ -73,6 +73,7 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Controls\ISelectableControlViewModel.cs" />
+    <Compile Include="Controls\ISuggestionsViewModel.cs" />
     <Compile Include="Controls\ITextModel.cs" />
     <Compile Include="Controls\SelectableButton.xaml.cs">
       <DependentUpon>SelectableButton.xaml</DependentUpon>
@@ -92,6 +93,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceInterfaces\IControlActivationService.cs" />
     <Compile Include="ServiceInterfaces\IPointHandler.cs" />
+    <Compile Include="ServiceInterfaces\ISuggestionService.cs" />
     <Compile Include="ServiceInterfaces\ITextToSpeechService.cs" />
     <Compile Include="ServiceInterfaces\IWindowKnower.cs" />
   </ItemGroup>

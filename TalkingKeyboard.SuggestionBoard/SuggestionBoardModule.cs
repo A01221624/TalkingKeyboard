@@ -3,6 +3,8 @@ using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
 using TalkingKeyboard.Infrastructure.Constants;
+using TalkingKeyboard.Infrastructure.Controls;
+using TalkingKeyboard.Modules.SuggestionBoard.ViewModels;
 using TalkingKeyboard.Modules.SuggestionBoard.Views;
 
 namespace TalkingKeyboard.Modules.SuggestionBoard
@@ -20,6 +22,9 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
 
         public void Initialize()
         {
+            _unityContainer.RegisterType<ISuggestionsViewModel, FourSuggestionsBoardViewModel>(
+                new ContainerControlledLifetimeManager());
+            _unityContainer.Resolve<ISuggestionsViewModel>();
             _regionManager.RegisterViewWithRegion(RegionNames.SuggestionRegion, () => _unityContainer.Resolve<FourSuggestionsBoard>());
         }
     }

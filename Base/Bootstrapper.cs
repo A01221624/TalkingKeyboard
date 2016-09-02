@@ -3,6 +3,7 @@ using Microsoft.Practices.Unity;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Unity;
+using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 using TalkingKeyboard.Modules.ByGazeTimePointProcessor;
 using TalkingKeyboard.Modules.CentralTextModule;
 using TalkingKeyboard.Modules.CommandBoard;
@@ -11,6 +12,7 @@ using TalkingKeyboard.Modules.MicrosoftTextToSpeech;
 using TalkingKeyboard.Modules.MultiKeyBoard;
 using TalkingKeyboard.Modules.SingleKeyBoard;
 using TalkingKeyboard.Modules.SuggestionBoard;
+using TalkingKeyboard.Modules.SuggestionsProvider;
 using TalkingKeyboard.Shell.Views;
 
 namespace TalkingKeyboard.Shell
@@ -47,12 +49,13 @@ namespace TalkingKeyboard.Shell
         protected override void ConfigureModuleCatalog()
         {
             ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            moduleCatalog.AddModule(typeof(SuggestionsProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(CommandBoardModule), InitializationMode.OnDemand);
             moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MultiKeyBoardModule), InitializationMode.OnDemand);
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
+            moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(ByGazeTimePointProcessorModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MicrosoftTextToSpeechModule), InitializationMode.WhenAvailable);
         }

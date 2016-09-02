@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.ByG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.MicrosoftTextToSpeech", "TalkingKeyboard.Modules.MicrosoftTextToSpeech\TalkingKeyboard.Modules.MicrosoftTextToSpeech.csproj", "{666C8BF7-6B1E-499C-9759-283620AD19D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.SuggestionsProvider", "TalkingKeyboard.Modules.SuggestionsProvider\TalkingKeyboard.Modules.SuggestionsProvider.csproj", "{07652BA6-87A4-4F7B-BA17-D0844027CB98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{666C8BF7-6B1E-499C-9759-283620AD19D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{666C8BF7-6B1E-499C-9759-283620AD19D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{666C8BF7-6B1E-499C-9759-283620AD19D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,5 +99,6 @@ Global
 		{297FB3B3-9765-4E70-9C50-8ED512954AC9} = {6A20A3E3-5B53-49ED-B399-02C9417A017A}
 		{3A25A2A8-EF5B-4490-9457-50BE3AC5EBA1} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
 		{666C8BF7-6B1E-499C-9759-283620AD19D0} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{07652BA6-87A4-4F7B-BA17-D0844027CB98} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
 	EndGlobalSection
 EndGlobal
