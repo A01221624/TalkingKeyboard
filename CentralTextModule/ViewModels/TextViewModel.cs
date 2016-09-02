@@ -4,15 +4,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
+using Prism.Events;
+using TalkingKeyboard.Infrastructure;
 using TalkingKeyboard.Infrastructure.Controls;
 
 namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 {
 	public class TextViewModel : BindableBase, ITextModel
     {
-        public TextViewModel()
+	    private readonly IEventAggregator _eventAggregator;
+
+	    public TextViewModel(IEventAggregator eventAggregator)
         {
-            _addTextCommand = new DelegateCommand<string>(s => CurrentText += s);
+	        _eventAggregator = eventAggregator;
+	        _addTextCommand = new DelegateCommand<string>(s => CurrentText += s);
             _removeLastCharacterCommand =
                 new DelegateCommand(() => CurrentText = CurrentText.Remove(CurrentText.Length - 1), () => CurrentText.Length > 0)
                     .ObservesProperty(() => CurrentText);
@@ -27,7 +32,11 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 	    public string CurrentText
 	    {
 	        get { return _currentText; }
-	        set { SetProperty(ref _currentText, value); }
+	        set
+	        {
+	            SetProperty(ref _currentText, value); 
+	            _eventAggregator.GetEvent<TextUpdatedEvent>().Publish();
+	        }
 	    }
 
 	    public ICommand AddTextCommand => _addTextCommand;

@@ -11,4 +11,8 @@ namespace TalkingKeyboard.Infrastructure
     public class NewCoordinateEvent : PubSubEvent<Point>
     {
     }
+
+    public class TextUpdatedEvent : PubSubEvent
+    {
+    }
 }
