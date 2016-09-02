@@ -18,19 +18,19 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         private readonly IUnityContainer _container;
         private readonly AveragingFilter _averagingFilter;
         private readonly TimedPoints _timedPoints;
+        private readonly ConcurrentDictionary<SelectableControl, SelectableButtonViewModel> _dataPerControl;
 
         public GazeSelectionService(IEventAggregator eventAggregator, IUnityContainer container)
         {
             _container = container;
             _timedPoints = new TimedPoints(Configuration.PointKeepAliveTimeSpan);
             _averagingFilter = new AveragingLastNpointsWithinTimeSpanFilter(3, TimeSpan.FromMilliseconds(75));
+            _dataPerControl = new ConcurrentDictionary<SelectableControl, SelectableButtonViewModel>();
             Windows.Add(Application.Current.MainWindow);
 
             eventAggregator.GetEvent<NewCoordinateEvent>().Subscribe(ProcessPoint);
             Application.Current.MainWindow.Closing += (sender, args) => eventAggregator.GetEvent<NewCoordinateEvent>().Unsubscribe(ProcessPoint);
         }
-
-        private ConcurrentBag<SelectableControl> KnownControls { get; } = new ConcurrentBag<SelectableControl>();
 
         /// <summary>
         ///     Checks whether the point falls on a control and updates any relevant information.
@@ -49,26 +49,38 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             var point = nullablePoint.Value;
             foreach (var window in Windows)
             {
+
                 var seenControl = HitTestHelper.SelectableControlUnderPoint(point, window);
+
+                foreach (var cd in _dataPerControl)
+                {
+                    var controlData = cd.Value;
+                    var control = cd.Key;
+
+                    var oldestAcceptable = DateTime.Now - controlData.GazeKeepAliveTimeSpan;
+                    controlData.CurrentGazeTimeSpan = oldestAcceptable > controlData.LastSeenTime
+                        ? TimeSpan.Zero
+                        : controlData.CurrentGazeTimeSpan + (DateTime.Now - controlData.LastSeenTime);
+
+                    if (!control.Equals(seenControl))
+                    {
+                        StateMachineUpdateForOtherControls(control, controlData, window);
+                    }
+                    else
+                    {
+                        controlData.LastSeenTime = DateTime.Now;
+                    }
+                }
+
                 if (seenControl == null) continue;
                 SelectableButtonViewModel data = null;
-                window.Dispatcher.Invoke(() => data = seenControl.DataContext as SelectableButtonViewModel);
-                if (data == null) continue;
-                KnownControls.Add(seenControl);
-                var oldestAcceptable = DateTime.Now - data.GazeKeepAliveTimeSpan;
-                data.CurrentGazeTimeSpan = oldestAcceptable > data.LastSeenTime
-                    ? TimeSpan.Zero
-                    : data.CurrentGazeTimeSpan + (DateTime.Now - data.LastSeenTime);
-                data.LastSeenTime = DateTime.Now;
-
-                foreach (var control in KnownControls)
+                if (!_dataPerControl.TryGetValue(seenControl, out data))
                 {
-                    SelectableButtonViewModel controlData = null;
-                    window.Dispatcher.Invoke(() => controlData = control.DataContext as SelectableButtonViewModel);
-                    if (controlData == null) continue;
-                    if (control.Equals(seenControl)) StateMachineUpdateForSeenControl(control, data, window);
-                    else StateMachineUpdateForOtherControls(control, data, window);
+                    window.Dispatcher.Invoke(() => data = seenControl.DataContext as SelectableButtonViewModel);
+                    if (data == null) continue;
+                    _dataPerControl.TryAdd(seenControl, data);
                 }
+                StateMachineUpdateForSeenControl(seenControl, data, window);
             }
         }
 
