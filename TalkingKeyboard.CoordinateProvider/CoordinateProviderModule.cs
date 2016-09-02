@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Modularity;
 using Prism.Regions;
@@ -10,21 +11,18 @@ namespace TalkingKeyboard.Modules.CoordinateProvider
     public class CoordinateProviderModule : IModule
     {
         private readonly IEventAggregator _eventAggregator;
+        private readonly IUnityContainer _unityContainer;
 
-        public CoordinateProviderModule(IEventAggregator eventAggregator)
+        public CoordinateProviderModule(IEventAggregator eventAggregator, IUnityContainer unityContainer)
         {
             _eventAggregator = eventAggregator;
+            _unityContainer = unityContainer;
         }
 
         public void Initialize()
         {
-            EyeXGazeCoordinateService eyeXGazeCoordinateService = new EyeXGazeCoordinateService(_eventAggregator);
-
-            /* TODO: Do this on module unload instead of Application exit */
-            Application.Current.Exit += (sender, args) =>
-            {
-                eyeXGazeCoordinateService.Dispose();
-            };
+            _unityContainer.RegisterType<EyeXGazeCoordinateService>(new ContainerControlledLifetimeManager());
+            _unityContainer.Resolve<EyeXGazeCoordinateService>();
         }
     }
 }
