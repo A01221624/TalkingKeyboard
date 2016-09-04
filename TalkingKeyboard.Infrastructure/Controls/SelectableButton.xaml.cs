@@ -28,7 +28,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         public static readonly DependencyProperty TextProperty = DependencyProperty.Register(
-            "Text", typeof(string), typeof(SelectableButton), new PropertyMetadata("Button"));
+            "Text", typeof(string), typeof(SelectableButton), new PropertyMetadata(default(string)));
 
         public string Text
         {
