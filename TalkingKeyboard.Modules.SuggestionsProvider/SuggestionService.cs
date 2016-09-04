@@ -41,7 +41,6 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
 
         public ObservableCollection<string> ProvideSuggestions(string basedOn)
         {
-            //return new ObservableCollection<string>() { _presageSource.GetDummySuggestions(), _count++.ToString(), _count++.ToString(), _count++.ToString() };
             return _presageSource.GetSuggestions(basedOn);
         }
     }
