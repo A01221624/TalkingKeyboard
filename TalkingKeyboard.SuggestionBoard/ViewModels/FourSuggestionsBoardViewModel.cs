@@ -17,7 +17,7 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
     {
         public FourSuggestionsBoardViewModel(IUnityContainer unityContainer, ISuggestionService suggestionService, ITextModel textModel, IEventAggregator eventAggregator)
         {
-            Suggestions = new ObservableCollection<string>() {"1", "2", "3", "4"};
+            Suggestions = new ObservableCollection<string>();
             eventAggregator.GetEvent<TextUpdatedEvent>()
                 .Subscribe(() =>
                 {

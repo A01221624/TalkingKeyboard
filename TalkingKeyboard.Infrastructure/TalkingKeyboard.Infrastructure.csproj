@@ -88,6 +88,7 @@
     <Compile Include="Enums\SelectableState.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Helpers\HitTestHelper.cs" />
+    <Compile Include="Helpers\StringEditHelper.cs" />
     <Compile Include="MarkupExtensions\SwitchBindingExtension.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

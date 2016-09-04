@@ -7,6 +7,7 @@ using System.Windows.Input;
 using Prism.Events;
 using TalkingKeyboard.Infrastructure;
 using TalkingKeyboard.Infrastructure.Controls;
+using TalkingKeyboard.Infrastructure.Helpers;
 
 namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 {
@@ -21,13 +22,19 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
             _removeLastCharacterCommand =
                 new DelegateCommand(() => CurrentText = CurrentText.Remove(CurrentText.Length - 1), () => CurrentText.Length > 0)
                     .ObservesProperty(() => CurrentText);
+            _removeLasWordCommand = new DelegateCommand(() =>
+            {
+                CurrentText = StringEditHelper.RemoveLastWord(CurrentText);
+            });
             Infrastructure.Commands.SetTextCommand.RegisterCommand(_addTextCommand);
             Infrastructure.Commands.RemoveLastCharacterCommand.RegisterCommand(_removeLastCharacterCommand);
+            Infrastructure.Commands.RemoveLastWordCommand.RegisterCommand(_removeLasWordCommand);
         }
 
 	    private string _currentText = "";
 	    private ICommand _addTextCommand;
 	    private ICommand _removeLastCharacterCommand;
+	    private ICommand _removeLasWordCommand;
 
 	    public string CurrentText
 	    {
@@ -46,5 +53,11 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 	        get { return _removeLastCharacterCommand; }
 	        set { _removeLastCharacterCommand = value; }
 	    }
-	}
+
+	    public ICommand RemoveLasWordCommand
+	    {
+	        get { return _removeLasWordCommand; }
+	        set { _removeLasWordCommand = value; }
+	    }
+    }
 }

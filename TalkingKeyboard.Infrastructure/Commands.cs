@@ -9,5 +9,7 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand SpeechSynthesisCommand = new CompositeCommand();
         public static CompositeCommand ToggleShiftDownCommand = new CompositeCommand();
         public static CompositeCommand RemoveLastCharacterCommand = new CompositeCommand();
+        public static CompositeCommand RemoveLastWordCommand = new CompositeCommand();
+        public static CompositeCommand AddSuggestionCommand = new CompositeCommand();
     }
 }
