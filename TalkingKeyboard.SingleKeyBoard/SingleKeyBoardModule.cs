@@ -20,7 +20,7 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
 
         public void Initialize()
         {
-            _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishSingleKeyboard>());
+            //_regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishSingleKeyboard>());
         }
     }
 }

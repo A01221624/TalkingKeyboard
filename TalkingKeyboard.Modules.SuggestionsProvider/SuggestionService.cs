@@ -16,6 +16,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
     {
         private int _count = 0;
         private PresageSuggestionSource _presageSource = new PresageSuggestionSource();
+        private MultikeySuggestionSource _multikeySource = new MultikeySuggestionSource();
         private ICommand _addSuggestionCommand;
 
         public ICommand AddSuggestionCommand
@@ -42,6 +43,26 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         public ObservableCollection<string> ProvideSuggestions(string basedOn)
         {
             return _presageSource.GetSuggestions(basedOn);
+        }
+
+        public ObservableCollection<string> ProvideMultikeySuggestions()
+        {
+            return _multikeySource.GetSuggestions();
+        }
+
+        public void AddMultiKeyText(string s)
+        {
+            _multikeySource.Add(s);
+        }
+
+        public void RemoveLastMultiCharacter()
+        {
+            _multikeySource.RemoveLastMultiCharacter();
+        }
+
+        public void ClearMultiCharacterBuffer()
+        {
+            _multikeySource.ClearMultiCharacterBuffer();
         }
     }
 }

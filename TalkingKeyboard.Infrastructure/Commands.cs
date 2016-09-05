@@ -11,5 +11,7 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand RemoveLastCharacterCommand = new CompositeCommand();
         public static CompositeCommand RemoveLastWordCommand = new CompositeCommand();
         public static CompositeCommand AddSuggestionCommand = new CompositeCommand();
+        public static CompositeCommand AddMultikeyTextCommand = new CompositeCommand();
+        public static CompositeCommand RemoveLastMultiCharacterCommand = new CompositeCommand();
     }
 }

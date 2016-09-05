@@ -16,5 +16,6 @@ namespace TalkingKeyboard.Infrastructure
             => GazeTimeSpanBeforeSelectionOccurs + GazeCoolDownTimeSpan;
 
         public static TimeSpan PointKeepAliveTimeSpan => TimeSpan.FromSeconds(1);
+        public static string DefaultDictionaryFilePath => @"Resources\SpanishSpain.dic";
     }
 }

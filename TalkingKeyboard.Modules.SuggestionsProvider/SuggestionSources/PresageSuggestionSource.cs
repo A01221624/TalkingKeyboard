@@ -4,11 +4,12 @@ using System.Collections.ObjectModel;
 using System.ServiceModel;
 using System.ServiceModel.MsmqIntegration;
 using TalkingKeyboard.Infrastructure.Helpers;
+using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 using TalkingKeyboard.Modules.SuggestionsProvider.PresageService;
 
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
-    public class PresageSuggestionSource
+    public class PresageSuggestionSource : ISuggestionSource
     {
         private PresageService.PresageChannel channel;
 
@@ -33,10 +34,12 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="currentText"></param>
+        /// <param name="basedOn"></param>
         /// <returns></returns>
-        public ObservableCollection<string> GetSuggestions(string currentText)
+        public ObservableCollection<string> GetSuggestions(object basedOn)
         {
+            var currentText = basedOn as string;
+            if (currentText == null) return new ObservableCollection<string>();
             string prefix, lastWord;
             StringEditHelper.SplitStringPrefixAndLastWord(currentText, out prefix, out lastWord);
             return new ObservableCollection<string>(channel.predict(prefix, lastWord));

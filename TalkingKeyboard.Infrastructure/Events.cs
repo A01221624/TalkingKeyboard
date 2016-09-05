@@ -15,4 +15,8 @@ namespace TalkingKeyboard.Infrastructure
     public class TextUpdatedEvent : PubSubEvent
     {
     }
+
+    public class MultiTextUpdatedEvent : PubSubEvent
+    {
+    }
 }
