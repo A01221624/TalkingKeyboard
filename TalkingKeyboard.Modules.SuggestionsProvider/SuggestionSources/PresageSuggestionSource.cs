@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ServiceModel;
 using System.ServiceModel.MsmqIntegration;
+using System.Text;
 using TalkingKeyboard.Infrastructure.Helpers;
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 using TalkingKeyboard.Modules.SuggestionsProvider.PresageService;
@@ -42,7 +43,13 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
             if (currentText == null) return new ObservableCollection<string>();
             string prefix, lastWord;
             StringEditHelper.SplitStringPrefixAndLastWord(currentText, out prefix, out lastWord);
-            return new ObservableCollection<string>(channel.predict(prefix, lastWord));
+            List<string> result = new List<string>();
+            foreach (var s in channel.predict(prefix, lastWord))
+            {
+                var bytes = Encoding.Default.GetBytes(s);
+                result.Add(Encoding.UTF8.GetString(bytes));
+            }
+            return new ObservableCollection<string>(result);
         }
     }
 }
