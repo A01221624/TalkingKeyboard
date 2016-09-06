@@ -28,6 +28,7 @@
                         <Setter Property="Height" Value="400" />
                         <Setter Property="VerticalAlignment" Value="Stretch" />
                         <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="FontSize" Value="100"></Setter>
                     </Style>
                     <Style x:Key="BoardNavigateButtonContentStyle"
                            TargetType="Rectangle">
@@ -44,7 +45,7 @@
     <DockPanel LastChildFill="True">
         <controls:SelectableButton
             x:Name="PreviousBoardButton"
-            DockPanel.Dock="Left" Text="L"
+            DockPanel.Dock="Left" Text="‹"
             Style="{StaticResource BoardNavigateButtonStyle}"
             Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type metro:MetroWindow}}, Path=DataContext.ChangeViewToLeftCommand}">
             <!--Style="{StaticResource BoardNavigateButtonStyle}">-->
@@ -56,7 +57,7 @@
         </controls:SelectableButton>
         <controls:SelectableButton
             x:Name="NextBoardButton"
-            DockPanel.Dock="Right" Text="R"
+            DockPanel.Dock="Right" Text="›"
             Style="{StaticResource BoardNavigateButtonStyle}"
             Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type metro:MetroWindow}}, Path=DataContext.ChangeViewToRightCommand}">
             <!--Style="{StaticResource BoardNavigateButtonStyle}">
