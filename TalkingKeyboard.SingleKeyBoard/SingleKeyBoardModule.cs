@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
@@ -22,8 +21,9 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
         public void Initialize()
         {
             _unityContainer.RegisterTypeForNavigation<QwertySpanishSingleKeyboard>(
-                Infrastructure.Constants.ViewNames.QwertySpanishSingleKeyboard);
-            _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishSingleKeyboard>());
+                ViewNames.QwertySpanishSingleKeyboard);
+            _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion,
+                () => _unityContainer.Resolve<QwertySpanishSingleKeyboard>());
         }
     }
 }

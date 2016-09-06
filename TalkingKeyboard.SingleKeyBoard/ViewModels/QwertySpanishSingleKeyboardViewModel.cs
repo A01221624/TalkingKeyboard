@@ -1,27 +1,22 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Prism.Commands;
+using TalkingKeyboard.Infrastructure;
 using TalkingKeyboard.Infrastructure.Annotations;
 
 namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
 {
     public class QwertySpanishSingleKeyboardViewModel : INotifyPropertyChanged
     {
+        private bool _isShiftDown;
+
         public QwertySpanishSingleKeyboardViewModel()
         {
-            _setShiftDownCommand = new DelegateCommand<bool?>(b => IsShiftDown = b ?? false);
-            _toggleShiftDownCommand = new DelegateCommand(() => IsShiftDown = !IsShiftDown);
-            Infrastructure.Commands.ToggleShiftDownCommand.RegisterCommand(_toggleShiftDownCommand);
+            SetShiftDownCommand = new DelegateCommand<bool?>(b => IsShiftDown = b ?? false);
+            ToggleShiftDownCommand = new DelegateCommand(() => IsShiftDown = !IsShiftDown);
+            Commands.ToggleShiftDownCommand.RegisterCommand(ToggleShiftDownCommand);
         }
-
-        private bool _isShiftDown = false;
-        private ICommand _setShiftDownCommand;
-        private ICommand _toggleShiftDownCommand;
 
         public bool IsShiftDown
         {
@@ -34,17 +29,9 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
             }
         }
 
-        public ICommand SetShiftDownCommand
-        {
-            get { return _setShiftDownCommand; }
-            set { _setShiftDownCommand = value; }
-        }
+        public ICommand SetShiftDownCommand { get; set; }
 
-        public ICommand ToggleShiftDownCommand
-        {
-            get { return _toggleShiftDownCommand; }
-            set { _toggleShiftDownCommand = value; }
-        }
+        public ICommand ToggleShiftDownCommand { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

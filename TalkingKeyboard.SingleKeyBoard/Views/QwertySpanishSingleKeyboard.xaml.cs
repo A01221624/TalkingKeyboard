@@ -1,10 +1,9 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace TalkingKeyboard.Modules.SingleKeyBoard.Views
 {
     /// <summary>
-    /// Interaction logic for QwertySpanishSingleKeyboard
+    ///     Interaction logic for QwertySpanishSingleKeyboard
     /// </summary>
     public partial class QwertySpanishSingleKeyboard : UserControl
     {
