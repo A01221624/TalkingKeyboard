@@ -1,12 +1,9 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Speech.Synthesis;
+﻿using System.Speech.Synthesis;
 using System.Windows.Input;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using TalkingKeyboard.Infrastructure;
-using TalkingKeyboard.Infrastructure.Annotations;
 using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
@@ -15,25 +12,19 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
     public class TextToSpeechService : BindableBase, ITextToSpeechService
     {
         private readonly SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
-        private ICommand _speechSynthesisCommand;
+
+        private string _currentText;
 
         public TextToSpeechService(ITextModel textModel, IEventAggregator eventAggregator)
         {
             TextModel = textModel;
-            _speechSynthesisCommand =
+            SpeechSynthesisCommand =
                 new DelegateCommand(SayCurrentText, SpeechSynthesisCanExecute).ObservesProperty(() => CurrentText);
-            Commands.SpeechSynthesisCommand.RegisterCommand(_speechSynthesisCommand);
+            Commands.SpeechSynthesisCommand.RegisterCommand(SpeechSynthesisCommand);
             eventAggregator.GetEvent<TextUpdatedEvent>().Subscribe(() => CurrentText = TextModel.CurrentText);
         }
 
-        private bool SpeechSynthesisCanExecute()
-        {
-            return !string.IsNullOrEmpty(CurrentText);
-        }
-
-        private ITextModel TextModel { get; set; }
-
-        private string _currentText;
+        private ITextModel TextModel { get; }
 
         public string CurrentText
         {
@@ -41,11 +32,7 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
             set { SetProperty(ref _currentText, value); }
         }
 
-        public ICommand SpeechSynthesisCommand
-        {
-            get { return _speechSynthesisCommand; }
-            set { _speechSynthesisCommand = value; }
-        }
+        public ICommand SpeechSynthesisCommand { get; set; }
 
         public void Say(string s)
         {
@@ -55,6 +42,11 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         public void SayCurrentText()
         {
             _synthesizer.SpeakAsync(TextModel.CurrentText);
+        }
+
+        private bool SpeechSynthesisCanExecute()
+        {
+            return !string.IsNullOrEmpty(CurrentText);
         }
     }
 }
