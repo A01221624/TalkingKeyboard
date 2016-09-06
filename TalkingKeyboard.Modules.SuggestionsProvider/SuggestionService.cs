@@ -7,6 +7,7 @@ using Prism.Commands;
 using Prism.Events;
 using TalkingKeyboard.Infrastructure;
 using TalkingKeyboard.Infrastructure.Controls;
+using TalkingKeyboard.Infrastructure.Helpers;
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 using TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources;
 
@@ -14,6 +15,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
 {
     public class SuggestionService : ISuggestionService, IDisposable
     {
+        private readonly ITextModel _textModel;
         private int _count = 0;
         private PresageSuggestionSource _presageSource = new PresageSuggestionSource();
         private MultikeySuggestionSource _multikeySource = new MultikeySuggestionSource();
@@ -25,11 +27,15 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
             set { _addSuggestionCommand = value; }
         }
 
-        public SuggestionService()
+        public SuggestionService(ITextModel textModel)
         {
+            _textModel = textModel;
             _addSuggestionCommand = new DelegateCommand<string>((s) =>
             {
-                Infrastructure.Commands.RemoveLastWordCommand.Execute(null);
+                var currentText = textModel.CurrentText;
+                var lastWord = StringEditHelper.GetLastWord(currentText);
+                if (s.StartsWith(lastWord))
+                    Infrastructure.Commands.RemoveLastWordCommand.Execute(null);
                 Infrastructure.Commands.SetTextCommand.Execute(" " + s + " ");
             });
             Infrastructure.Commands.AddSuggestionCommand.RegisterCommand(_addSuggestionCommand);

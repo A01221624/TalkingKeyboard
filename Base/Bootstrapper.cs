@@ -50,12 +50,12 @@ namespace TalkingKeyboard.Shell
         {
             //TODO: Sort based on dependencies (least to most, sort of)
             ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionsProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(CommandBoardModule), InitializationMode.OnDemand);
             moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MultiKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(ByGazeTimePointProcessorModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MicrosoftTextToSpeechModule), InitializationMode.WhenAvailable);
