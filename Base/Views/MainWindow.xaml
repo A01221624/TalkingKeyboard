@@ -6,7 +6,7 @@
                    xmlns:const="clr-namespace:TalkingKeyboard.Infrastructure.Constants;assembly=TalkingKeyboard.Infrastructure"
                    xmlns:controls="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
                    prism:ViewModelLocator.AutoWireViewModel="True"
-                   
+
                    Title="{Binding Title}"
                    Height="900" Width="1280"
                    WindowStartupLocation="CenterScreen"
@@ -28,15 +28,18 @@
                         <Setter Property="Height" Value="400" />
                         <Setter Property="VerticalAlignment" Value="Stretch" />
                         <Setter Property="HorizontalAlignment" Value="Center" />
-                        <Setter Property="FontSize" Value="100"></Setter>
+                        <Setter Property="FontSize" Value="100" />
                     </Style>
                     <Style x:Key="BoardNavigateButtonContentStyle"
                            TargetType="Rectangle">
                         <Setter Property="Width" Value="20" />
                         <Setter Property="Height" Value="20" />
-                        <Setter Property="MaxWidth" Value="{Binding Width, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
-                        <Setter Property="MaxHeight" Value="{Binding Height, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
-                        <Setter Property="Fill" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+                        <Setter Property="MaxWidth"
+                                Value="{Binding Width, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+                        <Setter Property="MaxHeight"
+                                Value="{Binding Height, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+                        <Setter Property="Fill"
+                                Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
                     </Style>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
@@ -101,21 +104,20 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <ContentControl 
+            <ContentControl
                 prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}"
-				Grid.Column="1" Grid.Row="1"
-				Grid.ColumnSpan="11" Grid.RowSpan="2">
-            </ContentControl>
-            <ContentControl 
+                Grid.Column="1" Grid.Row="1"
+                Grid.ColumnSpan="11" Grid.RowSpan="2" />
+            <ContentControl
                 prism:RegionManager.RegionName="{x:Static const:RegionNames.BoardViewRegion}"
-				Grid.Column="1" Grid.Row="4"
-				Grid.ColumnSpan="11" Grid.RowSpan="7">
+                Grid.Column="1" Grid.Row="4"
+                Grid.ColumnSpan="11" Grid.RowSpan="7">
                 <!--<Canvas Background="Aquamarine" />-->
             </ContentControl>
-            <ContentControl 
+            <ContentControl
                 prism:RegionManager.RegionName="{x:Static const:RegionNames.SuggestionRegion}"
-				Grid.Column="1" Grid.Row="12"
-				Grid.ColumnSpan="11" Grid.RowSpan="2">
+                Grid.Column="1" Grid.Row="12"
+                Grid.ColumnSpan="11" Grid.RowSpan="2">
                 <!--<Canvas Background="Aquamarine" />-->
             </ContentControl>
         </Grid>

@@ -3,19 +3,18 @@ using Prism.Logging;
 
 namespace TalkingKeyboard.Shell.Logging
 {
-
     public class NLogLogger : ILoggerFacade
     {
         #region Members and Constants
 
-        private Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         #endregion Members and Constants 
 
         #region ILoggerFacade Members
 
         /// <summary>
-        /// Write a new log entry with the specified category and priority.
+        ///     Write a new log entry with the specified category and priority.
         /// </summary>
         /// <param name="message">Message body to log.</param>
         /// <param name="category">Category of the entry.</param>

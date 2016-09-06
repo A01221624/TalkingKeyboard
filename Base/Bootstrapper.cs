@@ -3,7 +3,6 @@ using Microsoft.Practices.Unity;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Unity;
-using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 using TalkingKeyboard.Modules.ByGazeTimePointProcessor;
 using TalkingKeyboard.Modules.CentralTextModule;
 using TalkingKeyboard.Modules.CommandBoard;
@@ -13,11 +12,12 @@ using TalkingKeyboard.Modules.MultiKeyBoard;
 using TalkingKeyboard.Modules.SingleKeyBoard;
 using TalkingKeyboard.Modules.SuggestionBoard;
 using TalkingKeyboard.Modules.SuggestionsProvider;
+using TalkingKeyboard.Shell.Logging;
 using TalkingKeyboard.Shell.Views;
 
 namespace TalkingKeyboard.Shell
 {
-    class Bootstrapper : UnityBootstrapper
+    internal class Bootstrapper : UnityBootstrapper
     {
         protected override DependencyObject CreateShell()
         {
@@ -49,7 +49,7 @@ namespace TalkingKeyboard.Shell
         protected override void ConfigureModuleCatalog()
         {
             //TODO: Sort based on dependencies (least to most, sort of)
-            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            var moduleCatalog = (ModuleCatalog) ModuleCatalog;
             moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionsProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(CommandBoardModule), InitializationMode.OnDemand);
@@ -62,13 +62,13 @@ namespace TalkingKeyboard.Shell
         }
 
         /// <summary>
-        /// Create logger
+        ///     Create logger
         /// </summary>
         /// <returns></returns>
         protected override ILoggerFacade CreateLogger()
         {
             //return base.CreateLogger();
-            return new Logging.NLogLogger();
+            return new NLogLogger();
         }
     }
 }
