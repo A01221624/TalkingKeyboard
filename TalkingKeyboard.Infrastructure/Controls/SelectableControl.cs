@@ -80,8 +80,9 @@ namespace TalkingKeyboard.Infrastructure.Controls
 
         public void Select()
         {
-            var canExecute = Command?.CanExecute(CommandParameter);
-            if (canExecute == null || !canExecute.Value) return;
+            if (Command == null) return;
+            var canExecute = Command.CanExecute(CommandParameter);
+            if (!canExecute) return;
             Command?.Execute(CommandParameter);
             System.Media.SystemSounds.Hand.Play();
         }
