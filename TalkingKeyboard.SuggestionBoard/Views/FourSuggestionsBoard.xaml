@@ -5,15 +5,14 @@
              xmlns:v="clr-namespace:TalkingKeyboard.Modules.SuggestionBoard.Views"
              xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
              xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
              d:DesignHeight="100" d:DesignWidth="500"
-             prism:ViewModelLocator.AutoWireViewModel="True"
-             >
+             prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <Style x:Key="SuggestionTextBoxStyle"
-                   TargetType="TextBlock">
+               TargetType="TextBlock">
             <Setter Property="FontSize" Value="25" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
@@ -22,25 +21,25 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*"  />
-            <ColumnDefinition Width="*"  />
-            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <sc:SelectableButton Grid.Column="0" HorizontalAlignment="Stretch"
                              Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
-                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[0]}"/>
+                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[0]}" />
         <sc:SelectableButton Grid.Column="1" HorizontalAlignment="Stretch"
                              Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
-                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[1]}"/>
+                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[1]}" />
         <sc:SelectableButton Grid.Column="2" HorizontalAlignment="Stretch"
                              Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
-                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[2]}"/>
+                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[2]}" />
         <sc:SelectableButton Grid.Column="3" HorizontalAlignment="Stretch"
                              Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
-                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[3]}"/>
+                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[3]}" />
     </Grid>
 </UserControl>

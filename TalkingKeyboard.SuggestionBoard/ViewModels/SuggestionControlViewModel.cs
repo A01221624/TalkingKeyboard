@@ -1,20 +1,16 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Prism.Mvvm;
 using TalkingKeyboard.Modules.SuggestionBoard.Model;
 
 namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
 {
     public class SuggestionControlViewModel : BindableBase
     {
+        private Suggestion _suggestion;
+
         public SuggestionControlViewModel(string suggestion)
         {
-            Suggestion = new Suggestion() {Text = suggestion};
+            Suggestion = new Suggestion {Text = suggestion};
         }
-
-        private Suggestion _suggestion;
 
         public Suggestion Suggestion
         {

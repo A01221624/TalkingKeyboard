@@ -3,7 +3,7 @@
 namespace TalkingKeyboard.Modules.SuggestionBoard.Views
 {
     /// <summary>
-    /// Interaction logic for FourSuggestionsBoard
+    ///     Interaction logic for FourSuggestionsBoard
     /// </summary>
     public partial class FourSuggestionsBoard : UserControl
     {

@@ -1,10 +1,9 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace TalkingKeyboard.Modules.SuggestionBoard.Views
 {
     /// <summary>
-    /// Interaction logic for SuggestionControl
+    ///     Interaction logic for SuggestionControl
     /// </summary>
     public partial class SuggestionControl : UserControl
     {

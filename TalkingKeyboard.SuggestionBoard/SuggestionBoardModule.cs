@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
 using TalkingKeyboard.Infrastructure.Constants;
@@ -25,7 +24,8 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
             _unityContainer.RegisterType<ISuggestionsViewModel, FourSuggestionsBoardViewModel>(
                 new ContainerControlledLifetimeManager());
             _unityContainer.Resolve<ISuggestionsViewModel>();
-            _regionManager.RegisterViewWithRegion(RegionNames.SuggestionRegion, () => _unityContainer.Resolve<FourSuggestionsBoard>());
+            _regionManager.RegisterViewWithRegion(RegionNames.SuggestionRegion,
+                () => _unityContainer.Resolve<FourSuggestionsBoard>());
         }
     }
 }
