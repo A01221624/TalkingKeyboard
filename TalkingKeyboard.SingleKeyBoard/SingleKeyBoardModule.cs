@@ -2,6 +2,7 @@
 using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Unity;
 using TalkingKeyboard.Infrastructure.Constants;
 using TalkingKeyboard.Modules.SingleKeyBoard.Views;
 
@@ -20,7 +21,9 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
 
         public void Initialize()
         {
-            //_regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishSingleKeyboard>());
+            _unityContainer.RegisterTypeForNavigation<QwertySpanishSingleKeyboard>(
+                Infrastructure.Constants.ViewNames.QwertySpanishSingleKeyboard);
+            _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishSingleKeyboard>());
         }
     }
 }

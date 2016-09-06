@@ -2,6 +2,7 @@
 using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Unity;
 using TalkingKeyboard.Infrastructure.Constants;
 using TalkingKeyboard.Infrastructure.Models;
 using TalkingKeyboard.Modules.MultiKeyBoard.Model;
@@ -24,6 +25,8 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
         {
             _unityContainer.RegisterType<IMultiKeyTextModel, MultikeyTextModel>(new ContainerControlledLifetimeManager());
             _unityContainer.Resolve<IMultiKeyTextModel>();
+            _unityContainer.RegisterTypeForNavigation<QwertySpanishMultiKeyboard>(
+                Infrastructure.Constants.ViewNames.QwertySpanishMultiKeyboard);
             _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishMultiKeyboard>());
         }
     }

@@ -4,6 +4,7 @@
                    xmlns:prism="http://prismlibrary.com/"
                    xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                    xmlns:const="clr-namespace:TalkingKeyboard.Infrastructure.Constants;assembly=TalkingKeyboard.Infrastructure"
+                   xmlns:controls="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
                    prism:ViewModelLocator.AutoWireViewModel="True"
                    
                    Title="{Binding Title}"
@@ -22,10 +23,10 @@
                 <ResourceDictionary Source="/Resources/Icons.xaml" />
                 <ResourceDictionary>
                     <Style x:Key="BoardNavigateButtonStyle"
-                           TargetType="Button">
-                        <Setter Property="Width" Value="25" />
-                        <Setter Property="Height" Value="70" />
-                        <Setter Property="VerticalAlignment" Value="Center" />
+                           TargetType="controls:SelectableButton">
+                        <Setter Property="Width" Value="75" />
+                        <Setter Property="Height" Value="400" />
+                        <Setter Property="VerticalAlignment" Value="Stretch" />
                         <Setter Property="HorizontalAlignment" Value="Center" />
                     </Style>
                     <Style x:Key="BoardNavigateButtonContentStyle"
@@ -41,24 +42,30 @@
         </ResourceDictionary>
     </Window.Resources>
     <DockPanel LastChildFill="True">
-        <Button x:Name="PreviousBoardButton"
-				DockPanel.Dock="Left"
-				Style="{StaticResource BoardNavigateButtonStyle}">
-            <Rectangle Style="{StaticResource BoardNavigateButtonContentStyle}">
+        <controls:SelectableButton
+            x:Name="PreviousBoardButton"
+            DockPanel.Dock="Left" Text="L"
+            Style="{StaticResource BoardNavigateButtonStyle}"
+            Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type metro:MetroWindow}}, Path=DataContext.ChangeViewToLeftCommand}">
+            <!--Style="{StaticResource BoardNavigateButtonStyle}">-->
+            <!--<Rectangle Style="{StaticResource BoardNavigateButtonContentStyle}">
                 <Rectangle.OpacityMask>
                     <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_chevron_left}" />
                 </Rectangle.OpacityMask>
-            </Rectangle>
-        </Button>
-        <Button x:Name="NextBoardButton"
-				DockPanel.Dock="Right"
-				Style="{StaticResource BoardNavigateButtonStyle}">
+            </Rectangle>-->
+        </controls:SelectableButton>
+        <controls:SelectableButton
+            x:Name="NextBoardButton"
+            DockPanel.Dock="Right" Text="R"
+            Style="{StaticResource BoardNavigateButtonStyle}"
+            Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type metro:MetroWindow}}, Path=DataContext.ChangeViewToRightCommand}">
+            <!--Style="{StaticResource BoardNavigateButtonStyle}">
             <Rectangle Style="{StaticResource BoardNavigateButtonContentStyle}">
                 <Rectangle.OpacityMask>
                     <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_chevron_right}" />
                 </Rectangle.OpacityMask>
-            </Rectangle>
-        </Button>
+            </Rectangle>-->
+        </controls:SelectableButton>
 
         <Grid>
             <Grid.RowDefinitions>
