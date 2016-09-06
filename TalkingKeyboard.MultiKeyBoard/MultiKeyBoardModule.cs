@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
@@ -12,8 +11,8 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
 {
     public class MultiKeyBoardModule : IModule
     {
-        IRegionManager _regionManager;
         private readonly IUnityContainer _unityContainer;
+        private readonly IRegionManager _regionManager;
 
         public MultiKeyBoardModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
@@ -26,8 +25,9 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
             _unityContainer.RegisterType<IMultiKeyTextModel, MultikeyTextModel>(new ContainerControlledLifetimeManager());
             _unityContainer.Resolve<IMultiKeyTextModel>();
             _unityContainer.RegisterTypeForNavigation<QwertySpanishMultiKeyboard>(
-                Infrastructure.Constants.ViewNames.QwertySpanishMultiKeyboard);
-            _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion, () => _unityContainer.Resolve<QwertySpanishMultiKeyboard>());
+                ViewNames.QwertySpanishMultiKeyboard);
+            _regionManager.RegisterViewWithRegion(RegionNames.BoardViewRegion,
+                () => _unityContainer.Resolve<QwertySpanishMultiKeyboard>());
         }
     }
 }

@@ -3,7 +3,7 @@
 namespace TalkingKeyboard.Modules.MultiKeyBoard.Views
 {
     /// <summary>
-    /// Interaction logic for QwertySpanishMultiKeyboard
+    ///     Interaction logic for QwertySpanishMultiKeyboard
     /// </summary>
     public partial class QwertySpanishMultiKeyboard : UserControl
     {
