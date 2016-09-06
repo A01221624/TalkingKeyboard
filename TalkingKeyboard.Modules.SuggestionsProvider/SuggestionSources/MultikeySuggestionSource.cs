@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
+using TalkingKeyboard.Infrastructure.Constants;
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
@@ -10,23 +9,24 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
     public class MultikeySuggestionSource : ISuggestionSource
     {
         private readonly List<List<string>> _filteredDictionary = new List<List<string>>();
-        private List<string> _receivedMultikeys = new List<string>();
-        private int caretPosition = 0;
+        private readonly List<string> _receivedMultikeys = new List<string>();
+        private int caretPosition;
 
         public MultikeySuggestionSource()
         {
-            LoadDictionarySortedByFrequency(Infrastructure.Constants.ResourceLocations.DefaultDictionaryLocation);
+            LoadDictionarySortedByFrequency(ResourceLocations.DefaultDictionaryLocation);
         }
 
         /// <summary>
-        /// Filters and returns suggestions according to the multi-key buffer.
+        ///     Filters and returns suggestions according to the multi-key buffer.
         /// </summary>
         /// <param name="basedOn"></param>
         /// <returns>
-        /// Returns disambiguation suggestions first and the rest are auto-complete suggestions.
+        ///     Returns disambiguation suggestions first and the rest are auto-complete suggestions.
         /// </returns>
         /// <remarks>
-        /// Disambiguation are those which match the number of keys selected and auto-complete are those which include keys which have not been selected yet.
+        ///     Disambiguation are those which match the number of keys selected and auto-complete are those which include keys
+        ///     which have not been selected yet.
         /// </remarks>
         public ObservableCollection<string> GetSuggestions(object basedOn = null)
         {

@@ -14,9 +14,9 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
 {
     public class SuggestionService : ISuggestionService, IDisposable
     {
-        private readonly ITextModel _textModel;
         private readonly MultikeySuggestionSource _multikeySource = new MultikeySuggestionSource();
         private readonly PresageSuggestionSource _presageSource = new PresageSuggestionSource();
+        private readonly ITextModel _textModel;
 
         public SuggestionService(ITextModel textModel)
         {

@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="urn:Presage/2015/03/10" elementFormDefault="qualified" targetNamespace="urn:Presage/2015/03/10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:schema xmlns:tns="urn:Presage/2015/03/10" elementFormDefault="qualified" targetNamespace="urn:Presage/2015/03/10"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="predict">
     <xs:complexType>
@@ -12,7 +14,8 @@
   <xs:element name="predictResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="predictResult" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0"
+                    name="predictResult" nillable="true" type="q1:ArrayOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
