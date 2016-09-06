@@ -4,11 +4,12 @@ using TalkingKeyboard.Infrastructure.Controls;
 
 namespace TalkingKeyboard.Infrastructure.Helpers
 {
-
     /* Not thread safe, but only makes sense to be called from UI Thread anyway. */
+
     public static class HitTestHelper
     {
         private static SelectableControl _selectableControlSeen;
+
         public static SelectableControl SelectableControlUnderPoint(Point point, Window window)
         {
             _selectableControlSeen = null;
@@ -35,10 +36,7 @@ namespace TalkingKeyboard.Infrastructure.Helpers
                 _selectableControlSeen = visualHit as SelectableControl;
                 return HitTestResultBehavior.Stop;
             }
-            else
-            {
-                return HitTestResultBehavior.Continue;
-            }
+            return HitTestResultBehavior.Continue;
         }
     }
 }

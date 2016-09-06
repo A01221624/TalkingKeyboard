@@ -21,7 +21,5 @@ namespace TalkingKeyboard.Infrastructure.Controls
         void StopAnimation();
         void ResumeAnimation();
         void Select();
-
-
     }
 }

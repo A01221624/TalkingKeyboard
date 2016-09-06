@@ -26,13 +26,13 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
 
         public override void AddPoint(Point point)
         {
-                var seenControl = HitTestHelper.SelectableControlUnderPoint(point, _window);
-                if (seenControl == null) return;
-                if (!ContainsKey(seenControl))
-                {
-                    TryAdd(seenControl, new TimedPoints(PointKeepAliveTimeSpan));
-                }
-                this[seenControl].AddPoint(point);
+            var seenControl = HitTestHelper.SelectableControlUnderPoint(point, _window);
+            if (seenControl == null) return;
+            if (!ContainsKey(seenControl))
+            {
+                TryAdd(seenControl, new TimedPoints(PointKeepAliveTimeSpan));
+            }
+            this[seenControl].AddPoint(point);
         }
     }
 }

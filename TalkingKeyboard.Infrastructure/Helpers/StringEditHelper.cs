@@ -1,4 +1,4 @@
-﻿using System;
+﻿using TalkingKeyboard.Infrastructure.Constants;
 
 namespace TalkingKeyboard.Infrastructure.Helpers
 {
@@ -6,10 +6,10 @@ namespace TalkingKeyboard.Infrastructure.Helpers
     {
         public static void SplitStringPrefixAndLastWord(string s, out string prefix, out string lastWord)
         {
-            prefix = String.Empty;
-            lastWord = String.Empty;
-            if (s == null || s.Equals(String.Empty)) return;
-            var indexLastWord = s.LastIndexOfAny(Constants.CharacterClasses.WordSeparators) + 1;
+            prefix = string.Empty;
+            lastWord = string.Empty;
+            if (s == null || s.Equals(string.Empty)) return;
+            var indexLastWord = s.LastIndexOfAny(CharacterClasses.WordSeparators) + 1;
             lastWord = s.Length > indexLastWord ? s.Substring(indexLastWord) : string.Empty;
             prefix = s.Length > indexLastWord ? s.Remove(indexLastWord) : s;
         }

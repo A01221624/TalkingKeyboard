@@ -11,23 +11,25 @@ namespace TalkingKeyboard.Infrastructure.Controls
 {
     public class SelectableButtonViewModel : ISelectableControlViewModel, INotifyPropertyChanged
     {
-        private string _buttonText;
-        private DateTime _lastSelectedTime = DateTime.MinValue;
-        private DateTime _lastSeenTime = DateTime.MinValue;
-        private TimeSpan _currentGazeTimeSpan = TimeSpan.Zero;
-        private SelectableState _state = SelectableState.Idle;
-        private TimeSpan _gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
-        private TimeSpan _gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
-        private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
-        private TimeSpan _gazeTimeSpanBeforeCooldown = Configuration.GazeTimeSpanBeforeCooldownazeTimeSpanBeforeSelectionOccurs;
         private Storyboard _animation;
+        private KeyTime _animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
+        private KeyTime _animationEndTime = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private string _buttonText;
         private ICommand _command;
         private object _commandParameter;
         private IInputElement _commandTarget;
-        private KeyTime _animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
-        private KeyTime _animationEndTime = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private TimeSpan _currentGazeTimeSpan = TimeSpan.Zero;
         private double _fontSize = 40;
-        public event PropertyChangedEventHandler PropertyChanged;
+        private TimeSpan _gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
+        private TimeSpan _gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
+
+        private TimeSpan _gazeTimeSpanBeforeCooldown =
+            Configuration.GazeTimeSpanBeforeCooldownazeTimeSpanBeforeSelectionOccurs;
+
+        private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private DateTime _lastSeenTime = DateTime.MinValue;
+        private DateTime _lastSelectedTime = DateTime.MinValue;
+        private SelectableState _state = SelectableState.Idle;
 
         public string ButtonText
         {
@@ -40,11 +42,40 @@ namespace TalkingKeyboard.Infrastructure.Controls
             }
         }
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public double FontSize
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            get { return _fontSize; }
+            set
+            {
+                if (value.Equals(_fontSize)) return;
+                _fontSize = value;
+                OnPropertyChanged();
+            }
         }
+
+        public KeyTime AnimationBeginTime
+        {
+            get { return _animationBeginTime; }
+            set
+            {
+                if (value.Equals(_animationBeginTime)) return;
+                _animationBeginTime = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public KeyTime AnimationEndTime
+        {
+            get { return _animationEndTime; }
+            set
+            {
+                if (value.Equals(_animationEndTime)) return;
+                _animationEndTime = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public ICommand Command
         {
@@ -75,17 +106,6 @@ namespace TalkingKeyboard.Infrastructure.Controls
             {
                 if (Equals(value, _commandTarget)) return;
                 _commandTarget = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public double FontSize
-        {
-            get { return _fontSize; }
-            set
-            {
-                if (value.Equals(_fontSize)) return;
-                _fontSize = value;
                 OnPropertyChanged();
             }
         }
@@ -178,28 +198,6 @@ namespace TalkingKeyboard.Infrastructure.Controls
             }
         }
 
-        public KeyTime AnimationBeginTime
-        {
-            get { return _animationBeginTime; }
-            set
-            {
-                if (value.Equals(_animationBeginTime)) return;
-                _animationBeginTime = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public KeyTime AnimationEndTime
-        {
-            get { return _animationEndTime; }
-            set
-            {
-                if (value.Equals(_animationEndTime)) return;
-                _animationEndTime = value;
-                OnPropertyChanged();
-            }
-        }
-
         public Storyboard Animation
         {
             get { return _animation; }
@@ -234,6 +232,12 @@ namespace TalkingKeyboard.Infrastructure.Controls
         public void Select()
         {
             throw new NotImplementedException();
+        }
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

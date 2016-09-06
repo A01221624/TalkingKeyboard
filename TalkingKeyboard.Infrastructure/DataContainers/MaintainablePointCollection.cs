@@ -26,15 +26,15 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
         public abstract void Maintain();
 
         public abstract void AddPoint(Point point);
-        //{
-
-        //IEnumerator IEnumerable.GetEnumerator()
-        //}
-        //    return Collection.GetEnumerator();
-        //{
 
 
         //public IEnumerator<KeyValuePair<T1, T2>> GetEnumerator()
+        //{
+        //    return Collection.GetEnumerator();
+        //}
+
+        //IEnumerator IEnumerable.GetEnumerator()
+        //{
         //    return GetEnumerator();
         //}
 
