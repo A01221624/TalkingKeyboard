@@ -29,25 +29,27 @@ namespace TalkingKeyboard.Infrastructure.Constants
         public static char[] Whitespace = {' ', '\r', '\n', '\t'};
         public static char[] ColonsAndCommas = {'.', ';', ',', ':'};
         public static char[] ClosingCharacters = {'?', '!', ')', ']', '}', '>'};
-        public static char[] Accents = { '´', '¨'};
+        public static char[] Accents = {'´', '¨'};
 
         public static char[] PreceededByNonwhitespaceFollowedByWhitespace =
             ColonsAndCommas.ToList().Concat(ClosingCharacters.ToList()).ToArray();
 
         public static char[] WordSeparators =
             Whitespace.ToList().Concat(PreceededByNonwhitespaceFollowedByWhitespace.ToList()).ToArray();
-        public static Dictionary<char, Dictionary<char, char>> AccentLookup = new Dictionary<char, Dictionary<char, char>>()
+
+        public static Dictionary<char, Dictionary<char, char>> AccentLookup = new Dictionary
+            <char, Dictionary<char, char>>
         {
-            { 'a', new Dictionary<char, char>() { { '´', 'á'} } },
-            { 'e', new Dictionary<char, char>() { { '´', 'é'} } },
-            { 'i', new Dictionary<char, char>() { { '´', 'í'} } },
-            { 'o', new Dictionary<char, char>() { { '´', 'ó'} } },
-            { 'u', new Dictionary<char, char>() { { '´', 'ú'}, { '¨', 'ü' } } },
-            { 'A', new Dictionary<char, char>() { { '´', 'Á'} } },
-            { 'E', new Dictionary<char, char>() { { '´', 'É'} } },
-            { 'I', new Dictionary<char, char>() { { '´', 'Í'} } },
-            { 'O', new Dictionary<char, char>() { { '´', 'Ó'} } },
-            { 'U', new Dictionary<char, char>() { { '´', 'Ú'}, { '¨', 'Ü' } } }
+            {'a', new Dictionary<char, char> {{'´', 'á'}}},
+            {'e', new Dictionary<char, char> {{'´', 'é'}}},
+            {'i', new Dictionary<char, char> {{'´', 'í'}}},
+            {'o', new Dictionary<char, char> {{'´', 'ó'}}},
+            {'u', new Dictionary<char, char> {{'´', 'ú'}, {'¨', 'ü'}}},
+            {'A', new Dictionary<char, char> {{'´', 'Á'}}},
+            {'E', new Dictionary<char, char> {{'´', 'É'}}},
+            {'I', new Dictionary<char, char> {{'´', 'Í'}}},
+            {'O', new Dictionary<char, char> {{'´', 'Ó'}}},
+            {'U', new Dictionary<char, char> {{'´', 'Ú'}, {'¨', 'Ü'}}}
         };
     }
 }
