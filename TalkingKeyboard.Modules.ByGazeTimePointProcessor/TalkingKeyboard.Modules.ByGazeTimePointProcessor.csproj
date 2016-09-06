@@ -109,10 +109,7 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TalkingKeyboard.Infrastructure\TalkingKeyboard.Infrastructure.csproj">
       <Project>{297FB3B3-9765-4E70-9C50-8ED512954AC9}</Project>
