@@ -1,9 +1,6 @@
-﻿using System;
-using System.Windows;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Prism.Events;
 using Prism.Modularity;
-using Prism.Regions;
 using TalkingKeyboard.Modules.CoordinateProvider.Services;
 
 namespace TalkingKeyboard.Modules.CoordinateProvider
