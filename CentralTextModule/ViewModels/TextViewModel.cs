@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows.Input;
 using Prism.Events;
 using TalkingKeyboard.Infrastructure;
+using TalkingKeyboard.Infrastructure.Constants;
 using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Infrastructure.Helpers;
 
@@ -18,7 +19,15 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 	    public TextViewModel(IEventAggregator eventAggregator)
         {
 	        _eventAggregator = eventAggregator;
-	        _addTextCommand = new DelegateCommand<string>(s => CurrentText += s);
+	        _addTextCommand = new DelegateCommand<string>(s =>
+	        {
+	            if (s.Length == 0) return;
+                if (CurrentText.Length > 0
+                && CharacterClasses.PreceededByNonwhitespaceFollowedByWhitespace.Contains(s[0])
+                && CharacterClasses.Whitespace.Contains(CurrentText[CurrentText.Length - 1]))
+                    CurrentText = CurrentText.Remove(CurrentText.Length - 1);
+                CurrentText += s;
+	        });
             _removeLastCharacterCommand =
                 new DelegateCommand(() => CurrentText = CurrentText.Remove(CurrentText.Length - 1), () => CurrentText.Length > 0)
                     .ObservesProperty(() => CurrentText);
