@@ -10,7 +10,8 @@
              d:DesignHeight="300" d:DesignWidth="300"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-    metro:ButtonHelper.PreserveTextCase="True">
+    metro:ButtonHelper.PreserveTextCase="True"
+    FontSize="{Binding FontSize, Mode=TwoWay}">
     <local:SelectableControl.Resources>
         <Storyboard x:Key="ArcSelectionAnimation">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(ed:Arc.EndAngle)" Storyboard.TargetName="arc">
@@ -28,7 +29,7 @@
 			Command="{Binding Command, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
 			CommandParameter="{Binding CommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
-                FontSize="{Binding FontSize, FallbackValue=40, Mode=TwoWay}"
+                FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}, FallbackValue=40, Mode=OneWay}"
                 FontFamily="Calibri Light"
                 
                 

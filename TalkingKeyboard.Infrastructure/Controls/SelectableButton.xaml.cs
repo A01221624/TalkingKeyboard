@@ -35,5 +35,14 @@ namespace TalkingKeyboard.Infrastructure.Controls
             get { return (string) GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
+
+        public new static readonly DependencyProperty FontSizeProperty = DependencyProperty.Register(
+            "FontSize", typeof(int), typeof(SelectableButton), new PropertyMetadata(default(int)));
+
+        public new int FontSize
+        {
+            get { return (int) GetValue(FontSizeProperty); }
+            set { SetValue(FontSizeProperty, value); }
+        }
     }
 }
