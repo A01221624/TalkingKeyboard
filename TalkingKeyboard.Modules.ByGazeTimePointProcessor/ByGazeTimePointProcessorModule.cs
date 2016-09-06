@@ -1,7 +1,5 @@
-﻿using Prism.Modularity;
-using Prism.Regions;
-using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
+using Prism.Modularity;
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
 namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
@@ -17,7 +15,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
 
         public void Initialize()
         {
-            _unityContainer.RegisterType<IControlActivationService, GazeSelectionService>(new ContainerControlledLifetimeManager());
+            _unityContainer.RegisterType<IControlActivationService, GazeSelectionService>(
+                new ContainerControlledLifetimeManager());
             _unityContainer.Resolve<IControlActivationService>();
         }
     }

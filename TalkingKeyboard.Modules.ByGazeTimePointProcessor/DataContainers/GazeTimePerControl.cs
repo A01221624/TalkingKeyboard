@@ -38,7 +38,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.DataContainers
             if (seenControl == null) return;
             var oldestAcceptable = DateTime.Now - _gazeKeepAliveTimeSpan;
             DateTime lastTimeSeen;
-            if(!LastTimePerControl.TryGetValue(seenControl, out lastTimeSeen))
+            if (!LastTimePerControl.TryGetValue(seenControl, out lastTimeSeen))
             {
                 lastTimeSeen = DateTime.MinValue;
                 LastTimePerControl.Add(seenControl, DateTime.Now);

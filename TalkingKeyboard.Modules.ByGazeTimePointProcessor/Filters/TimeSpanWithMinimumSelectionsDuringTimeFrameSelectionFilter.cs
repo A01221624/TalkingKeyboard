@@ -9,10 +9,11 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     public class TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter : SelectionFilter<TimedControlsWithPoint>
     {
-        private readonly TimeSpan _timeFrame;
         private readonly int _pointsRequired;
+        private readonly TimeSpan _timeFrame;
 
-        public TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter(Window window, TimeSpan timeFrame, int pointsRequired) : base(window)
+        public TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter(Window window, TimeSpan timeFrame,
+            int pointsRequired) : base(window)
         {
             _timeFrame = timeFrame;
             _pointsRequired = pointsRequired;

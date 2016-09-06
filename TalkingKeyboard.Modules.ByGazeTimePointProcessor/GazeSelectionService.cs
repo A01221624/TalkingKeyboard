@@ -15,10 +15,10 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
 {
     public class GazeSelectionService : IControlActivationService
     {
-        private readonly IUnityContainer _container;
         private readonly AveragingFilter _averagingFilter;
-        private readonly TimedPoints _timedPoints;
+        private readonly IUnityContainer _container;
         private readonly ConcurrentDictionary<SelectableControl, SelectableButtonViewModel> _dataPerControl;
+        private readonly TimedPoints _timedPoints;
 
         public GazeSelectionService(IEventAggregator eventAggregator, IUnityContainer container)
         {
@@ -29,7 +29,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             Windows.Add(Application.Current.MainWindow);
 
             eventAggregator.GetEvent<NewCoordinateEvent>().Subscribe(ProcessPoint);
-            Application.Current.MainWindow.Closing += (sender, args) => eventAggregator.GetEvent<NewCoordinateEvent>().Unsubscribe(ProcessPoint);
+            Application.Current.MainWindow.Closing +=
+                (sender, args) => eventAggregator.GetEvent<NewCoordinateEvent>().Unsubscribe(ProcessPoint);
         }
 
         /// <summary>
@@ -49,7 +50,6 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             var point = nullablePoint.Value;
             foreach (var window in Windows)
             {
-
                 var seenControl = HitTestHelper.SelectableControlUnderPoint(point, window);
 
                 foreach (var cd in _dataPerControl)
@@ -84,7 +84,10 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             }
         }
 
-        private void StateMachineUpdateForOtherControls(SelectableControl control, SelectableButtonViewModel data, Window window)
+        public ConcurrentBag<Window> Windows { get; set; } = new ConcurrentBag<Window>();
+
+        private void StateMachineUpdateForOtherControls(SelectableControl control, SelectableButtonViewModel data,
+            Window window)
         {
             switch (data.State)
             {
@@ -124,7 +127,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             }
         }
 
-        private void StateMachineUpdateForSeenControl(SelectableControl seenControl, SelectableButtonViewModel data, Window window)
+        private void StateMachineUpdateForSeenControl(SelectableControl seenControl, SelectableButtonViewModel data,
+            Window window)
         {
             switch (data.State)
             {
@@ -171,7 +175,5 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                     throw new ArgumentOutOfRangeException();
             }
         }
-
-        public ConcurrentBag<Window> Windows { get; set; } = new ConcurrentBag<Window>();
     }
 }
