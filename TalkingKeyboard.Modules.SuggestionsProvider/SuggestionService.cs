@@ -45,13 +45,13 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
             return AddSpaceAndUppercaseIfNecessary(suggestions);
         }
 
-        public ObservableCollection<string> ProvideMultikeySuggestions()
+        public ObservableCollection<string> ProvideMultiCharacterSuggestions()
         {
             var suggestions = _multikeySource.GetSuggestions();
             return AddSpaceAndUppercaseIfNecessary(suggestions);
         }
 
-        public void AddMultiKeyText(string s)
+        public void AddMultiCharacterText(string s)
         {
             _multikeySource.Add(s);
         }

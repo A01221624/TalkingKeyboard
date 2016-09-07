@@ -21,15 +21,15 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
             var model = new MultikeyTextModel();
             AddMultikeyTextCommand = new DelegateCommand<string>(s =>
             {
-                _suggestionService.AddMultiKeyText(s);
-                _eventAggregator.GetEvent<MultiTextUpdatedEvent>().Publish();
+                _suggestionService.AddMultiCharacterText(s);
+                _eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Publish();
             });
             RemoveLastMultiCharacterCommand = new DelegateCommand(() =>
             {
                 _suggestionService.RemoveLastMultiCharacter();
-                _eventAggregator.GetEvent<MultiTextUpdatedEvent>().Publish();
+                _eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Publish();
             });
-            Commands.AddMultikeyTextCommand.RegisterCommand(AddMultikeyTextCommand);
+            Commands.AddMultiCharacterTextCommand.RegisterCommand(AddMultikeyTextCommand);
             Commands.RemoveLastMultiCharacterCommand.RegisterCommand(RemoveLastMultiCharacterCommand);
         }
 

@@ -4,6 +4,6 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.Model
 {
     public class MultikeyTextModel : IMultiKeyTextModel
     {
-        public string CurrentMultiText { get; set; }
+        public string CurrentMultiCharacterText { get; set; }
     }
 }

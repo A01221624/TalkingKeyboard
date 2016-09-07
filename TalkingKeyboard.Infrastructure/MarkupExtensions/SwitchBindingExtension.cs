@@ -1,80 +1,131 @@
-﻿using System;
-using System.Globalization;
-using System.Windows;
-using System.Windows.Data;
-using System.Windows.Markup;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="SwitchBindingExtension.cs" company="Numeral">
+//   Copyright 2016 Fernando Ramírez Garibay
+// </copyright>
+// <summary>
+//   Markup extension which binds two possible strings and selects one based on a boolean.
+//   Author: Thomas Levesque.
+// </summary>
+// <remarks>
+//   Useful for Keyboards which change state based on other keys. Such as Shift ? Uppercase : Lowercase.
+//   More information on: https://stackoverflow.com/questions/841808/wpf-display-a-bool-value-as-yes-no
+// </remarks>
+// --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.MarkupExtensions
 {
-    /// <summary>
-    ///     Markup extension which binds two possible strings and selects one based on a boolean.
-    ///     Author: Thomas Levesque.
-    /// </summary>
-    /// <remarks>
-    ///     Useful for Keyboards which change state based on other keys. Such as Shift ? Uppercase : Lowercase.
-    ///     More information on: https://stackoverflow.com/questions/841808/wpf-display-a-bool-value-as-yes-no
-    /// </remarks>
+    using System;
+    using System.Globalization;
+    using System.Windows;
+    using System.Windows.Data;
+    using System.Windows.Markup;
+
     public class SwitchBindingExtension : Binding
     {
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="SwitchBindingExtension" /> class.
+        /// </summary>
         public SwitchBindingExtension()
         {
-            Initialize();
+            this.Initialize();
         }
 
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="SwitchBindingExtension" /> class.
+        /// </summary>
+        /// <param name="path">The initial <see cref="P:System.Windows.Data.Binding.Path" /> for the binding.</param>
         public SwitchBindingExtension(string path)
             : base(path)
         {
-            Initialize();
+            this.Initialize();
         }
 
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="SwitchBindingExtension" /> class.
+        /// </summary>
+        /// <param name="path">The binding path.</param>
+        /// <param name="valueIfTrue">The value if true.</param>
+        /// <param name="valueIfFalse">The value if false.</param>
         public SwitchBindingExtension(string path, object valueIfTrue, object valueIfFalse)
             : base(path)
         {
-            Initialize();
-            ValueIfTrue = valueIfTrue;
-            ValueIfFalse = valueIfFalse;
+            this.Initialize();
+            this.ValueIfTrue = valueIfTrue;
+            this.ValueIfFalse = valueIfFalse;
         }
 
-        public SwitchBindingExtension(RelativeSource relativeSource, string path, object valueIfTrue,
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="SwitchBindingExtension" /> class.
+        /// </summary>
+        /// <param name="relativeSource">The relative source.</param>
+        /// <param name="path">The binding path.</param>
+        /// <param name="valueIfTrue">The value if true.</param>
+        /// <param name="valueIfFalse">The value if false.</param>
+        public SwitchBindingExtension(
+            RelativeSource relativeSource,
+            string path,
+            object valueIfTrue,
             object valueIfFalse)
             : base(path)
         {
-            Initialize();
-            RelativeSource = relativeSource;
-            ValueIfTrue = valueIfTrue;
-            ValueIfFalse = valueIfFalse;
+            this.Initialize();
+            this.RelativeSource = relativeSource;
+            this.ValueIfTrue = valueIfTrue;
+            this.ValueIfFalse = valueIfFalse;
         }
-
-        [ConstructorArgument("valueIfTrue")]
-        public object ValueIfTrue { get; set; }
 
         [ConstructorArgument("valueIfFalse")]
         public object ValueIfFalse { get; set; }
 
+        [ConstructorArgument("valueIfTrue")]
+        public object ValueIfTrue { get; set; }
+
+        /// <summary>
+        ///     Initializes this instance.
+        /// </summary>
         private void Initialize()
         {
-            ValueIfTrue = DoNothing;
-            ValueIfFalse = DoNothing;
-            Converter = new SwitchConverter(this);
+            this.ValueIfTrue = DoNothing;
+            this.ValueIfFalse = DoNothing;
+            this.Converter = new SwitchConverter(this);
         }
 
+        /// <summary>
+        ///     IValueConverter implementation for converting between boolean and any object.
+        /// </summary>
+        /// <remarks>
+        ///     Does the footwork for selecting an object instance depending on a boolean value.
+        /// </remarks>
+        /// <seealso cref="System.Windows.Data.IValueConverter" />
         private class SwitchConverter : IValueConverter
         {
             private readonly SwitchBindingExtension _switch;
 
+            /// <summary>
+            ///     Initializes a new instance of the <see cref="SwitchConverter" /> class.
+            /// </summary>
+            /// <param name="switchExtension">The switch extension.</param>
             public SwitchConverter(SwitchBindingExtension switchExtension)
             {
-                _switch = switchExtension;
+                this._switch = switchExtension;
             }
 
-            #region IValueConverter Members
-
+            /// <summary>
+            ///     Maps the boolean value (true/false) to one of two possible object instances.
+            /// </summary>
+            /// <param name="value">The value produced by the binding source.</param>
+            /// <param name="targetType">The type of the binding target property.</param>
+            /// <param name="parameter">The converter parameter to use.</param>
+            /// <param name="culture">The culture to use in the converter.</param>
+            /// <returns>
+            ///     <see cref="SwitchBindingExtension.ValueIfTrue" /> if the boolean (<see cref="value" />) is true or
+            ///     <see cref="SwitchBindingExtension.ValueIfFalse" /> if false.
+            /// </returns>
             public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             {
                 try
                 {
                     var b = System.Convert.ToBoolean(value);
-                    return b ? _switch.ValueIfTrue : _switch.ValueIfFalse;
+                    return b ? this._switch.ValueIfTrue : this._switch.ValueIfFalse;
                 }
                 catch
                 {
@@ -82,12 +133,23 @@ namespace TalkingKeyboard.Infrastructure.MarkupExtensions
                 }
             }
 
+            /// <summary>
+            ///     Converts the object instance back to boolean.
+            /// </summary>
+            /// <param name="value">The value that is produced by the binding target.</param>
+            /// <param name="targetType">The type to convert to.</param>
+            /// <param name="parameter">The converter parameter to use.</param>
+            /// <param name="culture">The culture to use in the converter.</param>
+            /// <returns>
+            ///     Current implementation does Nothing.
+            /// </returns>
+            /// <remarks>
+            ///     Current scope has no use for this.
+            /// </remarks>
             public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             {
                 return DoNothing;
             }
-
-            #endregion
         }
     }
 }

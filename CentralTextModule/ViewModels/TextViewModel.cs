@@ -46,7 +46,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
             set
             {
                 SetProperty(ref _currentText, value);
-                _eventAggregator.GetEvent<TextUpdatedEvent>().Publish();
+                _eventAggregator.GetEvent<Events.TextUpdatedEvent>().Publish();
             }
         }
 

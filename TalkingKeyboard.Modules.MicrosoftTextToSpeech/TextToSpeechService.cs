@@ -21,7 +21,7 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
             SpeechSynthesisCommand =
                 new DelegateCommand(SayCurrentText, SpeechSynthesisCanExecute).ObservesProperty(() => CurrentText);
             Commands.SpeechSynthesisCommand.RegisterCommand(SpeechSynthesisCommand);
-            eventAggregator.GetEvent<TextUpdatedEvent>().Subscribe(() => CurrentText = TextModel.CurrentText);
+            eventAggregator.GetEvent<Events.TextUpdatedEvent>().Subscribe(() => CurrentText = TextModel.CurrentText);
         }
 
         private ITextModel TextModel { get; }

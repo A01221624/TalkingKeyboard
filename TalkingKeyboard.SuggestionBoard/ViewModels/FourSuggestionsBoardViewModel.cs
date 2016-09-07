@@ -21,14 +21,14 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
             _suggestionService = suggestionService;
             _textModel = textModel;
             Suggestions = new ObservableCollection<string>();
-            eventAggregator.GetEvent<TextUpdatedEvent>()
+            eventAggregator.GetEvent<Events.TextUpdatedEvent>()
                 .Subscribe(() =>
                 {
                     Suggestions = suggestionService.ProvideSuggestions(_textModel.CurrentText);
                     suggestionService.ClearMultiCharacterBuffer();
                 }, ThreadOption.BackgroundThread, true);
-            eventAggregator.GetEvent<MultiTextUpdatedEvent>()
-                .Subscribe(() => { Suggestions = _suggestionService.ProvideMultikeySuggestions(); },
+            eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>()
+                .Subscribe(() => { Suggestions = _suggestionService.ProvideMultiCharacterSuggestions(); },
                     ThreadOption.BackgroundThread, true);
         }
 

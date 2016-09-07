@@ -26,11 +26,11 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             _timedPoints = new TimedPoints(Configuration.PointKeepAliveTimeSpan);
             _averagingFilter = new AveragingLastNpointsWithinTimeSpanFilter(3, TimeSpan.FromMilliseconds(75));
             _dataPerControl = new ConcurrentDictionary<SelectableControl, SelectableButtonViewModel>();
-            Windows.Add(Application.Current.MainWindow);
+            this.KnownWindows.Add(Application.Current.MainWindow);
 
-            eventAggregator.GetEvent<NewCoordinateEvent>().Subscribe(ProcessPoint);
+            eventAggregator.GetEvent<Events.NewCoordinateEvent>().Subscribe(ProcessPoint);
             Application.Current.MainWindow.Closing +=
-                (sender, args) => eventAggregator.GetEvent<NewCoordinateEvent>().Unsubscribe(ProcessPoint);
+                (sender, args) => eventAggregator.GetEvent<Events.NewCoordinateEvent>().Unsubscribe(ProcessPoint);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             var nullablePoint = _averagingFilter.Filter(_timedPoints);
             if (nullablePoint == null) return;
             var point = nullablePoint.Value;
-            foreach (var window in Windows)
+            foreach (var window in this.KnownWindows)
             {
                 var seenControl = HitTestHelper.SelectableControlUnderPoint(point, window);
 
@@ -84,7 +84,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             }
         }
 
-        public ConcurrentBag<Window> Windows { get; set; } = new ConcurrentBag<Window>();
+        public ConcurrentBag<Window> KnownWindows { get; set; } = new ConcurrentBag<Window>();
 
         private void StateMachineUpdateForOtherControls(SelectableControl control, SelectableButtonViewModel data,
             Window window)

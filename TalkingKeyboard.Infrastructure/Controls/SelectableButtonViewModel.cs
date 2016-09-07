@@ -33,7 +33,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private TimeSpan _gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
 
         private TimeSpan _gazeTimeSpanBeforeCooldown =
-            Configuration.GazeTimeSpanBeforeCooldownazeTimeSpanBeforeSelectionOccurs;
+            Configuration.GazeTimeSpanBeforeCooldownOccurs;
 
         private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
         private DateTime _lastSeenTime = DateTime.MinValue;

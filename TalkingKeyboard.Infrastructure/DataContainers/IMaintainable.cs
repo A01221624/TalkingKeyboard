@@ -3,7 +3,7 @@
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // <summary>
-//   Defines the IMaintainable type.
+//   Defines the IMaintainable interface.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.DataContainers

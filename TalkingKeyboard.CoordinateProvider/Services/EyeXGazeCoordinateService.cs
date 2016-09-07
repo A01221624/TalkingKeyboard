@@ -16,7 +16,7 @@ namespace TalkingKeyboard.Modules.CoordinateProvider.Services
 
             GazePointDataStream = EyeXHost.CreateGazePointDataStream(GazePointDataMode.Unfiltered);
             GazePointDataStream.Next +=
-                (sender, args) => { eventAggregator.GetEvent<NewCoordinateEvent>().Publish(new Point(args.X, args.Y)); };
+                (sender, args) => { eventAggregator.GetEvent<Events.NewCoordinateEvent>().Publish(new Point(args.X, args.Y)); };
         }
 
         public EyeXHost EyeXHost { get; set; }

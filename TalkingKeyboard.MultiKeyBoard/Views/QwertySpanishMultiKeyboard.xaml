@@ -46,32 +46,32 @@
         <!--<sc:SelectableButton Text="q w e r" Grid.Column="0" Grid.Row="0" Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}" CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />-->
         <!--<sc:SelectableButton Grid.RowSpan="2" Grid.ColumnSpan="2" Text="que" Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}" CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"></sc:SelectableButton>-->
         <sc:SelectableButton Text="q  w  a" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="e  r  d" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="t  y  g" Grid.Row="0" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="u  i  j" Grid.Row="0" Grid.Column="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="o  p  l  ñ" Grid.Row="0" Grid.Column="8" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
 
         <sc:SelectableButton Text="s  z  x" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="f  c  v" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="h  b  n" Grid.Row="2" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton Text="k  m" Grid.Row="2" Grid.Column="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                             Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
 
 
