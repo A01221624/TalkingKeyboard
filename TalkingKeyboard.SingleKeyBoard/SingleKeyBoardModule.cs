@@ -2,11 +2,13 @@
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
-using TalkingKeyboard.Infrastructure.Constants;
+
 using TalkingKeyboard.Modules.SingleKeyBoard.Views;
 
 namespace TalkingKeyboard.Modules.SingleKeyBoard
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public class SingleKeyBoardModule : IModule
     {
         private readonly IRegionManager _regionManager;

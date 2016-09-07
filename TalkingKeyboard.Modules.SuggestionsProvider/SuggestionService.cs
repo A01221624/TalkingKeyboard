@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows.Input;
 using Prism.Commands;
 using TalkingKeyboard.Infrastructure;
-using TalkingKeyboard.Infrastructure.Constants;
 using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Infrastructure.Helpers;
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
@@ -12,6 +11,8 @@ using TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources;
 
 namespace TalkingKeyboard.Modules.SuggestionsProvider
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public class SuggestionService : ISuggestionService, IDisposable
     {
         private readonly MultikeySuggestionSource _multikeySource = new MultikeySuggestionSource();

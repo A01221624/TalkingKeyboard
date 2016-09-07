@@ -1,7 +1,7 @@
-﻿using TalkingKeyboard.Infrastructure.Constants;
-
-namespace TalkingKeyboard.Infrastructure.Helpers
+﻿namespace TalkingKeyboard.Infrastructure.Helpers
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public static class StringEditHelper
     {
         public static void SplitStringPrefixAndLastWord(string s, out string prefix, out string lastWord)

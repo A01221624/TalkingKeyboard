@@ -5,12 +5,13 @@ using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using TalkingKeyboard.Infrastructure;
-using TalkingKeyboard.Infrastructure.Constants;
 using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Infrastructure.Helpers;
 
 namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public class TextViewModel : BindableBase, ITextModel
     {
         private readonly IEventAggregator _eventAggregator;
@@ -68,7 +69,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 
         private void RemoveWhitespaceIfNecessaryBasedOn(string s)
         {
-            if (CurrentText.Length > 0 && CharacterClasses.PreceededByNonwhitespaceFollowedByWhitespace.Contains(s[0]) &&
+            if (CurrentText.Length > 0 && CharacterClasses.PrecededByNonwhitespaceFollowedByWhitespace.Contains(s[0]) &&
                 CharacterClasses.Whitespace.Contains(CurrentText[CurrentText.Length - 1]))
                 CurrentText = CurrentText.Remove(CurrentText.Length - 1);
         }

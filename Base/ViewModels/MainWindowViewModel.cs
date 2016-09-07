@@ -3,10 +3,11 @@ using System.Windows.Input;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
-using TalkingKeyboard.Infrastructure.Constants;
 
 namespace TalkingKeyboard.Shell.ViewModels
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public class MainWindowViewModel : BindableBase
     {
         private readonly List<string> _knownBoards;

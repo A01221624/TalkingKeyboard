@@ -1,13 +1,15 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
-using TalkingKeyboard.Infrastructure.Constants;
+
 using TalkingKeyboard.Infrastructure.Controls;
 using TalkingKeyboard.Modules.SuggestionBoard.ViewModels;
 using TalkingKeyboard.Modules.SuggestionBoard.Views;
 
 namespace TalkingKeyboard.Modules.SuggestionBoard
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public class SuggestionBoardModule : IModule
     {
         private readonly IRegionManager _regionManager;

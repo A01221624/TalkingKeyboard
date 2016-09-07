@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using TalkingKeyboard.Infrastructure.Constants;
+
 using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
+    using TalkingKeyboard.Infrastructure.Constants;
+
     public class MultikeySuggestionSource : ISuggestionSource
     {
         private readonly List<List<string>> _filteredDictionary = new List<List<string>>();
