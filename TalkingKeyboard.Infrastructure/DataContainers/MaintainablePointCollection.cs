@@ -21,7 +21,7 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
 
         /// <summary>
         ///     Removes any points older than <see cref="PointKeepAliveTimeSpan" />
-        ///     from this />
+        ///     from this.
         /// </summary>
         public abstract void Maintain();
 

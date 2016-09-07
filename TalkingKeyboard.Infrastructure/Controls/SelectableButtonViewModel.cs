@@ -31,12 +31,14 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private double _fontSize = 40;
         private TimeSpan _gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
         private TimeSpan _gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
+
+        private TimeSpan _gazeTimeSpanBeforeCooldown =
+            Configuration.GazeTimeSpanBeforeCooldownazeTimeSpanBeforeSelectionOccurs;
+
         private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
         private DateTime _lastSeenTime = DateTime.MinValue;
         private DateTime _lastSelectedTime = DateTime.MinValue;
         private SelectableState _state = SelectableState.Idle;
-        private TimeSpan _gazeTimeSpanBeforeCooldown =
-            Configuration.GazeTimeSpanBeforeCooldownazeTimeSpanBeforeSelectionOccurs;
 
         /// <summary>
         ///     The property changed.
@@ -79,7 +81,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
             {
                 if (value.Equals(this._animationBeginTime))
                 {
-                    return; 
+                    return;
                 }
 
                 this._animationBeginTime = value;
@@ -398,7 +400,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        ///     The select.
+        ///     <inheritdoc/>
         /// </summary>
         /// <exception cref="NotImplementedException">
         ///     TODO: Consider changing the selection to the ViewModel.
@@ -409,10 +411,10 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        /// The on property changed.
+        /// Call on property changed.
         /// </summary>
         /// <param name="propertyName">
-        /// The property name.
+        /// Name of property which changed.
         /// </param>
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
