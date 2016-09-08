@@ -8,6 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
 {
+    using System;
     using System.Speech.Synthesis;
     using System.Windows.Input;
 
@@ -19,11 +20,10 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
     using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
-    public class TextToSpeechService : BindableBase, ITextToSpeechService
+    public class TextToSpeechService : BindableBase, ITextToSpeechService, IDisposable
     {
-        private readonly SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-
         private string currentText;
+        private SpeechSynthesizer synthesizer = new SpeechSynthesizer();
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="TextToSpeechService" /> class.
@@ -78,6 +78,15 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         private ITextModel TextModel { get; }
 
         /// <summary>
+        ///     Disposes of the point data stream and the EyeXHost.
+        /// </summary>
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
         ///     Speaks the specified string.
         /// </summary>
         /// <param name="s">The string to speech-synthesize</param>
@@ -92,6 +101,22 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         public void SayCurrentText()
         {
             this.synthesizer.SpeakAsync(this.TextModel.CurrentText);
+        }
+
+        /// <summary>
+        ///     Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        /// <param name="disposing">
+        ///     <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+        ///     unmanaged resources.
+        /// </param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing && (this.synthesizer != null))
+            {
+                this.synthesizer.Dispose();
+                this.synthesizer = null;
+            }
         }
 
         /// <summary>
