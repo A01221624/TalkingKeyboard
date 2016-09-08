@@ -2,9 +2,6 @@
 // <copyright file="Commands.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Provides static solution-wide access to commands.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure
 {
