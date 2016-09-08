@@ -159,10 +159,6 @@
       <Project>{3b1cf9eb-d2e8-4e7c-a402-23f5c85a2518}</Project>
       <Name>TalkingKeyboard.Modules.TextHolder</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TalkingKeyboard.CommandBoard\TalkingKeyboard.Modules.CommandBoard.csproj">
-      <Project>{962599d1-a8c7-45bc-bfb4-e3637ed48aeb}</Project>
-      <Name>TalkingKeyboard.Modules.CommandBoard</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TalkingKeyboard.CoordinateProvider\TalkingKeyboard.Modules.CoordinateProvider.csproj">
       <Project>{75e9595d-c9dd-43bb-a3ce-62995566b671}</Project>
       <Name>TalkingKeyboard.Modules.CoordinateProvider</Name>

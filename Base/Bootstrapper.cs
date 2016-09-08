@@ -5,7 +5,6 @@ using Prism.Modularity;
 using Prism.Unity;
 using TalkingKeyboard.Modules.ByGazeTimePointProcessor;
 using TalkingKeyboard.Modules.CentralTextModule;
-using TalkingKeyboard.Modules.CommandBoard;
 using TalkingKeyboard.Modules.CoordinateProvider;
 using TalkingKeyboard.Modules.MicrosoftTextToSpeech;
 using TalkingKeyboard.Modules.MultiKeyBoard;
@@ -52,7 +51,6 @@ namespace TalkingKeyboard.Shell
             var moduleCatalog = (ModuleCatalog) ModuleCatalog;
             moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionsProviderModule), InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule(typeof(CommandBoardModule), InitializationMode.OnDemand);
             moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MultiKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
