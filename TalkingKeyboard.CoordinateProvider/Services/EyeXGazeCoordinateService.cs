@@ -38,6 +38,11 @@ namespace TalkingKeyboard.Modules.CoordinateProvider.Services
                     };
         }
 
+        ~EyeXGazeCoordinateService()
+        {
+            this.Dispose(false);
+        }
+
         /// <summary>
         ///     Gets or sets the EyeX host.
         /// </summary>
@@ -59,8 +64,30 @@ namespace TalkingKeyboard.Modules.CoordinateProvider.Services
         /// </summary>
         public void Dispose()
         {
-            this.GazePointDataStream.Dispose();
-            this.EyeXHost.Dispose();
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        ///     Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        /// <param name="disposing">
+        ///     <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+        ///     unmanaged resources.
+        /// </param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this.GazePointDataStream != null)
+            {
+                this.GazePointDataStream.Dispose();
+                this.GazePointDataStream = null;
+            }
+
+            if (this.EyeXHost != null)
+            {
+                this.EyeXHost.Dispose();
+                this.EyeXHost = null;
+            }
         }
     }
 }
