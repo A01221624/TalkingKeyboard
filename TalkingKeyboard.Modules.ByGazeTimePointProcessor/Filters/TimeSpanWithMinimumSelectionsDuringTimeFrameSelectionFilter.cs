@@ -1,50 +1,70 @@
-﻿using System;
-using System.Linq;
-using System.Windows;
-using TalkingKeyboard.Infrastructure;
-using TalkingKeyboard.Infrastructure.DataContainers;
-using TimedPoint = System.Tuple<System.DateTime, System.Windows.Point>;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.cs" company="Numeral">
+//   Copyright 2016 Fernando Ramírez Garibay
+// </copyright>
+// <summary>
+//   Defines the TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
+    using System;
+    using System.Linq;
+    using System.Windows;
+
+    using TalkingKeyboard.Infrastructure;
+    using TalkingKeyboard.Infrastructure.DataContainers;
+
     public class TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter : SelectionFilter<TimedControlsWithPoint>
     {
         private readonly int _pointsRequired;
         private readonly TimeSpan _timeFrame;
 
-        public TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter(Window window, TimeSpan timeFrame,
-            int pointsRequired) : base(window)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter"/> class.
+        /// </summary>
+        /// <param name="window">The window on which the selectable controls are located.</param>
+        /// <param name="timeFrame">The time frame from current time during which points must have fallen to be considered.</param>
+        /// <param name="pointsRequired">The number of points required for activation.</param>
+        public TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter(
+            Window window,
+            TimeSpan timeFrame,
+            int pointsRequired)
+            : base(window)
         {
-            _timeFrame = timeFrame;
-            _pointsRequired = pointsRequired;
+            this._timeFrame = timeFrame;
+            this._pointsRequired = pointsRequired;
         }
 
-        /*
-    Algorithm:
-    1.- Traverse the Queue by Dequeuing
-    1.1.- AddPoint each element to its corresponding element's Queue (or discard if too old or no element)
-    2.- Any Queues with more or equal than N elements where the TimeSpan is reached call it's elment's Select().
-    3.- Any other Queues are combined and sent back.
-    */
-
+        /// <summary>
+        ///     Filters the collection, selects accordingly and returns an updated collection.
+        /// </summary>
+        /// <param name="c">The point collection.</param>
+        /// <returns>The updated point collection.</returns>
         public override TimedControlsWithPoint SelectAndUpdate(TimedControlsWithPoint c)
         {
-            var result = new TimedControlsWithPoint(Configuration.PointKeepAliveTimeSpan, Window);
+            var result = new TimedControlsWithPoint(Configuration.PointKeepAliveTimeSpan, this.Window);
             foreach (var ctp in c)
             {
                 var timedPoints = ctp.Value;
-                if (timedPoints == null) continue;
-                var pointCount = timedPoints.Count;
-                if (pointCount >= _pointsRequired
-                    && timedPoints.Keys.Last() - timedPoints.Keys.First() >= _timeFrame)
+                if (timedPoints == null)
                 {
-                    Window.Dispatcher.Invoke(() => ctp.Key.Select());
+                    continue;
+                }
+
+                var pointCount = timedPoints.Count;
+                if ((pointCount >= this._pointsRequired)
+                    && (timedPoints.Keys.Last() - timedPoints.Keys.First() >= this._timeFrame))
+                {
+                    this.Window.Dispatcher.Invoke(() => ctp.Key.Select());
                 }
                 else
                 {
                     result.TryAdd(ctp.Key, ctp.Value);
                 }
             }
+
             return result;
         }
     }
