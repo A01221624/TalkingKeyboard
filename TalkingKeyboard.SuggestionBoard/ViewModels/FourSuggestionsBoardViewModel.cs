@@ -10,8 +10,6 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
 {
     using System.Collections.ObjectModel;
 
-    using Microsoft.Practices.Unity;
-
     using Prism.Events;
     using Prism.Mvvm;
 
@@ -21,38 +19,36 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
 
     public class FourSuggestionsBoardViewModel : BindableBase, ISuggestionsViewModel
     {
-        private readonly ISuggestionService _suggestionService;
-        private readonly ITextModel _textModel;
+        private readonly ISuggestionService suggestionService;
+        private readonly ITextModel textModel;
 
-        private ObservableCollection<string> _suggestions;
+        private ObservableCollection<string> suggestions;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="FourSuggestionsBoardViewModel" /> class.
         /// </summary>
-        /// <param name="unityContainer">The unity DI container (obtained through DI).</param>
         /// <param name="suggestionService">The suggestion service (obtained through DI).</param>
         /// <param name="textModel">The text model (obtained through DI).</param>
         /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
         public FourSuggestionsBoardViewModel(
-            IUnityContainer unityContainer,
             ISuggestionService suggestionService,
             ITextModel textModel,
             IEventAggregator eventAggregator)
         {
-            this._suggestionService = suggestionService;
-            this._textModel = textModel;
+            this.suggestionService = suggestionService;
+            this.textModel = textModel;
             this.Suggestions = new ObservableCollection<string>();
             eventAggregator.GetEvent<Events.TextUpdatedEvent>().Subscribe(
                 () =>
                     {
-                        this.Suggestions = suggestionService.ProvideSuggestions(this._textModel.CurrentText);
+                        this.Suggestions = suggestionService.ProvideSuggestions(this.textModel.CurrentText);
                         suggestionService.ClearMultiCharacterBuffer();
                     },
                 ThreadOption.BackgroundThread,
                 true);
             eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>()
                 .Subscribe(
-                    () => { this.Suggestions = this._suggestionService.ProvideMultiCharacterSuggestions(); },
+                    () => { this.Suggestions = this.suggestionService.ProvideMultiCharacterSuggestions(); },
                     ThreadOption.BackgroundThread,
                     true);
         }
@@ -64,12 +60,12 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
         {
             get
             {
-                return this._suggestions;
+                return this.suggestions;
             }
 
             set
             {
-                this.SetProperty(ref this._suggestions, value);
+                this.SetProperty(ref this.suggestions, value);
             }
         }
     }

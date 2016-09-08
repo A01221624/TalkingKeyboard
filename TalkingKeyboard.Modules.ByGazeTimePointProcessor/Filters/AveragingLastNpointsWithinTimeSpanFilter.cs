@@ -16,8 +16,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 
     public class AveragingLastNpointsWithinTimeSpanFilter : AveragingFilter
     {
-        private readonly int _numberOfPoints;
-        private readonly TimeSpan _timeSpan;
+        private readonly int numberOfPoints;
+        private readonly TimeSpan timeSpan;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="AveragingLastNpointsWithinTimeSpanFilter" /> class.
@@ -26,8 +26,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
         /// <param name="timeSpan">The time span.</param>
         public AveragingLastNpointsWithinTimeSpanFilter(int numberOfPoints, TimeSpan timeSpan)
         {
-            this._numberOfPoints = numberOfPoints;
-            this._timeSpan = timeSpan;
+            this.numberOfPoints = numberOfPoints;
+            this.timeSpan = timeSpan;
         }
 
         /// <summary>
@@ -44,13 +44,13 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
                 return null;
             }
 
-            var withinTimeSpan = timedPoints.Where(pair => DateTime.Now - pair.Key <= this._timeSpan).ToList();
-            if (withinTimeSpan.Count() < this._numberOfPoints)
+            var withinTimeSpan = timedPoints.Where(pair => DateTime.Now - pair.Key <= this.timeSpan).ToList();
+            if (withinTimeSpan.Count < this.numberOfPoints)
             {
                 return null;
             }
 
-            var pointsToAverage = withinTimeSpan.OrderByDescending(pair => pair.Key).Take(this._numberOfPoints).ToList();
+            var pointsToAverage = withinTimeSpan.OrderByDescending(pair => pair.Key).Take(this.numberOfPoints).ToList();
             var averageX = pointsToAverage.Select(pair => pair.Value.X).Average();
             var averageY = pointsToAverage.Select(pair => pair.Value.Y).Average();
 

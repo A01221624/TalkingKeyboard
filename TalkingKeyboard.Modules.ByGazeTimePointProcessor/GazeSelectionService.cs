@@ -12,8 +12,6 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
     using System.Collections.Concurrent;
     using System.Windows;
 
-    using Microsoft.Practices.Unity;
-
     using Prism.Events;
 
     using TalkingKeyboard.Infrastructure;
@@ -26,22 +24,19 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
 
     public class GazeSelectionService : IControlActivationService
     {
-        private readonly AveragingFilter _averagingFilter;
-        private readonly IUnityContainer _container;
-        private readonly ConcurrentDictionary<SelectableControl, SelectableButtonViewModel> _dataPerControl;
-        private readonly TimedPoints _timedPoints;
+        private readonly AveragingFilter averagingFilter;
+        private readonly ConcurrentDictionary<SelectableControl, SelectableButtonViewModel> dataPerControl;
+        private readonly TimedPoints timedPoints;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="GazeSelectionService" /> class.
         /// </summary>
         /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
-        /// <param name="container">The unity DI container (obtained through DI).</param>
-        public GazeSelectionService(IEventAggregator eventAggregator, IUnityContainer container)
+        public GazeSelectionService(IEventAggregator eventAggregator)
         {
-            this._container = container;
-            this._timedPoints = new TimedPoints(Configuration.PointKeepAliveTimeSpan);
-            this._averagingFilter = new AveragingLastNpointsWithinTimeSpanFilter(3, TimeSpan.FromMilliseconds(75));
-            this._dataPerControl = new ConcurrentDictionary<SelectableControl, SelectableButtonViewModel>();
+            this.timedPoints = new TimedPoints(Configuration.PointKeepAliveTimeSpan);
+            this.averagingFilter = new AveragingLastNpointsWithinTimeSpanFilter(3, TimeSpan.FromMilliseconds(75));
+            this.dataPerControl = new ConcurrentDictionary<SelectableControl, SelectableButtonViewModel>();
             this.KnownWindows.Add(Application.Current.MainWindow);
 
             eventAggregator.GetEvent<Events.NewCoordinateEvent>().Subscribe(this.ProcessPoint);
@@ -67,9 +62,9 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         /// <param name="p">The point to be processed.</param>
         public void ProcessPoint(Point p)
         {
-            this._timedPoints.Maintain();
-            this._timedPoints.AddPoint(p);
-            var nullablePoint = this._averagingFilter.Filter(this._timedPoints);
+            this.timedPoints.Maintain();
+            this.timedPoints.AddPoint(p);
+            var nullablePoint = this.averagingFilter.Filter(this.timedPoints);
             if (nullablePoint == null)
             {
                 return;
@@ -80,7 +75,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             {
                 var seenControl = HitTestHelper.SelectableControlUnderPoint(point, window);
 
-                foreach (var cd in this._dataPerControl)
+                foreach (var cd in this.dataPerControl)
                 {
                     var controlData = cd.Value;
                     var control = cd.Key;
@@ -106,8 +101,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                     continue;
                 }
 
-                SelectableButtonViewModel data = null;
-                if (!this._dataPerControl.TryGetValue(seenControl, out data))
+                SelectableButtonViewModel data;
+                if (!this.dataPerControl.TryGetValue(seenControl, out data))
                 {
                     window.Dispatcher.Invoke(() => data = seenControl.DataContext as SelectableButtonViewModel);
                     if (data == null)
@@ -115,7 +110,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                         continue;
                     }
 
-                    this._dataPerControl.TryAdd(seenControl, data);
+                    this.dataPerControl.TryAdd(seenControl, data);
                 }
 
                 this.StateMachineUpdateForSeenControl(seenControl, data, window);

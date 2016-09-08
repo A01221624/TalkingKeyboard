@@ -20,25 +20,25 @@ namespace TalkingKeyboard.Infrastructure.Controls
     /// </summary>
     public class SelectableButtonViewModel : ISelectableControlViewModel, INotifyPropertyChanged
     {
-        private Storyboard _animation;
-        private KeyTime _animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
-        private KeyTime _animationEndTime = Configuration.GazeTimeSpanBeforeSelectionOccurs;
-        private string _buttonText;
-        private ICommand _command;
-        private object _commandParameter;
-        private IInputElement _commandTarget;
-        private TimeSpan _currentGazeTimeSpan = TimeSpan.Zero;
-        private double _fontSize = 40;
-        private TimeSpan _gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
-        private TimeSpan _gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
+        private Storyboard animation;
+        private KeyTime animationBeginTime = KeyTime.FromTimeSpan(TimeSpan.Zero);
+        private KeyTime animationEndTime = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private string buttonText;
+        private ICommand command;
+        private object commandParameter;
+        private IInputElement commandTarget;
+        private TimeSpan currentGazeTimeSpan = TimeSpan.Zero;
+        private double fontSize = 40;
+        private TimeSpan gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
+        private TimeSpan gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
 
-        private TimeSpan _gazeTimeSpanBeforeCooldown =
+        private TimeSpan gazeTimeSpanBeforeCooldown =
             Configuration.GazeTimeSpanBeforeCooldownOccurs;
 
-        private TimeSpan _gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
-        private DateTime _lastSeenTime = DateTime.MinValue;
-        private DateTime _lastSelectedTime = DateTime.MinValue;
-        private SelectableState _state = SelectableState.Idle;
+        private TimeSpan gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
+        private DateTime lastSeenTime = DateTime.MinValue;
+        private DateTime lastSelectedTime = DateTime.MinValue;
+        private SelectableState state = SelectableState.Idle;
 
         /// <summary>
         ///     The property changed.
@@ -52,17 +52,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._animation;
+                return this.animation;
             }
 
             set
             {
-                if (object.Equals(value, this._animation))
+                if (object.Equals(value, this.animation))
                 {
                     return;
                 }
 
-                this._animation = value;
+                this.animation = value;
                 this.OnPropertyChanged();
             }
         }
@@ -74,17 +74,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._animationBeginTime;
+                return this.animationBeginTime;
             }
 
             set
             {
-                if (value.Equals(this._animationBeginTime))
+                if (value.Equals(this.animationBeginTime))
                 {
                     return;
                 }
 
-                this._animationBeginTime = value;
+                this.animationBeginTime = value;
                 this.OnPropertyChanged();
             }
         }
@@ -96,17 +96,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._animationEndTime;
+                return this.animationEndTime;
             }
 
             set
             {
-                if (value.Equals(this._animationEndTime))
+                if (value.Equals(this.animationEndTime))
                 {
                     return;
                 }
 
-                this._animationEndTime = value;
+                this.animationEndTime = value;
                 this.OnPropertyChanged();
             }
         }
@@ -118,17 +118,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._buttonText;
+                return this.buttonText;
             }
 
             set
             {
-                if (value == this._buttonText)
+                if (value == this.buttonText)
                 {
                     return;
                 }
 
-                this._buttonText = value;
+                this.buttonText = value;
                 this.OnPropertyChanged();
             }
         }
@@ -140,17 +140,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._command;
+                return this.command;
             }
 
             set
             {
-                if (object.Equals(value, this._command))
+                if (object.Equals(value, this.command))
                 {
                     return;
                 }
 
-                this._command = value;
+                this.command = value;
                 this.OnPropertyChanged();
             }
         }
@@ -162,17 +162,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._commandParameter;
+                return this.commandParameter;
             }
 
             set
             {
-                if (object.Equals(value, this._commandParameter))
+                if (object.Equals(value, this.commandParameter))
                 {
                     return;
                 }
 
-                this._commandParameter = value;
+                this.commandParameter = value;
                 this.OnPropertyChanged();
             }
         }
@@ -184,17 +184,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._commandTarget;
+                return this.commandTarget;
             }
 
             set
             {
-                if (object.Equals(value, this._commandTarget))
+                if (object.Equals(value, this.commandTarget))
                 {
                     return;
                 }
 
-                this._commandTarget = value;
+                this.commandTarget = value;
                 this.OnPropertyChanged();
             }
         }
@@ -206,17 +206,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._currentGazeTimeSpan;
+                return this.currentGazeTimeSpan;
             }
 
             set
             {
-                if (value.Equals(this._currentGazeTimeSpan))
+                if (value.Equals(this.currentGazeTimeSpan))
                 {
                     return;
                 }
 
-                this._currentGazeTimeSpan = value;
+                this.currentGazeTimeSpan = value;
                 this.OnPropertyChanged();
             }
         }
@@ -228,19 +228,19 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._fontSize;
+                return this.fontSize;
             }
 
             set
             {
                 {
-                    if (value.Equals(this._fontSize))
+                    if (value.Equals(this.fontSize))
                     {
                         return;
                     }
                 }
 
-                this._fontSize = value;
+                this.fontSize = value;
                 this.OnPropertyChanged();
             }
         }
@@ -252,17 +252,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._gazeKeepAliveTimeSpan;
+                return this.gazeKeepAliveTimeSpan;
             }
 
             set
             {
-                if (value.Equals(this._gazeKeepAliveTimeSpan))
+                if (value.Equals(this.gazeKeepAliveTimeSpan))
                 {
                     return;
                 }
 
-                this._gazeKeepAliveTimeSpan = value;
+                this.gazeKeepAliveTimeSpan = value;
                 this.OnPropertyChanged();
             }
         }
@@ -274,17 +274,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._gazeTimeSpanBeforeAnimationBegins;
+                return this.gazeTimeSpanBeforeAnimationBegins;
             }
 
             set
             {
-                if (value.Equals(this._gazeTimeSpanBeforeAnimationBegins))
+                if (value.Equals(this.gazeTimeSpanBeforeAnimationBegins))
                 {
                     return;
                 }
 
-                this._gazeTimeSpanBeforeAnimationBegins = value;
+                this.gazeTimeSpanBeforeAnimationBegins = value;
                 this.OnPropertyChanged();
             }
         }
@@ -296,17 +296,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._gazeTimeSpanBeforeCooldown;
+                return this.gazeTimeSpanBeforeCooldown;
             }
 
             set
             {
-                if (value.Equals(this._gazeTimeSpanBeforeCooldown))
+                if (value.Equals(this.gazeTimeSpanBeforeCooldown))
                 {
                     return;
                 }
 
-                this._gazeTimeSpanBeforeCooldown = value;
+                this.gazeTimeSpanBeforeCooldown = value;
                 this.OnPropertyChanged();
             }
         }
@@ -318,17 +318,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._gazeTimeSpanBeforeSelectionOccurs;
+                return this.gazeTimeSpanBeforeSelectionOccurs;
             }
 
             set
             {
-                if (value.Equals(this._gazeTimeSpanBeforeSelectionOccurs))
+                if (value.Equals(this.gazeTimeSpanBeforeSelectionOccurs))
                 {
                     return;
                 }
 
-                this._gazeTimeSpanBeforeSelectionOccurs = value;
+                this.gazeTimeSpanBeforeSelectionOccurs = value;
                 this.OnPropertyChanged();
             }
         }
@@ -340,17 +340,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._lastSeenTime;
+                return this.lastSeenTime;
             }
 
             set
             {
-                if (value.Equals(this._lastSeenTime))
+                if (value.Equals(this.lastSeenTime))
                 {
                     return;
                 }
 
-                this._lastSeenTime = value;
+                this.lastSeenTime = value;
                 this.OnPropertyChanged();
             }
         }
@@ -362,17 +362,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._lastSelectedTime;
+                return this.lastSelectedTime;
             }
 
             set
             {
-                if (value.Equals(this._lastSelectedTime))
+                if (value.Equals(this.lastSelectedTime))
                 {
                     return;
                 }
 
-                this._lastSelectedTime = value;
+                this.lastSelectedTime = value;
                 this.OnPropertyChanged();
             }
         }
@@ -384,17 +384,17 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this._state;
+                return this.state;
             }
 
             set
             {
-                if (value == this._state)
+                if (value == this.state)
                 {
                     return;
                 }
 
-                this._state = value;
+                this.state = value;
                 this.OnPropertyChanged();
             }
         }

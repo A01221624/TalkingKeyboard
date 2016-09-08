@@ -1,98 +1,58 @@
-using System;
-using System.Collections.Concurrent;
-using System.Windows;
-
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MaintainablePointCollection.cs" company="Numeral">
+//   Copyright 2016 Fernando Ramírez Garibay
+// </copyright>
+// <summary>
+//   Defines the MaintainablePointCollection type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.DataContainers
 {
+    using System;
+    using System.Collections.Concurrent;
+    using System.Windows;
+
     public abstract class MaintainablePointCollection<T1, T2> : ConcurrentDictionary<T1, T2>, IMaintainable
     {
-        protected DateTime LastMaintainedTime;
-        protected TimeSpan PointKeepAliveTimeSpan;
-
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="MaintainablePointCollection{T1, T2}" /> class given the point keep
+        ///     alive time span.
+        /// </summary>
+        /// <param name="pointKeepAliveTimeSpan">The point keep alive time span.</param>
         protected MaintainablePointCollection(TimeSpan pointKeepAliveTimeSpan)
         {
-            PointKeepAliveTimeSpan = pointKeepAliveTimeSpan;
-            LastMaintainedTime = DateTime.Now;
+            this.PointKeepAliveTimeSpan = pointKeepAliveTimeSpan;
+            this.LastMaintainedTime = DateTime.Now;
         }
 
-        protected MaintainablePointCollection() : this(Configuration.PointKeepAliveTimeSpan)
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="MaintainablePointCollection{T1, T2}" /> class.
+        /// </summary>
+        protected MaintainablePointCollection()
+            : this(Configuration.PointKeepAliveTimeSpan)
         {
         }
+
+        /// <summary>
+        ///     Gets or sets the time on which the collection was last maintained.
+        /// </summary>
+        /// <value>
+        ///     The time on which the collection was last maintained.
+        /// </value>
+        protected DateTime LastMaintainedTime { get; set; }
+
+        protected TimeSpan PointKeepAliveTimeSpan { get; }
+
+        /// <summary>
+        ///     Adds a new point to the collection by doing the necessary processing.
+        /// </summary>
+        /// <param name="point">The point to be added and processed.</param>
+        public abstract void AddPoint(Point point);
 
         /// <summary>
         ///     Removes any points older than <see cref="PointKeepAliveTimeSpan" />
         ///     from this.
         /// </summary>
         public abstract void Maintain();
-
-        public abstract void AddPoint(Point point);
-
-
-        //public IEnumerator<KeyValuePair<T1, T2>> GetEnumerator()
-        //{
-        //    return Collection.GetEnumerator();
-        //}
-
-        //IEnumerator IEnumerable.GetEnumerator()
-        //{
-        //    return GetEnumerator();
-        //}
-
-        //public void AddPoint(KeyValuePair<T1, T2> item)
-        //{
-        //    Collection.AddPoint(item.Key, item.Value);
-        //}
-
-        //public void Clear()
-        //{
-        //    Collection.Clear();
-        //}
-
-        //public bool Contains(KeyValuePair<T1, T2> item)
-        //{
-        //    return Collection.Contains(item);
-        //}
-
-        //public void CopyTo(KeyValuePair<T1, T2>[] array, int arrayIndex)
-        //{
-        //    var c = (IDictionary<T1, T2>) Collection;
-        //    c.CopyTo(array, arrayIndex);
-        //}
-
-        //public bool Remove(KeyValuePair<T1, T2> item)
-        //{
-        //    return Collection.Remove(item.Key);
-        //}
-
-        //public int Count => Collection.Count;
-        //public bool IsReadOnly => false;
-        //public bool ContainsKey(T1 key)
-        //{
-        //    return Collection.ContainsKey(key);
-        //}
-
-        //public void AddPoint(T1 key, T2 value)
-        //{
-        //    Collection.AddPoint(key, value);
-        //}
-
-        //public bool Remove(T1 key)
-        //{
-        //    return Collection.Remove(key);
-        //}
-
-        //public bool TryGetValue(T1 key, out T2 value)
-        //{
-        //    return Collection.TryGetValue(key, out value);
-        //}
-
-        //T2 IDictionary<T1, T2>.this[T1 key]
-        //{
-        //    get { return Collection[key]; }
-        //    set { Collection[key] = value; }
-        //}
-
-        //public ICollection<T1> Keys => Collection.Keys;
-        //public ICollection<T2> Values => Collection.Values;
     }
 }

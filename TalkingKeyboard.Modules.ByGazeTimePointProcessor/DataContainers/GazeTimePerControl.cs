@@ -18,8 +18,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.DataContainers
 
     internal class GazeTimePerControl : MaintainablePointCollection<SelectableControl, TimeSpan>
     {
-        private readonly TimeSpan _gazeKeepAliveTimeSpan;
-        private readonly Window _window;
+        private readonly TimeSpan gazeKeepAliveTimeSpan;
+        private readonly Window window;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="GazeTimePerControl" /> class.
@@ -28,8 +28,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.DataContainers
         /// <param name="window">The window containing the controls.</param>
         public GazeTimePerControl(TimeSpan gazeKeepAliveTimeSpan, Window window)
         {
-            this._gazeKeepAliveTimeSpan = gazeKeepAliveTimeSpan;
-            this._window = window;
+            this.gazeKeepAliveTimeSpan = gazeKeepAliveTimeSpan;
+            this.window = window;
             this.LastTimePerControl = new Dictionary<SelectableControl, DateTime>();
         }
 
@@ -50,13 +50,13 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.DataContainers
         /// </remarks>
         public override void AddPoint(Point point)
         {
-            var seenControl = HitTestHelper.SelectableControlUnderPoint(point, this._window);
+            var seenControl = HitTestHelper.SelectableControlUnderPoint(point, this.window);
             if (seenControl == null)
             {
                 return;
             }
 
-            var oldestAcceptable = DateTime.Now - this._gazeKeepAliveTimeSpan;
+            var oldestAcceptable = DateTime.Now - this.gazeKeepAliveTimeSpan;
             DateTime lastTimeSeen;
             if (!this.LastTimePerControl.TryGetValue(seenControl, out lastTimeSeen))
             {
@@ -73,12 +73,12 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.DataContainers
         }
 
         /// <summary>
-        ///     Removes any points older than <see cref="_gazeKeepAliveTimeSpan" />
+        ///     Removes any points older than <see cref="gazeKeepAliveTimeSpan" />
         ///     from this.
         /// </summary>
         public override void Maintain()
         {
-            var oldestAcceptable = DateTime.Now - this._gazeKeepAliveTimeSpan;
+            var oldestAcceptable = DateTime.Now - this.gazeKeepAliveTimeSpan;
             foreach (var e in this)
             {
                 this.AddOrUpdate(

@@ -19,7 +19,7 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
 
     public class QwertySpanishSingleKeyboardViewModel : INotifyPropertyChanged
     {
-        private bool _isShiftDown;
+        private bool isShiftDown;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="QwertySpanishSingleKeyboardViewModel" /> class.
@@ -46,17 +46,17 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
         {
             get
             {
-                return this._isShiftDown;
+                return this.isShiftDown;
             }
 
             set
             {
-                if (value == this._isShiftDown)
+                if (value == this.isShiftDown)
                 {
                     return;
                 }
 
-                this._isShiftDown = value;
+                this.isShiftDown = value;
                 this.OnPropertyChanged();
             }
         }

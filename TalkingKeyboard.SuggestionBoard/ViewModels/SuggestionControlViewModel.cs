@@ -14,10 +14,10 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
 
     public class SuggestionControlViewModel : BindableBase
     {
-        private Suggestion _suggestion;
+        private Suggestion suggestion;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SuggestionControlViewModel"/> class.
+        ///     Initializes a new instance of the <see cref="SuggestionControlViewModel" /> class.
         /// </summary>
         /// <param name="suggestion">The suggestion held by the control.</param>
         public SuggestionControlViewModel(string suggestion)
@@ -26,21 +26,21 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
         }
 
         /// <summary>
-        /// Gets or sets the suggestion held by the control.
+        ///     Gets or sets the suggestion held by the control.
         /// </summary>
         /// <value>
-        /// The suggestion held by the control.
+        ///     The suggestion held by the control.
         /// </value>
         public Suggestion Suggestion
         {
             get
             {
-                return this._suggestion;
+                return this.suggestion;
             }
 
             set
             {
-                this.SetProperty(ref this._suggestion, value);
+                this.SetProperty(ref this.suggestion, value);
             }
         }
     }

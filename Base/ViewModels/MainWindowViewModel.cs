@@ -1,51 +1,101 @@
-﻿using System.Collections.Generic;
-using System.Windows.Input;
-using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Regions;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MainWindowViewModel.cs" company="Numeral">
+//   Copyright 2016 Fernando Ramírez Garibay
+// </copyright>
+// <summary>
+//   Defines the MainWindowViewModel type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Shell.ViewModels
 {
+    using System.Collections.Generic;
+    using System.Windows.Input;
+
+    using Prism.Commands;
+    using Prism.Mvvm;
+    using Prism.Regions;
+
     using TalkingKeyboard.Infrastructure.Constants;
 
     public class MainWindowViewModel : BindableBase
     {
-        private readonly List<string> _knownBoards;
-        private readonly IRegionManager _regionManager;
-        private int _currentViewIndex; // Must be set to index of initial board.
-        private string _title = "Prism Unity Application";
+        private readonly List<string> knownBoards;
+        private readonly IRegionManager regionManager;
+        private int currentViewIndex; // Must be set to index of initial board.
+        private string title = "Prism Unity Application";
 
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="MainWindowViewModel" /> class.
+        /// </summary>
+        /// <param name="regionManager">The region manager (obtained through dependency injection).</param>
         public MainWindowViewModel(IRegionManager regionManager)
         {
-            _regionManager = regionManager;
-            _knownBoards = new List<string>
-            {
-                ViewNames.QwertySpanishMultiKeyboard,
-                ViewNames.QwertySpanishSingleKeyboard
-            };
+            this.regionManager = regionManager;
+            this.knownBoards = new List<string>
+                                   {
+                                       ViewNames.QwertySpanishMultiKeyboard,
+                                       ViewNames.QwertySpanishSingleKeyboard
+                                   };
 
-            ChangeViewToLeftCommand = new DelegateCommand(() =>
-            {
-                if (--_currentViewIndex < 0) _currentViewIndex = _knownBoards.Count - 1;
-                _regionManager.RequestNavigate(RegionNames.BoardViewRegion,
-                    _knownBoards[_currentViewIndex]);
-            });
-            ChangeViewToRightCommand = new DelegateCommand(() =>
-            {
-                if (++_currentViewIndex >= _knownBoards.Count) _currentViewIndex = 0;
-                _regionManager.RequestNavigate(RegionNames.BoardViewRegion,
-                    _knownBoards[_currentViewIndex]);
-            });
+            this.ChangeViewToLeftCommand = new DelegateCommand(
+                                               () =>
+                                                   {
+                                                       if (--this.currentViewIndex < 0)
+                                                       {
+                                                           this.currentViewIndex = this.knownBoards.Count - 1;
+                                                       }
+
+                                                       this.regionManager.RequestNavigate(
+                                                           RegionNames.BoardViewRegion,
+                                                           this.knownBoards[this.currentViewIndex]);
+                                                   });
+            this.ChangeViewToRightCommand = new DelegateCommand(
+                                                () =>
+                                                    {
+                                                        if (++this.currentViewIndex >= this.knownBoards.Count)
+                                                        {
+                                                            this.currentViewIndex = 0;
+                                                        }
+
+                                                        this.regionManager.RequestNavigate(
+                                                            RegionNames.BoardViewRegion,
+                                                            this.knownBoards[this.currentViewIndex]);
+                                                    });
         }
 
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
-        }
+        /// <summary>
+        ///     Gets or sets the command for switching to the view on the left.
+        /// </summary>
+        /// <value>
+        ///     The command for switching to the view on the left.
+        /// </value>
+        public ICommand ChangeViewToLeftCommand { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the command for switching to the view on the right.
+        /// </summary>
+        /// <value>
+        ///     The command for switching to the view on the right.
+        /// </value>
         public ICommand ChangeViewToRightCommand { get; set; }
 
-        public ICommand ChangeViewToLeftCommand { get; set; }
+        /// <summary>
+        ///     Gets or sets the title of the window.
+        /// </summary>
+        /// <value>
+        ///     The title of the window.
+        /// </value>
+        public string Title
+        {
+            get
+            {
+                return this.title;
+            }
+
+            set
+            {
+                this.SetProperty(ref this.title, value);
+            }
+        }
     }
 }

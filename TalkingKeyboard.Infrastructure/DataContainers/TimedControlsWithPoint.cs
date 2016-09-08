@@ -16,7 +16,7 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
 
     public class TimedControlsWithPoint : MaintainablePointCollection<SelectableControl, TimedPoints>
     {
-        private readonly Window _window;
+        private readonly Window window;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="TimedControlsWithPoint" /> class.
@@ -26,7 +26,7 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
         public TimedControlsWithPoint(TimeSpan pointKeepAliveTimeSpan, Window window)
             : base(pointKeepAliveTimeSpan)
         {
-            this._window = window;
+            this.window = window;
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
         /// <remarks>Does nothing if the point does not fall on any control</remarks>
         public override void AddPoint(Point point)
         {
-            var seenControl = HitTestHelper.SelectableControlUnderPoint(point, this._window);
+            var seenControl = HitTestHelper.SelectableControlUnderPoint(point, this.window);
             if (seenControl == null)
             {
                 return;

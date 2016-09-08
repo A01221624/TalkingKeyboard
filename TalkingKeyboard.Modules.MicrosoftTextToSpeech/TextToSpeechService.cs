@@ -21,9 +21,9 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
 
     public class TextToSpeechService : BindableBase, ITextToSpeechService
     {
-        private readonly SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
+        private readonly SpeechSynthesizer synthesizer = new SpeechSynthesizer();
 
-        private string _currentText;
+        private string currentText;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="TextToSpeechService" /> class.
@@ -51,12 +51,12 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         {
             get
             {
-                return this._currentText;
+                return this.currentText;
             }
 
             set
             {
-                this.SetProperty(ref this._currentText, value);
+                this.SetProperty(ref this.currentText, value);
             }
         }
 
@@ -83,7 +83,7 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         /// <param name="s">The string to speech-synthesize</param>
         public void Say(string s)
         {
-            this._synthesizer.SpeakAsync(s);
+            this.synthesizer.SpeakAsync(s);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         /// </summary>
         public void SayCurrentText()
         {
-            this._synthesizer.SpeakAsync(this.TextModel.CurrentText);
+            this.synthesizer.SpeakAsync(this.TextModel.CurrentText);
         }
 
         /// <summary>

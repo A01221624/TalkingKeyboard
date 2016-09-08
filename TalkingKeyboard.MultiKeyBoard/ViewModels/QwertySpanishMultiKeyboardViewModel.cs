@@ -16,12 +16,11 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
 
     using TalkingKeyboard.Infrastructure;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
-    using TalkingKeyboard.Modules.MultiKeyBoard.Model;
 
     public class QwertySpanishMultiKeyboardViewModel : BindableBase
     {
-        private readonly IEventAggregator _eventAggregator;
-        private readonly ISuggestionService _suggestionService;
+        private readonly IEventAggregator eventAggregator;
+        private readonly ISuggestionService suggestionService;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="QwertySpanishMultiKeyboardViewModel" /> class.
@@ -32,9 +31,8 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
             IEventAggregator eventAggregator,
             ISuggestionService suggestionService)
         {
-            this._eventAggregator = eventAggregator;
-            this._suggestionService = suggestionService;
-            var model = new MultikeyTextModel();
+            this.eventAggregator = eventAggregator;
+            this.suggestionService = suggestionService;
             this.AddMultiCharacterCommand = new DelegateCommand<string>(this.AddMultiCharacter);
             this.RemoveLastMultiCharacterCommand = new DelegateCommand(this.RemoveLastMultiCharacter);
             Commands.AddMultiCharacterTextCommand.RegisterCommand(this.AddMultiCharacterCommand);
@@ -63,8 +61,8 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
         /// <param name="s">The s.</param>
         private void AddMultiCharacter(string s)
         {
-            this._suggestionService.AddMultiCharacterText(s);
-            this._eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Publish();
+            this.suggestionService.AddMultiCharacterText(s);
+            this.eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Publish();
         }
 
         /// <summary>
@@ -72,8 +70,8 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
         /// </summary>
         private void RemoveLastMultiCharacter()
         {
-            this._suggestionService.RemoveLastMultiCharacter();
-            this._eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Publish();
+            this.suggestionService.RemoveLastMultiCharacter();
+            this.eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Publish();
         }
     }
 }

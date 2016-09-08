@@ -84,8 +84,8 @@ namespace TalkingKeyboard.Infrastructure.MarkupExtensions
         /// </summary>
         private void Initialize()
         {
-            this.ValueIfTrue = DoNothing;
-            this.ValueIfFalse = DoNothing;
+            this.ValueIfTrue = Binding.DoNothing;
+            this.ValueIfFalse = Binding.DoNothing;
             this.Converter = new SwitchConverter(this);
         }
 

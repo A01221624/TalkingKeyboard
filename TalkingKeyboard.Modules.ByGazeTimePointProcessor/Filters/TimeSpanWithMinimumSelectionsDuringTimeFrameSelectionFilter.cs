@@ -18,8 +18,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 
     public class TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter : SelectionFilter<TimedControlsWithPoint>
     {
-        private readonly int _pointsRequired;
-        private readonly TimeSpan _timeFrame;
+        private readonly int pointsRequired;
+        private readonly TimeSpan timeFrame;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter"/> class.
@@ -33,8 +33,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
             int pointsRequired)
             : base(window)
         {
-            this._timeFrame = timeFrame;
-            this._pointsRequired = pointsRequired;
+            this.timeFrame = timeFrame;
+            this.pointsRequired = pointsRequired;
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
                 }
 
                 var pointCount = timedPoints.Count;
-                if ((pointCount >= this._pointsRequired)
-                    && (timedPoints.Keys.Last() - timedPoints.Keys.First() >= this._timeFrame))
+                if ((pointCount >= this.pointsRequired)
+                    && (timedPoints.Keys.Last() - timedPoints.Keys.First() >= this.timeFrame))
                 {
                     this.Window.Dispatcher.Invoke(() => ctp.Key.Select());
                 }

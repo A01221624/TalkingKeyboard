@@ -1,17 +1,12 @@
-﻿using NLog;
-using Prism.Logging;
-
-namespace TalkingKeyboard.Shell.Logging
+﻿namespace TalkingKeyboard.Shell.Logging
 {
+    using NLog;
+
+    using Prism.Logging;
+
     public class NLogLogger : ILoggerFacade
     {
-        #region Members and Constants
-
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
-
-        #endregion Members and Constants 
-
-        #region ILoggerFacade Members
 
         /// <summary>
         ///     Write a new log entry with the specified category and priority.
@@ -24,23 +19,21 @@ namespace TalkingKeyboard.Shell.Logging
             switch (category)
             {
                 case Category.Debug:
-                    logger.Debug(message);
+                    this.logger.Debug(message);
                     break;
                 case Category.Exception:
-                    logger.Error(message);
+                    this.logger.Error(message);
                     break;
                 case Category.Info:
-                    logger.Info(message);
+                    this.logger.Info(message);
                     break;
                 case Category.Warn:
-                    logger.Warn(message);
+                    this.logger.Warn(message);
                     break;
                 default:
-                    logger.Info(message);
+                    this.logger.Info(message);
                     break;
             }
         }
-
-        #endregion ILoggerFacade Members
     }
 }
