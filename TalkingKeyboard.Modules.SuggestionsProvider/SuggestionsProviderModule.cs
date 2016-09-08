@@ -8,6 +8,10 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
     {
         private readonly IUnityContainer _unityContainer;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SuggestionsProviderModule"/> class.
+        /// </summary>
+        /// <param name="unityContainer">The unity DI container (obtained through DI).</param>
         public SuggestionsProviderModule(IUnityContainer unityContainer)
         {
             _unityContainer = unityContainer;

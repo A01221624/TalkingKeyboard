@@ -28,7 +28,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         }
 
         /// <summary>
-        ///     Notifies the module that it has be initialized.
+        ///     Notifies the module that it has been initialized.
         /// </summary>
         public void Initialize()
         {

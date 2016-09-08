@@ -19,6 +19,10 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 
         private string _currentText = string.Empty;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextViewModel"/> class.
+        /// </summary>
+        /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
         public TextViewModel(IEventAggregator eventAggregator)
         {
             _eventAggregator = eventAggregator;

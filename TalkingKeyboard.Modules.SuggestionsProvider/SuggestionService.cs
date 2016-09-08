@@ -19,6 +19,10 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         private readonly PresageSuggestionSource _presageSource = new PresageSuggestionSource();
         private readonly ITextModel _textModel;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SuggestionService"/> class.
+        /// </summary>
+        /// <param name="textModel">The text model (obtained through DI).</param>
         public SuggestionService(ITextModel textModel)
         {
             _textModel = textModel;

@@ -15,6 +15,11 @@ namespace TalkingKeyboard.Modules.CentralTextModule
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _unityContainer;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextHolderModule"/> class.
+        /// </summary>
+        /// <param name="regionManager">The prism region manager (obtained through DI).</param>
+        /// <param name="unityContainer">The unity DI container (obtained through DI).</param>
         public TextHolderModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
             _regionManager = regionManager;
