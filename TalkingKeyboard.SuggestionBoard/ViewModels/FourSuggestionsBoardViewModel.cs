@@ -37,20 +37,31 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
         {
             this.suggestionService = suggestionService;
             this.textModel = textModel;
-            this.Suggestions = new ObservableCollection<string>();
             eventAggregator.GetEvent<Events.TextUpdatedEvent>().Subscribe(
                 () =>
                     {
+                        if (this.Suggestions == null)
+                        {
+                            this.Suggestions = new ObservableCollection<string>();
+                        }
+
                         this.Suggestions = suggestionService.ProvideSuggestions(this.textModel.CurrentText);
                         suggestionService.ClearMultiCharacterBuffer();
                     },
                 ThreadOption.BackgroundThread,
                 true);
-            eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>()
-                .Subscribe(
-                    () => { this.Suggestions = this.suggestionService.ProvideMultiCharacterSuggestions(); },
-                    ThreadOption.BackgroundThread,
-                    true);
+            eventAggregator.GetEvent<Events.MultiTextUpdatedEvent>().Subscribe(
+                () =>
+                    {
+                        if (this.Suggestions == null)
+                        {
+                            this.Suggestions = new ObservableCollection<string>();
+                        }
+
+                        this.Suggestions = this.suggestionService.ProvideMultiCharacterSuggestions();
+                    },
+                ThreadOption.BackgroundThread,
+                true);
         }
 
         /// <summary>
