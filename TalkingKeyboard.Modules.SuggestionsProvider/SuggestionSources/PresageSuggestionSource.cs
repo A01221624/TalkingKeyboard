@@ -6,13 +6,11 @@
 //   Defines the PresageSuggestionSource type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
-    using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Linq;
     using System.ServiceModel;
-    using System.Text;
 
     using TalkingKeyboard.Infrastructure.Helpers;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
@@ -20,9 +18,11 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 
     public class PresageSuggestionSource : ISuggestionSource
     {
-        private readonly PresageClient _client;
         private readonly PresageChannel channel;
 
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="PresageSuggestionSource" /> class.
+        /// </summary>
         public PresageSuggestionSource()
         {
             var binding = new NetNamedPipeBinding();
@@ -31,18 +31,27 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
             this.channel = channelFactory.CreateChannel();
         }
 
-        public string GetDummySuggestions()
-        {
-            var test = this.channel.context();
-            var t = this.channel.predict("hello", "my");
-            var testo = t[0];
-            return testo;
-        }
-
         /// <summary>
+        ///     Gets the suggestions.
         /// </summary>
-        /// <param name="basedOn"></param>
-        /// <returns></returns>
+        /// <param name="basedOn">
+        ///     String (as object) with the text on which the suggestions are based (i.e. the currently displayed
+        ///     text).
+        /// </param>
+        /// <returns>
+        ///     Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the
+        ///     suggestions.
+        /// </returns>
+        /// <remarks>
+        ///     <para>
+        ///         The suggestions are sorted by Presage. Configuration of Presage is done through an XML file located in its
+        ///         installation folder.
+        ///     </para>
+        ///     <para>
+        ///         Conversion between UTF8 (for this module) and Default encoding (for Presage) is performed when communicating
+        ///         with the Presage Service.
+        ///     </para>
+        /// </remarks>
         public ObservableCollection<string> GetSuggestions(object basedOn)
         {
             var currentText = basedOn as string;
@@ -53,12 +62,14 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 
             string prefix, lastWord;
             StringEditHelper.SplitStringPrefixAndLastWord(currentText, out prefix, out lastWord);
-            var result = new List<string>();
-            foreach (var s in this.channel.predict(prefix, lastWord))
-            {
-                var bytes = Encoding.Default.GetBytes(s);
-                result.Add(Encoding.UTF8.GetString(bytes));
-            }
+
+            prefix = StringEditHelper.ConvertToDefaultEncodingFromUtf8(prefix);
+            lastWord = StringEditHelper.ConvertToDefaultEncodingFromUtf8(lastWord);
+
+            var result =
+                this.channel.predict(prefix, lastWord)
+                    .Select(StringEditHelper.ConvertToUtf8FromDefaultEncoding)
+                    .ToList();
 
             return new ObservableCollection<string>(result);
         }

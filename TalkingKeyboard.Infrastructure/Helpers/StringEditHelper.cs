@@ -8,6 +8,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.Helpers
 {
+    using System.Text;
+
     using TalkingKeyboard.Infrastructure.Constants;
 
     public static class StringEditHelper
@@ -60,6 +62,18 @@ namespace TalkingKeyboard.Infrastructure.Helpers
             var indexLastWord = s.LastIndexOfAny(CharacterClasses.WordSeparators) + 1;
             lastWord = s.Length > indexLastWord ? s.Substring(indexLastWord) : string.Empty;
             prefix = s.Length > indexLastWord ? s.Remove(indexLastWord) : s;
+        }
+
+        public static string ConvertToDefaultEncodingFromUtf8(string s)
+        {
+            var bytes = Encoding.UTF8.GetBytes(s);
+            return Encoding.Default.GetString(bytes);
+        }
+
+        public static string ConvertToUtf8FromDefaultEncoding(string s)
+        {
+            var bytes = Encoding.Default.GetBytes(s);
+            return Encoding.UTF8.GetString(bytes);
         }
     }
 }
