@@ -78,12 +78,10 @@
   <ItemGroup>
     <Compile Include="ByGazeTimePointProcessorModule.cs" />
     <Compile Include="DataContainers\GazeTimePerControl.cs" />
-    <Compile Include="Filters\AmountOfSelectionsDuringTimeFrameSelectionFilter.cs" />
     <Compile Include="Filters\AveragingFilter.cs" />
     <Compile Include="Filters\AveragingLastNpointsWithinTimeSpanFilter.cs" />
     <Compile Include="Filters\SelectionFilter.cs" />
     <Compile Include="Filters\TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.cs" />
-    <Compile Include="Filters\TwoSelectionsDuringTimeFrameSelectionFilter.cs" />
     <Compile Include="GazeSelectionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
