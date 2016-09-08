@@ -47,139 +47,139 @@
         </Grid.ColumnDefinitions>
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='Q', ValueIfFalse='q'}"
-            Grid.Column="0" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="0" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='W', ValueIfFalse='w'}"
-            Grid.Column="1" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="1" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='E', ValueIfFalse='e'}"
-            Grid.Column="2" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="2" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='R', ValueIfFalse='r'}"
-            Grid.Column="3" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="3" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='T', ValueIfFalse='t'}"
-            Grid.Column="4" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="4" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='Y', ValueIfFalse='y'}"
-            Grid.Column="5" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="5" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='U', ValueIfFalse='u'}"
-            Grid.Column="6" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="6" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='I', ValueIfFalse='i'}"
-            Grid.Column="7" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="7" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='O', ValueIfFalse='o'}"
-            Grid.Column="8" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="8" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='P', ValueIfFalse='p'}"
-            Grid.Column="9" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="9" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='¨', ValueIfFalse=&#x00B4;}"
-            Grid.Column="10" Grid.Row="0" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="10" Grid.Row="0" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='A', ValueIfFalse='a'}"
-            Grid.Column="0" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="0" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='S', ValueIfFalse='s'}"
-            Grid.Column="1" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="1" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='D', ValueIfFalse='d'}"
-            Grid.Column="2" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="2" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='F', ValueIfFalse='f'}"
-            Grid.Column="3" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="3" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='G', ValueIfFalse='g'}"
-            Grid.Column="4" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="4" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='H', ValueIfFalse='h'}"
-            Grid.Column="5" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="5" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='J', ValueIfFalse='j'}"
-            Grid.Column="6" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="6" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='K', ValueIfFalse='k'}"
-            Grid.Column="7" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="7" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='L', ValueIfFalse='l'}"
-            Grid.Column="8" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="8" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='Ñ', ValueIfFalse='ñ'}"
-            Grid.Column="9" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="9" Grid.Row="1" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='Z', ValueIfFalse='z'}"
-            Grid.Column="0" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="0" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='X', ValueIfFalse='x'}"
-            Grid.Column="1" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="1" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='C', ValueIfFalse='c'}"
-            Grid.Column="2" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="2" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='V', ValueIfFalse='v'}"
-            Grid.Column="3" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="3" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='B', ValueIfFalse='b'}"
-            Grid.Column="4" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="4" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='N', ValueIfFalse='n'}"
-            Grid.Column="5" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="5" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='M', ValueIfFalse='m'}"
-            Grid.Column="6" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="6" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue=';', ValueIfFalse=','}"
-            Grid.Column="7" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="7" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue=':', ValueIfFalse='.'}"
-            Grid.Column="8" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="8" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
             Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='_', ValueIfFalse='-'}"
-            Grid.Column="9" Grid.Row="2" Command="{x:Static infrastructure:Commands.SetTextCommand}"
+            Grid.Column="9" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
 
 
         <sc:SelectableButton Text="⌫" Grid.Column="11" Grid.Row="0"
                              Command="{x:Static infrastructure:Commands.RemoveLastCharacterCommand}" />
         <sc:SelectableButton Text="⏎" Grid.Column="10" Grid.Row="1"
-                             Command="{x:Static infrastructure:Commands.SetTextCommand}"
+                             Command="{x:Static infrastructure:Commands.AppendTextCommand}"
                              CommandParameter="{x:Static system:Environment.NewLine}" Grid.ColumnSpan="2" />
         <sc:SelectableButton Text="⇧" Grid.Column="10" Grid.Row="2"
                              Command="{x:Static infrastructure:Commands.ToggleShiftDownCommand}" Grid.ColumnSpan="2" />
         <sc:SelectableButton Text="Espacio" Grid.Column="3" Grid.Row="3"
-                             Command="{x:Static infrastructure:Commands.SetTextCommand}" CommandParameter=" "
+                             Command="{x:Static infrastructure:Commands.AppendTextCommand}" CommandParameter=" "
                              Grid.ColumnSpan="6" Margin="0,10" />
         <sc:SelectableButton Text="Leer" Grid.Row="3"
                              Command="{x:Static infrastructure:Commands.SpeechSynthesisCommand}"

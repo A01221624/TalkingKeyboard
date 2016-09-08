@@ -21,8 +21,8 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
 
     public class MultiKeyBoardModule : IModule
     {
-        private readonly IRegionManager _regionManager;
-        private readonly IUnityContainer _unityContainer;
+        private readonly IRegionManager regionManager;
+        private readonly IUnityContainer unityContainer;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MultiKeyBoardModule" /> class.
@@ -31,23 +31,24 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
         /// <param name="unityContainer">The unity DI container (obtained through DI).</param>
         public MultiKeyBoardModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
-            this._regionManager = regionManager;
-            this._unityContainer = unityContainer;
+            this.regionManager = regionManager;
+            this.unityContainer = unityContainer;
         }
 
         /// <summary>
-        ///     Notifies the module that it has be initialized.
+        ///     Registers a unique instance of the multi-key text model and  of each of the keyboard view-models in the dependency
+        ///     injection container and registers their views with the region manager to the corresponding region of the window.
         /// </summary>
         public void Initialize()
         {
-            this._unityContainer.RegisterType<IMultiKeyTextModel, MultikeyTextModel>(
+            this.unityContainer.RegisterType<IMultiKeyTextModel, MultikeyTextModel>(
                 new ContainerControlledLifetimeManager());
-            this._unityContainer.Resolve<IMultiKeyTextModel>();
-            this._unityContainer.RegisterTypeForNavigation<QwertySpanishMultiKeyboard>(
+            this.unityContainer.Resolve<IMultiKeyTextModel>();
+            this.unityContainer.RegisterTypeForNavigation<QwertySpanishMultiKeyboard>(
                 ViewNames.QwertySpanishMultiKeyboard);
-            this._regionManager.RegisterViewWithRegion(
+            this.regionManager.RegisterViewWithRegion(
                 RegionNames.BoardViewRegion,
-                () => this._unityContainer.Resolve<QwertySpanishMultiKeyboard>());
+                () => this.unityContainer.Resolve<QwertySpanishMultiKeyboard>());
         }
     }
 }

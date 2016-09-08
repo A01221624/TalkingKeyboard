@@ -20,8 +20,8 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
 
     public class SuggestionBoardModule : IModule
     {
-        private readonly IRegionManager _regionManager;
-        private readonly IUnityContainer _unityContainer;
+        private readonly IRegionManager regionManager;
+        private readonly IUnityContainer unityContainer;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="SuggestionBoardModule" /> class.
@@ -30,21 +30,22 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
         /// <param name="unityContainer">The unity DI container (obtained through DI).</param>
         public SuggestionBoardModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
-            this._regionManager = regionManager;
-            this._unityContainer = unityContainer;
+            this.regionManager = regionManager;
+            this.unityContainer = unityContainer;
         }
 
         /// <summary>
-        ///     Notifies the module that it has been initialized.
+        ///     Registers a unique instance of the suggestions view-model in the dependency injection container and registers the
+        ///     suggestion board view with the region manager to the corresponding region of the window.
         /// </summary>
         public void Initialize()
         {
-            this._unityContainer.RegisterType<ISuggestionsViewModel, FourSuggestionsBoardViewModel>(
+            this.unityContainer.RegisterType<ISuggestionsViewModel, FourSuggestionsBoardViewModel>(
                 new ContainerControlledLifetimeManager());
-            this._unityContainer.Resolve<ISuggestionsViewModel>();
-            this._regionManager.RegisterViewWithRegion(
+            this.unityContainer.Resolve<ISuggestionsViewModel>();
+            this.regionManager.RegisterViewWithRegion(
                 RegionNames.SuggestionRegion,
-                () => this._unityContainer.Resolve<FourSuggestionsBoard>());
+                () => this.unityContainer.Resolve<FourSuggestionsBoard>());
         }
     }
 }

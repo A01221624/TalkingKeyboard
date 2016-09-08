@@ -10,34 +10,30 @@ namespace TalkingKeyboard.Modules.CoordinateProvider
 {
     using Microsoft.Practices.Unity;
 
-    using Prism.Events;
     using Prism.Modularity;
 
     using TalkingKeyboard.Modules.CoordinateProvider.Services;
 
     public class CoordinateProviderModule : IModule
     {
-        private readonly IEventAggregator _eventAggregator;
-        private readonly IUnityContainer _unityContainer;
+        private readonly IUnityContainer unityContainer;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="CoordinateProviderModule" /> class.
         /// </summary>
-        /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
         /// <param name="unityContainer">The unity dependency injection container (obtained through DI).</param>
-        public CoordinateProviderModule(IEventAggregator eventAggregator, IUnityContainer unityContainer)
+        public CoordinateProviderModule(IUnityContainer unityContainer)
         {
-            this._eventAggregator = eventAggregator;
-            this._unityContainer = unityContainer;
+            this.unityContainer = unityContainer;
         }
 
         /// <summary>
-        ///     Notifies the module that it has been initialized.
+        ///     Registers a unique instance of each of the coordinate providing services in the dependency injection container.
         /// </summary>
         public void Initialize()
         {
-            this._unityContainer.RegisterType<EyeXGazeCoordinateService>(new ContainerControlledLifetimeManager());
-            this._unityContainer.Resolve<EyeXGazeCoordinateService>();
+            this.unityContainer.RegisterType<EyeXGazeCoordinateService>(new ContainerControlledLifetimeManager());
+            this.unityContainer.Resolve<EyeXGazeCoordinateService>();
         }
     }
 }

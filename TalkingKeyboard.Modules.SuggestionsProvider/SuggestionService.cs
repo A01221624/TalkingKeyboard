@@ -1,91 +1,161 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
-using Prism.Commands;
-using TalkingKeyboard.Infrastructure;
-using TalkingKeyboard.Infrastructure.Controls;
-using TalkingKeyboard.Infrastructure.Helpers;
-using TalkingKeyboard.Infrastructure.ServiceInterfaces;
-using TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="SuggestionService.cs" company="Numeral">
+//   Copyright 2016 Fernando Ramírez Garibay
+// </copyright>
+// <summary>
+//   Defines the SuggestionService type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.SuggestionsProvider
 {
-    using TalkingKeyboard.Infrastructure.Constants;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Windows.Input;
 
-    public class SuggestionService : ISuggestionService, IDisposable
+    using Prism.Commands;
+
+    using TalkingKeyboard.Infrastructure;
+    using TalkingKeyboard.Infrastructure.Constants;
+    using TalkingKeyboard.Infrastructure.Controls;
+    using TalkingKeyboard.Infrastructure.Helpers;
+    using TalkingKeyboard.Infrastructure.ServiceInterfaces;
+    using TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources;
+
+    public class SuggestionService : ISuggestionService
     {
-        private readonly MultikeySuggestionSource _multikeySource = new MultikeySuggestionSource();
-        private readonly PresageSuggestionSource _presageSource = new PresageSuggestionSource();
-        private readonly ITextModel _textModel;
+        private readonly MultikeySuggestionSource multikeySource = new MultikeySuggestionSource();
+        private readonly PresageSuggestionSource presageSource = new PresageSuggestionSource();
+        private readonly ITextModel textModel;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SuggestionService"/> class.
+        ///     Initializes a new instance of the <see cref="SuggestionService" /> class.
         /// </summary>
         /// <param name="textModel">The text model (obtained through DI).</param>
         public SuggestionService(ITextModel textModel)
         {
-            _textModel = textModel;
-            AddSuggestionCommand = new DelegateCommand<string>(s =>
-            {
-                var currentText = _textModel.CurrentText;
-                var lastWord = StringEditHelper.GetLastWord(currentText);
-                if (s.ToLower().StartsWith(lastWord.ToLower())) Commands.RemoveLastWordCommand.Execute(null);
-                Commands.SetTextCommand.Execute(s + " ");
-            });
-            Commands.AddSuggestionCommand.RegisterCommand(AddSuggestionCommand);
+            this.textModel = textModel;
+            this.AddSuggestionCommand = new DelegateCommand<string>(
+                                            s =>
+                                                {
+                                                    var currentText = this.textModel.CurrentText;
+                                                    var lastWord = StringEditHelper.GetLastWord(currentText);
+                                                    if (s.ToLower().StartsWith(lastWord.ToLower()))
+                                                    {
+                                                        Commands.RemoveLastWordCommand.Execute(null);
+                                                    }
+
+                                                    Commands.AppendTextCommand.Execute(s + " ");
+                                                });
+            Commands.AddSuggestionCommand.RegisterCommand(this.AddSuggestionCommand);
         }
 
+        /// <summary>
+        ///     Gets or sets the command for adding a suggestion.
+        /// </summary>
+        /// <value>
+        ///     The command for adding a suggestion.
+        /// </value>
         public ICommand AddSuggestionCommand { get; set; }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public ObservableCollection<string> ProvideSuggestions(string basedOn)
-        {
-            var suggestions = _presageSource.GetSuggestions(basedOn);
-            return AddSpaceAndUppercaseIfNecessary(suggestions);
-        }
-
-        public ObservableCollection<string> ProvideMultiCharacterSuggestions()
-        {
-            var suggestions = _multikeySource.GetSuggestions();
-            return AddSpaceAndUppercaseIfNecessary(suggestions);
-        }
-
+        /// <summary>
+        ///     Adds a multi-character to the buffer.
+        /// </summary>
+        /// <param name="s">The multi-character to add.</param>
+        /// <remarks>
+        ///     The multi-character is a string with several characters, each of which will be considered as a potential
+        ///     character for the current position in the text. These characters may be separated by any whitespace character found
+        ///     in <see cref="CharacterClasses.Whitespace" />
+        /// </remarks>
         public void AddMultiCharacterText(string s)
         {
-            _multikeySource.Add(s);
+            this.multikeySource.Add(s);
         }
 
-        public void RemoveLastMultiCharacter()
-        {
-            _multikeySource.RemoveLastMultiCharacter();
-        }
-
+        /// <summary>
+        ///     Clears the multi character buffer.
+        /// </summary>
         public void ClearMultiCharacterBuffer()
         {
-            _multikeySource.ClearMultiCharacterBuffer();
+            this.multikeySource.ClearMultiCharacterBuffer();
         }
 
+        /// <summary>
+        ///     Provides suggestions according to the multi-key buffer.
+        /// </summary>
+        /// <returns>
+        ///     Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> collection with disambiguation
+        ///     suggestions first and then auto-complete suggestions.
+        /// </returns>
+        /// <remarks>
+        ///     <para>
+        ///         Disambiguation are those which match the number of keys selected and auto-complete are those which include keys
+        ///         which have not been selected yet.
+        ///     </para>
+        ///     <para>Adds space and first-uppercases the suggestions if necessary.</para>
+        /// </remarks>
+        public ObservableCollection<string> ProvideMultiCharacterSuggestions()
+        {
+            var suggestions = this.multikeySource.GetSuggestions();
+            return this.AddSpaceAndUppercaseIfNecessary(suggestions);
+        }
+
+        /// <summary>
+        ///     Gets the suggestions.
+        /// </summary>
+        /// <param name="basedOn">String on which the suggestions are based (current text).</param>
+        /// <returns>
+        ///     Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the
+        ///     suggestions.
+        /// </returns>
+        /// <remarks>
+        ///     <para>Adds space and first-uppercases the suggestions if necessary.</para>
+        /// </remarks>
+        public ObservableCollection<string> ProvideSuggestions(string basedOn)
+        {
+            var suggestions = this.presageSource.GetSuggestions(basedOn);
+            return this.AddSpaceAndUppercaseIfNecessary(suggestions);
+        }
+
+        /// <summary>
+        ///     Removes the last multi-character from the buffer.
+        /// </summary>
+        public void RemoveLastMultiCharacter()
+        {
+            this.multikeySource.RemoveLastMultiCharacter();
+        }
+
+        /// <summary>
+        ///     Adds space and first-uppercase if necessary to each string in a suggestion collection (based on the current text).
+        /// </summary>
+        /// <param name="collection">The suggestion collection.</param>
+        /// <returns>
+        ///     A new collection where the strings are the same as in the original but with a space at the beginning if it is
+        ///     needed and where the first character is uppercase if necessary.
+        /// </returns>
         private ObservableCollection<string> AddSpaceAndUppercaseIfNecessary(ObservableCollection<string> collection)
         {
-            var currentPrefix = StringEditHelper.RemoveLastWord(_textModel.CurrentText);
+            var currentPrefix = StringEditHelper.RemoveLastWord(this.textModel.CurrentText);
             var trimmedPrefix = currentPrefix.Trim();
-            var needsSpace = currentPrefix.Length > 0
-                             && !CharacterClasses.Whitespace.Contains(
-                                 currentPrefix[currentPrefix.Length - 1]);
-            var needsUppercase = _textModel.CurrentText.Trim().Length == 0 || trimmedPrefix.Length == 0
-                                 ||
-                                 CharacterClasses.FollowedByUppercase.Contains(trimmedPrefix[trimmedPrefix.Length - 1]);
-            var result = collection.Select(s =>
-            {
-                if (needsUppercase) s = s.Length > 1 ? char.ToUpper(s[0]) + s.Substring(1) : s.ToUpper();
-                if (needsSpace) s = " " + s;
-                return s;
-            });
+            var needsSpace = (currentPrefix.Length > 0)
+                             && !CharacterClasses.Whitespace.Contains(currentPrefix[currentPrefix.Length - 1]);
+            var needsUppercase = (this.textModel.CurrentText.Trim().Length == 0) || (trimmedPrefix.Length == 0)
+                                 || CharacterClasses.FollowedByUppercase.Contains(
+                                     trimmedPrefix[trimmedPrefix.Length - 1]);
+            var result = collection.Select(
+                s =>
+                    {
+                        if (needsUppercase)
+                        {
+                            s = s.Length > 1 ? char.ToUpper(s[0]) + s.Substring(1) : s.ToUpper();
+                        }
+
+                        if (needsSpace)
+                        {
+                            s = " " + s;
+                        }
+
+                        return s;
+                    });
             return new ObservableCollection<string>(result);
         }
     }

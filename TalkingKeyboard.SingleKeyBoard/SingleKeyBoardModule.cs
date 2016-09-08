@@ -19,8 +19,8 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
 
     public class SingleKeyBoardModule : IModule
     {
-        private readonly IRegionManager _regionManager;
-        private readonly IUnityContainer _unityContainer;
+        private readonly IRegionManager regionManager;
+        private readonly IUnityContainer unityContainer;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="SingleKeyBoardModule" /> class.
@@ -29,20 +29,21 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
         /// <param name="unityContainer">The unity DI container (obtained through DI).</param>
         public SingleKeyBoardModule(IRegionManager regionManager, IUnityContainer unityContainer)
         {
-            this._regionManager = regionManager;
-            this._unityContainer = unityContainer;
+            this.regionManager = regionManager;
+            this.unityContainer = unityContainer;
         }
 
         /// <summary>
-        ///     Notifies the module that it has been initialized.
+        ///     Registers a unique instance of each of the keyboard view-models in the dependency injection container and registers
+        ///     their views with the region manager to the corresponding region of the window.
         /// </summary>
         public void Initialize()
         {
-            this._unityContainer.RegisterTypeForNavigation<QwertySpanishSingleKeyboard>(
+            this.unityContainer.RegisterTypeForNavigation<QwertySpanishSingleKeyboard>(
                 ViewNames.QwertySpanishSingleKeyboard);
-            this._regionManager.RegisterViewWithRegion(
+            this.regionManager.RegisterViewWithRegion(
                 RegionNames.BoardViewRegion,
-                () => this._unityContainer.Resolve<QwertySpanishSingleKeyboard>());
+                () => this.unityContainer.Resolve<QwertySpanishSingleKeyboard>());
         }
     }
 }

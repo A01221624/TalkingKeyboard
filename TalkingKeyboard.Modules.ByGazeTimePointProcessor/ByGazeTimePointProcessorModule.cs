@@ -16,7 +16,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
 
     public class ByGazeTimePointProcessorModule : IModule
     {
-        private readonly IUnityContainer _unityContainer;
+        private readonly IUnityContainer unityContainer;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="ByGazeTimePointProcessorModule" /> class.
@@ -24,17 +24,17 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         /// <param name="unityContainer">The unity dependency injection container (obtained through DI).</param>
         public ByGazeTimePointProcessorModule(IUnityContainer unityContainer)
         {
-            this._unityContainer = unityContainer;
+            this.unityContainer = unityContainer;
         }
 
         /// <summary>
-        ///     Notifies the module that it has been initialized.
+        ///     Registers a unique instance of the selection-by-gaze service in the dependency injection container.
         /// </summary>
         public void Initialize()
         {
-            this._unityContainer.RegisterType<IControlActivationService, GazeSelectionService>(
+            this.unityContainer.RegisterType<IControlActivationService, GazeSelectionService>(
                 new ContainerControlledLifetimeManager());
-            this._unityContainer.Resolve<IControlActivationService>();
+            this.unityContainer.Resolve<IControlActivationService>();
         }
     }
 }

@@ -11,14 +11,15 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.IO;
+    using System.Linq;
 
     using TalkingKeyboard.Infrastructure.Constants;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
     public class MultikeySuggestionSource : ISuggestionSource
     {
-        private readonly List<List<string>> _filteredDictionary = new List<List<string>>();
-        private int _caretPosition;
+        private readonly List<List<string>> filteredDictionary = new List<List<string>>();
+        private int caretPosition;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MultikeySuggestionSource" /> class.
@@ -29,20 +30,30 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         }
 
         /// <summary>
-        ///     Adds the specified multi-character.
+        ///     Adds a multi-character to the buffer.
         /// </summary>
-        /// <param name="s">The multi-character.</param>
+        /// <param name="s">The multi-character to add.</param>
+        /// <remarks>
+        ///     The multi-character is a string with several characters, each of which will be considered as a potential
+        ///     character for the current position in the text. These characters may be separated by any whitespace character found
+        ///     in <see cref="CharacterClasses.Whitespace" />
+        /// </remarks>
         public void Add(string s)
         {
             this.UpdateFilteredDictionary(s);
         }
 
         /// <summary>
-        ///     Clears the multi-character buffer.
+        ///     Clears the multi character buffer.
         /// </summary>
+        /// <remarks>
+        ///     This only virtually clears the buffer by returning to the original dictionary (position zero in the list of
+        ///     filtered dictionaries). The rest of the dictionaries are not unassigned but will be overwritten as multi-characters
+        ///     are added.
+        /// </remarks>
         public void ClearMultiCharacterBuffer()
         {
-            this._caretPosition = 0;
+            this.caretPosition = 0;
         }
 
         /// <summary>
@@ -50,7 +61,8 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// </summary>
         /// <param name="basedOn">Nothing is required. May be used later on.</param>
         /// <returns>
-        ///     Returns disambiguation suggestions first and the rest are auto-complete suggestions.
+        ///     Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> with disambiguation suggestions
+        ///     first and then auto-complete suggestions.
         /// </returns>
         /// <remarks>
         ///     Disambiguation are those which match the number of keys selected and auto-complete are those which include keys
@@ -58,8 +70,8 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// </remarks>
         public ObservableCollection<string> GetSuggestions(object basedOn = null)
         {
-            var disambiguationList = this.FilterDictionaryToWordLength(this._caretPosition);
-            var autocompleteList = this.FilterDictionaryToHigherThanWordLength(this._caretPosition);
+            var disambiguationList = this.FilterDictionaryToWordLength(this.caretPosition);
+            var autocompleteList = this.FilterDictionaryToHigherThanWordLength(this.caretPosition);
             disambiguationList.AddRange(autocompleteList);
             return new ObservableCollection<string>(disambiguationList);
         }
@@ -83,7 +95,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
                 }
             }
 
-            this._filteredDictionary.Add(dictionary);
+            this.filteredDictionary.Add(dictionary);
         }
 
         /// <summary>
@@ -91,12 +103,12 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// </summary>
         public void RemoveLastMultiCharacter()
         {
-            if (this._caretPosition == 0)
+            if (this.caretPosition == 0)
             {
                 return;
             }
 
-            this._caretPosition--;
+            this.caretPosition--;
         }
 
         /// <summary>
@@ -107,7 +119,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// <remarks>Here "dictionary" is not meant as a type. It is a list of words.</remarks>
         private List<string> FilterDictionaryToHigherThanWordLength(int wordLength)
         {
-            return this._filteredDictionary[this._caretPosition].FindAll(s => s.Length > wordLength);
+            return this.filteredDictionary[this.caretPosition].FindAll(s => s.Length > wordLength);
         }
 
         /// <summary>
@@ -118,7 +130,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// <remarks>Here "dictionary" is not meant as a type. It is a list of words.</remarks>
         private List<string> FilterDictionaryToWordLength(int wordLength)
         {
-            return this._filteredDictionary[this._caretPosition].FindAll(s => s.Length == wordLength);
+            return this.filteredDictionary[this.caretPosition].FindAll(s => s.Length == wordLength);
         }
 
         /// <summary>
@@ -126,38 +138,66 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// </summary>
         /// <param name="addedMultiCharacter">The added multi-character.</param>
         /// <remarks>
-        ///     The multi-character buffer is essentially a list of word lists (dictionaries), where the first one is the original
-        ///     dictionary and each one following it is a filtered version of the previous where the filtering is based on the new
-        ///     multi-character received.
+        ///     <para>
+        ///         The multi-character buffer is essentially a list of word lists (dictionaries), where the first one is the
+        ///         original
+        ///         dictionary and each one following it is a filtered version of the previous where the filtering is based on the
+        ///         new
+        ///         multi-character received.
+        ///     </para>
+        ///     <para>
+        ///         Algorithm:
+        ///         <list type="number">
+        ///             <item>
+        ///                 <description>Add new entry to buffer if necessary</description>
+        ///             </item>
+        ///             <item>
+        ///                 <description>Filter the previous dictionary as follows</description>
+        ///             </item>
+        ///             <list type="bullet">
+        ///                 <item>
+        ///                     <description>Check whether the word is at least of adequate size (number of characters entered).</description>
+        ///                 </item>
+        ///                 <item>
+        ///                     <description>
+        ///                         Check whether any of the characters (ignore whitespace) from the multi-character
+        ///                         string fall on the expected position.
+        ///                     </description>
+        ///                 </item>
+        ///             </list>
+        ///             <item>
+        ///                 <description>Increase the current buffer position (to the newly filtered dictionary).</description>
+        ///             </item>
+        ///         </list>
+        ///     </para>
         /// </remarks>
         private void UpdateFilteredDictionary(string addedMultiCharacter)
         {
             var possibleCharacters = addedMultiCharacter.ToCharArray();
-            if (this._filteredDictionary.Count <= this._caretPosition + 1)
+            if (this.filteredDictionary.Count <= this.caretPosition + 1)
             {
-                this._filteredDictionary.Add(null);
+                this.filteredDictionary.Add(null);
             }
 
-            this._filteredDictionary[this._caretPosition + 1] =
-                this._filteredDictionary[this._caretPosition].FindAll(
-                    s =>
+            this.filteredDictionary[this.caretPosition + 1] = this.filteredDictionary[this.caretPosition].FindAll(
+                s =>
+                    {
+                        foreach (var c in possibleCharacters)
                         {
-                            foreach (var c in possibleCharacters)
+                            if (CharacterClasses.Whitespace.Contains(c))
                             {
-                                if ((c == ' ') || (c == '\r') || (c == '\n'))
-                                {
-                                    continue;
-                                }
-
-                                if ((s.Length > this._caretPosition) && (s[this._caretPosition] == c))
-                                {
-                                    return true;
-                                }
+                                continue;
                             }
 
-                            return false;
-                        });
-            this._caretPosition++;
+                            if ((s.Length > this.caretPosition) && (s[this.caretPosition] == c))
+                            {
+                                return true;
+                            }
+                        }
+
+                        return false;
+                    });
+            this.caretPosition++;
         }
     }
 }

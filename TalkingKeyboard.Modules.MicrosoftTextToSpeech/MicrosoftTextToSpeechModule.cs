@@ -16,7 +16,7 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
 
     public class MicrosoftTextToSpeechModule : IModule
     {
-        private readonly IUnityContainer _unityContainer;
+        private readonly IUnityContainer unityContainer;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MicrosoftTextToSpeechModule" /> class.
@@ -24,17 +24,17 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
         /// <param name="unityContainer">The unity dependency injection container (obtained through DI).</param>
         public MicrosoftTextToSpeechModule(IUnityContainer unityContainer)
         {
-            this._unityContainer = unityContainer;
+            this.unityContainer = unityContainer;
         }
 
         /// <summary>
-        ///     Notifies the module that it has been initialized.
+        ///     Registers a unique instance of the text to speech service in the dependency injection container.
         /// </summary>
         public void Initialize()
         {
-            this._unityContainer.RegisterType<ITextToSpeechService, TextToSpeechService>(
+            this.unityContainer.RegisterType<ITextToSpeechService, TextToSpeechService>(
                 new ContainerControlledLifetimeManager());
-            this._unityContainer.Resolve<ITextToSpeechService>();
+            this.unityContainer.Resolve<ITextToSpeechService>();
         }
     }
 }

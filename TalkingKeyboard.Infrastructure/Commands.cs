@@ -48,7 +48,7 @@ namespace TalkingKeyboard.Infrastructure
         /// <summary>
         ///     Gets or sets the set text command.
         /// </summary>
-        public static CompositeCommand SetTextCommand { get; set; } = new CompositeCommand();
+        public static CompositeCommand AppendTextCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
         ///     Gets or sets the speech synthesis command.
