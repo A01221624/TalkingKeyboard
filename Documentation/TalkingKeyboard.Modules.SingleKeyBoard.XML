@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TalkingKeyboard.Modules.SingleKeyBoard</name>
+    </assembly>
+    <members>
+        <member name="T:TalkingKeyboard.Modules.SingleKeyBoard.SingleKeyBoardModule">
+            <summary>
+                Class for initializing the module for displaying the single-character keyboards.
+            </summary>
+            <seealso cref="T:Prism.Modularity.IModule" />
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.SingleKeyBoardModule.#ctor(Prism.Regions.IRegionManager,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SingleKeyBoard.SingleKeyBoardModule" /> class.
+            </summary>
+            <param name="regionManager">The prism region manager (obtained through DI).</param>
+            <param name="unityContainer">The unity DI container (obtained through DI).</param>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.SingleKeyBoardModule.Initialize">
+            <summary>
+                Registers a unique instance of each of the keyboard view-models in the dependency injection container and registers
+                their views with the region manager to the corresponding region of the window.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.SingleKeyBoard.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel" /> class.
+            </summary>
+        </member>
+        <member name="E:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.PropertyChanged">
+            <summary>
+                Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.IsShiftDown">
+            <summary>
+                Gets or sets a value indicating whether this instance has shift down.
+            </summary>
+            <value>
+                <c>true</c> if this instance has shift down; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.SetShiftDownCommand">
+            <summary>
+                Gets or sets the command for setting shift down.
+            </summary>
+            <value>
+                The command for setting shift down.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.ToggleShiftDownCommand">
+            <summary>
+                Gets or sets the command for toggling shift down.
+            </summary>
+            <value>
+                The command for toggling shift down.
+            </value>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.OnPropertyChanged(System.String)">
+            <summary>
+                Called when [property changed].
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard">
+            <summary>
+                Interaction logic for QwertySpanishSingleKeyboard
+            </summary>
+            <summary>
+            QwertySpanishSingleKeyboard
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -2,11 +2,7 @@
 // <copyright file="SuggestionsProviderModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the SuggestionsProviderModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace TalkingKeyboard.Modules.SuggestionsProvider
 {
     using Microsoft.Practices.Unity;
@@ -15,6 +11,11 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
 
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     Class for initializing the module for providing suggestions based on the context (current text, current multi-text,
+    ///     etc.) given certain algorithms or services known as sources.
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class SuggestionsProviderModule : IModule
     {
         private readonly IUnityContainer unityContainer;

@@ -2,9 +2,6 @@
 // <copyright file="MicrosoftTextToSpeechModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the MicrosoftTextToSpeechModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
 {
@@ -14,6 +11,11 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
 
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     Class for initializing the module for providing text to speech services, particularly obtained by the Microsoft TTS
+    ///     (which uses the voices installed for Windows).
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class MicrosoftTextToSpeechModule : IModule
     {
         private readonly IUnityContainer unityContainer;

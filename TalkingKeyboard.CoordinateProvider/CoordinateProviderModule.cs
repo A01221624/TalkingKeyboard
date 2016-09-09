@@ -2,9 +2,6 @@
 // <copyright file="CoordinateProviderModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the CoordinateProviderModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.CoordinateProvider
 {
@@ -14,6 +11,10 @@ namespace TalkingKeyboard.Modules.CoordinateProvider
 
     using TalkingKeyboard.Modules.CoordinateProvider.Services;
 
+    /// <summary>
+    ///     Class for initializing the module for providing coordinates from different sources (such as gaze from EyeX).
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class CoordinateProviderModule : IModule
     {
         private readonly IUnityContainer unityContainer;

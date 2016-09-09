@@ -2,17 +2,17 @@
 // <copyright file="Configuration.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Contains configuration constants.
-// </summary>
-// <remarks>
-//   It could be useful to change and use Windows-based configuration for modifying externally.
-// </remarks>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure
 {
     using System;
 
+    /// <summary>
+    ///   Contains configuration constants.
+    /// </summary>
+    /// <remarks>
+    ///   It could be useful to change and use Windows-based configuration for modifying externally.
+    /// </remarks>
     public static class Configuration
     {
         /// <summary>

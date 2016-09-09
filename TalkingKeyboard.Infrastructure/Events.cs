@@ -9,6 +9,9 @@ namespace TalkingKeyboard.Infrastructure
 
     using Prism.Events;
 
+    /// <summary>
+    ///     Class containing the events to which the modules can publish and subscribe.
+    /// </summary>
     public class Events
     {
         /// <summary>

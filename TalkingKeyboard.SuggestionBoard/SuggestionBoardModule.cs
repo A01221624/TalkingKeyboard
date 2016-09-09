@@ -2,9 +2,6 @@
 // <copyright file="SuggestionBoardModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the SuggestionBoardModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.SuggestionBoard
 {
@@ -18,6 +15,10 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
     using TalkingKeyboard.Modules.SuggestionBoard.ViewModels;
     using TalkingKeyboard.Modules.SuggestionBoard.Views;
 
+    /// <summary>
+    ///     Class for initializing the module for displaying suggestions as SelectableControls.
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class SuggestionBoardModule : IModule
     {
         private readonly IRegionManager regionManager;

@@ -2,9 +2,6 @@
 // <copyright file="ByGazeTimePointProcessorModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the ByGazeTimePointProcessorModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
 {
@@ -14,6 +11,10 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
 
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     Class for initializing the module for gaze processing.
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class ByGazeTimePointProcessorModule : IModule
     {
         private readonly IUnityContainer unityContainer;

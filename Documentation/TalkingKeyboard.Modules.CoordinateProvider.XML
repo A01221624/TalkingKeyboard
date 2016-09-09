@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TalkingKeyboard.Modules.CoordinateProvider</name>
+    </assembly>
+    <members>
+        <member name="T:TalkingKeyboard.Modules.CoordinateProvider.CoordinateProviderModule">
+            <summary>
+                Class for initializing the module for providing coordinates from different sources (such as gaze from EyeX).
+            </summary>
+            <seealso cref="T:Prism.Modularity.IModule" />
+        </member>
+        <member name="M:TalkingKeyboard.Modules.CoordinateProvider.CoordinateProviderModule.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CoordinateProvider.CoordinateProviderModule" /> class.
+            </summary>
+            <param name="unityContainer">The unity dependency injection container (obtained through DI).</param>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.CoordinateProvider.CoordinateProviderModule.Initialize">
+            <summary>
+                Registers a unique instance of each of the coordinate providing services in the dependency injection container.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.CoordinateProvider.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.CoordinateProvider.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.CoordinateProvider.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService.#ctor(Prism.Events.IEventAggregator)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService" /> class.
+            </summary>
+            <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService.EyeXHost">
+            <summary>
+                Gets or sets the EyeX host.
+            </summary>
+            <value>
+                The EyeX host.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService.GazePointDataStream">
+            <summary>
+                Gets or sets the gaze point data stream.
+            </summary>
+            <value>
+                The gaze point data stream.
+            </value>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService.Dispose">
+            <summary>
+                Disposes of the point data stream and the EyeXHost.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+    </members>
+</doc>

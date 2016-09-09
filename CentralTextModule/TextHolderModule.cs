@@ -2,11 +2,7 @@
 // <copyright file="TextHolderModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the TextHolderModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace TalkingKeyboard.Modules.CentralTextModule
 {
     using Microsoft.Practices.Unity;
@@ -19,6 +15,11 @@ namespace TalkingKeyboard.Modules.CentralTextModule
     using TalkingKeyboard.Modules.CentralTextModule.ViewModels;
     using TalkingKeyboard.Modules.CentralTextModule.Views;
 
+    /// <summary>
+    ///     Class for initializing the module for holding, displaying and handling changes (through commands) to the current
+    ///     text.
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class TextHolderModule : IModule
     {
         private readonly IRegionManager regionManager;

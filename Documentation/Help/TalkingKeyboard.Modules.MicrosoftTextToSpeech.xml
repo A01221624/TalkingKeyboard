@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TalkingKeyboard.Modules.MicrosoftTextToSpeech</name>
+  </assembly>
+  <members>
+    <member name="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.MicrosoftTextToSpeechModule">
+      <summary>
+                Class for initializing the module for providing text to speech services, particularly obtained by the Microsoft TTS
+                (which uses the voices installed for Windows).
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.MicrosoftTextToSpeechModule.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.MicrosoftTextToSpeechModule" /> class.
+            </summary>
+      <param name="unityContainer">The unity dependency injection container (obtained through DI).</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.MicrosoftTextToSpeechModule.Initialize">
+      <summary>
+                Registers a unique instance of the text to speech service in the dependency injection container.
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService"></member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.#ctor(TalkingKeyboard.Infrastructure.Controls.ITextModel,Prism.Events.IEventAggregator)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService" /> class.
+            </summary>
+      <param name="textModel">The text model (obtained through DI).</param>
+      <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.CurrentText">
+      <summary>
+                Gets or sets the current text.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.Dispose">
+      <summary>
+                Disposes of the point data stream and the EyeXHost.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.Dispose(System.Boolean)">
+      <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+      <param name="disposing">
+        <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.Say(System.String)">
+      <summary>
+                Speaks the specified string.
+            </summary>
+      <param name="s">The string to speech-synthesize</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.SayCurrentText">
+      <summary>
+                Speaks the current text.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.SpeechSynthesisCommand">
+      <summary>
+                Gets or sets the speech synthesis command.
+            </summary>
+    </member>
+  </members>
+</doc>

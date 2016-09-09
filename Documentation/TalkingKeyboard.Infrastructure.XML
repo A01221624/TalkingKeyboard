@@ -1,0 +1,1585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TalkingKeyboard.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:TalkingKeyboard.Infrastructure.Commands">
+            <summary>
+                The commands for static, solution-wide access.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.AddMultiCharacterTextCommand">
+            <summary>
+                Gets or sets the add multi-character text command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.AddSuggestionCommand">
+            <summary>
+                Gets or sets the add suggestion command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.RemoveLastCharacterCommand">
+            <summary>
+                Gets or sets the remove last character command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.RemoveLastMultiCharacterCommand">
+            <summary>
+                Gets or sets the remove last multi character command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.RemoveLastWordCommand">
+            <summary>
+                Gets or sets the remove last word command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.SetShiftDownCommand">
+            <summary>
+                Gets or sets the set shift down command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.AppendTextCommand">
+            <summary>
+                Gets or sets the set text command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.SpeechSynthesisCommand">
+            <summary>
+                Gets or sets the speech synthesis command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.ToggleShiftDownCommand">
+            <summary>
+                Gets or sets the toggle shift down command.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Configuration">
+            <summary>
+              Contains configuration constants.
+            </summary>
+            <remarks>
+              It could be useful to change and use Windows-based configuration for modifying externally.
+            </remarks>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.DefaultDictionaryFilePath">
+            <summary>
+                Gets the default dictionary file path.
+            </summary>
+            <value>
+                The default dictionary file path.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.GazeKeepAliveTimeSpan">
+            <summary>
+                Gets the default gaze keep alive time span.
+            </summary>
+            <value>
+                The gaze keep alive time span.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.GazeTimeSpanBeforeAnimationBegins">
+            <summary>
+                Gets the default gaze time span before animation begins.
+            </summary>
+            <value>
+                The gaze time span before animation begins.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.GazeTimeSpanBeforeCooldownOccurs">
+            <summary>
+                Gets the default gaze time span before cool-down occurs.
+            </summary>
+            <value>
+                The gaze time span before cool-down occurs.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.GazeTimeSpanBeforeSelectionOccurs">
+            <summary>
+                Gets the default gaze time span before selection occurs.
+            </summary>
+            <value>
+                The gaze time span before selection occurs.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.InitialRequiredGazeTime">
+            <summary>
+                Gets the initial (default) required gaze time.
+            </summary>
+            <value>
+                The initial required gaze time.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.PointKeepAliveTimeSpan">
+            <summary>
+                Gets the default point keep alive time span.
+            </summary>
+            <value>
+                The point keep alive time span.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Configuration.GazeCoolDownTimeSpan">
+            <summary>
+                Gets the default gaze cool-down time span.
+            </summary>
+            <value>
+                The gaze cool-down time span.
+            </value>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Constants.CharacterClasses">
+            <summary>
+            The character classes.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.FollowedByUppercase">
+            <summary>
+            Characters followed by uppercase.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.Whitespace">
+            <summary>
+            Whitespace characters.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.ColonsAndCommas">
+            <summary>
+            Colons and commas characters.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.ClosingCharacters">
+            <summary>
+            Closing characters.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.Accents">
+            <summary>
+            Accent characters.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.PrecededByNonwhitespaceFollowedByWhitespace">
+            <summary>
+            The characters preceded by non-whitespace and followed by whitespace (e.g. ',').
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.WordSeparators">
+            <summary>
+            Word separating characters.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.AccentLookup">
+            <summary>
+            Dictionary for joining characters with accents.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Constants.RegionNames">
+            <summary>
+                The region names.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.RegionNames.BoardViewRegion">
+            <summary>
+                The board view region name.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.RegionNames.SuggestionRegion">
+            <summary>
+                The suggestion region name.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.RegionNames.TextViewRegion">
+            <summary>
+                The text view region name.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Constants.ResourceLocations">
+            <summary>
+                Resource location constants (e.g. dictionary paths).
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ResourceLocations.DefaultDictionaryLocation">
+            <summary>
+                The default dictionary location.
+            </summary>
+            <remarks>
+                Original project is for Spanish user. Therefore the default dictionary is Spanish.
+            </remarks>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ResourceLocations.SpanishDictionaryLocation">
+            <summary>
+                The Spanish dictionary location.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Constants.ViewNames">
+            <summary>
+                The view names.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ViewNames.QwertySpanishMultiKeyboard">
+            <summary>
+                The qwerty Spanish multi keyboard.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ViewNames.QwertySpanishSingleKeyboard">
+            <summary>
+                The qwerty Spanish single keyboard.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel">
+            <summary>
+            The SelectableControlViewModel interface.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.CurrentGazeTimeSpan">
+            <summary>
+            Gets or sets the current gaze time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.GazeKeepAliveTimeSpan">
+            <summary>
+            Gets or sets the gaze keep alive time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.GazeTimeSpanBeforeAnimationBegins">
+            <summary>
+            Gets or sets the gaze time span before animation begins.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.GazeTimeSpanBeforeCooldown">
+            <summary>
+            Gets or sets the gaze time span before cool-down.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.GazeTimeSpanBeforeSelectionOccurs">
+            <summary>
+            Gets or sets the gaze time span before selection occurs.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.LastSeenTime">
+            <summary>
+            Gets or sets the last seen time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.LastSelectedTime">
+            <summary>
+            Gets or sets the last selected time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.Select">
+            <summary>
+            Executes the Command assigned to the control.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.ISuggestionsViewModel">
+            <summary>
+            The SuggestionsViewModel interface.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISuggestionsViewModel.Suggestions">
+            <summary>
+            Gets or sets the suggestions.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.ITextModel">
+            <summary>
+            The TextModel interface.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ITextModel.CurrentText">
+            <summary>
+            Gets or sets the current text.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableButton">
+            <summary>
+            Interaction logic for SelectableButton.xaml
+            </summary>
+            <summary>
+            SelectableButton
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel">
+            <summary>
+                The selectable button view model.
+            </summary>
+        </member>
+        <member name="E:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.PropertyChanged">
+            <summary>
+                The property changed.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.Animation">
+            <summary>
+                Gets or sets the animation.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.AnimationBeginTime">
+            <summary>
+                Gets or sets the animation begin time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.AnimationEndTime">
+            <summary>
+                Gets or sets the animation end time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.ButtonText">
+            <summary>
+                Gets or sets the button text.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.Command">
+            <summary>
+                Gets or sets the command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.CommandParameter">
+            <summary>
+                Gets or sets the command parameter.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.CommandTarget">
+            <summary>
+                Gets or sets the command target.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.CurrentGazeTimeSpan">
+            <summary>
+                Gets or sets the current gaze time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.FontSize">
+            <summary>
+                Gets or sets the font size.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeKeepAliveTimeSpan">
+            <summary>
+                Gets or sets the gaze keep alive time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeTimeSpanBeforeAnimationBegins">
+            <summary>
+                Gets or sets the gaze time span before animation begins.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeTimeSpanBeforeCooldown">
+            <summary>
+                Gets or sets the gaze time span before cool-down.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeTimeSpanBeforeSelectionOccurs">
+            <summary>
+                Gets or sets the gaze time span before selection occurs.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.LastSeenTime">
+            <summary>
+                Gets or sets the last seen time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.LastSelectedTime">
+            <summary>
+                Gets or sets the last selected time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.State">
+            <summary>
+                Gets or sets the state.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.Select">
+            <summary>
+                <inheritdoc/>
+            </summary>
+            <exception cref="T:System.NotImplementedException">
+                TODO: Consider changing the selection to the ViewModel.
+            </exception>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Call on property changed.
+            </summary>
+            <param name="propertyName">
+            Name of property which changed.
+            </param>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableControl">
+            <summary>
+                Base for selectable controls
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.Animation">
+            <summary>
+                Gets or sets the animation.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.Command">
+            <summary>
+                Gets or sets the command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandParameter">
+            <summary>
+                Gets or sets the command parameter.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandTarget">
+            <summary>
+                Gets or sets the command target.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CompareTo(System.Object)">
+            <summary>
+                Implementation for IComparable
+            </summary>
+            <param name="obj">
+                Object to compare against.
+            </param>
+            <returns>
+                0 if equal, -1 if <see cref="!:obj" /> is not of same type, 1 otherwise.
+            </returns>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.PauseAnimation">
+            <summary>
+                Pause the animation.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.PlayAnimation">
+            <summary>
+                Play the animation.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.ResumeAnimation">
+            <summary>
+                Resumes the animation.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.Select">
+            <summary>
+                Executes the command assigned to the control.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.StopAnimation">
+            <summary>
+                Stops the animation.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.IMaintainable.Maintain">
+            <summary>
+                Performs any regular maintenance tasks such as
+                clean-up of old elements.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.#ctor(System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2" /> class given the point keep
+                alive time span.
+            </summary>
+            <param name="pointKeepAliveTimeSpan">The point keep alive time span.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2" /> class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.LastMaintainedTime">
+            <summary>
+                Gets or sets the time on which the collection was last maintained.
+            </summary>
+            <value>
+                The time on which the collection was last maintained.
+            </value>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.AddPoint(System.Windows.Point)">
+            <summary>
+                Adds a new point to the collection by doing the necessary processing.
+            </summary>
+            <param name="point">The point to be added and processed.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.Maintain">
+            <summary>
+                Removes any points older than <see cref="P:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.PointKeepAliveTimeSpan" />
+                from this.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint.#ctor(System.TimeSpan,System.Windows.Window)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint" /> class.
+            </summary>
+            <param name="pointKeepAliveTimeSpan">The time for which the point will be remembered.</param>
+            <param name="window">The window where the controls are located.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint.AddPoint(System.Windows.Point)">
+            <summary>
+                Registers a new point to the control on which it falls, if it is located on any control.
+            </summary>
+            <param name="point">The point.</param>
+            <remarks>Does nothing if the point does not fall on any control</remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint.Maintain">
+            <summary>
+                Removes any points older than
+                <see cref="F:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.PointKeepAliveTimeSpan" />
+                from this.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedPoints.#ctor(System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimedPoints" /> class.
+            </summary>
+            <param name="pointKeepAliveTimeSpan">The time for which the point will be remembered.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedPoints.AddPoint(System.Windows.Point)">
+            <summary>
+                Adds a point.
+            </summary>
+            <param name="point">The point.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedPoints.Maintain">
+            <summary>
+                Removes any points older than
+                <see cref="F:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.PointKeepAliveTimeSpan" />
+                from this.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.#ctor(System.DateTime,System.Windows.Point)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair"/> class.
+            </summary>
+            <param name="time">The time.</param>
+            <param name="point">The point.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.#ctor(System.Windows.Point)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair"/> class.
+            </summary>
+            <param name="point">The point.</param>
+            <remarks><see cref="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Time"/>Is set to <see cref="P:System.DateTime.Now"/></remarks>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Point">
+            <summary>
+            Gets or sets the point.
+            </summary>
+            <value>
+            The point.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+            <value>
+            The time.
+            </value>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Enums.SelectableState.Idle">
+            <summary>
+                Awaiting for points to fall on control.
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Enums.SelectableState.SeenButWaiting">
+            <summary>
+                A point has recently fallen on the control; waiting for a dead-time before animation begins.
+            </summary>
+            <remarks>
+                By not letting animations start immediately, distractions and midas-touch issues are reduced (e.g. when traveling
+                over controls).
+            </remarks>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Enums.SelectableState.AnimationRunning">
+            <summary>
+                The animation is currently running (i.e. selection is underway and the user is aware of it).
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Enums.SelectableState.AnimationOnHold">
+            <summary>
+                The animation is on hold as the user looked elsewhere while selection was underway. The selection progress will be
+                kept for a given amount of time.
+            </summary>
+            <remarks>
+                This helps in case the point stream is unreliable as well as for users who tend to move their eyes too much even
+                when focusing on a point.
+            </remarks>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Enums.SelectableState.RecentlySelected">
+            <summary>
+                The control has been recently selected and a dead-time is underway before returning to idle.
+            </summary>
+            <remarks>
+                This helps introduce a time between selections of the same key, as the eyes will linger shortly on a control after
+                selecting it and it could result in midas-touch.
+            </remarks>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Events">
+            <summary>
+                Class containing the events to which the modules can publish and subscribe.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Events.MultiTextUpdatedEvent">
+            <summary>
+                Event to be raised when the current multi-character text is updated.
+            </summary>
+            <seealso cref="T:Prism.Events.PubSubEvent" />
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Events.NewCoordinateEvent">
+            <summary>
+                Event to be raised when a new coordinate is received (e.g. Gaze detection device provides new point).
+            </summary>
+            <seealso cref="T:Prism.Events.PubSubEvent`1" />
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Events.TextUpdatedEvent">
+            <summary>
+                Event to be raised when the current text is updated.
+            </summary>
+            <seealso cref="T:Prism.Events.PubSubEvent" />
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper.GetLastWord(System.String)">
+            <summary>
+                Gets the last word.
+            </summary>
+            <param name="s">String from which to get the last word.</param>
+            <returns>Last word from string.</returns>
+            <remarks>The last word is anything found after the last <see cref="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.WordSeparators" /></remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper.RemoveLastWord(System.String)">
+            <summary>
+                Returns a new instance of the original string where the last word is removed.
+            </summary>
+            <param name="s">The original string.</param>
+            <returns>A new instance of the original string where the last word is removed.</returns>
+            <remarks>The last word is anything found after the last <see cref="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.WordSeparators" /></remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper.SplitStringPrefixAndLastWord(System.String,System.String@,System.String@)">
+            <summary>
+                Splits the string between the last word and everything before (prefix).
+            </summary>
+            <param name="s">The string</param>
+            <param name="prefix">The retrieved prefix.</param>
+            <param name="lastWord">The retrieved last word.</param>
+            <remarks>
+                The last word is anything found after the last <see cref="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.WordSeparators" />.
+                The prefix is anything before the last word.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension" /> class.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension" /> class.
+            </summary>
+            <param name="path">The initial <see cref="P:System.Windows.Data.Binding.Path" /> for the binding.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.#ctor(System.String,System.Object,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension" /> class.
+            </summary>
+            <param name="path">The binding path.</param>
+            <param name="valueIfTrue">The value if true.</param>
+            <param name="valueIfFalse">The value if false.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.#ctor(System.Windows.Data.RelativeSource,System.String,System.Object,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension" /> class.
+            </summary>
+            <param name="relativeSource">The relative source.</param>
+            <param name="path">The binding path.</param>
+            <param name="valueIfTrue">The value if true.</param>
+            <param name="valueIfFalse">The value if false.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.Initialize">
+            <summary>
+                Initializes this instance.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.SwitchConverter">
+            <summary>
+                IValueConverter implementation for converting between boolean and any object.
+            </summary>
+            <remarks>
+                Does the footwork for selecting an object instance depending on a boolean value.
+            </remarks>
+            <seealso cref="T:System.Windows.Data.IValueConverter" />
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.SwitchConverter.#ctor(TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.SwitchConverter" /> class.
+            </summary>
+            <param name="switchExtension">The switch extension.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.SwitchConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+                Maps the boolean value (true/false) to one of two possible object instances.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+                <see cref="P:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.ValueIfTrue" /> if the boolean (<see cref="!:value" />) is true or
+                <see cref="P:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.ValueIfFalse" /> if false.
+            </returns>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.SwitchConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+                Converts the object instance back to boolean.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+                Current implementation does Nothing.
+            </returns>
+            <remarks>
+                Current scope has no use for this.
+            </remarks>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Models.IMultiKeyTextModel.CurrentMultiCharacterText">
+            <summary>
+                Gets or sets the current multi-character text.
+            </summary>
+            <value>
+                The current multi-character text.
+            </value>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.CanBeNullAttribute">
+            <summary>
+            Indicates that the value of the marked element could be <c>null</c> sometimes,
+            so the check for <c>null</c> is necessary before its usage.
+            </summary>
+            <example><code>
+            [CanBeNull] object Test() => null;
+            
+            void UseTest() {
+              var p = Test();
+              var s = p.ToString(); // Warning: Possible 'System.NullReferenceException'
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.NotNullAttribute">
+            <summary>
+            Indicates that the value of the marked element could never be <c>null</c>.
+            </summary>
+            <example><code>
+            [NotNull] object Foo() {
+              return null; // Warning: Possible 'null' assignment
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ItemNotNullAttribute">
+            <summary>
+            Can be appplied to symbols of types derived from IEnumerable as well as to symbols of Task
+            and Lazy classes to indicate that the value of a collection item, of the Task.Result property
+            or of the Lazy.Value property can never be null.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ItemCanBeNullAttribute">
+            <summary>
+            Can be appplied to symbols of types derived from IEnumerable as well as to symbols of Task
+            and Lazy classes to indicate that the value of a collection item, of the Task.Result property
+            or of the Lazy.Value property can be null.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ImplicitNotNullAttribute">
+            <summary>
+            Implicitly apply [NotNull]/[ItemNotNull] annotation to all the of type members and parameters
+            in particular scope where this annotation is used (type declaration or whole assembly).
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.StringFormatMethodAttribute">
+            <summary>
+            Indicates that the marked method builds string by format pattern and (optional) arguments.
+            Parameter, which contains format string, should be given in constructor. The format string
+            should be in <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object[])"/>-like form.
+            </summary>
+            <example><code>
+            [StringFormatMethod("message")]
+            void ShowError(string message, params object[] args) { /* do something */ }
+            
+            void Foo() {
+              ShowError("Failed: {0}"); // Warning: Non-existing argument in format string
+            }
+            </code></example>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Annotations.StringFormatMethodAttribute.#ctor(System.String)">
+            <param name="formatParameterName">
+            Specifies which parameter of an annotated method should be treated as format-string
+            </param>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ValueProviderAttribute">
+            <summary>
+            For a parameter that is expected to be one of the limited set of values.
+            Specify fields of which type should be used as values for this parameter.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.InvokerParameterNameAttribute">
+            <summary>
+            Indicates that the function argument should be string literal and match one
+            of the parameters of the caller function. For example, ReSharper annotates
+            the parameter of <see cref="T:System.ArgumentNullException"/>.
+            </summary>
+            <example><code>
+            void Foo(string param) {
+              if (param == null)
+                throw new ArgumentNullException("par"); // Warning: Cannot resolve symbol
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.NotifyPropertyChangedInvocatorAttribute">
+             <summary>
+             Indicates that the method is contained in a type that implements
+             <c>System.ComponentModel.INotifyPropertyChanged</c> interface and this method
+             is used to notify that some property value changed.
+             </summary>
+             <remarks>
+             The method should be non-static and conform to one of the supported signatures:
+             <list>
+             <item><c>NotifyChanged(string)</c></item>
+             <item><c>NotifyChanged(params string[])</c></item>
+             <item><c>NotifyChanged{T}(Expression{Func{T}})</c></item>
+             <item><c>NotifyChanged{T,U}(Expression{Func{T,U}})</c></item>
+             <item><c>SetProperty{T}(ref T, T, string)</c></item>
+             </list>
+             </remarks>
+             <example><code>
+             public class Foo : INotifyPropertyChanged {
+               public event PropertyChangedEventHandler PropertyChanged;
+             
+               [NotifyPropertyChangedInvocator]
+               protected virtual void NotifyChanged(string propertyName) { ... }
+            
+               string _name;
+             
+               public string Name {
+                 get { return _name; }
+                 set { _name = value; NotifyChanged("LastName"); /* Warning */ }
+               }
+             }
+             </code>
+             Examples of generated notifications:
+             <list>
+             <item><c>NotifyChanged("Property")</c></item>
+             <item><c>NotifyChanged(() =&gt; Property)</c></item>
+             <item><c>NotifyChanged((VM x) =&gt; x.Property)</c></item>
+             <item><c>SetProperty(ref myField, value, "Property")</c></item>
+             </list>
+             </example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ContractAnnotationAttribute">
+            <summary>
+            Describes dependency between method input and output.
+            </summary>
+            <syntax>
+            <p>Function Definition Table syntax:</p>
+            <list>
+            <item>FDT      ::= FDTRow [;FDTRow]*</item>
+            <item>FDTRow   ::= Input =&gt; Output | Output &lt;= Input</item>
+            <item>Input    ::= ParameterName: Value [, Input]*</item>
+            <item>Output   ::= [ParameterName: Value]* {halt|stop|void|nothing|Value}</item>
+            <item>Value    ::= true | false | null | notnull | canbenull</item>
+            </list>
+            If method has single input parameter, it's name could be omitted.<br/>
+            Using <c>halt</c> (or <c>void</c>/<c>nothing</c>, which is the same)
+            for method output means that the methos doesn't return normally.<br/>
+            <c>canbenull</c> annotation is only applicable for output parameters.<br/>
+            You can use multiple <c>[ContractAnnotation]</c> for each FDT row,
+            or use single attribute with rows separated by semicolon.<br/>
+            </syntax>
+            <examples><list>
+            <item><code>
+            [ContractAnnotation("=> halt")]
+            public void TerminationMethod()
+            </code></item>
+            <item><code>
+            [ContractAnnotation("halt &lt;= condition: false")]
+            public void Assert(bool condition, string text) // regular assertion method
+            </code></item>
+            <item><code>
+            [ContractAnnotation("s:null => true")]
+            public bool IsNullOrEmpty(string s) // string.IsNullOrEmpty()
+            </code></item>
+            <item><code>
+            // A method that returns null if the parameter is null,
+            // and not null if the parameter is not null
+            [ContractAnnotation("null => null; notnull => notnull")]
+            public object Transform(object data) 
+            </code></item>
+            <item><code>
+            [ContractAnnotation("s:null=>false; =>true,result:notnull; =>false, result:null")]
+            public bool TryParse(string s, out Person result)
+            </code></item>
+            </list></examples>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.LocalizationRequiredAttribute">
+            <summary>
+            Indicates that marked element should be localized or not.
+            </summary>
+            <example><code>
+            [LocalizationRequiredAttribute(true)]
+            class Foo {
+              string str = "my string"; // Warning: Localizable string
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.CannotApplyEqualityOperatorAttribute">
+            <summary>
+            Indicates that the value of the marked type (or its derivatives)
+            cannot be compared using '==' or '!=' operators and <c>Equals()</c>
+            should be used instead. However, using '==' or '!=' for comparison
+            with <c>null</c> is always permitted.
+            </summary>
+            <example><code>
+            [CannotApplyEqualityOperator]
+            class NoEquality { }
+            
+            class UsesNoEquality {
+              void Test() {
+                var ca1 = new NoEquality();
+                var ca2 = new NoEquality();
+                if (ca1 != null) { // OK
+                  bool condition = ca1 == ca2; // Warning
+                }
+              }
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.BaseTypeRequiredAttribute">
+            <summary>
+            When applied to a target attribute, specifies a requirement for any type marked
+            with the target attribute to implement or inherit specific type or types.
+            </summary>
+            <example><code>
+            [BaseTypeRequired(typeof(IComponent)] // Specify requirement
+            class ComponentAttribute : Attribute { }
+            
+            [Component] // ComponentAttribute requires implementing IComponent interface
+            class MyComponent : IComponent { }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.UsedImplicitlyAttribute">
+            <summary>
+            Indicates that the marked symbol is used implicitly (e.g. via reflection, in external library),
+            so this symbol will not be marked as unused (as well as by other usage inspections).
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.MeansImplicitUseAttribute">
+            <summary>
+            Should be used on attributes and causes ReSharper to not mark symbols marked with such attributes
+            as unused (as well as by other usage inspections)
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseKindFlags.Access">
+            <summary>Only entity marked with attribute considered used.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseKindFlags.Assign">
+            <summary>Indicates implicit assignment to a member.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseKindFlags.InstantiatedWithFixedConstructorSignature">
+            <summary>
+            Indicates implicit instantiation of a type with fixed constructor signature.
+            That means any unused constructor parameters won't be reported as such.
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseKindFlags.InstantiatedNoFixedConstructorSignature">
+            <summary>Indicates implicit instantiation of a type.</summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseTargetFlags">
+            <summary>
+            Specify what is considered used implicitly when marked
+            with <see cref="T:TalkingKeyboard.Infrastructure.Annotations.MeansImplicitUseAttribute"/> or <see cref="T:TalkingKeyboard.Infrastructure.Annotations.UsedImplicitlyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseTargetFlags.Members">
+            <summary>Members of entity marked with attribute are considered used.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.ImplicitUseTargetFlags.WithMembers">
+            <summary>Entity marked with attribute and all its members considered used.</summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.PublicAPIAttribute">
+            <summary>
+            This attribute is intended to mark publicly available API
+            which should not be removed and so is treated as used.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.InstantHandleAttribute">
+            <summary>
+            Tells code analysis engine if the parameter is completely handled when the invoked method is on stack.
+            If the parameter is a delegate, indicates that delegate is executed while the method is executed.
+            If the parameter is an enumerable, indicates that it is enumerated while the method is executed.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.PureAttribute">
+            <summary>
+            Indicates that a method does not make any observable state changes.
+            The same as <c>System.Diagnostics.Contracts.PureAttribute</c>.
+            </summary>
+            <example><code>
+            [Pure] int Multiply(int x, int y) => x * y;
+            
+            void M() {
+              Multiply(123, 42); // Waring: Return value of pure method is not used
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.MustUseReturnValueAttribute">
+            <summary>
+            Indicates that the return value of method invocation must be used.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.ProvidesContextAttribute">
+            <summary>
+            Indicates the type member or parameter of some type, that should be used instead of all other ways
+            to get the value that type. This annotation is useful when you have some "context" value evaluated
+            and stored somewhere, meaning that all other ways to get this value must be consolidated with existing one.
+            </summary>
+            <example><code>
+            class Foo {
+              [ProvidesContext] IBarService _barService = ...;
+            
+              void ProcessNode(INode node) {
+                DoSomething(node, node.GetGlobalServices().Bar);
+                //              ^ Warning: use value of '_barService' field
+              }
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.PathReferenceAttribute">
+            <summary>
+            Indicates that a parameter is a path to a file or a folder within a web project.
+            Path can be relative or absolute, starting from web root (~).
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.SourceTemplateAttribute">
+            <summary>
+            An extension method marked with this attribute is processed by ReSharper code completion
+            as a 'Source Template'. When extension method is completed over some expression, it's source code
+            is automatically expanded like a template at call site.
+            </summary>
+            <remarks>
+            Template method body can contain valid source code and/or special comments starting with '$'.
+            Text inside these comments is added as source code when the template is applied. Template parameters
+            can be used either as additional method parameters or as identifiers wrapped in two '$' signs.
+            Use the <see cref="T:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute"/> attribute to specify macros for parameters.
+            </remarks>
+            <example>
+            In this example, the 'forEach' method is a source template available over all values
+            of enumerable types, producing ordinary C# 'foreach' statement and placing caret inside block:
+            <code>
+            [SourceTemplate]
+            public static void forEach&lt;T&gt;(this IEnumerable&lt;T&gt; xs) {
+              foreach (var x in xs) {
+                 //$ $END$
+              }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute">
+            <summary>
+            Allows specifying a macro for a parameter of a <see cref="T:TalkingKeyboard.Infrastructure.Annotations.SourceTemplateAttribute">source template</see>.
+            </summary>
+            <remarks>
+            You can apply the attribute on the whole method or on any of its additional parameters. The macro expression
+            is defined in the <see cref="P:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute.Expression"/> property. When applied on a method, the target
+            template parameter is defined in the <see cref="P:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute.Target"/> property. To apply the macro silently
+            for the parameter, set the <see cref="P:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute.Editable"/> property value = -1.
+            </remarks>
+            <example>
+            Applying the attribute on a source template method:
+            <code>
+            [SourceTemplate, Macro(Target = "item", Expression = "suggestVariableName()")]
+            public static void forEach&lt;T&gt;(this IEnumerable&lt;T&gt; collection) {
+              foreach (var item in collection) {
+                //$ $END$
+              }
+            }
+            </code>
+            Applying the attribute on a template method parameter:
+            <code>
+            [SourceTemplate]
+            public static void something(this Entity x, [Macro(Expression = "guid()", Editable = -1)] string newguid) {
+              /*$ var $x$Id = "$newguid$" + x.ToString();
+              x.DoSomething($x$Id); */
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute.Expression">
+            <summary>
+            Allows specifying a macro that will be executed for a <see cref="T:TalkingKeyboard.Infrastructure.Annotations.SourceTemplateAttribute">source template</see>
+            parameter when the template is expanded.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute.Editable">
+            <summary>
+            Allows specifying which occurrence of the target parameter becomes editable when the template is deployed.
+            </summary>
+            <remarks>
+            If the target parameter is used several times in the template, only one occurrence becomes editable;
+            other occurrences are changed synchronously. To specify the zero-based index of the editable occurrence,
+            use values >= 0. To make the parameter non-editable when the template is expanded, use -1.
+            </remarks>>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute.Target">
+            <summary>
+            Identifies the target parameter of a <see cref="T:TalkingKeyboard.Infrastructure.Annotations.SourceTemplateAttribute">source template</see> if the
+            <see cref="T:TalkingKeyboard.Infrastructure.Annotations.MacroAttribute"/> is applied on a template method.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcActionAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC action. If applied to a method, the MVC action name is calculated
+            implicitly from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcAreaAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC area.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcControllerAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter is
+            an MVC controller. If applied to a method, the MVC controller name is calculated
+            implicitly from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcMasterAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC Master. Use this attribute
+            for custom wrappers similar to <c>System.Web.Mvc.Controller.View(String, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcModelTypeAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC model type. Use this attribute
+            for custom wrappers similar to <c>System.Web.Mvc.Controller.View(String, Object)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcPartialViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter is an MVC
+            partial view. If applied to a method, the MVC partial view name is calculated implicitly
+            from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcSuppressViewErrorAttribute">
+            <summary>
+            ASP.NET MVC attribute. Allows disabling inspections for MVC views within a class or a method.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcDisplayTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC display template.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.Mvc.Html.DisplayExtensions.DisplayForModel(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcEditorTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC editor template.
+            Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Html.EditorExtensions.EditorForModel(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcTemplateAttribute">
+            <summary>
+            ASP.NET MVC attribute. Indicates that a parameter is an MVC template.
+            Use this attribute for custom wrappers similar to
+            <c>System.ComponentModel.DataAnnotations.UIHintAttribute(System.String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view component. If applied to a method, the MVC view name is calculated implicitly
+            from the context. Use this attribute for custom wrappers similar to
+            <c>System.Web.Mvc.Controller.View(Object)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcViewComponentAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view component name.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcViewComponentViewAttribute">
+            <summary>
+            ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+            is an MVC view component view. If applied to a method, the MVC view component view name is default.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AspMvcActionSelectorAttribute">
+            <summary>
+            ASP.NET MVC attribute. When applied to a parameter of an attribute,
+            indicates that this parameter is an MVC action name.
+            </summary>
+            <example><code>
+            [ActionName("Foo")]
+            public ActionResult Login(string returnUrl) {
+              ViewBag.ReturnUrl = Url.Action("Foo"); // OK
+              return RedirectToAction("Bar"); // Error: Cannot resolve action
+            }
+            </code></example>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.RazorSectionAttribute">
+            <summary>
+            Razor attribute. Indicates that a parameter or a method is a Razor section.
+            Use this attribute for custom wrappers similar to 
+            <c>System.Web.WebPages.WebPageBase.RenderSection(String)</c>.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.CollectionAccessAttribute">
+            <summary>
+            Indicates how method, constructor invocation or property access
+            over collection type affects content of the collection.
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.CollectionAccessType.None">
+            <summary>Method does not use or modify content of the collection.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.CollectionAccessType.Read">
+            <summary>Method only reads content of the collection but does not modify it.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.CollectionAccessType.ModifyExistingContent">
+            <summary>Method can change content of the collection but does not add new elements.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.CollectionAccessType.UpdatedContent">
+            <summary>Method can add new elements to the collection.</summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AssertionMethodAttribute">
+            <summary>
+            Indicates that the marked method is assertion method, i.e. it halts control flow if
+            one of the conditions is satisfied. To set the condition, mark one of the parameters with 
+            <see cref="T:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionAttribute"/> attribute.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionAttribute">
+            <summary>
+            Indicates the condition parameter of the assertion method. The method itself should be
+            marked by <see cref="T:TalkingKeyboard.Infrastructure.Annotations.AssertionMethodAttribute"/> attribute. The mandatory argument of
+            the attribute is the assertion type.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionType">
+            <summary>
+            Specifies assertion type. If the assertion method argument satisfies the condition,
+            then the execution continues. Otherwise, execution is assumed to be halted.
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionType.IS_TRUE">
+            <summary>Marked parameter should be evaluated to true.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionType.IS_FALSE">
+            <summary>Marked parameter should be evaluated to false.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionType.IS_NULL">
+            <summary>Marked parameter should be evaluated to null value.</summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Annotations.AssertionConditionType.IS_NOT_NULL">
+            <summary>Marked parameter should be evaluated to not null value.</summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.TerminatesProgramAttribute">
+            <summary>
+            Indicates that the marked method unconditionally terminates control flow execution.
+            For example, it could unconditionally throw exception.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.LinqTunnelAttribute">
+            <summary>
+            Indicates that method is pure LINQ method, with postponed enumeration (like Enumerable.Select,
+            .Where). This annotation allows inference of [InstantHandle] annotation for parameters
+            of delegate type by analyzing LINQ method chains.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.NoEnumerationAttribute">
+            <summary>
+            Indicates that IEnumerable, passed as parameter, is not enumerated.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.RegexPatternAttribute">
+            <summary>
+            Indicates that parameter is regular expression pattern.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.XamlItemsControlAttribute">
+            <summary>
+            XAML attribute. Indicates the type that has <c>ItemsSource</c> property and should be treated
+            as <c>ItemsControl</c>-derived type, to enable inner items <c>DataContext</c> type resolve.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.XamlItemBindingOfItemsControlAttribute">
+            <summary>
+            XAML attribute. Indicates the property of some <c>BindingBase</c>-derived type, that
+            is used to bind some item of <c>ItemsControl</c>-derived type. This annotation will
+            enable the <c>DataContext</c> type resolve for XAML bindings for such properties.
+            </summary>
+            <remarks>
+            Property should have the tree ancestor of the <c>ItemsControl</c> type or
+            marked with the <see cref="T:TalkingKeyboard.Infrastructure.Annotations.XamlItemsControlAttribute"/> attribute.
+            </remarks>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Annotations.NoReorder">
+            <summary>
+            Prevents the Member Reordering feature from tossing members of the marked class.
+            </summary>
+            <remarks>
+            The attribute must be mentioned in your member reordering patterns
+            </remarks>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Resources.SpanishSpain">
+             <summary>
+               Looks up a localized string similar to de
+            la
+            que
+            el
+            en
+            los
+            se
+            del
+            las
+            un
+            por
+            con
+            no
+            una
+            su
+            para
+            es
+            al
+            lo
+            como
+            más
+            pero
+            sus
+            le
+            ha
+            me
+            si
+            sin
+            sobre
+            este
+            ya
+            entre
+            cuando
+            todo
+            esta
+            ser
+            son
+            dos
+            también
+            fue
+            había
+            era
+            muy
+            años
+            hasta
+            desde
+            está
+            mi
+            porque
+            qué
+            sólo
+            han
+            yo
+            hay
+            vez
+            puede
+            todos
+            así
+            nos
+            ni
+            parte
+            tiene
+            él
+            uno
+            donde
+            bien
+            tiempo
+            mismo
+            ese
+            ahora
+            cada
+            vida
+            otro
+            después
+            te
+            otros
+            aunque
+            esa
+            eso
+            hace
+            otra
+            gobierno
+            tan
+            durante
+            siempre
+            día
+            tanto
+            ella
+            tres
+            sí
+            dijo
+            sido
+            gran
+            país
+            según
+            menos
+            mundo
+            año
+            antes
+            estado
+            contra
+            sino
+            forma
+            caso
+            nada
+            hacer
+            general [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler.ProcessPoint(System.Windows.Point)">
+            <summary>
+                Processes the point.
+            </summary>
+            <param name="point">The point to be processed.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.AddMultiCharacterText(System.String)">
+            <summary>
+                Adds multi-character text to the buffer.
+            </summary>
+            <param name="s">The multi-character text to add.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.ClearMultiCharacterBuffer">
+            <summary>
+                Clears the multi character buffer.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.ProvideMultiCharacterSuggestions">
+            <summary>
+                Provides the multi character suggestions (disambiguation and auto-complete).
+            </summary>
+            <returns>Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the suggestions.</returns>
+            <remarks>
+                The suggestions may be sorted or not. It is up to the implementing type to decide and for the suggestion board view
+                model to take into account.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.ProvideSuggestions(System.String)">
+            <summary>
+                Gets the suggestions.
+            </summary>
+            <param name="basedOn">Possible object on which the suggestions are based (may be null).</param>
+            <returns>Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the suggestions.</returns>
+            <remarks>
+                The suggestions may be sorted or not. It is up to the implementing type to decide and for the suggestion board view
+                model to take into account.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.RemoveLastMultiCharacter">
+            <summary>
+                Removes the last multi-character from the buffer.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource.GetSuggestions(System.Object)">
+            <summary>
+                Gets the suggestions.
+            </summary>
+            <param name="basedOn">Possible object on which the suggestions are based (may be null).</param>
+            <returns>Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the suggestions.</returns>
+            <remarks>
+                The suggestions may be sorted or not. It is up to the implementing type to decide and for the suggestion board view
+                model to take into account.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService.Say(System.String)">
+            <summary>
+                Speaks the specified string.
+            </summary>
+            <param name="s">The string to speech-synthesize</param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService.SayCurrentText">
+            <summary>
+                Speaks the current text.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.ServiceInterfaces.IWindowKnower.KnownWindows">
+            <summary>
+                Gets or sets the known windows.
+            </summary>
+            <value>
+                The known windows.
+            </value>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

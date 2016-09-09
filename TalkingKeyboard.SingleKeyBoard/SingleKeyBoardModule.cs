@@ -2,9 +2,6 @@
 // <copyright file="SingleKeyBoardModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the SingleKeyBoardModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.SingleKeyBoard
 {
@@ -17,6 +14,10 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
     using TalkingKeyboard.Infrastructure.Constants;
     using TalkingKeyboard.Modules.SingleKeyBoard.Views;
 
+    /// <summary>
+    ///     Class for initializing the module for displaying the single-character keyboards.
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class SingleKeyBoardModule : IModule
     {
         private readonly IRegionManager regionManager;

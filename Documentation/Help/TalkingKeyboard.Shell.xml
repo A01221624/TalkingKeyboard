@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TalkingKeyboard.Shell</name>
+  </assembly>
+  <members>
+    <member name="T:TalkingKeyboard.Shell.App">
+      <summary>
+                Interaction logic for App.xaml
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.App.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TalkingKeyboard.Shell.App</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.App.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.App.Main">
+      <summary>
+            Application Entry Point.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.App.OnStartup(System.Windows.StartupEventArgs)"></member>
+    <member name="T:TalkingKeyboard.Shell.Logging.NLogLogger"></member>
+    <member name="M:TalkingKeyboard.Shell.Logging.NLogLogger.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TalkingKeyboard.Shell.Logging.NLogLogger</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.Logging.NLogLogger.Log(System.String,Prism.Logging.Category,Prism.Logging.Priority)">
+      <summary>
+                Write a new log entry with the specified category and priority.
+            </summary>
+      <param name="message">Message body to log.</param>
+      <param name="category">Category of the entry.</param>
+      <param name="priority">The priority of the entry (not used by NLog so we pass Priority.None)</param>
+    </member>
+    <member name="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel"></member>
+    <member name="M:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.#ctor(Prism.Regions.IRegionManager)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel" /> class.
+            </summary>
+      <param name="regionManager">The region manager (obtained through dependency injection).</param>
+    </member>
+    <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.ChangeViewToLeftCommand">
+      <summary>
+                Gets or sets the command for switching to the view on the left.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.ChangeViewToRightCommand">
+      <summary>
+                Gets or sets the command for switching to the view on the right.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.Title">
+      <summary>
+                Gets or sets the title of the window.
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Shell.Views.MainWindow">
+      <summary>
+                Interaction logic for MainWindow.xaml
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.Views.MainWindow.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TalkingKeyboard.Shell.Views.MainWindow</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Shell.Views.MainWindow.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+  </members>
+</doc>

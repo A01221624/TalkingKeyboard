@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TalkingKeyboard.Modules.TextHolder</name>
+  </assembly>
+  <members>
+    <member name="T:TalkingKeyboard.Modules.CentralTextModule.TextHolderModule">
+      <summary>
+                Class for initializing the module for holding, displaying and handling changes (through commands) to the current
+                text.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.CentralTextModule.TextHolderModule.#ctor(Prism.Regions.IRegionManager,Microsoft.Practices.Unity.IUnityContainer)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CentralTextModule.TextHolderModule" /> class.
+            </summary>
+      <param name="regionManager">The prism region manager (obtained through DI).</param>
+      <param name="unityContainer">The unity DI container (obtained through DI).</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.CentralTextModule.TextHolderModule.Initialize">
+      <summary>
+                Registers a unique instance of the text view-model in the dependency injection container and registers the text
+                view with the region manager to the corresponding region of the window.
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel"></member>
+    <member name="M:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.#ctor(Prism.Events.IEventAggregator)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel" /> class.
+            </summary>
+      <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.AppendTextCommand">
+      <summary>
+                Gets the command for adding a string to the current text.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.CurrentText">
+      <summary>
+                Gets or sets the current text.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.RemoveLastCharacterCommand">
+      <summary>
+                Gets or sets the command for removing the last character from the current text.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.RemoveLastWordCommand">
+      <summary>
+                Gets or sets the command for removing the last word from the current text.
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.CentralTextModule.Views.TextView">
+      <summary>
+                Interaction logic for TextView
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.CentralTextModule.Views.TextView.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TalkingKeyboard.Modules.CentralTextModule.Views.TextView</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.CentralTextModule.Views.TextView.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+  </members>
+</doc>

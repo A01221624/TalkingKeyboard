@@ -2,9 +2,6 @@
 // <copyright file="MultiKeyBoardModule.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the MultiKeyBoardModule type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.MultiKeyBoard
 {
@@ -19,6 +16,10 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
     using TalkingKeyboard.Modules.MultiKeyBoard.Model;
     using TalkingKeyboard.Modules.MultiKeyBoard.Views;
 
+    /// <summary>
+    ///     Class for initializing the module for displaying the multi-character keyboards and handling their input.
+    /// </summary>
+    /// <seealso cref="Prism.Modularity.IModule" />
     public class MultiKeyBoardModule : IModule
     {
         private readonly IRegionManager regionManager;

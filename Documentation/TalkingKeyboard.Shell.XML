@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TalkingKeyboard.Shell</name>
+    </assembly>
+    <members>
+        <member name="T:TalkingKeyboard.Shell.App">
+            <summary>
+                Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.Bootstrapper.CreateLogger">
+            <summary>
+                Create the <see cref="T:Prism.Logging.ILoggerFacade" /> used by the bootstrapper.
+            </summary>
+            <returns>Returns an NLog Logger.</returns>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.Bootstrapper.CreateShell">
+            <summary>
+                Creates the shell or main window of the application.
+            </summary>
+            <returns>
+                The shell of the application.
+            </returns>
+            <remarks>
+                If the returned instance is a <see cref="T:System.Windows.DependencyObject" />, the
+                <see cref="T:Prism.Bootstrapper" /> will attach the default <see cref="T:Prism.Regions.IRegionManager" /> of
+                the application in its <see cref="F:Prism.Regions.RegionManager.RegionManagerProperty" /> attached property
+                in order to be able to add regions by using the <see cref="F:Prism.Regions.RegionManager.RegionNameProperty" />
+                attached property from XAML.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.Bootstrapper.InitializeShell">
+            <summary>
+                Initializes the shell.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.Logging.NLogLogger.Log(System.String,Prism.Logging.Category,Prism.Logging.Priority)">
+            <summary>
+                Write a new log entry with the specified category and priority.
+            </summary>
+            <param name="message">Message body to log.</param>
+            <param name="category">Category of the entry.</param>
+            <param name="priority">The priority of the entry (not used by NLog so we pass Priority.None)</param>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.#ctor(Prism.Regions.IRegionManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel" /> class.
+            </summary>
+            <param name="regionManager">The region manager (obtained through dependency injection).</param>
+        </member>
+        <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.ChangeViewToLeftCommand">
+            <summary>
+                Gets or sets the command for switching to the view on the left.
+            </summary>
+            <value>
+                The command for switching to the view on the left.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.ChangeViewToRightCommand">
+            <summary>
+                Gets or sets the command for switching to the view on the right.
+            </summary>
+            <value>
+                The command for switching to the view on the right.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.Title">
+            <summary>
+                Gets or sets the title of the window.
+            </summary>
+            <value>
+                The title of the window.
+            </value>
+        </member>
+        <member name="T:TalkingKeyboard.Shell.Views.MainWindow">
+            <summary>
+                Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.Views.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Shell.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Shell.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Shell.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TalkingKeyboard.Modules.MultiKeyBoard</name>
+    </assembly>
+    <members>
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.Model.MultikeyTextModel.CurrentMultiCharacterText">
+            <summary>
+                Gets or sets the current multi-character text.
+            </summary>
+            <value>
+                The current multi-character text.
+            </value>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.MultiKeyBoardModule">
+            <summary>
+                Class for initializing the module for displaying the multi-character keyboards and handling their input.
+            </summary>
+            <seealso cref="T:Prism.Modularity.IModule" />
+        </member>
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.MultiKeyBoardModule.#ctor(Prism.Regions.IRegionManager,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.MultiKeyBoardModule" /> class.
+            </summary>
+            <param name="regionManager">The prism region manager (obtained through DI).</param>
+            <param name="unityContainer">The unity DI container (obtained through DI).</param>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.MultiKeyBoardModule.Initialize">
+            <summary>
+                Registers a unique instance of the multi-key text model and  of each of the keyboard view-models in the dependency
+                injection container and registers their views with the region manager to the corresponding region of the window.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.#ctor(Prism.Events.IEventAggregator,TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel" /> class.
+            </summary>
+            <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
+            <param name="suggestionService">The suggestion service (obtained through DI).</param>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.AddMultiCharacterCommand">
+            <summary>
+                Gets or sets the add multi-character command.
+            </summary>
+            <value>
+                The add multi-character command.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand">
+            <summary>
+                Gets or sets the command for removing the last multi-character.
+            </summary>
+            <value>
+                The command for removing the last multi-character.
+            </value>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.AddMultiCharacter(System.String)">
+            <summary>
+                Adds a multi-character.
+            </summary>
+            <param name="s">The s.</param>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.RemoveLastMultiCharacter">
+            <summary>
+                Removes the last multi-character.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard">
+            <summary>
+                Interaction logic for QwertySpanishMultiKeyboard
+            </summary>
+            <summary>
+            QwertySpanishMultiKeyboard
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

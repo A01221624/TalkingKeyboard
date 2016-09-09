@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TalkingKeyboard.Modules.ByGazeTimePointProcessor</name>
+  </assembly>
+  <members>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.ByGazeTimePointProcessorModule">
+      <summary>
+                Class for initializing the module for gaze processing.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.ByGazeTimePointProcessorModule.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.ByGazeTimePointProcessorModule" /> class.
+            </summary>
+      <param name="unityContainer">The unity dependency injection container (obtained through DI).</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.ByGazeTimePointProcessorModule.Initialize">
+      <summary>
+                Registers a unique instance of the selection-by-gaze service in the dependency injection container.
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService"></member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.#ctor(Prism.Events.IEventAggregator)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService" /> class.
+            </summary>
+      <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.KnownWindows">
+      <summary>
+                Gets or sets the known windows.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.ProcessPoint(System.Windows.Point)">
+      <summary>
+                Checks whether the point falls on a control and updates any relevant information.
+            </summary>
+      <param name="p">The point to be processed.</param>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter"></member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter.Filter(TalkingKeyboard.Infrastructure.DataContainers.TimedPoints)">
+      <summary>
+                Filters the specified timed points.
+            </summary>
+      <param name="timedPoints">The timed points.</param>
+      <returns>
+                An average of the points. The actual average depends on implementation (e.g. it could be an average of the
+                last 5 points, or of the 10 points nearest to the last in a given timespan)
+            </returns>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter"></member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter.#ctor(System.Int32,System.TimeSpan)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter" /> class.
+            </summary>
+      <param name="numberOfPoints">The number of points.</param>
+      <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter.Filter(TalkingKeyboard.Infrastructure.DataContainers.TimedPoints)">
+      <summary>
+                Filters the specified timed points.
+            </summary>
+      <param name="timedPoints">The timed points.</param>
+      <returns>
+                An average of the last N points (as long as they fall within a given timespan from <see cref="P:System.DateTime.Now" />).
+            </returns>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter`1">
+      <summary>
+                Defines the abstract SelectionFilter type. This type filters the received points as necessary and executes any
+                commands (selects) accordingly.
+                After filtering and selecting, the original point collection may (should) be updated if necessary to avoid multiple
+                selections.
+            </summary>
+      <typeparam name="T">The type of the point collection.</typeparam>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter`1.#ctor(System.Windows.Window)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter`1" /> class.
+            </summary>
+      <param name="window">The window.</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter`1.SelectAndUpdate(`0)">
+      <summary>
+                Filters the collection, selects accordingly and returns an updated collection.
+            </summary>
+      <param name="pointCollection">The point collection.</param>
+      <returns>The updated point collection.</returns>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter`1.Window">
+      <summary>
+                Gets or sets the window on which the controls for the points are located.
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter"></member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.#ctor(System.Windows.Window,System.TimeSpan,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter" /> class.
+            </summary>
+      <param name="window">The window on which the selectable controls are located.</param>
+      <param name="timeFrame">The time frame from current time during which points must have fallen to be considered.</param>
+      <param name="pointsRequired">The number of points required for activation.</param>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.SelectAndUpdate(TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint)">
+      <summary>
+                Filters the collection, selects accordingly and returns an updated collection.
+            </summary>
+      <param name="c">The point collection.</param>
+      <returns>The updated point collection.</returns>
+    </member>
+  </members>
+</doc>
