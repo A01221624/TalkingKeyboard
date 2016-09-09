@@ -3,11 +3,13 @@
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // <summary>
-//   Defines the IMaintainable interface.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.DataContainers
 {
+    /// <summary>
+    ///     Defines the IMaintainable interface used to make collections maintainable (e.g. eliminating old elements).
+    /// </summary>
     public interface IMaintainable
     {
         /// <summary>

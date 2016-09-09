@@ -2,9 +2,6 @@
 // <copyright file="TimedControlsWithPoint.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the TimedControlsWithPoint type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.DataContainers
 {
@@ -14,6 +11,10 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
     using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Infrastructure.Helpers;
 
+    /// <summary>
+    ///     Defines the TimedControlsWithPoint class which maintains a collection of points (each with the time at which it was
+    ///     obtained) mapped to the control they fall on.
+    /// </summary>
     public class TimedControlsWithPoint : MaintainablePointCollection<SelectableControl, TimedPoints>
     {
         private readonly Window window;

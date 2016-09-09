@@ -17,12 +17,18 @@ namespace TalkingKeyboard.Infrastructure.Controls
     /// </summary>
     public abstract class SelectableControl : ContentControl, ICommandSource, IComparable
     {
+        /// <summary>
+        ///     The animation property
+        /// </summary>
         public static readonly DependencyProperty AnimationProperty = DependencyProperty.Register(
             "Animation",
             typeof(Storyboard),
             typeof(SelectableControl),
             new PropertyMetadata(default(Storyboard)));
 
+        /// <summary>
+        ///     The command parameter property
+        /// </summary>
         public static readonly DependencyProperty CommandParameterProperty =
             DependencyProperty.Register(
                 "CommandParameter",
@@ -30,12 +36,18 @@ namespace TalkingKeyboard.Infrastructure.Controls
                 typeof(SelectableControl),
                 new PropertyMetadata(default(object)));
 
+        /// <summary>
+        ///     The command property
+        /// </summary>
         public static readonly DependencyProperty CommandProperty = DependencyProperty.Register(
             "Command",
             typeof(ICommand),
             typeof(SelectableControl),
             new PropertyMetadata(default(ICommand)));
 
+        /// <summary>
+        ///     The command target property
+        /// </summary>
         public static readonly DependencyProperty CommandTargetProperty = DependencyProperty.Register(
             "CommandTarget",
             typeof(IInputElement),
@@ -107,13 +119,13 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        ///     Implementation for IComparable
+        ///     Implementation for IComparable.
         /// </summary>
         /// <param name="obj">
         ///     Object to compare against.
         /// </param>
         /// <returns>
-        ///     0 if equal, -1 if <see cref="obj" /> is not of same type, 1 otherwise.
+        ///     0 if equal, -1 if the parameter is not of same type, 1 otherwise.
         /// </returns>
         public int CompareTo(object obj)
         {
@@ -132,7 +144,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        ///     Pause the animation.
+        ///     Pauses the animation.
         /// </summary>
         public void PauseAnimation()
         {
@@ -140,7 +152,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        ///     Play the animation.
+        ///     Plays the animation.
         /// </summary>
         public void PlayAnimation()
         {

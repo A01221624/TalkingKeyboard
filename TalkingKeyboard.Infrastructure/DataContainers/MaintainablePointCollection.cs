@@ -12,6 +12,14 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
     using System.Collections.Concurrent;
     using System.Windows;
 
+    /// <summary>
+    ///     Defines the MaintainablePointCollection abstract class used as a base for collections of points mapped to a given
+    ///     object (e.g. control, time).
+    /// </summary>
+    /// <typeparam name="T1">The type of the 1.</typeparam>
+    /// <typeparam name="T2">The type of the 2.</typeparam>
+    /// <seealso cref="System.Collections.Concurrent.ConcurrentDictionary{T1, T2}" />
+    /// <seealso cref="TalkingKeyboard.Infrastructure.DataContainers.IMaintainable" />
     public abstract class MaintainablePointCollection<T1, T2> : ConcurrentDictionary<T1, T2>, IMaintainable
     {
         /// <summary>
@@ -41,6 +49,12 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
         /// </value>
         protected DateTime LastMaintainedTime { get; set; }
 
+        /// <summary>
+        ///     Gets the maximum time for which to keep a point alive after it was obtained.
+        /// </summary>
+        /// <value>
+        ///     The time span for which to keep a point alive after it was obtained.
+        /// </value>
         protected TimeSpan PointKeepAliveTimeSpan { get; }
 
         /// <summary>

@@ -301,11 +301,39 @@
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableButton">
             <summary>
-            Interaction logic for SelectableButton.xaml
+                Interaction logic for SelectableButton.xaml
             </summary>
             <summary>
             SelectableButton
             </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableButton.FontSizeProperty">
+            <summary>
+                The font size property.
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableButton.TextProperty">
+            <summary>
+                The text property.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButton.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableButton" /> class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButton.FontSize">
+            <summary>
+                Gets or sets the font size of the text on the button.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButton.Text">
+            <summary>
+                Gets or sets the text on the button.
+            </summary>
+            <value>
+                The text on the button.
+            </value>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButton.InitializeComponent">
             <summary>
@@ -423,6 +451,26 @@
                 Base for selectable controls
             </summary>
         </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.AnimationProperty">
+            <summary>
+                The animation property
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandParameterProperty">
+            <summary>
+                The command parameter property
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandProperty">
+            <summary>
+                The command property
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandTargetProperty">
+            <summary>
+                The command target property
+            </summary>
+        </member>
         <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.Animation">
             <summary>
                 Gets or sets the animation.
@@ -445,23 +493,23 @@
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CompareTo(System.Object)">
             <summary>
-                Implementation for IComparable
+                Implementation for IComparable.
             </summary>
             <param name="obj">
                 Object to compare against.
             </param>
             <returns>
-                0 if equal, -1 if <see cref="!:obj" /> is not of same type, 1 otherwise.
+                0 if equal, -1 if the parameter is not of same type, 1 otherwise.
             </returns>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.PauseAnimation">
             <summary>
-                Pause the animation.
+                Pauses the animation.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.PlayAnimation">
             <summary>
-                Play the animation.
+                Plays the animation.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.ResumeAnimation">
@@ -479,11 +527,26 @@
                 Stops the animation.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.DataContainers.IMaintainable">
+            <summary>
+                Defines the IMaintainable interface used to make collections maintainable (e.g. eliminating old elements).
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.IMaintainable.Maintain">
             <summary>
                 Performs any regular maintenance tasks such as
                 clean-up of old elements.
             </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2">
+            <summary>
+                Defines the MaintainablePointCollection abstract class used as a base for collections of points mapped to a given
+                object (e.g. control, time).
+            </summary>
+            <typeparam name="T1">The type of the 1.</typeparam>
+            <typeparam name="T2">The type of the 2.</typeparam>
+            <seealso cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />
+            <seealso cref="T:TalkingKeyboard.Infrastructure.DataContainers.IMaintainable" />
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.#ctor(System.TimeSpan)">
             <summary>
@@ -505,6 +568,14 @@
                 The time on which the collection was last maintained.
             </value>
         </member>
+        <member name="P:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.PointKeepAliveTimeSpan">
+            <summary>
+                Gets the maximum time for which to keep a point alive after it was obtained.
+            </summary>
+            <value>
+                The time span for which to keep a point alive after it was obtained.
+            </value>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.AddPoint(System.Windows.Point)">
             <summary>
                 Adds a new point to the collection by doing the necessary processing.
@@ -515,6 +586,12 @@
             <summary>
                 Removes any points older than <see cref="P:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.PointKeepAliveTimeSpan" />
                 from this.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint">
+            <summary>
+                Defines the TimedControlsWithPoint class which maintains a collection of points (each with the time at which it was
+                obtained) mapped to the control they fall on.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint.#ctor(System.TimeSpan,System.Windows.Window)">
@@ -537,6 +614,12 @@
                 <see cref="F:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2.PointKeepAliveTimeSpan" />
                 from this.
             </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.DataContainers.TimedPoints">
+            <summary>
+                Defines the TimedPoints class which maintains a collection of points along with the time they were obtained.
+            </summary>
+            <seealso cref="T:TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection`2" />
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimedPoints.#ctor(System.TimeSpan)">
             <summary>

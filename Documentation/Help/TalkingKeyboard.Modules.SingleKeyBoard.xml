@@ -73,13 +73,5 @@
             InitializeComponent
             </summary>
     </member>
-    <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
-      <summary>
-            GeneratedInternalTypeHelper
-            </summary>
-    </member>
-    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper" /> class.</summary>
-    </member>
   </members>
 </doc>

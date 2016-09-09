@@ -12,6 +12,10 @@ namespace TalkingKeyboard.Infrastructure.DataContainers
     using System.Linq;
     using System.Windows;
 
+    /// <summary>
+    ///     Defines the TimedPoints class which maintains a collection of points along with the time they were obtained.
+    /// </summary>
+    /// <seealso cref="MaintainablePointCollection{T1,T2}" />
     public class TimedPoints : MaintainablePointCollection<DateTime, Point>
     {
         /// <summary>
