@@ -39,12 +39,11 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.#ctor(TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService,TalkingKeyboard.Infrastructure.Controls.ITextModel,Prism.Events.IEventAggregator)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.#ctor(TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService,Prism.Events.IEventAggregator)">
             <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel" /> class.
             </summary>
             <param name="suggestionService">The suggestion service (obtained through DI).</param>
-            <param name="textModel">The text model (obtained through DI).</param>
             <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
         </member>
         <member name="P:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.Suggestions">

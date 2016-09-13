@@ -173,6 +173,11 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService">
+            <summary>
+                Defines the SuggestionService class which provides suggestion services such as auto-complete.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.#ctor(TalkingKeyboard.Infrastructure.Controls.ITextModel)">
             <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService" /> class.
@@ -219,11 +224,10 @@
                 <para>Adds space and first-uppercases the suggestions if necessary.</para>
             </remarks>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.ProvideSuggestions(System.String)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.ProvideSuggestions">
             <summary>
-                Gets the suggestions.
+                Gets the suggestions based on the current text.
             </summary>
-            <param name="basedOn">String on which the suggestions are based (current text).</param>
             <returns>
                 Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the
                 suggestions.
@@ -246,6 +250,12 @@
                 A new collection where the strings are the same as in the original but with a space at the beginning if it is
                 needed and where the first character is uppercase if necessary.
             </returns>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.AddSuggestion(System.String)">
+            <summary>
+                Adds a suggestion.
+            </summary>
+            <param name="s">The suggestion.</param>
         </member>
     </members>
 </doc>

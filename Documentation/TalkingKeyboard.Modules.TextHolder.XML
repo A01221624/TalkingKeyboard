@@ -40,6 +40,13 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel">
+            <summary>
+                Defines the TextViewModel view-model class which contains and maintains the current text.
+            </summary>
+            <seealso cref="T:Prism.Mvvm.BindableBase" />
+            <seealso cref="T:TalkingKeyboard.Infrastructure.Controls.ITextModel" />
+        </member>
         <member name="M:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.#ctor(Prism.Events.IEventAggregator)">
             <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel" /> class.
@@ -91,7 +98,7 @@
                 character.
             </returns>
         </member>
-        <member name="M:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.RemoveWhitespaceIfNecessaryBasedOn(System.String)">
+        <member name="M:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.RemoveWhitespaceIfNecessaryFromString(System.String)">
             <summary>
                 Removes trailing white-spaces if necessary given the new character to be appended.
             </summary>
