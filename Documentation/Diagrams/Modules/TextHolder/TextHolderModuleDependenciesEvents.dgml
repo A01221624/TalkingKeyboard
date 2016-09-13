@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @13 @17 Member=.ctor)" Category="CodeSchema_Method" Bounds="220.255115305583,505.592574248017,105.003333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Bootstrapper" />
+    <Node Id="(@1 @13 @17 Member=ConfigureModuleCatalog)" Category="CodeSchema_Method" Bounds="220.289695129394,561.552674248017,169.78,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="ConfigureModuleCatalog" />
+    <Node Id="(@1 @13 @17 Member=CreateLogger)" Category="CodeSchema_Method" Bounds="355.258448638916,505.592574248017,107.593333333333,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="CreateLogger" />
+    <Node Id="(@1 @13 @17 Member=CreateShell)" Category="CodeSchema_Method" Bounds="220.257543029785,449.632474248017,95.5833333333334,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="CreateShell" />
+    <Node Id="(@1 @13 @17 Member=InitializeShell)" Category="CodeSchema_Method" Bounds="345.840876363119,449.632474248017,104.74,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="InitializeShell" />
+    <Node Id="@10" Category="CodeSchema_Namespace" Bounds="-32.270167401134,-693.566822250074,361.76,261.92" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.CentralTextModule‎.ViewModels" UseManualLocation="True" />
+    <Node Id="@11" Category="CodeSchema_Namespace" Bounds="-129.679940087521,-172.09366743724,316.94,145.9604" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.MicrosoftTextToSpeech" UseManualLocation="True" />
+    <Node Id="@12" Category="CodeSchema_Namespace" Bounds="-134.377584641638,33.706549656427,352.913333333333,145.9604" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.SuggestionBoard‎.ViewModels" UseManualLocation="True" />
+    <Node Id="@14" Category="CodeSchema_Namespace" Bounds="180.255115305583,369.632274248017,322.596666666667,257.8806" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="TalkingKeyboard.Shell" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard.Shell" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="255.516440901137,-92.8606838125627,156.796666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="TextUpdatedEvent" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="200.255115305583,409.632374248017,282.596666666667,197.8804" CodeSchemaProperty_IsInternal="True" CommonLabel="Bootstrapper" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Icon="CodeSchema_Class" Label="Bootstrapper" SourceLocation="(Assembly=file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/Base/Bootstrapper.cs StartLineNumber=30 StartCharacterOffset=19 EndLineNumber=30 EndCharacterOffset=31)" UseManualLocation="True" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="235.516440901137,-132.860783812563,196.796666666667,85.0002" CodeSchemaProperty_IsPublic="True" CommonLabel="Events" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Icon="CodeSchema_Class" Label="Events" SourceLocation="(Assembly=file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/TalkingKeyboard.Infrastructure/Events.cs StartLineNumber=14 StartCharacterOffset=17 EndLineNumber=14 EndCharacterOffset=23)" />
+    <Node Id="@2" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 16:57:37" Bounds="160.255115305583,329.632174248017,362.596666666667,317.8808" CodeSchemaProperty_StrongName="TalkingKeyboard.Shell, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" CommonLabel="TalkingKeyboard.Shell" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(6f77beb1-085e-4f50-84a7-20b7a704ca68.OutputPath)" Group="Expanded" Label="TalkingKeyboard.Shell.exe" UseManualLocation="True">
+      <Category Ref="CodeMap_WpfProject" />
+    </Node>
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="-85.4359179749711,73.706649656427,255.03,85.9602" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="FourSuggestionsBoardViewModel" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="-63.5716067541872,-132.09356743724,184.723333333333,85.9602000000001" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TextToSpeechService" />
+    <Node Id="@23" Category="CodeSchema_Class" Bounds="50.0681659321994,-653.566822250074,197.083333333333,201.92" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TextViewModel" UseManualLocation="True" />
+    <Node Id="@25" Category="CodeSchema_Method" Bounds="90.4431659321995,-613.566822250074,116.333333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="TextViewModel" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="TextViewModel" UseManualLocation="True" />
+    <Node Id="@27" Category="CodeSchema_Method" Bounds="90.0681659321994,-517.606822250074,117.083333333333,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPropertySet="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="set_CurrentText" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="set_CurrentText" UseManualLocation="True" />
+    <Node Id="@28" Category="CodeSchema_Method" Bounds="-65.4361713640876,113.724371184361,215.03,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="FourSuggestionsBoardViewModel" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="FourSuggestionsBoardViewModel" />
+    <Node Id="@29" Category="CodeSchema_Method" Bounds="-43.5716067541872,-92.0482870227902,144.723333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="TextToSpeechService" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="TextToSpeechService" />
+    <Node Id="@30" Category="CodeSchema_Property" Bounds="70.0681659321994,-557.606822250074,157.083333333333,85.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="CurrentText" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:07" Bounds="377.545970944152,42.1397161874373,304.333333333333,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.SuggestionBoard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\TalkingKeyboard.SuggestionBoard\bin\Debug\TalkingKeyboard.Modules.SuggestionBoard.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.SuggestionBoard.dll">
+      <Category Ref="CodeMap_WpfProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@6" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:06" Bounds="377.545970944152,97.1398161874374,335.42,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.MicrosoftTextToSpeech, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\TalkingKeyboard.Modules.MicrosoftTextToSpeech\bin\Debug\TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll">
+      <Category Ref="CodeMap_WpfProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@8" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:06" Bounds="36.9893042774846,80.2542270107956,270.556666666667,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.TextHolder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\CentralTextModule\bin\Debug\TalkingKeyboard.Modules.TextHolder.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.TextHolder.dll">
+      <Category Ref="CodeMap_WpfProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="CurrentModule" Bounds="16.9893042774846,40.2541270107956,310.556666666667,85.0002" Group="Expanded" Label="Current Module" UseManualLocation="True" />
+    <Node Id="Infrastructure{6A20A3E3-5B53-49ED-B399-02C9417A017A}" Category="CodeMap_SolutionFolder" Bounds="215.516440901137,-172.860883812563,236.796666666667,145.0004" Group="Expanded" Label="Infrastructure" UseManualLocation="True" />
+    <Node Id="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Category="CodeMap_SolutionFolder" Bounds="357.545970944152,2.13961618743734,375.42,140.0003" Group="Expanded" Label="Modules" />
+    <Node Id="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" Category="CodeMap_SolutionFolder" Bounds="303.758410924664,172.140016187437,65.2533333333333,25" Group="Collapsed" Label="Shell" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="@10" Target="@23" Category="Contains" FetchingParent="@10" />
+    <Link Source="@11" Target="@21" Category="Contains" FetchingParent="@11" />
+    <Link Source="@12" Target="@20" Category="Contains" FetchingParent="@12" />
+    <Link Source="@14" Target="@18" Category="Contains" FetchingParent="@14" />
+    <Link Source="@18" Target="(@1 @13 @17 Member=.ctor)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(@1 @13 @17 Member=ConfigureModuleCatalog)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(@1 @13 @17 Member=CreateLogger)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(@1 @13 @17 Member=CreateShell)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(@1 @13 @17 Member=InitializeShell)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@19" Target="@16" Category="Contains" FetchingParent="@19" />
+    <Link Source="@2" Target="@14" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@4" Category="CodeMap_ProjectReference" Bounds="409.117030644018,73.2828672325719,108.970893658813,256.349307015445" />
+    <Link Source="@2" Target="@6" Category="CodeMap_ProjectReference" Bounds="425.351374138856,127.961416842866,106.326592260705,201.670757405151" />
+    <Link Source="@2" Target="@8" Category="CodeMap_ProjectReference" Bounds="169.406964564385,246.961679388808,58.9022901264752,82.6704948592091" />
+    <Link Source="@20" Target="@28" Category="Contains" FetchingParent="@20" />
+    <Link Source="@21" Target="@29" Category="Contains" FetchingParent="@21" />
+    <Link Source="@23" Target="@25" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@30" Category="Contains" FetchingParent="@23" />
+    <Link Source="@25" Target="@27" Category="CodeSchema_Calls" Weight="2" />
+    <Link Source="@27" Target="@16" Category="References" Bounds="103.612863216683,-332.647762251197,0.189804138422133,812.922600245316" Weight="1" />
+    <Link Source="@28" Target="@16" Category="References" Bounds="49.205483269056,169.787276238179,50.2492152950148,261.163002429764" Weight="1" />
+    <Link Source="@29" Target="@16" Category="References" Bounds="30.6165056060684,-66.1734237618207,69.9311809326518,497.049373919118" Weight="1" />
+    <Link Source="@30" Target="@27" Category="Contains" FetchingParent="@30" />
+    <Link Source="@4" Target="@12" Category="Contains" FetchingParent="@4" />
+    <Link Source="@6" Target="@11" Category="Contains" FetchingParent="@6" />
+    <Link Source="@8" Target="@10" Category="Contains" FetchingParent="@8" />
+    <Link Source="CurrentModule" Target="@8" Category="Contains" />
+    <Link Source="Infrastructure{6A20A3E3-5B53-49ED-B399-02C9417A017A}" Target="@19" Category="Contains" />
+    <Link Source="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Target="@4" Category="Contains" FetchingParent="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" />
+    <Link Source="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Target="@6" Category="Contains" FetchingParent="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" />
+    <Link Source="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" Target="@2" Category="Contains" FetchingParent="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" />
+  </Links>
+  <Categories>
+    <Category Id="CodeMap_ProjectReference" Label="Project Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+    <Category Id="CodeMap_SolutionFolder" Label="Solution Folder" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Solution Folder" />
+    <Category Id="CodeMap_WpfProject" Label="WPF Project" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="WPF Projects" />
+    <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_Property" Label="Property" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Property" NavigationActionLabel="Properties" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="FileSystem.Category.FileOfType.dll" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
+    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+  </Categories>
+  <Properties>
+    <Property Id="AssemblyTimestamp" DataType="System.DateTime" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsInternal" Label="Is Internal" Description="Flag to indicate the method is 'Internal'" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPropertySet" Label="Is Property Set" Description="Flag to indicate the frame is a Property Set" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsProtected" Label="Is Protected" Description="Flag to indicate the scope is Protected" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsSpecialName" Label="Is Special Name" Description="Flag to indicate the method is treated in a special way by some compilers" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsVirtual" Label="Is Virtual" Description="Flag to indicate the method can be overridden" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_StrongName" Label="StrongName" Description="StrongName" DataType="System.String" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="ParentType" Label="Parent Type" ValueType="System.Object" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(6f77beb1-085e-4f50-84a7-20b7a704ca68.OutputPathUri)" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.SuggestionBoard/bin/Debug/TalkingKeyboard.Modules.SuggestionBoard.dll" />
+    <Alias n="4" Id="(@3)" />
+    <Alias n="5" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.Modules.MicrosoftTextToSpeech/bin/Debug/TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Uri="Assembly=$(VsSolutionUri)/CentralTextModule/bin/Debug/TalkingKeyboard.Modules.TextHolder.dll" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Id="Namespace=TalkingKeyboard.Modules.CentralTextModule.ViewModels" />
+    <Alias n="10" Id="(@7 @9)" />
+    <Alias n="11" Id="(@5 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech)" />
+    <Alias n="12" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels)" />
+    <Alias n="13" Id="Namespace=TalkingKeyboard.Shell" />
+    <Alias n="14" Id="(@1 @13)" />
+    <Alias n="15" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.Infrastructure/bin/Debug/TalkingKeyboard.Infrastructure.dll" />
+    <Alias n="16" Id="(@15 Namespace=TalkingKeyboard.Infrastructure Type=(Name=TextUpdatedEvent ParentType=Events))" />
+    <Alias n="17" Id="Type=Bootstrapper" />
+    <Alias n="18" Id="(@1 @13 @17)" />
+    <Alias n="19" Id="(@15 Namespace=TalkingKeyboard.Infrastructure Type=Events)" />
+    <Alias n="20" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels Type=FourSuggestionsBoardViewModel)" />
+    <Alias n="21" Id="(@5 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech Type=TextToSpeechService)" />
+    <Alias n="22" Id="Type=TextViewModel" />
+    <Alias n="23" Id="(@7 @9 @22)" />
+    <Alias n="24" Uri="Assembly=$(VsSolutionUri)/packages/Prism.Core.6.2.0/lib/net45/Prism.dll" />
+    <Alias n="25" Id="(@7 @9 @22 Member=(Name=.ctor OverloadingParameters=[(@24 Namespace=Prism.Events Type=IEventAggregator)]))" />
+    <Alias n="26" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.2/mscorlib.dll" />
+    <Alias n="27" Id="(@7 @9 @22 Member=(Name=set_CurrentText OverloadingParameters=[(@26 Namespace=System Type=String)]))" />
+    <Alias n="28" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels Type=FourSuggestionsBoardViewModel Member=(Name=.ctor OverloadingParameters=[(@15 Namespace=TalkingKeyboard.Infrastructure.ServiceInterfaces Type=ISuggestionService),(@24 Namespace=Prism.Events Type=IEventAggregator)]))" />
+    <Alias n="29" Id="(@5 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech Type=TextToSpeechService Member=(Name=.ctor OverloadingParameters=[(@15 Namespace=TalkingKeyboard.Infrastructure.Controls Type=ITextModel),(@24 Namespace=Prism.Events Type=IEventAggregator)]))" />
+    <Alias n="30" Id="(@7 @9 @22 Member=CurrentText)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Link" GroupLabel="Current Call Stack Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CurrentCallStackCall')" />
+      <Setter Property="Stroke" Value="#FFD93701" />
+      <Setter Property="Weight" Value="1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Call Stack Indirect Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CallStackIndirectCall')" />
+      <Setter Property="Stroke" Value="#FFB8B8B8" />
+      <Setter Property="StrokeDashArray" Value="4 1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Call Stack Direct Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CallStackDirectCall')" />
+      <Setter Property="Stroke" Value="#FFB8B8B8" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="External And Current" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('ExternalCallStackEntry') And HasCategory('CurrentCallStackEntry')" />
+      <Setter Property="Background" Value="#FFFFF8F0" />
+      <Setter Property="Stroke" Value="#FFCE5100" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Return" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeSchema_ReturnTypeLink')" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="References" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('References')" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Uses Attribute" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeSchema_AttributeUse')" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Solution Folder" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeMap_SolutionFolder')" />
+      <Setter Property="Background" Value="#FFDEBA83" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Class')" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Background" Value="#FF0E619A" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True">
+      <Condition Expression="HasCategory('InheritsFrom')" />
+      <Setter Property="Stroke" Value="#FF00A600" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True">
+      <Condition Expression="HasCategory('Implements')" />
+      <Setter Property="Stroke" Value="#8000A600" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Calls" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Calls')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Function Pointer" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FunctionPointer')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Write" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FieldWrite')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="DrawArrow" Value="true" />
+      <Setter Property="IsHidden" Value="false" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="External Reference" ValueLabel="External Reference">
+      <Condition Expression="HasCategory('CodeMap_ExternalReference')" />
+      <Setter Property="Stroke" Value="#9A9A9A" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Project Reference" ValueLabel="Project Reference">
+      <Condition Expression="HasCategory('CodeMap_ProjectReference')" />
+      <Setter Property="DrawArrow" Value="true" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="Stroke" Value="#9A9A9A" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Test Project" ValueLabel="Test Project">
+      <Condition Expression="HasCategory('CodeMap_TestProject')" />
+      <Setter Property="Icon" Value="CodeMap_TestProject" />
+      <Setter Property="Background" Value="#FF307A69" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Web Project" ValueLabel="Web Project">
+      <Condition Expression="HasCategory('CodeMap_WebProject')" />
+      <Setter Property="Icon" Value="CodeMap_WebProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Windows Store Project" ValueLabel="Windows Store Project">
+      <Condition Expression="HasCategory('CodeMap_WindowsStoreProject')" />
+      <Setter Property="Icon" Value="CodeMap_WindowsStoreProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Phone Project" ValueLabel="Phone Project">
+      <Condition Expression="HasCategory('CodeMap_PhoneProject')" />
+      <Setter Property="Icon" Value="CodeMap_PhoneProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Portable Library" ValueLabel="Portable Library">
+      <Condition Expression="HasCategory('CodeMap_PortableLibraryProject')" />
+      <Setter Property="Icon" Value="CodeMap_PortableLibraryProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="WPF Project" ValueLabel="WPF Project">
+      <Condition Expression="HasCategory('CodeMap_WpfProject')" />
+      <Setter Property="Icon" Value="CodeMap_WpfProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="VSIX Project" ValueLabel="VSIX Project">
+      <Condition Expression="HasCategory('CodeMap_VsixProject')" />
+      <Setter Property="Icon" Value="CodeMap_VsixProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Modeling Project" ValueLabel="Modeling Project">
+      <Condition Expression="HasCategory('CodeMap_ModelingProject')" />
+      <Setter Property="Icon" Value="CodeMap_ModelingProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="Has category">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="6f77beb1-085e-4f50-84a7-20b7a704ca68.OutputPath" Value="D:\Fer\Dropbox\Tesis\Software\TalkingKeyboard\Base\bin\Debug\TalkingKeyboard.Shell.exe" />
+    <Path Id="6f77beb1-085e-4f50-84a7-20b7a704ca68.OutputPathUri" Value="file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/Base/bin/Debug/TalkingKeyboard.Shell.exe" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework" />
+    <Path Id="VsSolution" Value="D:\Fer\Dropbox\Tesis\Software\TalkingKeyboard" />
+    <Path Id="VsSolutionUri" Value="file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard" />
+  </Paths>
+</DirectedGraph>
