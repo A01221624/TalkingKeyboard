@@ -20,7 +20,6 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
     public class FourSuggestionsBoardViewModel : BindableBase, ISuggestionsViewModel
     {
         private readonly ISuggestionService suggestionService;
-        private readonly ITextModel textModel;
 
         private ObservableCollection<string> suggestions;
 
@@ -28,15 +27,12 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
         ///     Initializes a new instance of the <see cref="FourSuggestionsBoardViewModel" /> class.
         /// </summary>
         /// <param name="suggestionService">The suggestion service (obtained through DI).</param>
-        /// <param name="textModel">The text model (obtained through DI).</param>
         /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
         public FourSuggestionsBoardViewModel(
             ISuggestionService suggestionService,
-            ITextModel textModel,
             IEventAggregator eventAggregator)
         {
             this.suggestionService = suggestionService;
-            this.textModel = textModel;
             eventAggregator.GetEvent<Events.TextUpdatedEvent>().Subscribe(
                 () =>
                     {
@@ -45,7 +41,7 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
                             this.Suggestions = new ObservableCollection<string>();
                         }
 
-                        this.Suggestions = suggestionService.ProvideSuggestions(this.textModel.CurrentText);
+                        this.Suggestions = suggestionService.ProvideSuggestions();
                         suggestionService.ClearMultiCharacterBuffer();
                     },
                 ThreadOption.BackgroundThread,

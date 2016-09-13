@@ -2,9 +2,6 @@
 // <copyright file="SuggestionService.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the SuggestionService type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.SuggestionsProvider
 {
@@ -21,6 +18,9 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
     using TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources;
 
+    /// <summary>
+    ///     Defines the SuggestionService class which provides suggestion services such as auto-complete.
+    /// </summary>
     public class SuggestionService : ISuggestionService
     {
         private readonly MultikeySuggestionSource multikeySource = new MultikeySuggestionSource();
@@ -34,18 +34,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         public SuggestionService(ITextModel textModel)
         {
             this.textModel = textModel;
-            this.AddSuggestionCommand = new DelegateCommand<string>(
-                                            s =>
-                                                {
-                                                    var currentText = this.textModel.CurrentText;
-                                                    var lastWord = StringEditHelper.GetLastWord(currentText);
-                                                    if (s.ToLower().StartsWith(lastWord.ToLower()))
-                                                    {
-                                                        Commands.RemoveLastWordCommand.Execute(null);
-                                                    }
-
-                                                    Commands.AppendTextCommand.Execute(s + " ");
-                                                });
+            this.AddSuggestionCommand = new DelegateCommand<string>(this.AddSuggestion);
             Commands.AddSuggestionCommand.RegisterCommand(this.AddSuggestionCommand);
         }
 
@@ -100,9 +89,8 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         }
 
         /// <summary>
-        ///     Gets the suggestions.
+        ///     Gets the suggestions based on the current text.
         /// </summary>
-        /// <param name="basedOn">String on which the suggestions are based (current text).</param>
         /// <returns>
         ///     Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the
         ///     suggestions.
@@ -110,9 +98,9 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// <remarks>
         ///     <para>Adds space and first-uppercases the suggestions if necessary.</para>
         /// </remarks>
-        public ObservableCollection<string> ProvideSuggestions(string basedOn)
+        public ObservableCollection<string> ProvideSuggestions()
         {
-            var suggestions = this.presageSource.GetSuggestions(basedOn);
+            var suggestions = this.presageSource.GetSuggestions(this.textModel.CurrentText);
             return this.AddSpaceAndUppercaseIfNecessary(suggestions);
         }
 
@@ -157,6 +145,22 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
                         return s;
                     });
             return new ObservableCollection<string>(result);
+        }
+
+        /// <summary>
+        ///     Adds a suggestion.
+        /// </summary>
+        /// <param name="s">The suggestion.</param>
+        private void AddSuggestion(string s)
+        {
+            var currentText = this.textModel.CurrentText;
+            var lastWord = StringEditHelper.GetLastWord(currentText);
+            if (s.ToLower().StartsWith(lastWord.ToLower()))
+            {
+                Commands.RemoveLastWordCommand.Execute(null);
+            }
+
+            Commands.AppendTextCommand.Execute(s + " ");
         }
     }
 }

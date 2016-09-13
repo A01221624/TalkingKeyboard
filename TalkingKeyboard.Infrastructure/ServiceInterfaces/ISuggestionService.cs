@@ -34,15 +34,14 @@ namespace TalkingKeyboard.Infrastructure.ServiceInterfaces
         ObservableCollection<string> ProvideMultiCharacterSuggestions();
 
         /// <summary>
-        ///     Gets the suggestions.
+        ///     Gets the suggestions leaving the implementer to retrieve any necessary models.
         /// </summary>
-        /// <param name="basedOn">Possible object on which the suggestions are based (may be null).</param>
         /// <returns>Returns an <see cref="ObservableCollection{T}" /> of strings containing the suggestions.</returns>
         /// <remarks>
         ///     The suggestions may be sorted or not. It is up to the implementing type to decide and for the suggestion board view
         ///     model to take into account.
         /// </remarks>
-        ObservableCollection<string> ProvideSuggestions(string basedOn);
+        ObservableCollection<string> ProvideSuggestions();
 
         /// <summary>
         ///     Removes the last multi-character from the buffer.

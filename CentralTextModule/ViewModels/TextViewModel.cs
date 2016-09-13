@@ -2,9 +2,6 @@
 // <copyright file="TextViewModel.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
-// <summary>
-//   Defines the TextViewModel type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 {
@@ -21,6 +18,11 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
     using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Infrastructure.Helpers;
 
+    /// <summary>
+    ///     Defines the TextViewModel view-model class which contains and maintains the current text.
+    /// </summary>
+    /// <seealso cref="Prism.Mvvm.BindableBase" />
+    /// <seealso cref="TalkingKeyboard.Infrastructure.Controls.ITextModel" />
     public class TextViewModel : BindableBase, ITextModel
     {
         private readonly IEventAggregator eventAggregator;
@@ -38,7 +40,11 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
             this.AppendTextCommand = new DelegateCommand<string>(this.AppendText);
             this.RemoveLastCharacterCommand =
                 new DelegateCommand(
-                    () => this.CurrentText = this.CurrentText.Remove(this.CurrentText.Length - 1),
+                    () =>
+                        this.CurrentText =
+                            this.CurrentText.Length > 0
+                                ? this.CurrentText.Remove(this.CurrentText.Length - 1)
+                                : this.CurrentText,
                     () => this.CurrentText.Length > 0).ObservesProperty(() => this.CurrentText);
             this.RemoveLastWordCommand =
                 new DelegateCommand(() => { this.CurrentText = StringEditHelper.RemoveLastWord(this.CurrentText); });
@@ -94,7 +100,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
         /// <param name="s">The string to be appended.</param>
         private void AppendText(string s)
         {
-            if (s.Length == 0)
+            if (string.IsNullOrEmpty(s))
             {
                 return;
             }
@@ -103,7 +109,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
             if (!newIsAccent)
             {
                 s = this.CombineWithAccentBuffer(s);
-                this.RemoveWhitespaceIfNecessaryBasedOn(s);
+                this.RemoveWhitespaceIfNecessaryFromString(s);
                 this.CurrentText += s;
                 this.accentBuffer = string.Empty;
             }
@@ -143,7 +149,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
         ///     This is necessary, for example, when there is a space and a comma is to be added: "Hello ," versus "Hello,"; this
         ///     case occurs when the suggestion module is used, which auto-adds spaces after words.
         /// </remarks>
-        private void RemoveWhitespaceIfNecessaryBasedOn(string s)
+        private void RemoveWhitespaceIfNecessaryFromString(string s)
         {
             if ((this.CurrentText.Length > 0)
                 && CharacterClasses.PrecededByNonwhitespaceFollowedByWhitespace.Contains(s[0])
