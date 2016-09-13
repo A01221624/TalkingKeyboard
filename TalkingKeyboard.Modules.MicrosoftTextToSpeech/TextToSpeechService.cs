@@ -37,6 +37,8 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
                 new DelegateCommand(this.SayCurrentText, this.SpeechSynthesisCanExecute).ObservesProperty(
                     () => this.CurrentText);
             Commands.SpeechSynthesisCommand.RegisterCommand(this.SpeechSynthesisCommand);
+
+            // TODO: Send to background thread.
             eventAggregator.GetEvent<Events.TextUpdatedEvent>()
                 .Subscribe(() => this.CurrentText = this.TextModel.CurrentText);
         }
