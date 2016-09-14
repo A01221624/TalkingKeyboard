@@ -81,7 +81,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Suggestion.cs" />
     <Compile Include="SuggestionBoardModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -97,7 +96,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\FourSuggestionsBoardViewModel.cs" />
-    <Compile Include="ViewModels\SuggestionControlViewModel.cs" />
     <Compile Include="Views\FourSuggestionsBoard.xaml.cs">
       <DependentUpon>FourSuggestionsBoard.xaml</DependentUpon>
     </Compile>
@@ -115,7 +113,9 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\FourSuggestionsBoard.xaml">
       <SubType>Designer</SubType>
