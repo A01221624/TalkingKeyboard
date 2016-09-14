@@ -51,20 +51,6 @@
                 Gets or sets the suggestions.
             </summary>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel.#ctor(System.String)">
-            <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel" /> class.
-            </summary>
-            <param name="suggestion">The suggestion held by the control.</param>
-        </member>
-        <member name="P:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel.Suggestion">
-            <summary>
-                Gets or sets the suggestion held by the control.
-            </summary>
-            <value>
-                The suggestion held by the control.
-            </value>
-        </member>
         <member name="T:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard">
             <summary>
                 Interaction logic for FourSuggestionsBoard

@@ -1,77 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@1 @13 @17 Member=.ctor)" Category="CodeSchema_Method" Bounds="220.255115305583,505.592574248017,105.003333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Bootstrapper" />
-    <Node Id="(@1 @13 @17 Member=ConfigureModuleCatalog)" Category="CodeSchema_Method" Bounds="220.289695129394,561.552674248017,169.78,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="ConfigureModuleCatalog" />
-    <Node Id="(@1 @13 @17 Member=CreateLogger)" Category="CodeSchema_Method" Bounds="355.258448638916,505.592574248017,107.593333333333,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="CreateLogger" />
-    <Node Id="(@1 @13 @17 Member=CreateShell)" Category="CodeSchema_Method" Bounds="220.257543029785,449.632474248017,95.5833333333334,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="CreateShell" />
-    <Node Id="(@1 @13 @17 Member=InitializeShell)" Category="CodeSchema_Method" Bounds="345.840876363119,449.632474248017,104.74,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="InitializeShell" />
-    <Node Id="@10" Category="CodeSchema_Namespace" Bounds="-32.270167401134,-693.566822250074,361.76,261.92" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.CentralTextModule‎.ViewModels" UseManualLocation="True" />
-    <Node Id="@11" Category="CodeSchema_Namespace" Bounds="-129.679940087521,-172.09366743724,316.94,145.9604" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.MicrosoftTextToSpeech" UseManualLocation="True" />
-    <Node Id="@12" Category="CodeSchema_Namespace" Bounds="-134.377584641638,33.706549656427,352.913333333333,145.9604" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.SuggestionBoard‎.ViewModels" UseManualLocation="True" />
-    <Node Id="@14" Category="CodeSchema_Namespace" Bounds="180.255115305583,369.632274248017,322.596666666667,257.8806" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="TalkingKeyboard.Shell" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard.Shell" />
-    <Node Id="@16" Category="CodeSchema_Class" Bounds="255.516440901137,-92.8606838125627,156.796666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="TextUpdatedEvent" />
-    <Node Id="@18" Category="CodeSchema_Class" Bounds="200.255115305583,409.632374248017,282.596666666667,197.8804" CodeSchemaProperty_IsInternal="True" CommonLabel="Bootstrapper" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Icon="CodeSchema_Class" Label="Bootstrapper" SourceLocation="(Assembly=file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/Base/Bootstrapper.cs StartLineNumber=30 StartCharacterOffset=19 EndLineNumber=30 EndCharacterOffset=31)" UseManualLocation="True" />
-    <Node Id="@19" Category="CodeSchema_Class" Bounds="235.516440901137,-132.860783812563,196.796666666667,85.0002" CodeSchemaProperty_IsPublic="True" CommonLabel="Events" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Icon="CodeSchema_Class" Label="Events" SourceLocation="(Assembly=file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/TalkingKeyboard.Infrastructure/Events.cs StartLineNumber=14 StartCharacterOffset=17 EndLineNumber=14 EndCharacterOffset=23)" />
+    <Node Id="(@1 @14 @18 Member=.ctor)" Category="CodeSchema_Method" Bounds="220.255115305583,505.592574248017,105.003333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Bootstrapper" />
+    <Node Id="(@1 @14 @18 Member=ConfigureModuleCatalog)" Category="CodeSchema_Method" Bounds="220.289695129394,561.552674248017,169.78,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="ConfigureModuleCatalog" />
+    <Node Id="(@1 @14 @18 Member=CreateLogger)" Category="CodeSchema_Method" Bounds="355.258448638916,505.592574248017,107.593333333333,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="CreateLogger" />
+    <Node Id="(@1 @14 @18 Member=CreateShell)" Category="CodeSchema_Method" Bounds="220.257543029785,449.632474248017,95.5833333333334,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="CreateShell" />
+    <Node Id="(@1 @14 @18 Member=InitializeShell)" Category="CodeSchema_Method" Bounds="345.840876363119,449.632474248017,104.74,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="InitializeShell" />
+    <Node Id="(@5)" Category="CodeSchema_Assembly" Bounds="0,0,296.08,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" FilePath="$(VsSolution)\TalkingKeyboard.SingleKeyBoard\bin\Debug\TalkingKeyboard.Modules.SingleKeyBoard.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.SingleKeyBoard.dll">
+      <Category Ref="CodeMap_WpfProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@11" Category="CodeSchema_Namespace" Bounds="-32.270167401134,-693.566822250074,361.76,261.92" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.CentralTextModule‎.ViewModels" UseManualLocation="True" />
+    <Node Id="@12" Category="CodeSchema_Namespace" Bounds="-129.679940087521,-172.09366743724,316.94,145.9604" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.MicrosoftTextToSpeech" UseManualLocation="True" />
+    <Node Id="@13" Category="CodeSchema_Namespace" Bounds="-134.377584641638,33.706549656427,352.913333333333,145.9604" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard‎.Modules‎.SuggestionBoard‎.ViewModels" UseManualLocation="True" />
+    <Node Id="@15" Category="CodeSchema_Namespace" Bounds="180.255115305583,369.632274248017,322.596666666667,257.8806" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="TalkingKeyboard.Shell" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TalkingKeyboard.Shell" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="40,80,156.796666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="TextUpdatedEvent" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="200.255115305583,409.632374248017,282.596666666667,197.8804" CodeSchemaProperty_IsInternal="True" CommonLabel="Bootstrapper" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Icon="CodeSchema_Class" Label="Bootstrapper" SourceLocation="(Assembly=file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/Base/Bootstrapper.cs StartLineNumber=30 StartCharacterOffset=19 EndLineNumber=30 EndCharacterOffset=31)" UseManualLocation="True" />
     <Node Id="@2" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 16:57:37" Bounds="160.255115305583,329.632174248017,362.596666666667,317.8808" CodeSchemaProperty_StrongName="TalkingKeyboard.Shell, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" CommonLabel="TalkingKeyboard.Shell" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(6f77beb1-085e-4f50-84a7-20b7a704ca68.OutputPath)" Group="Expanded" Label="TalkingKeyboard.Shell.exe" UseManualLocation="True">
       <Category Ref="CodeMap_WpfProject" />
     </Node>
-    <Node Id="@20" Category="CodeSchema_Class" Bounds="-85.4359179749711,73.706649656427,255.03,85.9602" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="FourSuggestionsBoardViewModel" />
-    <Node Id="@21" Category="CodeSchema_Class" Bounds="-63.5716067541872,-132.09356743724,184.723333333333,85.9602000000001" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TextToSpeechService" />
-    <Node Id="@23" Category="CodeSchema_Class" Bounds="50.0681659321994,-653.566822250074,197.083333333333,201.92" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TextViewModel" UseManualLocation="True" />
-    <Node Id="@25" Category="CodeSchema_Method" Bounds="90.4431659321995,-613.566822250074,116.333333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="TextViewModel" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="TextViewModel" UseManualLocation="True" />
-    <Node Id="@27" Category="CodeSchema_Method" Bounds="90.0681659321994,-517.606822250074,117.083333333333,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPropertySet="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="set_CurrentText" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="set_CurrentText" UseManualLocation="True" />
-    <Node Id="@28" Category="CodeSchema_Method" Bounds="-65.4361713640876,113.724371184361,215.03,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="FourSuggestionsBoardViewModel" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="FourSuggestionsBoardViewModel" />
-    <Node Id="@29" Category="CodeSchema_Method" Bounds="-43.5716067541872,-92.0482870227902,144.723333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="TextToSpeechService" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="TextToSpeechService" />
-    <Node Id="@30" Category="CodeSchema_Property" Bounds="70.0681659321994,-557.606822250074,157.083333333333,85.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="CurrentText" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:07" Bounds="377.545970944152,42.1397161874373,304.333333333333,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.SuggestionBoard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\TalkingKeyboard.SuggestionBoard\bin\Debug\TalkingKeyboard.Modules.SuggestionBoard.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.SuggestionBoard.dll">
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="20,40,196.796666666667,85" CodeSchemaProperty_IsPublic="True" CommonLabel="Events" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Icon="CodeSchema_Class" Label="Events" SourceLocation="(Assembly=file:///D:/Fer/Dropbox/Tesis/Software/TalkingKeyboard/TalkingKeyboard.Infrastructure/Events.cs StartLineNumber=14 StartCharacterOffset=17 EndLineNumber=14 EndCharacterOffset=23)" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="-85.4359179749711,73.706649656427,255.03,85.9602" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="FourSuggestionsBoardViewModel" />
+    <Node Id="@22" Category="CodeSchema_Class" Bounds="-63.5716067541872,-132.09356743724,184.723333333333,85.9602000000001" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TextToSpeechService" />
+    <Node Id="@24" Category="CodeSchema_Class" Bounds="50.0681659321994,-653.566822250074,197.083333333333,201.92" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="TextViewModel" UseManualLocation="True" />
+    <Node Id="@26" Category="CodeSchema_Method" Bounds="90.4431659321995,-613.566822250074,116.333333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="TextViewModel" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="TextViewModel" UseManualLocation="True" />
+    <Node Id="@28" Category="CodeSchema_Method" Bounds="90.0681659321994,-517.606822250074,117.083333333333,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPropertySet="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="set_CurrentText" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="set_CurrentText" UseManualLocation="True" />
+    <Node Id="@29" Category="CodeSchema_Method" Bounds="-65.4361713640876,113.724371184361,215.03,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="FourSuggestionsBoardViewModel" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="FourSuggestionsBoardViewModel" />
+    <Node Id="@30" Category="CodeSchema_Method" Bounds="-43.5716067541872,-92.0482870227902,144.723333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" CommonLabel="TextToSpeechService" DelayedCrossGroupLinksState="Fetched" Icon="CodeSchema_Method" Label="TextToSpeechService" />
+    <Node Id="@31" Category="CodeSchema_Property" Bounds="70.0681659321994,-557.606822250074,157.083333333333,85.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Expanded" Label="CurrentText" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:07" Bounds="20,215,304.333333333333,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.SuggestionBoard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\TalkingKeyboard.SuggestionBoard\bin\Debug\TalkingKeyboard.Modules.SuggestionBoard.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.SuggestionBoard.dll">
       <Category Ref="CodeMap_WpfProject" />
       <Category Ref="FileSystem.Category.FileOfType.dll" />
     </Node>
-    <Node Id="@6" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:06" Bounds="377.545970944152,97.1398161874374,335.42,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.MicrosoftTextToSpeech, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\TalkingKeyboard.Modules.MicrosoftTextToSpeech\bin\Debug\TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll">
+    <Node Id="@7" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:06" Bounds="20,270,335.42,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.MicrosoftTextToSpeech, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\TalkingKeyboard.Modules.MicrosoftTextToSpeech\bin\Debug\TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll">
       <Category Ref="CodeMap_WpfProject" />
       <Category Ref="FileSystem.Category.FileOfType.dll" />
     </Node>
-    <Node Id="@8" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:06" Bounds="36.9893042774846,80.2542270107956,270.556666666667,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.TextHolder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\CentralTextModule\bin\Debug\TalkingKeyboard.Modules.TextHolder.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.TextHolder.dll">
+    <Node Id="@9" Category="CodeSchema_Assembly" AssemblyTimestamp="09/13/2016 15:19:06" Bounds="20,385,270.556666666667,25" CodeSchemaProperty_StrongName="TalkingKeyboard.Modules.TextHolder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\CentralTextModule\bin\Debug\TalkingKeyboard.Modules.TextHolder.dll" Group="Collapsed" Label="TalkingKeyboard.Modules.TextHolder.dll">
       <Category Ref="CodeMap_WpfProject" />
       <Category Ref="FileSystem.Category.FileOfType.dll" />
     </Node>
-    <Node Id="CurrentModule" Bounds="16.9893042774846,40.2541270107956,310.556666666667,85.0002" Group="Expanded" Label="Current Module" UseManualLocation="True" />
-    <Node Id="Infrastructure{6A20A3E3-5B53-49ED-B399-02C9417A017A}" Category="CodeMap_SolutionFolder" Bounds="215.516440901137,-172.860883812563,236.796666666667,145.0004" Group="Expanded" Label="Infrastructure" UseManualLocation="True" />
-    <Node Id="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Category="CodeMap_SolutionFolder" Bounds="357.545970944152,2.13961618743734,375.42,140.0003" Group="Expanded" Label="Modules" />
-    <Node Id="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" Category="CodeMap_SolutionFolder" Bounds="303.758410924664,172.140016187437,65.2533333333333,25" Group="Collapsed" Label="Shell" UseManualLocation="True" />
+    <Node Id="CurrentModule" Bounds="0,345,310.556666666667,85" Group="Expanded" Label="Current Module" />
+    <Node Id="Infrastructure{6A20A3E3-5B53-49ED-B399-02C9417A017A}" Category="CodeMap_SolutionFolder" Bounds="-1.4210854715202E-14,0,236.796666666667,145" Group="Expanded" Label="Infrastructure" />
+    <Node Id="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Category="CodeMap_SolutionFolder" Bounds="0,175,375.42,140" Group="Expanded" Label="Modules" />
+    <Node Id="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" Category="CodeMap_SolutionFolder" Bounds="340.556666666667,345,65.2533333333333,25" Group="Collapsed" Label="Shell" />
   </Nodes>
   <Links>
-    <Link Source="@10" Target="@23" Category="Contains" FetchingParent="@10" />
-    <Link Source="@11" Target="@21" Category="Contains" FetchingParent="@11" />
-    <Link Source="@12" Target="@20" Category="Contains" FetchingParent="@12" />
-    <Link Source="@14" Target="@18" Category="Contains" FetchingParent="@14" />
-    <Link Source="@18" Target="(@1 @13 @17 Member=.ctor)" Category="Contains" FetchingParent="@18" />
-    <Link Source="@18" Target="(@1 @13 @17 Member=ConfigureModuleCatalog)" Category="Contains" FetchingParent="@18" />
-    <Link Source="@18" Target="(@1 @13 @17 Member=CreateLogger)" Category="Contains" FetchingParent="@18" />
-    <Link Source="@18" Target="(@1 @13 @17 Member=CreateShell)" Category="Contains" FetchingParent="@18" />
-    <Link Source="@18" Target="(@1 @13 @17 Member=InitializeShell)" Category="Contains" FetchingParent="@18" />
-    <Link Source="@19" Target="@16" Category="Contains" FetchingParent="@19" />
-    <Link Source="@2" Target="@14" Category="Contains" FetchingParent="@2" />
+    <Link Source="@11" Target="@24" Category="Contains" FetchingParent="@11" />
+    <Link Source="@12" Target="@22" Category="Contains" FetchingParent="@12" />
+    <Link Source="@13" Target="@21" Category="Contains" FetchingParent="@13" />
+    <Link Source="@15" Target="@19" Category="Contains" FetchingParent="@15" />
+    <Link Source="@19" Target="(@1 @14 @18 Member=.ctor)" Category="Contains" FetchingParent="@19" />
+    <Link Source="@19" Target="(@1 @14 @18 Member=ConfigureModuleCatalog)" Category="Contains" FetchingParent="@19" />
+    <Link Source="@19" Target="(@1 @14 @18 Member=CreateLogger)" Category="Contains" FetchingParent="@19" />
+    <Link Source="@19" Target="(@1 @14 @18 Member=CreateShell)" Category="Contains" FetchingParent="@19" />
+    <Link Source="@19" Target="(@1 @14 @18 Member=InitializeShell)" Category="Contains" FetchingParent="@19" />
+    <Link Source="@2" Target="@15" Category="Contains" FetchingParent="@2" />
     <Link Source="@2" Target="@4" Category="CodeMap_ProjectReference" Bounds="409.117030644018,73.2828672325719,108.970893658813,256.349307015445" />
-    <Link Source="@2" Target="@6" Category="CodeMap_ProjectReference" Bounds="425.351374138856,127.961416842866,106.326592260705,201.670757405151" />
-    <Link Source="@2" Target="@8" Category="CodeMap_ProjectReference" Bounds="169.406964564385,246.961679388808,58.9022901264752,82.6704948592091" />
-    <Link Source="@20" Target="@28" Category="Contains" FetchingParent="@20" />
+    <Link Source="@2" Target="@7" Category="CodeMap_ProjectReference" Bounds="425.351374138856,127.961416842866,106.326592260705,201.670757405151" />
+    <Link Source="@2" Target="@9" Category="CodeMap_ProjectReference" Bounds="169.406964564385,246.961679388808,58.9022901264752,82.6704948592091" />
+    <Link Source="@20" Target="@17" Category="Contains" FetchingParent="@20" />
     <Link Source="@21" Target="@29" Category="Contains" FetchingParent="@21" />
-    <Link Source="@23" Target="@25" Category="Contains" FetchingParent="@23" />
-    <Link Source="@23" Target="@30" Category="Contains" FetchingParent="@23" />
-    <Link Source="@25" Target="@27" Category="CodeSchema_Calls" Weight="2" />
-    <Link Source="@27" Target="@16" Category="References" Bounds="103.612863216683,-332.647762251197,0.189804138422133,812.922600245316" Weight="1" />
-    <Link Source="@28" Target="@16" Category="References" Bounds="49.205483269056,169.787276238179,50.2492152950148,261.163002429764" Weight="1" />
-    <Link Source="@29" Target="@16" Category="References" Bounds="30.6165056060684,-66.1734237618207,69.9311809326518,497.049373919118" Weight="1" />
-    <Link Source="@30" Target="@27" Category="Contains" FetchingParent="@30" />
-    <Link Source="@4" Target="@12" Category="Contains" FetchingParent="@4" />
-    <Link Source="@6" Target="@11" Category="Contains" FetchingParent="@6" />
-    <Link Source="@8" Target="@10" Category="Contains" FetchingParent="@8" />
-    <Link Source="CurrentModule" Target="@8" Category="Contains" />
-    <Link Source="Infrastructure{6A20A3E3-5B53-49ED-B399-02C9417A017A}" Target="@19" Category="Contains" />
+    <Link Source="@22" Target="@30" Category="Contains" FetchingParent="@22" />
+    <Link Source="@24" Target="@26" Category="Contains" FetchingParent="@24" />
+    <Link Source="@24" Target="@31" Category="Contains" FetchingParent="@24" />
+    <Link Source="@26" Target="@28" Category="CodeSchema_Calls" Weight="2" />
+    <Link Source="@28" Target="@17" Category="References" Bounds="103.612863216683,-332.647762251197,0.189804138422133,812.922600245316" Weight="1" />
+    <Link Source="@29" Target="@17" Category="References" Bounds="49.205483269056,169.787276238179,50.2492152950148,261.163002429764" Weight="1" />
+    <Link Source="@30" Target="@17" Category="References" Bounds="30.6165056060684,-66.1734237618207,69.9311809326518,497.049373919118" Weight="1" />
+    <Link Source="@31" Target="@28" Category="Contains" FetchingParent="@31" />
+    <Link Source="@4" Target="@13" Category="Contains" FetchingParent="@4" />
+    <Link Source="@7" Target="@12" Category="Contains" FetchingParent="@7" />
+    <Link Source="@9" Target="@11" Category="Contains" FetchingParent="@9" />
+    <Link Source="CurrentModule" Target="@9" Category="Contains" />
+    <Link Source="Infrastructure{6A20A3E3-5B53-49ED-B399-02C9417A017A}" Target="@20" Category="Contains" />
+    <Link Source="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Target="(@5)" Category="Contains" FetchingParent="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" />
     <Link Source="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Target="@4" Category="Contains" FetchingParent="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" />
-    <Link Source="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Target="@6" Category="Contains" FetchingParent="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" />
+    <Link Source="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" Target="@7" Category="Contains" FetchingParent="Modules{F682E76A-ECC4-49AE-B125-9AB299ECDB20}" />
     <Link Source="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" Target="@2" Category="Contains" FetchingParent="Shell{461163E7-2D39-411D-AE72-0582EACD640E}" />
   </Links>
   <Categories>
@@ -149,32 +154,33 @@
     <Alias n="2" Id="(@1)" />
     <Alias n="3" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.SuggestionBoard/bin/Debug/TalkingKeyboard.Modules.SuggestionBoard.dll" />
     <Alias n="4" Id="(@3)" />
-    <Alias n="5" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.Modules.MicrosoftTextToSpeech/bin/Debug/TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll" />
-    <Alias n="6" Id="(@5)" />
-    <Alias n="7" Uri="Assembly=$(VsSolutionUri)/CentralTextModule/bin/Debug/TalkingKeyboard.Modules.TextHolder.dll" />
-    <Alias n="8" Id="(@7)" />
-    <Alias n="9" Id="Namespace=TalkingKeyboard.Modules.CentralTextModule.ViewModels" />
-    <Alias n="10" Id="(@7 @9)" />
-    <Alias n="11" Id="(@5 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech)" />
-    <Alias n="12" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels)" />
-    <Alias n="13" Id="Namespace=TalkingKeyboard.Shell" />
-    <Alias n="14" Id="(@1 @13)" />
-    <Alias n="15" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.Infrastructure/bin/Debug/TalkingKeyboard.Infrastructure.dll" />
-    <Alias n="16" Id="(@15 Namespace=TalkingKeyboard.Infrastructure Type=(Name=TextUpdatedEvent ParentType=Events))" />
-    <Alias n="17" Id="Type=Bootstrapper" />
-    <Alias n="18" Id="(@1 @13 @17)" />
-    <Alias n="19" Id="(@15 Namespace=TalkingKeyboard.Infrastructure Type=Events)" />
-    <Alias n="20" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels Type=FourSuggestionsBoardViewModel)" />
-    <Alias n="21" Id="(@5 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech Type=TextToSpeechService)" />
-    <Alias n="22" Id="Type=TextViewModel" />
-    <Alias n="23" Id="(@7 @9 @22)" />
-    <Alias n="24" Uri="Assembly=$(VsSolutionUri)/packages/Prism.Core.6.2.0/lib/net45/Prism.dll" />
-    <Alias n="25" Id="(@7 @9 @22 Member=(Name=.ctor OverloadingParameters=[(@24 Namespace=Prism.Events Type=IEventAggregator)]))" />
-    <Alias n="26" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.2/mscorlib.dll" />
-    <Alias n="27" Id="(@7 @9 @22 Member=(Name=set_CurrentText OverloadingParameters=[(@26 Namespace=System Type=String)]))" />
-    <Alias n="28" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels Type=FourSuggestionsBoardViewModel Member=(Name=.ctor OverloadingParameters=[(@15 Namespace=TalkingKeyboard.Infrastructure.ServiceInterfaces Type=ISuggestionService),(@24 Namespace=Prism.Events Type=IEventAggregator)]))" />
-    <Alias n="29" Id="(@5 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech Type=TextToSpeechService Member=(Name=.ctor OverloadingParameters=[(@15 Namespace=TalkingKeyboard.Infrastructure.Controls Type=ITextModel),(@24 Namespace=Prism.Events Type=IEventAggregator)]))" />
-    <Alias n="30" Id="(@7 @9 @22 Member=CurrentText)" />
+    <Alias n="5" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.SingleKeyBoard/bin/Debug/TalkingKeyboard.Modules.SingleKeyBoard.dll" />
+    <Alias n="6" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.Modules.MicrosoftTextToSpeech/bin/Debug/TalkingKeyboard.Modules.MicrosoftTextToSpeech.dll" />
+    <Alias n="7" Id="(@6)" />
+    <Alias n="8" Uri="Assembly=$(VsSolutionUri)/CentralTextModule/bin/Debug/TalkingKeyboard.Modules.TextHolder.dll" />
+    <Alias n="9" Id="(@8)" />
+    <Alias n="10" Id="Namespace=TalkingKeyboard.Modules.CentralTextModule.ViewModels" />
+    <Alias n="11" Id="(@8 @10)" />
+    <Alias n="12" Id="(@6 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech)" />
+    <Alias n="13" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels)" />
+    <Alias n="14" Id="Namespace=TalkingKeyboard.Shell" />
+    <Alias n="15" Id="(@1 @14)" />
+    <Alias n="16" Uri="Assembly=$(VsSolutionUri)/TalkingKeyboard.Infrastructure/bin/Debug/TalkingKeyboard.Infrastructure.dll" />
+    <Alias n="17" Id="(@16 Namespace=TalkingKeyboard.Infrastructure Type=(Name=TextUpdatedEvent ParentType=Events))" />
+    <Alias n="18" Id="Type=Bootstrapper" />
+    <Alias n="19" Id="(@1 @14 @18)" />
+    <Alias n="20" Id="(@16 Namespace=TalkingKeyboard.Infrastructure Type=Events)" />
+    <Alias n="21" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels Type=FourSuggestionsBoardViewModel)" />
+    <Alias n="22" Id="(@6 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech Type=TextToSpeechService)" />
+    <Alias n="23" Id="Type=TextViewModel" />
+    <Alias n="24" Id="(@8 @10 @23)" />
+    <Alias n="25" Uri="Assembly=$(VsSolutionUri)/packages/Prism.Core.6.2.0/lib/net45/Prism.dll" />
+    <Alias n="26" Id="(@8 @10 @23 Member=(Name=.ctor OverloadingParameters=[(@25 Namespace=Prism.Events Type=IEventAggregator)]))" />
+    <Alias n="27" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.2/mscorlib.dll" />
+    <Alias n="28" Id="(@8 @10 @23 Member=(Name=set_CurrentText OverloadingParameters=[(@27 Namespace=System Type=String)]))" />
+    <Alias n="29" Id="(@3 Namespace=TalkingKeyboard.Modules.SuggestionBoard.ViewModels Type=FourSuggestionsBoardViewModel Member=(Name=.ctor OverloadingParameters=[(@16 Namespace=TalkingKeyboard.Infrastructure.ServiceInterfaces Type=ISuggestionService),(@25 Namespace=Prism.Events Type=IEventAggregator)]))" />
+    <Alias n="30" Id="(@6 Namespace=TalkingKeyboard.Modules.MicrosoftTextToSpeech Type=TextToSpeechService Member=(Name=.ctor OverloadingParameters=[(@16 Namespace=TalkingKeyboard.Infrastructure.Controls Type=ITextModel),(@25 Namespace=Prism.Events Type=IEventAggregator)]))" />
+    <Alias n="31" Id="(@8 @10 @23 Member=CurrentText)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Link" GroupLabel="Current Call Stack Link" ValueLabel="True" Visibility="Hidden">
