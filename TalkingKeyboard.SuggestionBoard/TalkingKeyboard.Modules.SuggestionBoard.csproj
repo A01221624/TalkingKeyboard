@@ -99,9 +99,6 @@
     <Compile Include="Views\FourSuggestionsBoard.xaml.cs">
       <DependentUpon>FourSuggestionsBoard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SuggestionControl.xaml.cs">
-      <DependentUpon>SuggestionControl.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -113,15 +110,9 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\FourSuggestionsBoard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\SuggestionControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
