@@ -36,14 +36,10 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
         }
 
         /// <summary>
-        ///     Registers a unique instance of the suggestions view-model in the dependency injection container and registers the
-        ///     suggestion board view with the region manager to the corresponding region of the window.
+        ///     Registers the suggestion board view with the region manager to the corresponding region of the window.
         /// </summary>
         public void Initialize()
         {
-            this.unityContainer.RegisterType<ISuggestionsViewModel, FourSuggestionsBoardViewModel>(
-                new ContainerControlledLifetimeManager());
-            this.unityContainer.Resolve<ISuggestionsViewModel>();
             this.regionManager.RegisterViewWithRegion(
                 RegionNames.SuggestionRegion,
                 () => this.unityContainer.Resolve<FourSuggestionsBoard>());

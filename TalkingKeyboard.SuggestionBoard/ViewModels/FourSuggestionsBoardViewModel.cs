@@ -17,7 +17,7 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
     using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
-    public class FourSuggestionsBoardViewModel : BindableBase, ISuggestionsViewModel
+    public class FourSuggestionsBoardViewModel : BindableBase
     {
         private readonly ISuggestionService suggestionService;
 

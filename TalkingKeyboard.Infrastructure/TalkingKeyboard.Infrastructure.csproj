@@ -77,7 +77,6 @@
     <Compile Include="Constants\ResourceLocations.cs" />
     <Compile Include="Constants\ViewNames.cs" />
     <Compile Include="Controls\ISelectableControlViewModel.cs" />
-    <Compile Include="Controls\ISuggestionsViewModel.cs" />
     <Compile Include="Controls\ITextModel.cs" />
     <Compile Include="Controls\SelectableButton.xaml.cs">
       <DependentUpon>SelectableButton.xaml</DependentUpon>
