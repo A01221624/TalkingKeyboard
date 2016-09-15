@@ -20,7 +20,7 @@ namespace TalkingKeyboard.Infrastructure
         /// <summary>
         ///     Gets or sets the add suggestion command.
         /// </summary>
-        public static CompositeCommand AddSuggestionCommand { get; set; } = new CompositeCommand();
+        public static CompositeCommand WriteSuggestionCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
         ///     Gets or sets the remove last character command.

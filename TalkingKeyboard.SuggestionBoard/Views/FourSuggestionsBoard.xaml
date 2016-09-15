@@ -26,19 +26,19 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <sc:SelectableButton Grid.Column="0" HorizontalAlignment="Stretch"
-                             Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
+                             Command="{x:Static infrastructure:Commands.WriteSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
                              Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[0]}" />
         <sc:SelectableButton Grid.Column="1" HorizontalAlignment="Stretch"
-                             Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
+                             Command="{x:Static infrastructure:Commands.WriteSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
                              Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[1]}" />
         <sc:SelectableButton Grid.Column="2" HorizontalAlignment="Stretch"
-                             Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
+                             Command="{x:Static infrastructure:Commands.WriteSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
                              Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[2]}" />
         <sc:SelectableButton Grid.Column="3" HorizontalAlignment="Stretch"
-                             Command="{x:Static infrastructure:Commands.AddSuggestionCommand}"
+                             Command="{x:Static infrastructure:Commands.WriteSuggestionCommand}"
                              CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"
                              Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.Suggestions[3]}" />
     </Grid>

@@ -34,8 +34,8 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         public SuggestionService(ITextModel textModel)
         {
             this.textModel = textModel;
-            this.AddSuggestionCommand = new DelegateCommand<string>(this.AddSuggestion);
-            Commands.AddSuggestionCommand.RegisterCommand(this.AddSuggestionCommand);
+            this.WriteSuggestionCommand = new DelegateCommand<string>(this.WriteSuggestion);
+            Commands.WriteSuggestionCommand.RegisterCommand(this.WriteSuggestionCommand);
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// <value>
         ///     The command for adding a suggestion.
         /// </value>
-        public ICommand AddSuggestionCommand { get; set; }
+        public ICommand WriteSuggestionCommand { get; set; }
 
         /// <summary>
         ///     Adds a multi-character to the buffer.
@@ -151,7 +151,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         ///     Adds a suggestion.
         /// </summary>
         /// <param name="s">The suggestion.</param>
-        private void AddSuggestion(string s)
+        private void WriteSuggestion(string s)
         {
             var currentText = this.textModel.CurrentText;
             var lastWord = StringEditHelper.GetLastWord(currentText);
