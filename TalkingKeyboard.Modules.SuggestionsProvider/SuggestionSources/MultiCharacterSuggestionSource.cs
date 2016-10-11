@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MultikeySuggestionSource.cs" company="Numeral">
+// <copyright file="MultiCharacterSuggestionSource.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // <summary>
-//   Defines the MultikeySuggestionSource type.
+//   Defines the MultiCharacterSuggestionSource type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
@@ -20,15 +20,15 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
     ///     This class implements a disambiguation algorithm for multi-character text entry.
     /// </summary>
     /// <seealso cref="TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource" />
-    public class MultikeySuggestionSource : ISuggestionSource
+    public class MultiCharacterSuggestionSource : ISuggestionSource
     {
         private readonly List<List<string>> filteredDictionary = new List<List<string>>();
         private int caretPosition;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="MultikeySuggestionSource" /> class.
+        ///     Initializes a new instance of the <see cref="MultiCharacterSuggestionSource" /> class.
         /// </summary>
-        public MultikeySuggestionSource()
+        public MultiCharacterSuggestionSource()
         {
             this.LoadDictionarySortedByFrequency(ResourceLocations.DefaultDictionaryLocation);
         }

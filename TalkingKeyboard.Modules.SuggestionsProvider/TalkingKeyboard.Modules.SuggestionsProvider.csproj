@@ -84,7 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="SuggestionSources\MultikeySuggestionSource.cs" />
+    <Compile Include="SuggestionSources\MultiCharacterSuggestionSource.cs" />
     <Compile Include="SuggestionSources\PresageSuggestionSource.cs" />
     <Compile Include="SuggestionsProviderModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

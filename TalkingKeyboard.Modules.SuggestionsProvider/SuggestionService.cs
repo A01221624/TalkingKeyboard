@@ -23,7 +23,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
     /// </summary>
     public class SuggestionService : ISuggestionService
     {
-        private readonly MultikeySuggestionSource multikeySource = new MultikeySuggestionSource();
+        private readonly MultiCharacterSuggestionSource multiCharacterSource = new MultiCharacterSuggestionSource();
         private readonly PresageSuggestionSource presageSource = new PresageSuggestionSource();
         private readonly ITextModel textModel;
 
@@ -57,7 +57,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// </remarks>
         public void AddMultiCharacterText(string s)
         {
-            this.multikeySource.Add(s);
+            this.multiCharacterSource.Add(s);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// </summary>
         public void ClearMultiCharacterBuffer()
         {
-            this.multikeySource.ClearMultiCharacterBuffer();
+            this.multiCharacterSource.ClearMultiCharacterBuffer();
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// </remarks>
         public ObservableCollection<string> ProvideMultiCharacterSuggestions()
         {
-            var suggestions = this.multikeySource.GetSuggestions();
+            var suggestions = this.multiCharacterSource.GetSuggestions();
             return this.AddSpaceAndUppercaseIfNecessary(suggestions);
         }
 
@@ -109,7 +109,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// </summary>
         public void RemoveLastMultiCharacter()
         {
-            this.multikeySource.RemoveLastMultiCharacter();
+            this.multiCharacterSource.RemoveLastMultiCharacter();
         }
 
         /// <summary>
