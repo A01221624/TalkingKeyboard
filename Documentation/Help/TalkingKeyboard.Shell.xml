@@ -6,7 +6,7 @@
   <members>
     <member name="T:TalkingKeyboard.Shell.App">
       <summary>
-                Interaction logic for App.xaml
+                Interaction logic for the application base.
             </summary>
     </member>
     <member name="M:TalkingKeyboard.Shell.App.#ctor">
@@ -28,8 +28,19 @@
             Application Entry Point.
             </summary>
     </member>
-    <member name="M:TalkingKeyboard.Shell.App.OnStartup(System.Windows.StartupEventArgs)"></member>
-    <member name="T:TalkingKeyboard.Shell.Logging.NLogLogger"></member>
+    <member name="M:TalkingKeyboard.Shell.App.OnStartup(System.Windows.StartupEventArgs)">
+      <summary>
+                Raises the <see cref="E:System.Windows.Application.Startup" /> event.
+            </summary>
+      <param name="e">
+                A <see cref="T:System.Windows.StartupEventArgs" /> that contains the event data.
+            </param>
+    </member>
+    <member name="T:TalkingKeyboard.Shell.Logging.NLogLogger">
+      <summary>
+                This class describes the logger to be used under the Prism Framework, in this case, the NLog Logger.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Shell.Logging.NLogLogger.#ctor">
       <summary>
         <markup>
@@ -43,11 +54,21 @@
       <summary>
                 Write a new log entry with the specified category and priority.
             </summary>
-      <param name="message">Message body to log.</param>
-      <param name="category">Category of the entry.</param>
-      <param name="priority">The priority of the entry (not used by NLog so we pass Priority.None)</param>
+      <param name="message">
+                Message body to log.
+            </param>
+      <param name="category">
+                Category of the entry.
+            </param>
+      <param name="priority">
+                The priority of the entry (not used by NLog so we pass Priority.None)
+            </param>
     </member>
-    <member name="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel"></member>
+    <member name="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel">
+      <summary>
+                This class describes the logic for the main window, which is currently only registering relevant objects.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.#ctor(Prism.Regions.IRegionManager)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel" /> class.
@@ -71,17 +92,13 @@
     </member>
     <member name="T:TalkingKeyboard.Shell.Views.MainWindow">
       <summary>
-                Interaction logic for MainWindow.xaml
+                Interaction logic for the main window.
             </summary>
     </member>
     <member name="M:TalkingKeyboard.Shell.Views.MainWindow.#ctor">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Shell.Views.MainWindow</parameter>
-          </include>
-        </markup>
-      </summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Shell.Views.MainWindow" /> class.
+            </summary>
     </member>
     <member name="M:TalkingKeyboard.Shell.Views.MainWindow.InitializeComponent">
       <summary>

@@ -6,11 +6,19 @@
     <members>
         <member name="T:TalkingKeyboard.Shell.App">
             <summary>
-                Interaction logic for App.xaml
+                Interaction logic for the application base.
             </summary>
             <summary>
             App
             </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.App.OnStartup(System.Windows.StartupEventArgs)">
+            <summary>
+                Raises the <see cref="E:System.Windows.Application.Startup" /> event.
+            </summary>
+            <param name="e">
+                A <see cref="T:System.Windows.StartupEventArgs" /> that contains the event data.
+            </param>
         </member>
         <member name="M:TalkingKeyboard.Shell.App.InitializeComponent">
             <summary>
@@ -48,13 +56,36 @@
                 Initializes the shell.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Shell.Logging.NLogLogger">
+            <summary>
+                This class describes the logger to be used under the Prism Framework, in this case, the NLog Logger.
+            </summary>
+            <seealso cref="T:Prism.Logging.ILoggerFacade" />
+        </member>
+        <member name="F:TalkingKeyboard.Shell.Logging.NLogLogger.logger">
+            <summary>
+                The logger.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Shell.Logging.NLogLogger.Log(System.String,Prism.Logging.Category,Prism.Logging.Priority)">
             <summary>
                 Write a new log entry with the specified category and priority.
             </summary>
-            <param name="message">Message body to log.</param>
-            <param name="category">Category of the entry.</param>
-            <param name="priority">The priority of the entry (not used by NLog so we pass Priority.None)</param>
+            <param name="message">
+                Message body to log.
+            </param>
+            <param name="category">
+                Category of the entry.
+            </param>
+            <param name="priority">
+                The priority of the entry (not used by NLog so we pass Priority.None)
+            </param>
+        </member>
+        <member name="T:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel">
+            <summary>
+                This class describes the logic for the main window, which is currently only registering relevant objects.
+            </summary>
+            <seealso cref="T:Prism.Mvvm.BindableBase" />
         </member>
         <member name="M:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.#ctor(Prism.Regions.IRegionManager)">
             <summary>
@@ -88,10 +119,15 @@
         </member>
         <member name="T:TalkingKeyboard.Shell.Views.MainWindow">
             <summary>
-                Interaction logic for MainWindow.xaml
+                Interaction logic for the main window.
             </summary>
             <summary>
             MainWindow
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Shell.Views.MainWindow.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Shell.Views.MainWindow" /> class.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Shell.Views.MainWindow.InitializeComponent">
