@@ -16,6 +16,10 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
     using TalkingKeyboard.Infrastructure.Constants;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     This class implements a disambiguation algorithm for multi-character text entry.
+    /// </summary>
+    /// <seealso cref="TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource" />
     public class MultikeySuggestionSource : ISuggestionSource
     {
         private readonly List<List<string>> filteredDictionary = new List<List<string>>();

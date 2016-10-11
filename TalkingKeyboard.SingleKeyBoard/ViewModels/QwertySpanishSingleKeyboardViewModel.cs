@@ -17,6 +17,12 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
     using TalkingKeyboard.Infrastructure;
     using TalkingKeyboard.Infrastructure.Annotations;
 
+    /// <summary>
+    ///     This class contains the state and logic relevant to the Spanish QWERTY single-character keyboard.This logic
+    ///     currently pertains the state of the shift button which enables toggling keys between one character and another,
+    ///     such as lowercase and uppercase.
+    /// </summary>
+    /// <seealso cref="System.ComponentModel.INotifyPropertyChanged" />
     public class QwertySpanishSingleKeyboardViewModel : INotifyPropertyChanged
     {
         private bool isShiftDown;

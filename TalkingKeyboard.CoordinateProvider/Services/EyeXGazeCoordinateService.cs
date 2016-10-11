@@ -19,6 +19,12 @@ namespace TalkingKeyboard.Modules.CoordinateProvider.Services
 
     using Tobii.EyeX.Framework;
 
+    /// <summary>
+    ///     This service provides coordinates obtained from the EyeX gaze-tracking device. It communicates with the server
+    ///     application provided by the manufacturer through their API to obtain data. Each time a new point is acquired, it is
+    ///     published into the <see cref="Events.NewCoordinateEvent" /> for the corresponding module to process it.
+    /// </summary>
+    /// <seealso cref="System.IDisposable" />
     public class EyeXGazeCoordinateService : IDisposable
     {
         /// <summary>

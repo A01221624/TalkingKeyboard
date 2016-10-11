@@ -184,7 +184,7 @@
             </summary>
             <param name="textModel">The text model (obtained through DI).</param>
         </member>
-        <member name="P:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.AddSuggestionCommand">
+        <member name="P:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.WriteSuggestionCommand">
             <summary>
                 Gets or sets the command for adding a suggestion.
             </summary>
@@ -251,7 +251,7 @@
                 needed and where the first character is uppercase if necessary.
             </returns>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.AddSuggestion(System.String)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService.WriteSuggestion(System.String)">
             <summary>
                 Adds a suggestion.
             </summary>

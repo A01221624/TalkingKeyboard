@@ -11,8 +11,6 @@ namespace TalkingKeyboard.Modules.SuggestionBoard
     using Prism.Regions;
 
     using TalkingKeyboard.Infrastructure.Constants;
-    using TalkingKeyboard.Infrastructure.Controls;
-    using TalkingKeyboard.Modules.SuggestionBoard.ViewModels;
     using TalkingKeyboard.Modules.SuggestionBoard.Views;
 
     /// <summary>

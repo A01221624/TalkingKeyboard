@@ -20,6 +20,13 @@ namespace TalkingKeyboard.Modules.MicrosoftTextToSpeech
     using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     This class implements the service for providing text-to-speech capabilities. The internal engine is currently the
+    ///     one provided with Windows systems. The current implementation reads directly the entire text from the model.
+    /// </summary>
+    /// <seealso cref="Prism.Mvvm.BindableBase" />
+    /// <seealso cref="TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService" />
+    /// <seealso cref="System.IDisposable" />
     public class TextToSpeechService : BindableBase, ITextToSpeechService, IDisposable
     {
         private string currentText;

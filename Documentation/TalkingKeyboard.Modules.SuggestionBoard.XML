@@ -19,8 +19,7 @@
         </member>
         <member name="M:TalkingKeyboard.Modules.SuggestionBoard.SuggestionBoardModule.Initialize">
             <summary>
-                Registers a unique instance of the suggestions view-model in the dependency injection container and registers the
-                suggestion board view with the region manager to the corresponding region of the window.
+                Registers the suggestion board view with the region manager to the corresponding region of the window.
             </summary>
         </member>
         <member name="T:TalkingKeyboard.Modules.SuggestionBoard.Properties.Resources">
@@ -60,19 +59,6 @@
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard.InitializeComponent">
-            <summary>
-            InitializeComponent
-            </summary>
-        </member>
-        <member name="T:TalkingKeyboard.Modules.SuggestionBoard.Views.SuggestionControl">
-            <summary>
-                Interaction logic for SuggestionControl
-            </summary>
-            <summary>
-            SuggestionControl
-            </summary>
-        </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.SuggestionControl.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

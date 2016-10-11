@@ -9,6 +9,7 @@
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
     using System.Collections.ObjectModel;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.ServiceModel;
 
@@ -16,6 +17,16 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
     using TalkingKeyboard.Modules.SuggestionsProvider.PresageService;
 
+    /// <summary>
+    ///     This class provides auto-completion suggestions obtained from an external application called Presage which uses an
+    ///     n-gram database to perform text prediction.
+    /// </summary>
+    /// <remarks>
+    ///     For more information on Presage, see http://presage.sourceforge.net/
+    /// </remarks>
+    /// <seealso cref="TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource" />
+    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly",
+         Justification = "Web addresses exempt of spell-check.")]
     public class PresageSuggestionSource : ISuggestionSource
     {
         private readonly PresageChannel channel;

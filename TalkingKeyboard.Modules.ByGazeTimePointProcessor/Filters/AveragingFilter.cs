@@ -12,6 +12,10 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 
     using TalkingKeyboard.Infrastructure.DataContainers;
 
+    /// <summary>
+    ///     This abstract class provides a base for other classes to act as filters which take a number of coordinate points
+    ///     and return an average.
+    /// </summary>
     public abstract class AveragingFilter
     {
         /// <summary>

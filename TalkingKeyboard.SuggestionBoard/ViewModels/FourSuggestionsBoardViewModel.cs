@@ -14,9 +14,12 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
     using Prism.Mvvm;
 
     using TalkingKeyboard.Infrastructure;
-    using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     This class contains and maintains the collection of suggestions which are used by the suggestions board.
+    /// </summary>
+    /// <seealso cref="Prism.Mvvm.BindableBase" />
     public class FourSuggestionsBoardViewModel : BindableBase
     {
         private readonly ISuggestionService suggestionService;
@@ -28,9 +31,7 @@ namespace TalkingKeyboard.Modules.SuggestionBoard.ViewModels
         /// </summary>
         /// <param name="suggestionService">The suggestion service (obtained through DI).</param>
         /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
-        public FourSuggestionsBoardViewModel(
-            ISuggestionService suggestionService,
-            IEventAggregator eventAggregator)
+        public FourSuggestionsBoardViewModel(ISuggestionService suggestionService, IEventAggregator eventAggregator)
         {
             this.suggestionService = suggestionService;
             eventAggregator.GetEvent<Events.TextUpdatedEvent>().Subscribe(

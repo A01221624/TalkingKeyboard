@@ -14,7 +14,7 @@
                 Gets or sets the add multi-character text command.
             </summary>
         </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Commands.AddSuggestionCommand">
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.WriteSuggestionCommand">
             <summary>
                 Gets or sets the add suggestion command.
             </summary>
@@ -277,16 +277,6 @@
         <member name="M:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.Select">
             <summary>
             Executes the Command assigned to the control.
-            </summary>
-        </member>
-        <member name="T:TalkingKeyboard.Infrastructure.Controls.ISuggestionsViewModel">
-            <summary>
-            The SuggestionsViewModel interface.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISuggestionsViewModel.Suggestions">
-            <summary>
-            Gets or sets the suggestions.
             </summary>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Controls.ITextModel">

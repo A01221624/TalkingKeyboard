@@ -17,6 +17,13 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
     using TalkingKeyboard.Infrastructure;
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
 
+    /// <summary>
+    ///     This class contains the logic related to edition of the multi-character buffer. Note that the view-model currently
+    ///     communicates directly with the suggestion service, this is a design decision for the current version of the
+    ///     application; an alternative would be to modify the model instance and expose an interface for the suggestion
+    ///     service to consume the necessary information.
+    /// </summary>
+    /// <seealso cref="Prism.Mvvm.BindableBase" />
     public class QwertySpanishMultiKeyboardViewModel : BindableBase
     {
         private readonly IEventAggregator eventAggregator;

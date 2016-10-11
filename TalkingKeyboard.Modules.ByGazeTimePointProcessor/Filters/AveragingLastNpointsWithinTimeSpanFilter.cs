@@ -14,6 +14,11 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 
     using TalkingKeyboard.Infrastructure.DataContainers;
 
+    /// <summary>
+    ///     This class inherits from <see cref="AveragingFilter" /> and can be used to obtain more accurate data through a
+    ///     modified implementation of a moving window average.
+    /// </summary>
+    /// <seealso cref="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter" />
     public class AveragingLastNpointsWithinTimeSpanFilter : AveragingFilter
     {
         private readonly int numberOfPoints;

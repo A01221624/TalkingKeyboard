@@ -6,7 +6,6 @@
 //   Defines the TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
 {
     using System;
@@ -16,13 +15,17 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters
     using TalkingKeyboard.Infrastructure;
     using TalkingKeyboard.Infrastructure.DataContainers;
 
+    /// <summary>
+    ///     This class implements a sample <see cref="SelectionFilter{T}" /> which activates a key if (at least) a given number
+    ///     of points have recently fallen on said key. The maximum considered time is established as a <see cref="TimeSpan" />
+    /// </summary>
     public class TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter : SelectionFilter<TimedControlsWithPoint>
     {
         private readonly int pointsRequired;
         private readonly TimeSpan timeFrame;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter"/> class.
+        ///     Initializes a new instance of the <see cref="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter" /> class.
         /// </summary>
         /// <param name="window">The window on which the selectable controls are located.</param>
         /// <param name="timeFrame">The time frame from current time during which points must have fallen to be considered.</param>

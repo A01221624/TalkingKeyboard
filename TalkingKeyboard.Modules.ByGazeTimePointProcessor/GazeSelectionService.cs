@@ -22,6 +22,12 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
     using TalkingKeyboard.Infrastructure.ServiceInterfaces;
     using TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters;
 
+    /// <summary>
+    ///     This class implements the service for providing gaze-based activation of graphical interface elements (e.g.
+    ///     buttons). It contains the logic for performing the selection based on the state machine of each gaze-selectable
+    ///     element. Future work could extract the logic into classes which implement different algorithms for selection.
+    /// </summary>
+    /// <seealso cref="TalkingKeyboard.Infrastructure.ServiceInterfaces.IControlActivationService" />
     public class GazeSelectionService : IControlActivationService
     {
         private readonly AveragingFilter averagingFilter;
