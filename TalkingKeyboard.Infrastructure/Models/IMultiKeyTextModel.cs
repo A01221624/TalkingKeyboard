@@ -8,6 +8,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.Models
 {
+    /// <summary>
+    ///     Defines the interface for the multi-character text model. This is used for inter-module communication.
+    /// </summary>
     public interface IMultiKeyTextModel
     {
         /// <summary>

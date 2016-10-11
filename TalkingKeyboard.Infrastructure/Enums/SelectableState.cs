@@ -8,6 +8,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.Enums
 {
+    /// <summary>
+    ///     This enumerator describes the possible selection-states for the gaze-based selection state machine (or, potentially
+    ///     any other point-dwell selection state machine).
+    /// </summary>
     public enum SelectableState
     {
         /// <summary>

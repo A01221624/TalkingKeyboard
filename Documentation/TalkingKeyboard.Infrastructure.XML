@@ -630,35 +630,46 @@
                 from this.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair">
+            <summary>
+                This class is used to hold pairs of <see cref="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Point" />-<see cref="T:System.DateTime" />.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.#ctor(System.DateTime,System.Windows.Point)">
             <summary>
-            Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair"/> class.
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair" /> class.
             </summary>
             <param name="time">The time.</param>
             <param name="point">The point.</param>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.#ctor(System.Windows.Point)">
             <summary>
-            Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair"/> class.
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair" /> class.
             </summary>
             <param name="point">The point.</param>
-            <remarks><see cref="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Time"/>Is set to <see cref="P:System.DateTime.Now"/></remarks>
+            <remarks><see cref="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Time" />Is set to <see cref="P:System.DateTime.Now" /></remarks>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Point">
             <summary>
-            Gets or sets the point.
+                Gets or sets the point.
             </summary>
             <value>
-            The point.
+                The point.
             </value>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.DataContainers.TimePointPair.Time">
             <summary>
-            Gets or sets the time.
+                Gets or sets the time.
             </summary>
             <value>
-            The time.
+                The time.
             </value>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Enums.SelectableState">
+            <summary>
+                This enumerator describes the possible selection-states for the gaze-based selection state machine (or, potentially
+                any other point-dwell selection state machine).
+            </summary>
         </member>
         <member name="F:TalkingKeyboard.Infrastructure.Enums.SelectableState.Idle">
             <summary>
@@ -721,6 +732,37 @@
             </summary>
             <seealso cref="T:Prism.Events.PubSubEvent" />
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Helpers.HitTestHelper">
+            <summary>
+                This helper class contains static methods to perform hit testing.
+            </summary>
+            <remarks>
+                Not thread safe, but only makes sense to be called from UI Thread anyway.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.HitTestHelper.FindSelectableControlSeen(System.Windows.Media.HitTestResult)">
+            <summary>
+                Finds the selectable control on which a gaze-point falls and populates a field in the class.
+            </summary>
+            <param name="result">The result.</param>
+            <returns>
+                <see cref="F:System.Windows.Media.HitTestResultBehavior.Stop" /> as soon as the first <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableControl" /> under the point is
+                found. Otherwise it returns <see cref="F:System.Windows.Media.HitTestResultBehavior.Continue" />.
+            </returns>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.HitTestHelper.SelectableControlUnderPoint(System.Windows.Point,System.Windows.Window)">
+            <summary>
+            Finds the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableControl"/> under the given <see cref="T:System.Windows.Point"/> in the given <see cref="T:System.Windows.Window"/>.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="window">The window.</param>
+            <returns>The <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableControl"/> under the point.</returns>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper">
+            <summary>
+            This helper class contains static methods for editing the string and retrieving useful information (e.g. last word).
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper.GetLastWord(System.String)">
             <summary>
                 Gets the last word.
@@ -747,6 +789,35 @@
             <remarks>
                 The last word is anything found after the last <see cref="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.WordSeparators" />.
                 The prefix is anything before the last word.
+            </remarks>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper.ConvertToDefaultEncodingFromUtf8(System.String)">
+            <summary>
+            Converts to default encoding from UTF8.
+            </summary>
+            <param name="s">The string for which to change the encoding.</param>
+            <returns>
+            The string encoded with the default encoding.
+            </returns>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Helpers.StringEditHelper.ConvertToUtf8FromDefaultEncoding(System.String)">
+            <summary>
+            Converts to UTF8 from default encoding.
+            </summary>
+            <param name="s">The string for which to change the encoding.</param>
+            <returns>
+            The string encoded with the UTF8 encoding.
+            </returns>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension">
+            <summary>
+                This class contains a markup extension which binds two possible strings and selects one based on a boolean.
+                Author: Thomas Levesque.
+            </summary>
+            <seealso cref="T:System.Windows.Data.Binding" />
+            <remarks>
+                Useful for Keyboards which change state based on other keys. Such as Shift ? Uppercase : Lowercase.
+                More information on: https://stackoverflow.com/questions/841808/wpf-display-a-bool-value-as-yes-no
             </remarks>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.#ctor">
@@ -776,6 +847,22 @@
             <param name="path">The binding path.</param>
             <param name="valueIfTrue">The value if true.</param>
             <param name="valueIfFalse">The value if false.</param>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.ValueIfFalse">
+            <summary>
+                Gets or sets the value if the bound object false.
+            </summary>
+            <value>
+                The value if false.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.ValueIfTrue">
+            <summary>
+                Gets or sets the value if the bound object true.
+            </summary>
+            <value>
+                The value if true.
+            </value>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension.Initialize">
             <summary>
@@ -824,6 +911,11 @@
             <remarks>
                 Current scope has no use for this.
             </remarks>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Models.IMultiKeyTextModel">
+            <summary>
+                Defines the interface for the multi-character text model. This is used for inter-module communication.
+            </summary>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.Models.IMultiKeyTextModel.CurrentMultiCharacterText">
             <summary>
@@ -1551,11 +1643,23 @@
             general [rest of string was truncated]&quot;;.
              </summary>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IControlActivationService">
+            <summary>
+                Interface for control activation services.
+            </summary>
+            <seealso cref="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler" />
+            <seealso cref="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IWindowKnower" />
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler.ProcessPoint(System.Windows.Point)">
             <summary>
                 Processes the point.
             </summary>
             <param name="point">The point to be processed.</param>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService">
+            <summary>
+                Interface for the suggestion service. This is used for inter-module communication.
+            </summary>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.AddMultiCharacterText(System.String)">
             <summary>
@@ -1593,6 +1697,11 @@
                 Removes the last multi-character from the buffer.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource">
+            <summary>
+                Interface for suggestion sources.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource.GetSuggestions(System.Object)">
             <summary>
                 Gets the suggestions.
@@ -1604,6 +1713,11 @@
                 model to take into account.
             </remarks>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService">
+            <summary>
+                Interface for text-to-speech services.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService.Say(System.String)">
             <summary>
                 Speaks the specified string.
@@ -1613,6 +1727,11 @@
         <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService.SayCurrentText">
             <summary>
                 Speaks the current text.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IWindowKnower">
+            <summary>
+                Interface for classes which must have references to windows in the application (e.g. for hit-testing).
             </summary>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.ServiceInterfaces.IWindowKnower.KnownWindows">

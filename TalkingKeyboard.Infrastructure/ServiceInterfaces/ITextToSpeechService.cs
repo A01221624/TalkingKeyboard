@@ -8,6 +8,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Infrastructure.ServiceInterfaces
 {
+    /// <summary>
+    ///     Interface for text-to-speech services.
+    /// </summary>
     public interface ITextToSpeechService
     {
         /// <summary>

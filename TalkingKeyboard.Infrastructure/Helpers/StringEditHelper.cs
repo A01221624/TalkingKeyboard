@@ -12,6 +12,9 @@ namespace TalkingKeyboard.Infrastructure.Helpers
 
     using TalkingKeyboard.Infrastructure.Constants;
 
+    /// <summary>
+    /// This helper class contains static methods for editing the string and retrieving useful information (e.g. last word).
+    /// </summary>
     public static class StringEditHelper
     {
         /// <summary>
@@ -64,12 +67,26 @@ namespace TalkingKeyboard.Infrastructure.Helpers
             prefix = s.Length > indexLastWord ? s.Remove(indexLastWord) : s;
         }
 
+        /// <summary>
+        /// Converts to default encoding from UTF8.
+        /// </summary>
+        /// <param name="s">The string for which to change the encoding.</param>
+        /// <returns>
+        /// The string encoded with the default encoding.
+        /// </returns>
         public static string ConvertToDefaultEncodingFromUtf8(string s)
         {
             var bytes = Encoding.UTF8.GetBytes(s);
             return Encoding.Default.GetString(bytes);
         }
 
+        /// <summary>
+        /// Converts to UTF8 from default encoding.
+        /// </summary>
+        /// <param name="s">The string for which to change the encoding.</param>
+        /// <returns>
+        /// The string encoded with the UTF8 encoding.
+        /// </returns>
         public static string ConvertToUtf8FromDefaultEncoding(string s)
         {
             var bytes = Encoding.Default.GetBytes(s);

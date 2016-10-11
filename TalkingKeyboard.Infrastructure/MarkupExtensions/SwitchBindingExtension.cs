@@ -14,11 +14,23 @@
 namespace TalkingKeyboard.Infrastructure.MarkupExtensions
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Windows;
     using System.Windows.Data;
     using System.Windows.Markup;
 
+    /// <summary>
+    ///     This class contains a markup extension which binds two possible strings and selects one based on a boolean.
+    ///     Author: Thomas Levesque.
+    /// </summary>
+    /// <seealso cref="System.Windows.Data.Binding" />
+    /// <remarks>
+    ///     Useful for Keyboards which change state based on other keys. Such as Shift ? Uppercase : Lowercase.
+    ///     More information on: https://stackoverflow.com/questions/841808/wpf-display-a-bool-value-as-yes-no
+    /// </remarks>
+    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly",
+         Justification = "Web addresses exempt of spell-check.")]
     public class SwitchBindingExtension : Binding
     {
         /// <summary>
@@ -73,9 +85,21 @@ namespace TalkingKeyboard.Infrastructure.MarkupExtensions
             this.ValueIfFalse = valueIfFalse;
         }
 
+        /// <summary>
+        ///     Gets or sets the value if the bound object false.
+        /// </summary>
+        /// <value>
+        ///     The value if false.
+        /// </value>
         [ConstructorArgument("valueIfFalse")]
         public object ValueIfFalse { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the value if the bound object true.
+        /// </summary>
+        /// <value>
+        ///     The value if true.
+        /// </value>
         [ConstructorArgument("valueIfTrue")]
         public object ValueIfTrue { get; set; }
 

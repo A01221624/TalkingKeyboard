@@ -11,6 +11,9 @@ namespace TalkingKeyboard.Infrastructure.ServiceInterfaces
     using System.Collections.Concurrent;
     using System.Windows;
 
+    /// <summary>
+    ///     Interface for classes which must have references to windows in the application (e.g. for hit-testing).
+    /// </summary>
     public interface IWindowKnower
     {
         /// <summary>

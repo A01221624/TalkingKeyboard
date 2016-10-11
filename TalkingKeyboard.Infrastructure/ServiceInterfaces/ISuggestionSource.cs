@@ -10,6 +10,9 @@ namespace TalkingKeyboard.Infrastructure.ServiceInterfaces
 {
     using System.Collections.ObjectModel;
 
+    /// <summary>
+    ///     Interface for suggestion sources.
+    /// </summary>
     public interface ISuggestionSource
     {
         /// <summary>
