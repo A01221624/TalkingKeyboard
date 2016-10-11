@@ -22,7 +22,7 @@ namespace TalkingKeyboard.Shell.ViewModels
         private readonly List<string> knownBoards;
         private readonly IRegionManager regionManager;
         private int currentViewIndex; // Must be set to index of initial board.
-        private string title = "Prism Unity Application";
+        private string title = "TalkingKeyboard";
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MainWindowViewModel" /> class.
