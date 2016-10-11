@@ -20,7 +20,13 @@
                 Registers a unique instance of the selection-by-gaze service in the dependency injection container.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService"></member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService">
+      <summary>
+                This class implements the service for providing gaze-based activation of graphical interface elements (e.g.
+                buttons). It contains the logic for performing the selection based on the state machine of each gaze-selectable
+                element. Future work could extract the logic into classes which implement different algorithms for selection.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.#ctor(Prism.Events.IEventAggregator)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService" /> class.
@@ -38,7 +44,12 @@
             </summary>
       <param name="p">The point to be processed.</param>
     </member>
-    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter"></member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter">
+      <summary>
+                This abstract class provides a base for other classes to act as filters which take a number of coordinate points
+                and return an average.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter.#ctor">
       <summary>
         <markup>
@@ -58,7 +69,12 @@
                 last 5 points, or of the 10 points nearest to the last in a given timespan)
             </returns>
     </member>
-    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter"></member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter">
+      <summary>
+                This class inherits from <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter" /> and can be used to obtain more accurate data through a
+                modified implementation of a moving window average.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter.#ctor(System.Int32,System.TimeSpan)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter" /> class.
@@ -102,10 +118,14 @@
                 Gets or sets the window on which the controls for the points are located.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter"></member>
+    <member name="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter">
+      <summary>
+                This class implements a sample <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter`1" /> which activates a key if (at least) a given number
+                of points have recently fallen on said key. The maximum considered time is established as a <see cref="T:System.TimeSpan" /></summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.#ctor(System.Windows.Window,System.TimeSpan,System.Int32)">
       <summary>
-            Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter" /> class.
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter" /> class.
             </summary>
       <param name="window">The window on which the selectable controls are located.</param>
       <param name="timeFrame">The time frame from current time during which points must have fallen to be considered.</param>

@@ -18,45 +18,24 @@
     </member>
     <member name="M:TalkingKeyboard.Modules.SuggestionBoard.SuggestionBoardModule.Initialize">
       <summary>
-                Registers a unique instance of the suggestions view-model in the dependency injection container and registers the
-                suggestion board view with the region manager to the corresponding region of the window.
+                Registers the suggestion board view with the region manager to the corresponding region of the window.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.SuggestionBoard.Model.Suggestion"></member>
-    <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Model.Suggestion.#ctor">
+    <member name="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Modules.SuggestionBoard.Model.Suggestion</parameter>
-          </include>
-        </markup>
-      </summary>
+                This class contains and maintains the collection of suggestions which are used by the suggestions board.
+            </summary>
     </member>
-    <member name="P:TalkingKeyboard.Modules.SuggestionBoard.Model.Suggestion.Text"></member>
-    <member name="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel"></member>
-    <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.#ctor(TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService,TalkingKeyboard.Infrastructure.Controls.ITextModel,Prism.Events.IEventAggregator)">
+    <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.#ctor(TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService,Prism.Events.IEventAggregator)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel" /> class.
             </summary>
       <param name="suggestionService">The suggestion service (obtained through DI).</param>
-      <param name="textModel">The text model (obtained through DI).</param>
       <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
     </member>
     <member name="P:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.Suggestions">
       <summary>
                 Gets or sets the suggestions.
-            </summary>
-    </member>
-    <member name="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel"></member>
-    <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel.#ctor(System.String)">
-      <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel" /> class.
-            </summary>
-      <param name="suggestion">The suggestion held by the control.</param>
-    </member>
-    <member name="P:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.SuggestionControlViewModel.Suggestion">
-      <summary>
-                Gets or sets the suggestion held by the control.
             </summary>
     </member>
     <member name="T:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard">
@@ -66,33 +45,10 @@
     </member>
     <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard.#ctor">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard</parameter>
-          </include>
-        </markup>
-      </summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard" /> class.
+            </summary>
     </member>
     <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard.InitializeComponent">
-      <summary>
-            InitializeComponent
-            </summary>
-    </member>
-    <member name="T:TalkingKeyboard.Modules.SuggestionBoard.Views.SuggestionControl">
-      <summary>
-                Interaction logic for SuggestionControl
-            </summary>
-    </member>
-    <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.SuggestionControl.#ctor">
-      <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Modules.SuggestionBoard.Views.SuggestionControl</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.SuggestionControl.InitializeComponent">
       <summary>
             InitializeComponent
             </summary>

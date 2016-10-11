@@ -21,7 +21,12 @@
                 Registers a unique instance of the text to speech service in the dependency injection container.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService"></member>
+    <member name="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService">
+      <summary>
+                This class implements the service for providing text-to-speech capabilities. The internal engine is currently the
+                one provided with Windows systems. The current implementation reads directly the entire text from the model.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService.#ctor(TalkingKeyboard.Infrastructure.Controls.ITextModel,Prism.Events.IEventAggregator)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService" /> class.

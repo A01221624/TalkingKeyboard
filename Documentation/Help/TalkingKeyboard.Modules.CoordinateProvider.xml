@@ -20,7 +20,13 @@
                 Registers a unique instance of each of the coordinate providing services in the dependency injection container.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService"></member>
+    <member name="T:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService">
+      <summary>
+                This service provides coordinates obtained from the EyeX gaze-tracking device. It communicates with the server
+                application provided by the manufacturer through their API to obtain data. Each time a new point is acquired, it is
+                published into the <see cref="T:TalkingKeyboard.Infrastructure.Events.NewCoordinateEvent" /> for the corresponding module to process it.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService.#ctor(Prism.Events.IEventAggregator)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService" /> class.

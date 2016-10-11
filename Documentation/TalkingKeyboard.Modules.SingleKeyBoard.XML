@@ -39,6 +39,14 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel">
+            <summary>
+                This class contains the state and logic relevant to the Spanish QWERTY single-character keyboard.This logic
+                currently pertains the state of the shift button which enables toggling keys between one character and another,
+                such as lowercase and uppercase.
+            </summary>
+            <seealso cref="T:System.ComponentModel.INotifyPropertyChanged" />
+        </member>
         <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.#ctor">
             <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel" /> class.
@@ -85,6 +93,11 @@
             </summary>
             <summary>
             QwertySpanishSingleKeyboard
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard" /> class.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard.InitializeComponent">

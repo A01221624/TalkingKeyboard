@@ -14,11 +14,6 @@
                 Gets or sets the add multi-character text command.
             </summary>
     </member>
-    <member name="P:TalkingKeyboard.Infrastructure.Commands.AddSuggestionCommand">
-      <summary>
-                Gets or sets the add suggestion command.
-            </summary>
-    </member>
     <member name="P:TalkingKeyboard.Infrastructure.Commands.AppendTextCommand">
       <summary>
                 Gets or sets the set text command.
@@ -52,6 +47,11 @@
     <member name="P:TalkingKeyboard.Infrastructure.Commands.ToggleShiftDownCommand">
       <summary>
                 Gets or sets the toggle shift down command.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Infrastructure.Commands.WriteSuggestionCommand">
+      <summary>
+                Gets or sets the add suggestion command.
             </summary>
     </member>
     <member name="T:TalkingKeyboard.Infrastructure.Configuration">
@@ -298,16 +298,6 @@
     <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.State">
       <summary>
             Gets or sets the state.
-            </summary>
-    </member>
-    <member name="T:TalkingKeyboard.Infrastructure.Controls.ISuggestionsViewModel">
-      <summary>
-            The SuggestionsViewModel interface.
-            </summary>
-    </member>
-    <member name="P:TalkingKeyboard.Infrastructure.Controls.ISuggestionsViewModel.Suggestions">
-      <summary>
-            Gets or sets the suggestions.
             </summary>
     </member>
     <member name="T:TalkingKeyboard.Infrastructure.Controls.ITextModel">
@@ -807,11 +797,10 @@
             </summary>
       <returns>Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the suggestions.</returns>
     </member>
-    <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.ProvideSuggestions(System.String)">
+    <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.ProvideSuggestions">
       <summary>
-                Gets the suggestions.
+                Gets the suggestions leaving the implementer to retrieve any necessary models.
             </summary>
-      <param name="basedOn">Possible object on which the suggestions are based (may be null).</param>
       <returns>Returns an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> of strings containing the suggestions.</returns>
     </member>
     <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService.RemoveLastMultiCharacter">

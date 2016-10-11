@@ -22,7 +22,13 @@
                 their views with the region manager to the corresponding region of the window.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel"></member>
+    <member name="T:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel">
+      <summary>
+                This class contains the state and logic relevant to the Spanish QWERTY single-character keyboard.This logic
+                currently pertains the state of the shift button which enables toggling keys between one character and another,
+                such as lowercase and uppercase.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.#ctor">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel" /> class.
@@ -61,17 +67,21 @@
     </member>
     <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard.#ctor">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard</parameter>
-          </include>
-        </markup>
-      </summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard" /> class.
+            </summary>
     </member>
     <member name="M:TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard.InitializeComponent">
       <summary>
             InitializeComponent
             </summary>
+    </member>
+    <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+      <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+    </member>
+    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper" /> class.</summary>
     </member>
   </members>
 </doc>

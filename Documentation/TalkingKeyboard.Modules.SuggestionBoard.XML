@@ -38,6 +38,12 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel">
+            <summary>
+                This class contains and maintains the collection of suggestions which are used by the suggestions board.
+            </summary>
+            <seealso cref="T:Prism.Mvvm.BindableBase" />
+        </member>
         <member name="M:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel.#ctor(TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService,Prism.Events.IEventAggregator)">
             <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel" /> class.
@@ -56,6 +62,11 @@
             </summary>
             <summary>
             FourSuggestionsBoard
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard" /> class.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard.InitializeComponent">

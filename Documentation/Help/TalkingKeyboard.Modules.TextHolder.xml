@@ -23,7 +23,11 @@
                 view with the region manager to the corresponding region of the window.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel"></member>
+    <member name="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel">
+      <summary>
+                Defines the TextViewModel view-model class which contains and maintains the current text.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.#ctor(Prism.Events.IEventAggregator)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel" /> class.
@@ -57,12 +61,8 @@
     </member>
     <member name="M:TalkingKeyboard.Modules.CentralTextModule.Views.TextView.#ctor">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Modules.CentralTextModule.Views.TextView</parameter>
-          </include>
-        </markup>
-      </summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CentralTextModule.Views.TextView" /> class.
+            </summary>
     </member>
     <member name="M:TalkingKeyboard.Modules.CentralTextModule.Views.TextView.InitializeComponent">
       <summary>

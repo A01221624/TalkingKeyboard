@@ -4,12 +4,18 @@
         <name>TalkingKeyboard.Modules.SuggestionsProvider</name>
     </assembly>
     <members>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.#ctor">
+        <member name="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource">
             <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource" /> class.
+                This class implements a disambiguation algorithm for multi-character text entry.
+            </summary>
+            <seealso cref="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource" />
+        </member>
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource" /> class.
             </summary>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.Add(System.String)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.Add(System.String)">
             <summary>
                 Adds a multi-character to the buffer.
             </summary>
@@ -20,7 +26,7 @@
                 in <see cref="P:TalkingKeyboard.Infrastructure.Constants.CharacterClasses.Whitespace" />
             </remarks>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.ClearMultiCharacterBuffer">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.ClearMultiCharacterBuffer">
             <summary>
                 Clears the multi character buffer.
             </summary>
@@ -30,7 +36,7 @@
                 are added.
             </remarks>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.GetSuggestions(System.Object)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.GetSuggestions(System.Object)">
             <summary>
                 Filters and returns suggestions according to the multi-key buffer.
             </summary>
@@ -44,18 +50,18 @@
                 which have not been selected yet.
             </remarks>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.LoadDictionarySortedByFrequency(System.String)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.LoadDictionarySortedByFrequency(System.String)">
             <summary>
                 Loads the dictionary sorted by frequency.
             </summary>
             <param name="filePath">The file path where the dictionary is located.</param>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.RemoveLastMultiCharacter">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.RemoveLastMultiCharacter">
             <summary>
                 Removes the last multi-character.
             </summary>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.FilterDictionaryToHigherThanWordLength(System.Int32)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.FilterDictionaryToHigherThanWordLength(System.Int32)">
             <summary>
                 Filters the dictionary to only leave words longer than <see cref="!:wordLength" />.
             </summary>
@@ -63,7 +69,7 @@
             <returns>The filtered dictionary.</returns>
             <remarks>Here "dictionary" is not meant as a type. It is a list of words.</remarks>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.FilterDictionaryToWordLength(System.Int32)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.FilterDictionaryToWordLength(System.Int32)">
             <summary>
                 Filters the dictionary to only leave words of length <see cref="!:wordLength" />..
             </summary>
@@ -71,7 +77,7 @@
             <returns>The filtered dictionary.</returns>
             <remarks>Here "dictionary" is not meant as a type. It is a list of words.</remarks>
         </member>
-        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultikeySuggestionSource.UpdateFilteredDictionary(System.String)">
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource.UpdateFilteredDictionary(System.String)">
             <summary>
                 Updates the dictionary list (multi-character buffer) given a new multi-character.
             </summary>
@@ -110,6 +116,16 @@
                     </list>
                 </para>
             </remarks>
+        </member>
+        <member name="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.PresageSuggestionSource">
+            <summary>
+                This class provides auto-completion suggestions obtained from an external application called Presage which uses an
+                n-gram database to perform text prediction.
+            </summary>
+            <remarks>
+                For more information on Presage, see http://presage.sourceforge.net/
+            </remarks>
+            <seealso cref="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource" />
         </member>
         <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.PresageSuggestionSource.#ctor">
             <summary>

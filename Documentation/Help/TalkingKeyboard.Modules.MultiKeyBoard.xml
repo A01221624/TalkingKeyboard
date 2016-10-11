@@ -22,7 +22,14 @@
                 injection container and registers their views with the region manager to the corresponding region of the window.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Model.MultikeyTextModel"></member>
+    <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Model.MultikeyTextModel">
+      <summary>
+                This class contains the model of currently held multi-character text. It is used by the suggestion service module
+                to disambiguate between the different possible words which can be formed by using the previously selected
+                characters and to suggest auto-completion candidates. The current version of the application holds an alternative
+                model directly in the suggestion service; both approaches have benefits and thus non-operational class is included.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Model.MultikeyTextModel.#ctor">
       <summary>
         <markup>
@@ -37,7 +44,14 @@
                 Gets or sets the current multi-character text.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel"></member>
+    <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel">
+      <summary>
+                This class contains the logic related to edition of the multi-character buffer. Note that the view-model currently
+                communicates directly with the suggestion service, this is a design decision for the current version of the
+                application; an alternative would be to modify the model instance and expose an interface for the suggestion
+                service to consume the necessary information.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.#ctor(Prism.Events.IEventAggregator,TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService)">
       <summary>
                 Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel" /> class.
@@ -57,17 +71,14 @@
     </member>
     <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard">
       <summary>
-                Interaction logic for QwertySpanishMultiKeyboard
+                This class describes a Spanish keyboard with multiple-character keys arranged in the QWERTY layout. No logic is
+                handled in this class and can be fully edited in a designer-oriented program.
             </summary>
     </member>
     <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.#ctor">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard</parameter>
-          </include>
-        </markup>
-      </summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard" /> class.
+            </summary>
     </member>
     <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.InitializeComponent">
       <summary>

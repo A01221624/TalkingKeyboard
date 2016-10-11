@@ -116,6 +116,11 @@
             TextView
             </summary>
         </member>
+        <member name="M:TalkingKeyboard.Modules.CentralTextModule.Views.TextView.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.CentralTextModule.Views.TextView" /> class.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Modules.CentralTextModule.Views.TextView.InitializeComponent">
             <summary>
             InitializeComponent
