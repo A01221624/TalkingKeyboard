@@ -17,6 +17,10 @@ namespace TalkingKeyboard.Shell.ViewModels
 
     using TalkingKeyboard.Infrastructure.Constants;
 
+    /// <summary>
+    ///     This class describes the logic for the main window, which is currently only registering relevant objects.
+    /// </summary>
+    /// <seealso cref="Prism.Mvvm.BindableBase" />
     public class MainWindowViewModel : BindableBase
     {
         private readonly List<string> knownBoards;
