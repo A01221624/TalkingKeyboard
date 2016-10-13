@@ -10,6 +10,9 @@ namespace TalkingKeyboard.Infrastructure.ServiceInterfaces
 {
     using System.Windows;
 
+    /// <summary>
+    ///     Interface for coordinate point-based services.
+    /// </summary>
     public interface IPointHandler
     {
         /// <summary>
