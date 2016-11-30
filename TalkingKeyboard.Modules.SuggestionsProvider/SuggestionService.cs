@@ -153,6 +153,11 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// <param name="s">The suggestion.</param>
         private void WriteSuggestion(string s)
         {
+            if (string.IsNullOrEmpty(s))
+            {
+                return;
+            }
+
             var currentText = this.textModel.CurrentText;
             var lastWord = StringEditHelper.GetLastWord(currentText);
             if (s.ToLower().StartsWith(lastWord.ToLower()))
