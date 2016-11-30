@@ -6,6 +6,9 @@
 //   Defines the MultiCharacterSuggestionSource type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
+using System;
+
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
     using System.Collections.Generic;
@@ -188,12 +191,16 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
                     {
                         foreach (var c in possibleCharacters)
                         {
-                            if (CharacterClasses.Whitespace.Contains(c))
+                            if (char.IsWhiteSpace(c))
                             {
                                 continue;
                             }
 
-                            if ((s.Length > this.caretPosition) && (s[this.caretPosition] == c))
+                            /* Remove diacritics before comparing */
+                            var tempBytes = System.Text.Encoding.GetEncoding("ISO-8859-8").GetBytes(s);
+                            var asciiStr = System.Text.Encoding.UTF8.GetString(tempBytes);
+
+                            if ((s.Length > this.caretPosition) && (asciiStr[this.caretPosition] == c))
                             {
                                 return true;
                             }
