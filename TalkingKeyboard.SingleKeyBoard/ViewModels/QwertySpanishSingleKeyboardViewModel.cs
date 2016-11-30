@@ -33,8 +33,10 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
         public QwertySpanishSingleKeyboardViewModel()
         {
             this.SetShiftDownCommand = new DelegateCommand<bool?>(b => this.IsShiftDown = b ?? false);
+            this.ResetShiftDownCommand = new DelegateCommand(() => this.IsShiftDown = false);
             this.ToggleShiftDownCommand = new DelegateCommand(() => this.IsShiftDown = !this.IsShiftDown);
             Commands.ToggleShiftDownCommand.RegisterCommand(this.ToggleShiftDownCommand);
+            Commands.AppendTextCommand.RegisterCommand(this.ResetShiftDownCommand);
         }
 
         /// <summary>
@@ -66,6 +68,14 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard.ViewModels
                 this.OnPropertyChanged();
             }
         }
+
+        /// <summary>
+        ///     Gets or sets the command for resetting shift down.
+        /// </summary>
+        /// <value>
+        ///     The command for resetting shift down.
+        /// </value>
+        public ICommand ResetShiftDownCommand { get; set; }
 
         /// <summary>
         ///     Gets or sets the command for setting shift down.
