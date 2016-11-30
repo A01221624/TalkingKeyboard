@@ -7,17 +7,15 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
-
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
+    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.IO;
     using System.Linq;
-
-    using TalkingKeyboard.Infrastructure.Constants;
-    using TalkingKeyboard.Infrastructure.ServiceInterfaces;
+    using Infrastructure.Constants;
+    using Infrastructure.ServiceInterfaces;
 
     /// <summary>
     ///     This class implements a disambiguation algorithm for multi-character text entry.
@@ -180,7 +178,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
         /// </remarks>
         private void UpdateFilteredDictionary(string addedMultiCharacter)
         {
-            var possibleCharacters = addedMultiCharacter.ToCharArray();
+            var possibleCharacters = addedMultiCharacter.ToLower().ToCharArray();
             if (this.filteredDictionary.Count <= this.caretPosition + 1)
             {
                 this.filteredDictionary.Add(null);

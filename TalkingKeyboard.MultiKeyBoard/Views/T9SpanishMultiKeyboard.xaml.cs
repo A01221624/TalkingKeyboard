@@ -12,15 +12,15 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.Views
     ///     This class describes a Spanish keyboard with multiple-character keys arranged in the QWERTY layout. No logic is
     ///     handled in this class and can be fully edited in a designer-oriented program.
     /// </summary>
-    public partial class QwertySpanishMultiKeyboard
+    public partial class T9SpanishMultiKeyboard
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QwertySpanishMultiKeyboard"/> class.
+        /// Initializes a new instance of the <see cref="T9SpanishMultiKeyboard"/> class.
         /// </summary>
         /// <param name="viewModel">
         /// The view-model for multi-character keyboards.
         /// </param>
-        public QwertySpanishMultiKeyboard(IMultiKeyboardViewModel viewModel)
+        public T9SpanishMultiKeyboard(IMultiKeyboardViewModel viewModel)
         {
             this.InitializeComponent();
             this.DataContext = viewModel;

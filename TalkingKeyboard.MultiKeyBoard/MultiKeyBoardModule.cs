@@ -3,6 +3,9 @@
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+
+using TalkingKeyboard.Modules.MultiKeyBoard.ViewModels;
+
 namespace TalkingKeyboard.Modules.MultiKeyBoard
 {
     using Microsoft.Practices.Unity;
@@ -42,14 +45,24 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard
         /// </summary>
         public void Initialize()
         {
+            /* Model */
             this.unityContainer.RegisterType<IMultiKeyTextModel, MultikeyTextModel>(
                 new ContainerControlledLifetimeManager());
             this.unityContainer.Resolve<IMultiKeyTextModel>();
+
+            /* View-model */
+            this.unityContainer.RegisterType<IMultiKeyboardViewModel, MultiKeyboardViewModel>(
+                new ContainerControlledLifetimeManager());
+            this.unityContainer.Resolve<IMultiKeyboardViewModel>();
+
+            /* Views */
+            this.unityContainer.RegisterTypeForNavigation<T9SpanishMultiKeyboard>(
+                ViewNames.T9SpanishMultiKeyboard);
             this.unityContainer.RegisterTypeForNavigation<QwertySpanishMultiKeyboard>(
                 ViewNames.QwertySpanishMultiKeyboard);
             this.regionManager.RegisterViewWithRegion(
                 RegionNames.BoardViewRegion,
-                () => this.unityContainer.Resolve<QwertySpanishMultiKeyboard>());
+                () => this.unityContainer.Resolve<T9SpanishMultiKeyboard>());
         }
     }
 }

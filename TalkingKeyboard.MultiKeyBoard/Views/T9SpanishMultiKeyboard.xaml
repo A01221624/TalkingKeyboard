@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="700"
+             xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
+             xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:markupExtensions="clr-namespace:TalkingKeyboard.Infrastructure.MarkupExtensions;assembly=TalkingKeyboard.Infrastructure"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:viewModels="clr-namespace:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels"
+             xmlns:specialized="clr-namespace:System.Collections.Specialized;assembly=System">
+    <UserControl.Resources>
+        <Style
+            TargetType="sc:SelectableButton">
+            <Setter Property="Margin" Value="10 10 10 10" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="FontSize" Value="30"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--<sc:SelectableButton Text="q w e r" Grid.Column="0" Grid.Row="0" Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}" CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />-->
+        <!--<sc:SelectableButton Grid.RowSpan="2" Grid.ColumnSpan="2" Text="que" Command="{x:Static infrastructure:Commands.AddMultikeyTextCommand}" CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}"></sc:SelectableButton>-->
+        <sc:SelectableButton Text="1" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="10" />
+        <sc:SelectableButton Text="     2&#xa;A B C" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="11,10,8,10" />
+        <sc:SelectableButton Text="   3&#xa;DEF" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="11,10,8,10" />
+        <sc:SelectableButton Text="   4&#xa;GHI" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="10" />
+        <sc:SelectableButton Text="  5&#xa;JKL" Grid.Row="1" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="11,10,9,10" />
+        <sc:SelectableButton Text="       6&#xa;MNÑO" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="12,10,8,10" />
+        <sc:SelectableButton Text="     7&#xa;PQRS" Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="10" />
+        <sc:SelectableButton Text="    8&#xa;TUV" Grid.Row="2" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="12,10,8,10" />
+        <sc:SelectableButton Text="      9&#xa;WXYZ" Grid.Row="2" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="10" />
+        <sc:SelectableButton Text="0" Grid.Row="3" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1"
+                             Command="{x:Static infrastructure:Commands.AddMultiCharacterTextCommand}"
+                             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" Margin="10" />
+
+
+        <sc:SelectableButton Text="⌫" Grid.Column="3"
+                             Command="{x:Static infrastructure:Commands.RemoveLastMultiCharacterCommand}" Margin="10,10,9,10" />
+        <!--<sc:SelectableButton Text="⏎" Grid.Column="10" Grid.Row="1" Command="{x:Static infrastructure:Commands.SetTextCommand}" CommandParameter="{x:Static system:Environment.NewLine}" Grid.ColumnSpan="2"/>-->
+        <!--<sc:SelectableButton Text="⇧" Grid.Column="10" Grid.Row="2" Command="{x:Static infrastructure:Commands.ToggleShiftDownCommand}" Grid.ColumnSpan="2"/>-->
+        <!--<sc:SelectableButton Text="Espacio" Grid.Column="3" Grid.Row="3" Command="{x:Static infrastructure:Commands.SetTextCommand}" CommandParameter=" " Grid.ColumnSpan="6" Margin="0,10"/>-->
+        <sc:SelectableButton Text="Leer" Grid.Row="3"
+                             Command="{x:Static infrastructure:Commands.SpeechSynthesisCommand}"
+                             CommandParameter="Hola"
+                             Grid.Column="3" Margin="10" />
+
+    </Grid>
+</UserControl>

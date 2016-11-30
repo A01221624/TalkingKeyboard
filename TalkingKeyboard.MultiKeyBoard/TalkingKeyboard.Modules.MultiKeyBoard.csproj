@@ -96,7 +96,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\QwertySpanishMultiKeyboardViewModel.cs" />
+    <Compile Include="ViewModels\MultiKeyboardViewModel.cs" />
+    <Compile Include="Views\T9SpanishMultiKeyboard.xaml.cs">
+      <DependentUpon>T9SpanishMultiKeyboard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\QwertySpanishMultiKeyboard.xaml.cs">
       <DependentUpon>QwertySpanishMultiKeyboard.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\T9SpanishMultiKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\QwertySpanishMultiKeyboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

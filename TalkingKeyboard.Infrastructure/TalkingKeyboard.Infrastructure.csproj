@@ -93,6 +93,7 @@
     <Compile Include="Helpers\HitTestHelper.cs" />
     <Compile Include="Helpers\StringEditHelper.cs" />
     <Compile Include="MarkupExtensions\SwitchBindingExtension.cs" />
+    <Compile Include="Models\IMultiKeyboardViewModel.cs" />
     <Compile Include="Models\IMultiKeyTextModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

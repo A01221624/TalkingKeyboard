@@ -1,11 +1,14 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="QwertySpanishMultiKeyboardViewModel.cs" company="Numeral">
+// <copyright file="T9SpanishMultiKeyboardViewModel.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // <summary>
-//   Defines the QwertySpanishMultiKeyboardViewModel type.
+//   Defines the T9SpanishMultiKeyboardViewModel type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
+using TalkingKeyboard.Infrastructure.Models;
+
 namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
 {
     using System.Windows.Input;
@@ -24,17 +27,17 @@ namespace TalkingKeyboard.Modules.MultiKeyBoard.ViewModels
     ///     service to consume the necessary information.
     /// </summary>
     /// <seealso cref="Prism.Mvvm.BindableBase" />
-    public class QwertySpanishMultiKeyboardViewModel : BindableBase
+    public class MultiKeyboardViewModel : BindableBase, IMultiKeyboardViewModel
     {
         private readonly IEventAggregator eventAggregator;
         private readonly ISuggestionService suggestionService;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="QwertySpanishMultiKeyboardViewModel" /> class.
+        ///     Initializes a new instance of the <see cref="MultiKeyboardViewModel" /> class.
         /// </summary>
         /// <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
         /// <param name="suggestionService">The suggestion service (obtained through DI).</param>
-        public QwertySpanishMultiKeyboardViewModel(
+        public MultiKeyboardViewModel(
             IEventAggregator eventAggregator,
             ISuggestionService suggestionService)
         {

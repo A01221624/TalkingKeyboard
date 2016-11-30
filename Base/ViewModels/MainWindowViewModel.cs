@@ -37,6 +37,7 @@ namespace TalkingKeyboard.Shell.ViewModels
             this.regionManager = regionManager;
             this.knownBoards = new List<string>
                                    {
+                                        ViewNames.T9SpanishMultiKeyboard,
                                        ViewNames.QwertySpanishMultiKeyboard,
                                        ViewNames.QwertySpanishSingleKeyboard
                                    };
