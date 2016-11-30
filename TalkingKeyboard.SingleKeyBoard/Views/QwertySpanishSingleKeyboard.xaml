@@ -181,7 +181,7 @@
         <sc:SelectableButton Text="Espacio" Grid.Column="3" Grid.Row="3"
                              Command="{x:Static infrastructure:Commands.AppendTextCommand}" CommandParameter=" "
                              Grid.ColumnSpan="6" Margin="0,10" />
-        <sc:SelectableButton Text="Leer" Grid.Row="3"
+        <sc:SelectableButton Text="🔊" Grid.Row="3"
                              Command="{x:Static infrastructure:Commands.SpeechSynthesisCommand}"
                              CommandParameter="Hola" Grid.ColumnSpan="2"
                              Grid.Column="0" Margin="10,10,0,10" />
