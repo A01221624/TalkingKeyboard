@@ -166,7 +166,7 @@
             Grid.Column="8" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
         <sc:SelectableButton
-            Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='_', ValueIfFalse='-'}"
+            Text="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.IsShiftDown, ValueIfTrue='¿', ValueIfFalse='?'}"
             Grid.Column="9" Grid.Row="2" Command="{x:Static infrastructure:Commands.AppendTextCommand}"
             CommandParameter="{Binding Text, RelativeSource={RelativeSource Self}}" />
 
