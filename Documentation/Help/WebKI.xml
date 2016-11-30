@@ -1,0 +1,1165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AccentLookup property" Url="html/5993268c-5bf7-8fd3-d758-18ad52f02d32.htm" />
+  <HelpKINode Title="Accents property" Url="html/5d1c0de0-04dd-a983-0fc8-966e1aa5f804.htm" />
+  <HelpKINode Title="Add method" Url="html/3cbedde2-172f-19b0-a4fd-2df40cce2e74.htm" />
+  <HelpKINode Title="AddMultiCharacterCommand property">
+    <HelpKINode Title="QwertySpanishMultiKeyboardViewModel.AddMultiCharacterCommand Property " Url="html/889dad82-7ddb-625d-ea8e-a3420396cfbc.htm" />
+    <HelpKINode Title="T9SpanishMultiKeyboardViewModel.AddMultiCharacterCommand Property " Url="html/425aed9c-183f-ba4e-2375-6eb4854e3150.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddMultiCharacterText method">
+    <HelpKINode Title="ISuggestionService.AddMultiCharacterText Method " Url="html/6148e330-6af6-f02c-c30b-d5ca275619a2.htm" />
+    <HelpKINode Title="SuggestionService.AddMultiCharacterText Method " Url="html/d91f6325-9e2f-1a3f-c268-e2850a6845f3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddMultiCharacterTextCommand property" Url="html/40383bac-5f72-d972-af35-7aa532785cf8.htm" />
+  <HelpKINode Title="AddPoint method">
+    <HelpKINode Title="MaintainablePointCollection(T1, T2).AddPoint Method " Url="html/805f2c98-a3bd-438c-dcfe-47c5c508715c.htm" />
+    <HelpKINode Title="TimedControlsWithPoint.AddPoint Method " Url="html/3cab97bd-d13e-6438-9f52-69dd51960067.htm" />
+    <HelpKINode Title="TimedPoints.AddPoint Method " Url="html/3bc1097d-1d82-00bd-75ef-2a0ec273f714.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Animation property">
+    <HelpKINode Title="ISelectableControlViewModel.Animation Property " Url="html/e679a0e4-2a7f-f08d-363f-1b9182d9039a.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.Animation Property " Url="html/5a9aa44b-acd3-321b-c4fc-e703e3ed5d93.htm" />
+    <HelpKINode Title="SelectableControl.Animation Property " Url="html/c65ef4c3-2ff4-2471-078b-d7fb35a7cdf1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnimationBeginTime property" Url="html/f8cf0acc-5c7e-1cb4-af7b-fc4b71f4bf84.htm" />
+  <HelpKINode Title="AnimationEndTime property" Url="html/37862f50-e676-329a-16d0-af8a2b78e332.htm" />
+  <HelpKINode Title="AnimationOnHold enumeration member" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="AnimationProperty field" Url="html/33e2969f-192b-ae55-8147-018daaa3d01b.htm" />
+  <HelpKINode Title="AnimationRunning enumeration member" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="App class">
+    <HelpKINode Title="App Class" Url="html/07c7ad6c-9d44-5805-ce3c-b59e3b78e6c2.htm" />
+    <HelpKINode Title="about App class" Url="html/07c7ad6c-9d44-5805-ce3c-b59e3b78e6c2.htm" />
+    <HelpKINode Title="constructor" Url="html/b3e401a0-e777-1a2d-e08c-7f7972229129.htm" />
+    <HelpKINode Title="events" Url="html/4cb7778e-ef62-7759-6ae3-86c851952341.htm" />
+    <HelpKINode Title="methods" Url="html/078d2745-bdda-a02b-d6f7-29e2c1d1163e.htm" />
+    <HelpKINode Title="properties" Url="html/c9b3d8d4-7e26-a106-6cd8-d557ac3e7e47.htm" />
+  </HelpKINode>
+  <HelpKINode Title="App.App constructor" Url="html/b3e401a0-e777-1a2d-e08c-7f7972229129.htm" />
+  <HelpKINode Title="App.InitializeComponent method" Url="html/533bdd9d-5647-076c-3fac-404d94b2cb6d.htm" />
+  <HelpKINode Title="App.Main method" Url="html/954fc648-a24d-8995-d83a-42841465e2c5.htm" />
+  <HelpKINode Title="App.OnStartup method" Url="html/18ef7307-f8bd-f4d6-0a0f-f6256e0950f6.htm" />
+  <HelpKINode Title="AppendTextCommand property">
+    <HelpKINode Title="Commands.AppendTextCommand Property " Url="html/8602c120-e2c0-5b27-2d50-7063a4d35e69.htm" />
+    <HelpKINode Title="TextViewModel.AppendTextCommand Property " Url="html/94e38d16-a450-5e15-5ef5-4e3d8e6913f9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AveragingFilter class">
+    <HelpKINode Title="AveragingFilter Class" Url="html/e0ad38cd-b1bc-003b-0b51-652536523a57.htm" />
+    <HelpKINode Title="about AveragingFilter class" Url="html/e0ad38cd-b1bc-003b-0b51-652536523a57.htm" />
+    <HelpKINode Title="constructor" Url="html/b0f7dfd9-5d0c-f0fc-5cc7-3bf82ce61690.htm" />
+    <HelpKINode Title="methods" Url="html/68b9c89e-1c49-1a97-b09c-0ee73c63a37c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AveragingFilter.AveragingFilter constructor" Url="html/b0f7dfd9-5d0c-f0fc-5cc7-3bf82ce61690.htm" />
+  <HelpKINode Title="AveragingFilter.Filter method" Url="html/af494124-59e6-fb76-6817-a7f7290a6f04.htm" />
+  <HelpKINode Title="AveragingLastNpointsWithinTimeSpanFilter class">
+    <HelpKINode Title="AveragingLastNpointsWithinTimeSpanFilter Class" Url="html/4eeba1bc-ce45-ba80-9380-f9877577203b.htm" />
+    <HelpKINode Title="about AveragingLastNpointsWithinTimeSpanFilter class" Url="html/4eeba1bc-ce45-ba80-9380-f9877577203b.htm" />
+    <HelpKINode Title="constructor" Url="html/445b413f-165f-3592-a833-898313c5865e.htm" />
+    <HelpKINode Title="methods" Url="html/74e2f2ac-bd9f-4084-9bec-ce77aaa17199.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AveragingLastNpointsWithinTimeSpanFilter.AveragingLastNpointsWithinTimeSpanFilter constructor" Url="html/445b413f-165f-3592-a833-898313c5865e.htm" />
+  <HelpKINode Title="AveragingLastNpointsWithinTimeSpanFilter.Filter method" Url="html/7ff7f173-1bb7-cf72-f0db-e8a420f41c6e.htm" />
+  <HelpKINode Title="BoardViewRegion property" Url="html/9caefb40-b7a2-254c-6e37-dc7740db9e8f.htm" />
+  <HelpKINode Title="ButtonText property" Url="html/da1cce22-0f58-a105-c05f-800bb94f1867.htm" />
+  <HelpKINode Title="ByGazeTimePointProcessorModule class">
+    <HelpKINode Title="ByGazeTimePointProcessorModule Class" Url="html/61d2146c-5543-f40e-5482-df0966097335.htm" />
+    <HelpKINode Title="about ByGazeTimePointProcessorModule class" Url="html/61d2146c-5543-f40e-5482-df0966097335.htm" />
+    <HelpKINode Title="constructor" Url="html/966726b6-1a6d-da51-81ed-7080e59b0339.htm" />
+    <HelpKINode Title="methods" Url="html/7e4b1dd6-4ed8-2784-79b7-afde2cbb39bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ByGazeTimePointProcessorModule.ByGazeTimePointProcessorModule constructor" Url="html/966726b6-1a6d-da51-81ed-7080e59b0339.htm" />
+  <HelpKINode Title="ByGazeTimePointProcessorModule.Initialize method" Url="html/4955344b-bfed-70f6-56fa-7a0f492f9a99.htm" />
+  <HelpKINode Title="ChangeViewToLeftCommand property" Url="html/3491a469-0d59-6674-18ed-70d459d47c40.htm" />
+  <HelpKINode Title="ChangeViewToRightCommand property" Url="html/fd4fd812-e968-778a-9a47-a3fce1dec744.htm" />
+  <HelpKINode Title="CharacterClasses class">
+    <HelpKINode Title="CharacterClasses Class" Url="html/48bcb2a0-b912-b67e-7f85-b014f548d437.htm" />
+    <HelpKINode Title="about CharacterClasses class" Url="html/48bcb2a0-b912-b67e-7f85-b014f548d437.htm" />
+    <HelpKINode Title="properties" Url="html/472416e9-cee7-ce6c-652f-b8a582c4149f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CharacterClasses.AccentLookup property" Url="html/5993268c-5bf7-8fd3-d758-18ad52f02d32.htm" />
+  <HelpKINode Title="CharacterClasses.Accents property" Url="html/5d1c0de0-04dd-a983-0fc8-966e1aa5f804.htm" />
+  <HelpKINode Title="CharacterClasses.ClosingCharacters property" Url="html/d2c9808f-c542-7dc5-6dba-c2f41422ff0b.htm" />
+  <HelpKINode Title="CharacterClasses.ColonsAndCommas property" Url="html/81301af0-3ccd-a74e-248a-697512a8f58d.htm" />
+  <HelpKINode Title="CharacterClasses.FollowedByUppercase property" Url="html/67395a4c-9538-fecf-c547-d07bb9fda0e7.htm" />
+  <HelpKINode Title="CharacterClasses.PrecededByNonwhitespaceFollowedByWhitespace property" Url="html/5bbfe028-b01d-ba6f-a353-83caa25c4011.htm" />
+  <HelpKINode Title="CharacterClasses.Whitespace property" Url="html/d6c815f6-058c-045b-5a54-95b7db148737.htm" />
+  <HelpKINode Title="CharacterClasses.WordSeparators property" Url="html/7c5dd27e-ce57-bbfd-9d00-1726fd624406.htm" />
+  <HelpKINode Title="ClearMultiCharacterBuffer method">
+    <HelpKINode Title="ISuggestionService.ClearMultiCharacterBuffer Method " Url="html/146a2035-207a-d2aa-bcaa-db8d787ea177.htm" />
+    <HelpKINode Title="MultiCharacterSuggestionSource.ClearMultiCharacterBuffer Method " Url="html/c6914cf4-9382-83ad-3352-691694edc4ed.htm" />
+    <HelpKINode Title="SuggestionService.ClearMultiCharacterBuffer Method " Url="html/aee94282-ded0-34c0-8a69-f102f21dca43.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClosingCharacters property" Url="html/d2c9808f-c542-7dc5-6dba-c2f41422ff0b.htm" />
+  <HelpKINode Title="ColonsAndCommas property" Url="html/81301af0-3ccd-a74e-248a-697512a8f58d.htm" />
+  <HelpKINode Title="Command property">
+    <HelpKINode Title="SelectableButtonViewModel.Command Property " Url="html/f5bfcd38-f336-198c-a1d6-77d4202d7814.htm" />
+    <HelpKINode Title="SelectableControl.Command Property " Url="html/de751d78-a437-e890-2e52-3fd19feb2f02.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandParameter property">
+    <HelpKINode Title="SelectableButtonViewModel.CommandParameter Property " Url="html/954972e7-3f1d-6610-3df6-c956b0bc8cfd.htm" />
+    <HelpKINode Title="SelectableControl.CommandParameter Property " Url="html/36cef0a3-a6fc-a8c3-96f0-c7d794c599ab.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandParameterProperty field" Url="html/2df226ce-be73-11f3-f88a-cb8ac1fddf21.htm" />
+  <HelpKINode Title="CommandProperty field" Url="html/e2db5cf6-9da7-5adb-3b8a-c267fa358b17.htm" />
+  <HelpKINode Title="Commands class">
+    <HelpKINode Title="Commands Class" Url="html/00f750a0-4985-ff18-f285-97c6f31a769a.htm" />
+    <HelpKINode Title="about Commands class" Url="html/00f750a0-4985-ff18-f285-97c6f31a769a.htm" />
+    <HelpKINode Title="properties" Url="html/67f3e6c6-21fa-d166-d49b-962809d540bb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Commands.AddMultiCharacterTextCommand property" Url="html/40383bac-5f72-d972-af35-7aa532785cf8.htm" />
+  <HelpKINode Title="Commands.AppendTextCommand property" Url="html/8602c120-e2c0-5b27-2d50-7063a4d35e69.htm" />
+  <HelpKINode Title="Commands.RemoveLastCharacterCommand property" Url="html/fe90df4c-8238-a973-124c-8969a4252f63.htm" />
+  <HelpKINode Title="Commands.RemoveLastMultiCharacterCommand property" Url="html/36c893c4-e5ec-f8d9-e5c5-be237e11afd8.htm" />
+  <HelpKINode Title="Commands.RemoveLastWordCommand property" Url="html/2dd351b4-20c1-6a08-15ac-2a9b4eee6329.htm" />
+  <HelpKINode Title="Commands.SetShiftDownCommand property" Url="html/64aaa46d-f290-93e8-47b2-284869b7f5dd.htm" />
+  <HelpKINode Title="Commands.SpeechSynthesisCommand property" Url="html/523feb4f-e731-5fcf-90a5-993962d89408.htm" />
+  <HelpKINode Title="Commands.ToggleShiftDownCommand property" Url="html/add3002f-6641-1164-6bbb-8481079031ef.htm" />
+  <HelpKINode Title="Commands.WriteSuggestionCommand property" Url="html/ae75d03f-7764-668f-bdf3-ee7e4e88ac62.htm" />
+  <HelpKINode Title="CommandTarget property">
+    <HelpKINode Title="SelectableButtonViewModel.CommandTarget Property " Url="html/deb93759-558e-4856-d0e2-a86a8f28be65.htm" />
+    <HelpKINode Title="SelectableControl.CommandTarget Property " Url="html/f9a53812-40e5-33b7-a161-b26267e08e69.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandTargetProperty field" Url="html/cb23ec49-03ee-a989-ac8f-334b41cf00b8.htm" />
+  <HelpKINode Title="CompareTo method" Url="html/69bc8be6-6cfc-7e4d-ba17-71bf76b771f6.htm" />
+  <HelpKINode Title="completion method">
+    <HelpKINode Title="Presage.completion Method " Url="html/ca04df52-0140-5f3e-f0d6-a97d5ef965c0.htm" />
+    <HelpKINode Title="PresageClient.completion Method " Url="html/cbec027c-4d74-fc1c-ab5d-2a4c5064dfa9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="completionAsync method">
+    <HelpKINode Title="Presage.completionAsync Method " Url="html/6d458640-be55-0b69-4fcb-5a70e7fa4d22.htm" />
+    <HelpKINode Title="PresageClient.completionAsync Method " Url="html/f2c9c25b-e564-74f1-7224-e07381e5d072.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Configuration class">
+    <HelpKINode Title="Configuration Class" Url="html/1fb0914d-fd25-8b49-5652-22b870f76842.htm" />
+    <HelpKINode Title="about Configuration class" Url="html/1fb0914d-fd25-8b49-5652-22b870f76842.htm" />
+    <HelpKINode Title="properties" Url="html/724c39a9-3ed4-2123-4992-f0bb259daf28.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Configuration.DefaultDictionaryFilePath property" Url="html/4b489894-2878-2f1b-8e01-3e2aa59b8bec.htm" />
+  <HelpKINode Title="Configuration.GazeKeepAliveTimeSpan property" Url="html/b6f65867-f33a-35cc-73a5-b68e3d103107.htm" />
+  <HelpKINode Title="Configuration.GazeTimeSpanBeforeAnimationBegins property" Url="html/1c0f8ad9-53cf-8893-c2fe-5012c9b96747.htm" />
+  <HelpKINode Title="Configuration.GazeTimeSpanBeforeCooldownOccurs property" Url="html/69706ef3-287c-6b91-882c-571a797452a0.htm" />
+  <HelpKINode Title="Configuration.GazeTimeSpanBeforeSelectionOccurs property" Url="html/1dc3957b-188e-c7d4-5e60-56c7d33dd1cc.htm" />
+  <HelpKINode Title="Configuration.InitialRequiredGazeTime property" Url="html/b3b160c4-a0dc-4b2f-6cfe-5c716f3d595a.htm" />
+  <HelpKINode Title="Configuration.PointKeepAliveTimeSpan property" Url="html/3028c0cb-b833-1eba-f20c-2f38eba4e695.htm" />
+  <HelpKINode Title="context method">
+    <HelpKINode Title="Presage.context Method " Url="html/fbfebcfd-7da1-09f2-ce63-57098ad539ba.htm" />
+    <HelpKINode Title="PresageClient.context Method " Url="html/52372d33-d5f5-ce65-7f39-13b7f0f77d29.htm" />
+  </HelpKINode>
+  <HelpKINode Title="contextAsync method">
+    <HelpKINode Title="Presage.contextAsync Method " Url="html/8c45a7b6-dc88-466f-67e7-9773f518dc73.htm" />
+    <HelpKINode Title="PresageClient.contextAsync Method " Url="html/b0f0caee-40ed-b7dc-ee98-20d3b618216d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="context_change method">
+    <HelpKINode Title="Presage.context_change Method " Url="html/970bbe00-2d37-a634-d89f-0a661878dc4b.htm" />
+    <HelpKINode Title="PresageClient.context_change Method " Url="html/eacddf1a-c302-c3d1-ad3a-932f3d91cc2d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="context_changeAsync method">
+    <HelpKINode Title="Presage.context_changeAsync Method " Url="html/eff6db4a-7c68-f7ef-9557-34eade8fac26.htm" />
+    <HelpKINode Title="PresageClient.context_changeAsync Method " Url="html/cf261e4a-e601-6ca3-7deb-36eb6479bc3d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConvertToDefaultEncodingFromUtf8 method" Url="html/19499663-746a-bcb9-107f-fd49654b8684.htm" />
+  <HelpKINode Title="ConvertToUtf8FromDefaultEncoding method" Url="html/9002df4f-99e6-3434-a067-55d021f179e5.htm" />
+  <HelpKINode Title="CoordinateProviderModule class">
+    <HelpKINode Title="CoordinateProviderModule Class" Url="html/1c76d641-c4d9-402b-bd06-0cd1adf842f9.htm" />
+    <HelpKINode Title="about CoordinateProviderModule class" Url="html/1c76d641-c4d9-402b-bd06-0cd1adf842f9.htm" />
+    <HelpKINode Title="constructor" Url="html/e95b1f60-f05e-5b09-6d85-14594cf8d403.htm" />
+    <HelpKINode Title="methods" Url="html/f590dc79-5a1f-fdeb-8601-d8affabd7c5c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CoordinateProviderModule.CoordinateProviderModule constructor" Url="html/e95b1f60-f05e-5b09-6d85-14594cf8d403.htm" />
+  <HelpKINode Title="CoordinateProviderModule.Initialize method" Url="html/e4a0a381-2614-859c-fabe-d5a2bd709b1e.htm" />
+  <HelpKINode Title="CurrentGazeTimeSpan property">
+    <HelpKINode Title="ISelectableControlViewModel.CurrentGazeTimeSpan Property " Url="html/1d8a0b14-a2e7-940e-f9e5-72421d8654c0.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.CurrentGazeTimeSpan Property " Url="html/94c9688a-bb4f-0910-56f1-b34d294291d3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurrentMultiCharacterText property">
+    <HelpKINode Title="IMultiKeyTextModel.CurrentMultiCharacterText Property " Url="html/4fb826da-ffc8-4bca-2ebd-14e2dbbf79ba.htm" />
+    <HelpKINode Title="MultikeyTextModel.CurrentMultiCharacterText Property " Url="html/dbe26ab3-7a64-750e-a936-d8d3c48cc5bb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurrentText property">
+    <HelpKINode Title="ITextModel.CurrentText Property " Url="html/c53458c2-d453-c1dc-3981-7ce7bae4dc45.htm" />
+    <HelpKINode Title="TextToSpeechService.CurrentText Property " Url="html/876691df-dc5b-3c96-c189-f3a0e69e160f.htm" />
+    <HelpKINode Title="TextViewModel.CurrentText Property " Url="html/9d785be7-7345-5c21-658c-926f5ee47f65.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DefaultDictionaryFilePath property" Url="html/4b489894-2878-2f1b-8e01-3e2aa59b8bec.htm" />
+  <HelpKINode Title="DefaultDictionaryLocation property" Url="html/e8fba160-eadf-b0c2-54d6-cf7c9f568b34.htm" />
+  <HelpKINode Title="Dispose method">
+    <HelpKINode Title="EyeXGazeCoordinateService.Dispose Method " Url="html/993db6bd-2686-c628-ac0c-3231d7f12dc4.htm" />
+    <HelpKINode Title="TextToSpeechService.Dispose Method " Url="html/f7314f16-8fb2-409f-e875-f8241728776e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Events class">
+    <HelpKINode Title="Events Class" Url="html/cebefeae-293f-bc73-8c54-937f6f935560.htm" />
+    <HelpKINode Title="about Events class" Url="html/cebefeae-293f-bc73-8c54-937f6f935560.htm" />
+    <HelpKINode Title="constructor" Url="html/9e084271-6f12-881f-4175-884852eafc9c.htm" />
+    <HelpKINode Title="methods" Url="html/1ef1a22d-9ecd-cdb5-1406-3db87a52c0de.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Events.Events constructor" Url="html/9e084271-6f12-881f-4175-884852eafc9c.htm" />
+  <HelpKINode Title="Events.MultiTextUpdatedEvent class">
+    <HelpKINode Title="Events.MultiTextUpdatedEvent Class" Url="html/42d5444d-b7ba-05cf-6b95-50064a5fb632.htm" />
+    <HelpKINode Title="about Events.MultiTextUpdatedEvent class" Url="html/42d5444d-b7ba-05cf-6b95-50064a5fb632.htm" />
+    <HelpKINode Title="constructor" Url="html/9bc416ee-f20c-7554-6c97-ca1616cbc07f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Events.MultiTextUpdatedEvent.MultiTextUpdatedEvent constructor" Url="html/9bc416ee-f20c-7554-6c97-ca1616cbc07f.htm" />
+  <HelpKINode Title="Events.NewCoordinateEvent class">
+    <HelpKINode Title="Events.NewCoordinateEvent Class" Url="html/a6986065-6556-1d20-e11a-bc73fc4606eb.htm" />
+    <HelpKINode Title="about Events.NewCoordinateEvent class" Url="html/a6986065-6556-1d20-e11a-bc73fc4606eb.htm" />
+    <HelpKINode Title="constructor" Url="html/a0743fec-cb2d-28d1-47cd-0f2c19915462.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Events.NewCoordinateEvent.NewCoordinateEvent constructor" Url="html/a0743fec-cb2d-28d1-47cd-0f2c19915462.htm" />
+  <HelpKINode Title="Events.TextUpdatedEvent class">
+    <HelpKINode Title="Events.TextUpdatedEvent Class" Url="html/40f64f3c-bea0-d368-169d-a567be8d5c1f.htm" />
+    <HelpKINode Title="about Events.TextUpdatedEvent class" Url="html/40f64f3c-bea0-d368-169d-a567be8d5c1f.htm" />
+    <HelpKINode Title="constructor" Url="html/4170e856-d3a5-5ed5-8b67-edbb407a0ff1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Events.TextUpdatedEvent.TextUpdatedEvent constructor" Url="html/4170e856-d3a5-5ed5-8b67-edbb407a0ff1.htm" />
+  <HelpKINode Title="EyeXGazeCoordinateService class">
+    <HelpKINode Title="EyeXGazeCoordinateService Class" Url="html/dce33989-e1a4-3672-12b6-38562ac8a39a.htm" />
+    <HelpKINode Title="about EyeXGazeCoordinateService class" Url="html/dce33989-e1a4-3672-12b6-38562ac8a39a.htm" />
+    <HelpKINode Title="constructor" Url="html/bd01b3aa-31f8-ffe8-c82b-0d11ea89b152.htm" />
+    <HelpKINode Title="methods" Url="html/354c7949-b57d-d8e4-9f2f-7cbb03fa021d.htm" />
+    <HelpKINode Title="properties" Url="html/cc4561e1-d3da-fa62-edc4-f5eac7377ff3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EyeXGazeCoordinateService.Dispose method" Url="html/993db6bd-2686-c628-ac0c-3231d7f12dc4.htm" />
+  <HelpKINode Title="EyeXGazeCoordinateService.EyeXGazeCoordinateService constructor" Url="html/bd01b3aa-31f8-ffe8-c82b-0d11ea89b152.htm" />
+  <HelpKINode Title="EyeXGazeCoordinateService.EyeXHost property" Url="html/5d3d80df-01a0-653a-7236-75e952e4b299.htm" />
+  <HelpKINode Title="EyeXGazeCoordinateService.Finalize method" Url="html/5b902469-5e52-e4b8-62b7-62c0e18f5d6d.htm" />
+  <HelpKINode Title="EyeXGazeCoordinateService.GazePointDataStream property" Url="html/1f563155-5f37-aa70-8f3c-46a2853694e7.htm" />
+  <HelpKINode Title="EyeXHost property" Url="html/5d3d80df-01a0-653a-7236-75e952e4b299.htm" />
+  <HelpKINode Title="Filter method">
+    <HelpKINode Title="AveragingFilter.Filter Method " Url="html/af494124-59e6-fb76-6817-a7f7290a6f04.htm" />
+    <HelpKINode Title="AveragingLastNpointsWithinTimeSpanFilter.Filter Method " Url="html/7ff7f173-1bb7-cf72-f0db-e8a420f41c6e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Finalize method" Url="html/5b902469-5e52-e4b8-62b7-62c0e18f5d6d.htm" />
+  <HelpKINode Title="FindSelectableControlSeen method" Url="html/43837077-e90e-4e79-2ecd-ecfd076d8fba.htm" />
+  <HelpKINode Title="FollowedByUppercase property" Url="html/67395a4c-9538-fecf-c547-d07bb9fda0e7.htm" />
+  <HelpKINode Title="FontSize property">
+    <HelpKINode Title="SelectableButton.FontSize Property " Url="html/8ac06381-6572-4ccc-ea3b-451577e347a3.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.FontSize Property " Url="html/303a273b-d428-a2a3-9bc3-cab519fe4cf2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FontSizeProperty field" Url="html/9a58b795-2489-3700-cf45-5e2a2735ff7d.htm" />
+  <HelpKINode Title="FourSuggestionsBoard class">
+    <HelpKINode Title="FourSuggestionsBoard Class" Url="html/1a4cd892-2213-16fb-ecb1-f3fc479e6dca.htm" />
+    <HelpKINode Title="about FourSuggestionsBoard class" Url="html/1a4cd892-2213-16fb-ecb1-f3fc479e6dca.htm" />
+    <HelpKINode Title="constructor" Url="html/4c525943-2d77-a8c2-bfca-3b89a9ae4a0a.htm" />
+    <HelpKINode Title="events" Url="html/53e26989-311b-fcaa-e5b1-554cf12b6629.htm" />
+    <HelpKINode Title="methods" Url="html/3e56165f-4b8b-7439-9500-3385fac7a65b.htm" />
+    <HelpKINode Title="properties" Url="html/e6a4cf28-0553-0aee-4852-79946a5af4bb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FourSuggestionsBoard.FourSuggestionsBoard constructor" Url="html/4c525943-2d77-a8c2-bfca-3b89a9ae4a0a.htm" />
+  <HelpKINode Title="FourSuggestionsBoard.InitializeComponent method" Url="html/ee377479-6123-aa39-c476-d0d97214f452.htm" />
+  <HelpKINode Title="FourSuggestionsBoardViewModel class">
+    <HelpKINode Title="FourSuggestionsBoardViewModel Class" Url="html/725ced41-545d-ecee-22ac-248156b42a6a.htm" />
+    <HelpKINode Title="about FourSuggestionsBoardViewModel class" Url="html/725ced41-545d-ecee-22ac-248156b42a6a.htm" />
+    <HelpKINode Title="constructor" Url="html/49808ded-8894-92ca-f2be-52eb7a9b3dc4.htm" />
+    <HelpKINode Title="events" Url="html/2185175b-feb5-b15f-3730-cd3cce7c55e9.htm" />
+    <HelpKINode Title="methods" Url="html/94be6a8d-cb85-9d4a-9c21-ea976f5bb2cc.htm" />
+    <HelpKINode Title="properties" Url="html/c10bcf21-6e28-1bae-f871-42d64ed75e71.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FourSuggestionsBoardViewModel.FourSuggestionsBoardViewModel constructor" Url="html/49808ded-8894-92ca-f2be-52eb7a9b3dc4.htm" />
+  <HelpKINode Title="FourSuggestionsBoardViewModel.Suggestions property" Url="html/9dcddfc5-2786-6e8e-7bb0-6693b8669a08.htm" />
+  <HelpKINode Title="GazeKeepAliveTimeSpan property">
+    <HelpKINode Title="Configuration.GazeKeepAliveTimeSpan Property " Url="html/b6f65867-f33a-35cc-73a5-b68e3d103107.htm" />
+    <HelpKINode Title="ISelectableControlViewModel.GazeKeepAliveTimeSpan Property " Url="html/bf6427e8-68b5-e7fb-f549-55da1c9e6f4c.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.GazeKeepAliveTimeSpan Property " Url="html/373d326b-36af-1033-f1a5-f705ec427f66.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GazePointDataStream property" Url="html/1f563155-5f37-aa70-8f3c-46a2853694e7.htm" />
+  <HelpKINode Title="GazeSelectionService class">
+    <HelpKINode Title="GazeSelectionService Class" Url="html/1c5aa5e7-e87a-e02d-eb5a-768bf019ea2c.htm" />
+    <HelpKINode Title="about GazeSelectionService class" Url="html/1c5aa5e7-e87a-e02d-eb5a-768bf019ea2c.htm" />
+    <HelpKINode Title="constructor" Url="html/22af11b5-1d8a-2714-8969-f63b719f1a0a.htm" />
+    <HelpKINode Title="methods" Url="html/96fc7677-15f1-efc5-d565-5b13abc5d083.htm" />
+    <HelpKINode Title="properties" Url="html/4941512c-717f-edec-634e-51be326f4411.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GazeSelectionService.GazeSelectionService constructor" Url="html/22af11b5-1d8a-2714-8969-f63b719f1a0a.htm" />
+  <HelpKINode Title="GazeSelectionService.KnownWindows property" Url="html/9259ede5-7ff7-b478-c79e-92c2ec47b8af.htm" />
+  <HelpKINode Title="GazeSelectionService.ProcessPoint method" Url="html/15911e26-6821-949d-bb46-5225abe4fc45.htm" />
+  <HelpKINode Title="GazeTimeSpanBeforeAnimationBegins property">
+    <HelpKINode Title="Configuration.GazeTimeSpanBeforeAnimationBegins Property " Url="html/1c0f8ad9-53cf-8893-c2fe-5012c9b96747.htm" />
+    <HelpKINode Title="ISelectableControlViewModel.GazeTimeSpanBeforeAnimationBegins Property " Url="html/724103f6-3e84-008f-2f36-7abdde38c3fd.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.GazeTimeSpanBeforeAnimationBegins Property " Url="html/91b1a353-8faf-6dd1-823f-bc6f5c17c02e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GazeTimeSpanBeforeCooldown property">
+    <HelpKINode Title="ISelectableControlViewModel.GazeTimeSpanBeforeCooldown Property " Url="html/ebfbe3ee-1d62-2c8a-deac-570dabdfebb7.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.GazeTimeSpanBeforeCooldown Property " Url="html/ac3d6e8e-fdd0-a0d3-e11c-363fa8cc9dab.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GazeTimeSpanBeforeCooldownOccurs property" Url="html/69706ef3-287c-6b91-882c-571a797452a0.htm" />
+  <HelpKINode Title="GazeTimeSpanBeforeSelectionOccurs property">
+    <HelpKINode Title="Configuration.GazeTimeSpanBeforeSelectionOccurs Property " Url="html/1dc3957b-188e-c7d4-5e60-56c7d33dd1cc.htm" />
+    <HelpKINode Title="ISelectableControlViewModel.GazeTimeSpanBeforeSelectionOccurs Property " Url="html/b21a1757-5b3c-4beb-b22e-62d64ff3023f.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.GazeTimeSpanBeforeSelectionOccurs Property " Url="html/b28fc6b5-9e9b-7f76-866f-b9eb936035bc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetLastWord method" Url="html/48de14aa-cc59-80ec-8484-344b22b58003.htm" />
+  <HelpKINode Title="GetSuggestions method">
+    <HelpKINode Title="ISuggestionSource.GetSuggestions Method " Url="html/bdec7958-d7d0-b18a-98c2-e44073d45320.htm" />
+    <HelpKINode Title="MultiCharacterSuggestionSource.GetSuggestions Method " Url="html/6a2887c6-b678-fe9e-b27d-68b029f70703.htm" />
+    <HelpKINode Title="PresageSuggestionSource.GetSuggestions Method " Url="html/9cd4a3f6-6ccf-12ee-d3f0-39ed2d663a0a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="get_config method">
+    <HelpKINode Title="Presage.get_config Method " Url="html/84867088-3eb1-87b2-6706-01b8bef9bb49.htm" />
+    <HelpKINode Title="PresageClient.get_config Method " Url="html/6e6bebce-6fb4-313f-33e7-070d329966d8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="get_configAsync method">
+    <HelpKINode Title="Presage.get_configAsync Method " Url="html/835025e0-4329-9e90-1fc7-bca9aea53dd8.htm" />
+    <HelpKINode Title="PresageClient.get_configAsync Method " Url="html/59bb2cc1-204b-85e6-d174-6317a2bcdab7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HitTestHelper class">
+    <HelpKINode Title="HitTestHelper Class" Url="html/9a7946bd-a730-6781-276d-ecfc9375f78f.htm" />
+    <HelpKINode Title="about HitTestHelper class" Url="html/9a7946bd-a730-6781-276d-ecfc9375f78f.htm" />
+    <HelpKINode Title="methods" Url="html/36860c07-b9f9-45e2-4a65-bfb95c4d37d6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HitTestHelper.FindSelectableControlSeen method" Url="html/43837077-e90e-4e79-2ecd-ecfd076d8fba.htm" />
+  <HelpKINode Title="HitTestHelper.SelectableControlUnderPoint method" Url="html/00345e13-7aa6-d0ad-ea20-7e7d45a76a00.htm" />
+  <HelpKINode Title="IControlActivationService interface">
+    <HelpKINode Title="IControlActivationService Interface" Url="html/e4ca2c28-f099-0bad-a8ff-75f56b72af61.htm" />
+    <HelpKINode Title="about IControlActivationService interface" Url="html/e4ca2c28-f099-0bad-a8ff-75f56b72af61.htm" />
+    <HelpKINode Title="methods" Url="html/fd8fb97f-dfa3-a1ed-6876-5027e625a715.htm" />
+    <HelpKINode Title="properties" Url="html/b840c49f-fc1f-781d-6b9c-114a29ccc357.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Idle enumeration member" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="IMaintainable interface">
+    <HelpKINode Title="IMaintainable Interface" Url="html/8be10029-4324-9c9b-c0a0-6d7b8ecceef2.htm" />
+    <HelpKINode Title="about IMaintainable interface" Url="html/8be10029-4324-9c9b-c0a0-6d7b8ecceef2.htm" />
+    <HelpKINode Title="methods" Url="html/f104f382-377f-8285-9d82-d9bf1995a3de.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IMaintainable.Maintain method" Url="html/dda78fed-a47c-88f1-3def-0270b9aa152b.htm" />
+  <HelpKINode Title="IMultiKeyTextModel interface">
+    <HelpKINode Title="IMultiKeyTextModel Interface" Url="html/bc4fb0bd-0795-9485-9317-f0b1d61ed537.htm" />
+    <HelpKINode Title="about IMultiKeyTextModel interface" Url="html/bc4fb0bd-0795-9485-9317-f0b1d61ed537.htm" />
+    <HelpKINode Title="properties" Url="html/5a3ed331-eb8a-3601-93ca-1d1db52678e9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IMultiKeyTextModel.CurrentMultiCharacterText property" Url="html/4fb826da-ffc8-4bca-2ebd-14e2dbbf79ba.htm" />
+  <HelpKINode Title="Initialize method">
+    <HelpKINode Title="ByGazeTimePointProcessorModule.Initialize Method " Url="html/4955344b-bfed-70f6-56fa-7a0f492f9a99.htm" />
+    <HelpKINode Title="CoordinateProviderModule.Initialize Method " Url="html/e4a0a381-2614-859c-fabe-d5a2bd709b1e.htm" />
+    <HelpKINode Title="MicrosoftTextToSpeechModule.Initialize Method " Url="html/cccc0690-8e1d-2dc2-b356-f407474144a0.htm" />
+    <HelpKINode Title="MultiKeyBoardModule.Initialize Method " Url="html/c41226cf-7ad8-a8ee-5114-903f8df04b0c.htm" />
+    <HelpKINode Title="SingleKeyBoardModule.Initialize Method " Url="html/ce74baf5-3663-b9d7-5f4d-936545c658a7.htm" />
+    <HelpKINode Title="SuggestionBoardModule.Initialize Method " Url="html/1bad78ba-34a7-22ca-2ec5-61f6d2502a64.htm" />
+    <HelpKINode Title="SuggestionsProviderModule.Initialize Method " Url="html/e5a43bf7-a3a9-83dc-a80e-bfc8d6addb67.htm" />
+    <HelpKINode Title="TextHolderModule.Initialize Method " Url="html/aa822637-9db9-4964-9f23-06a92e20db3e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InitializeComponent method">
+    <HelpKINode Title="App.InitializeComponent Method " Url="html/533bdd9d-5647-076c-3fac-404d94b2cb6d.htm" />
+    <HelpKINode Title="FourSuggestionsBoard.InitializeComponent Method " Url="html/ee377479-6123-aa39-c476-d0d97214f452.htm" />
+    <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/7e9aceae-e6e0-257f-75bf-a20e1edf0a85.htm" />
+    <HelpKINode Title="QwertySpanishMultiKeyboard.InitializeComponent Method " Url="html/259401c9-6370-e3cd-a895-6e03d76c879b.htm" />
+    <HelpKINode Title="QwertySpanishSingleKeyboard.InitializeComponent Method " Url="html/25beeff5-f05d-a772-dec4-3391d457e868.htm" />
+    <HelpKINode Title="SelectableButton.InitializeComponent Method " Url="html/37780fe6-2032-dfe3-d75c-6ac5d360679c.htm" />
+    <HelpKINode Title="T9SpanishMultiKeyboard.InitializeComponent Method " Url="html/471b8e48-dfab-5e02-470a-8ba3a4a0e855.htm" />
+    <HelpKINode Title="TextView.InitializeComponent Method " Url="html/628be135-3cd4-0e8c-d2c1-07295e7f1820.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InitialRequiredGazeTime property" Url="html/b3b160c4-a0dc-4b2f-6cfe-5c716f3d595a.htm" />
+  <HelpKINode Title="IPointHandler interface">
+    <HelpKINode Title="IPointHandler Interface" Url="html/6e9cf204-eeff-24bd-ba00-ba0e79a1b777.htm" />
+    <HelpKINode Title="about IPointHandler interface" Url="html/6e9cf204-eeff-24bd-ba00-ba0e79a1b777.htm" />
+    <HelpKINode Title="methods" Url="html/813c267b-879b-070d-18c1-8a7bb6aab0c0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPointHandler.ProcessPoint method" Url="html/4c080aec-8c86-b405-62a5-3d1ad9f8df6b.htm" />
+  <HelpKINode Title="ISelectableControlViewModel interface">
+    <HelpKINode Title="ISelectableControlViewModel Interface" Url="html/c8790639-e772-55b1-1b5c-4db68ac21b6d.htm" />
+    <HelpKINode Title="about ISelectableControlViewModel interface" Url="html/c8790639-e772-55b1-1b5c-4db68ac21b6d.htm" />
+    <HelpKINode Title="methods" Url="html/d423648d-d3e7-543a-a190-e45f7aa15859.htm" />
+    <HelpKINode Title="properties" Url="html/18ca8861-ebf3-4da8-e55b-4875951dc391.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISelectableControlViewModel.Animation property" Url="html/e679a0e4-2a7f-f08d-363f-1b9182d9039a.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.CurrentGazeTimeSpan property" Url="html/1d8a0b14-a2e7-940e-f9e5-72421d8654c0.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.GazeKeepAliveTimeSpan property" Url="html/bf6427e8-68b5-e7fb-f549-55da1c9e6f4c.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.GazeTimeSpanBeforeAnimationBegins property" Url="html/724103f6-3e84-008f-2f36-7abdde38c3fd.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.GazeTimeSpanBeforeCooldown property" Url="html/ebfbe3ee-1d62-2c8a-deac-570dabdfebb7.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.GazeTimeSpanBeforeSelectionOccurs property" Url="html/b21a1757-5b3c-4beb-b22e-62d64ff3023f.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.LastSeenTime property" Url="html/51acdadc-a3c7-18d9-84e5-7be418009820.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.LastSelectedTime property" Url="html/ebe3fdf8-a1c4-4ec1-66c9-dfc6860990d8.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.Select method" Url="html/3ac82892-10e2-bf1e-ee40-c0892b512671.htm" />
+  <HelpKINode Title="ISelectableControlViewModel.State property" Url="html/c0df5c96-b062-823b-d278-d99f1c61060f.htm" />
+  <HelpKINode Title="IsShiftDown property" Url="html/e99971cb-73e3-1f2d-a88a-8c60bd8841ba.htm" />
+  <HelpKINode Title="ISuggestionService interface">
+    <HelpKINode Title="ISuggestionService Interface" Url="html/d50af1e4-5cc5-4b0b-1d7a-b7b85ba7b003.htm" />
+    <HelpKINode Title="about ISuggestionService interface" Url="html/d50af1e4-5cc5-4b0b-1d7a-b7b85ba7b003.htm" />
+    <HelpKINode Title="methods" Url="html/e5302348-9de4-8df0-6502-b3e30528cf5a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISuggestionService.AddMultiCharacterText method" Url="html/6148e330-6af6-f02c-c30b-d5ca275619a2.htm" />
+  <HelpKINode Title="ISuggestionService.ClearMultiCharacterBuffer method" Url="html/146a2035-207a-d2aa-bcaa-db8d787ea177.htm" />
+  <HelpKINode Title="ISuggestionService.ProvideMultiCharacterSuggestions method" Url="html/cd52241e-aaa1-2878-ba58-2ad7578800b3.htm" />
+  <HelpKINode Title="ISuggestionService.ProvideSuggestions method" Url="html/9265eba2-90c9-5d6d-00bc-56e027196a48.htm" />
+  <HelpKINode Title="ISuggestionService.RemoveLastMultiCharacter method" Url="html/023470aa-30ef-aa8c-8a82-efe099e9db0c.htm" />
+  <HelpKINode Title="ISuggestionSource interface">
+    <HelpKINode Title="ISuggestionSource Interface" Url="html/9a71f81d-a901-b57f-ace3-e6a67ffabb3e.htm" />
+    <HelpKINode Title="about ISuggestionSource interface" Url="html/9a71f81d-a901-b57f-ace3-e6a67ffabb3e.htm" />
+    <HelpKINode Title="methods" Url="html/b555b37c-d4d7-9dcb-6dc7-b4ccf87fe361.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISuggestionSource.GetSuggestions method" Url="html/bdec7958-d7d0-b18a-98c2-e44073d45320.htm" />
+  <HelpKINode Title="ITextModel interface">
+    <HelpKINode Title="ITextModel Interface" Url="html/a442dc5f-42a4-470b-a5e5-b111d81240cf.htm" />
+    <HelpKINode Title="about ITextModel interface" Url="html/a442dc5f-42a4-470b-a5e5-b111d81240cf.htm" />
+    <HelpKINode Title="properties" Url="html/11458566-338e-a88a-3cb7-b4432a65159b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITextModel.CurrentText property" Url="html/c53458c2-d453-c1dc-3981-7ce7bae4dc45.htm" />
+  <HelpKINode Title="ITextToSpeechService interface">
+    <HelpKINode Title="ITextToSpeechService Interface" Url="html/88f9c1a6-0a43-2104-058a-866d71c12121.htm" />
+    <HelpKINode Title="about ITextToSpeechService interface" Url="html/88f9c1a6-0a43-2104-058a-866d71c12121.htm" />
+    <HelpKINode Title="methods" Url="html/d823cea9-0987-b34e-a79a-9558c49ca305.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITextToSpeechService.Say method" Url="html/0bd7fe53-98fb-79a6-86ae-38c1f2c53029.htm" />
+  <HelpKINode Title="ITextToSpeechService.SayCurrentText method" Url="html/26207c70-dc02-41af-5ca6-27fd5d2eb881.htm" />
+  <HelpKINode Title="IWindowKnower interface">
+    <HelpKINode Title="IWindowKnower Interface" Url="html/c2b5a29b-ddbb-ca87-7de6-9b842b7cf532.htm" />
+    <HelpKINode Title="about IWindowKnower interface" Url="html/c2b5a29b-ddbb-ca87-7de6-9b842b7cf532.htm" />
+    <HelpKINode Title="properties" Url="html/f5e4e7a3-9c22-a7fb-624b-a9ec4b886434.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IWindowKnower.KnownWindows property" Url="html/2fe6db4c-9446-5351-6cd6-16c263fd62b9.htm" />
+  <HelpKINode Title="KnownWindows property">
+    <HelpKINode Title="GazeSelectionService.KnownWindows Property " Url="html/9259ede5-7ff7-b478-c79e-92c2ec47b8af.htm" />
+    <HelpKINode Title="IWindowKnower.KnownWindows Property " Url="html/2fe6db4c-9446-5351-6cd6-16c263fd62b9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LastMaintainedTime property" Url="html/e3f7874a-d638-8f01-1ceb-62155df37226.htm" />
+  <HelpKINode Title="LastSeenTime property">
+    <HelpKINode Title="ISelectableControlViewModel.LastSeenTime Property " Url="html/51acdadc-a3c7-18d9-84e5-7be418009820.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.LastSeenTime Property " Url="html/a9ff5646-73a7-3c87-fabc-c921cbb0159f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LastSelectedTime property">
+    <HelpKINode Title="ISelectableControlViewModel.LastSelectedTime Property " Url="html/ebe3fdf8-a1c4-4ec1-66c9-dfc6860990d8.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.LastSelectedTime Property " Url="html/fe16ba7e-5de8-2232-be3f-5f4a8700182a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="learn method">
+    <HelpKINode Title="Presage.learn Method " Url="html/059e9585-47e4-2522-3d88-a055c82d2aa1.htm" />
+    <HelpKINode Title="PresageClient.learn Method " Url="html/e5e411f2-b8f6-aa2b-3113-60a574014d18.htm" />
+  </HelpKINode>
+  <HelpKINode Title="learnAsync method">
+    <HelpKINode Title="Presage.learnAsync Method " Url="html/95d9ef46-f6b5-9914-9904-502bce4a5f28.htm" />
+    <HelpKINode Title="PresageClient.learnAsync Method " Url="html/52f0a760-6e8f-e843-3d00-12c9a39fc8d3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoadDictionarySortedByFrequency method" Url="html/d0286a7b-a283-04bc-1f55-fef687a50b4e.htm" />
+  <HelpKINode Title="Log method" Url="html/7b89be1b-dcd4-1f41-984c-37c67085419f.htm" />
+  <HelpKINode Title="Main method" Url="html/954fc648-a24d-8995-d83a-42841465e2c5.htm" />
+  <HelpKINode Title="Maintain method">
+    <HelpKINode Title="IMaintainable.Maintain Method " Url="html/dda78fed-a47c-88f1-3def-0270b9aa152b.htm" />
+    <HelpKINode Title="MaintainablePointCollection(T1, T2).Maintain Method " Url="html/fcb97a78-4b19-83a5-5b03-164e59203385.htm" />
+    <HelpKINode Title="TimedControlsWithPoint.Maintain Method " Url="html/2565168a-5b2b-bda3-764e-0c82dd604f93.htm" />
+    <HelpKINode Title="TimedPoints.Maintain Method " Url="html/fc822ae7-349e-fdc7-830d-4d168a77eefe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MaintainablePointCollection(Of T1, T2) class">
+    <HelpKINode Title="MaintainablePointCollection(T1, T2) Class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm" />
+    <HelpKINode Title="about MaintainablePointCollection(Of T1, T2) class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm" />
+    <HelpKINode Title="constructor" Url="html/cdff0a70-8d0f-1ca3-ed27-42a24bd7b91e.htm" />
+    <HelpKINode Title="methods" Url="html/ad614cff-501c-c725-c115-d19d7560efd1.htm" />
+    <HelpKINode Title="properties" Url="html/f4e97a54-0df3-4258-5f90-a87ee0d32047.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MaintainablePointCollection(Of T1, T2).AddPoint method" Url="html/805f2c98-a3bd-438c-dcfe-47c5c508715c.htm" />
+  <HelpKINode Title="MaintainablePointCollection(Of T1, T2).LastMaintainedTime property" Url="html/e3f7874a-d638-8f01-1ceb-62155df37226.htm" />
+  <HelpKINode Title="MaintainablePointCollection(Of T1, T2).Maintain method" Url="html/fcb97a78-4b19-83a5-5b03-164e59203385.htm" />
+  <HelpKINode Title="MaintainablePointCollection(Of T1, T2).MaintainablePointCollection constructor" Url="html/cdff0a70-8d0f-1ca3-ed27-42a24bd7b91e.htm" />
+  <HelpKINode Title="MaintainablePointCollection(Of T1, T2).PointKeepAliveTimeSpan property" Url="html/60010a64-0792-375a-1f82-52796e97dc98.htm" />
+  <HelpKINode Title="MaintainablePointCollection&lt;T1, T2&gt; class">
+    <HelpKINode Title="MaintainablePointCollection(T1, T2) Class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm" />
+    <HelpKINode Title="about MaintainablePointCollection&lt;T1, T2&gt; class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm" />
+    <HelpKINode Title="constructor" Url="html/cdff0a70-8d0f-1ca3-ed27-42a24bd7b91e.htm" />
+    <HelpKINode Title="methods" Url="html/ad614cff-501c-c725-c115-d19d7560efd1.htm" />
+    <HelpKINode Title="properties" Url="html/f4e97a54-0df3-4258-5f90-a87ee0d32047.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MaintainablePointCollection&lt;T1, T2&gt;.AddPoint method" Url="html/805f2c98-a3bd-438c-dcfe-47c5c508715c.htm" />
+  <HelpKINode Title="MaintainablePointCollection&lt;T1, T2&gt;.LastMaintainedTime property" Url="html/e3f7874a-d638-8f01-1ceb-62155df37226.htm" />
+  <HelpKINode Title="MaintainablePointCollection&lt;T1, T2&gt;.Maintain method" Url="html/fcb97a78-4b19-83a5-5b03-164e59203385.htm" />
+  <HelpKINode Title="MaintainablePointCollection&lt;T1, T2&gt;.MaintainablePointCollection constructor" Url="html/cdff0a70-8d0f-1ca3-ed27-42a24bd7b91e.htm" />
+  <HelpKINode Title="MaintainablePointCollection&lt;T1, T2&gt;.PointKeepAliveTimeSpan property" Url="html/60010a64-0792-375a-1f82-52796e97dc98.htm" />
+  <HelpKINode Title="MainWindow class">
+    <HelpKINode Title="MainWindow Class" Url="html/21423ef9-4bf5-1e4b-c1ea-6fbfc04585fc.htm" />
+    <HelpKINode Title="about MainWindow class" Url="html/21423ef9-4bf5-1e4b-c1ea-6fbfc04585fc.htm" />
+    <HelpKINode Title="constructor" Url="html/8afb0ae8-6780-fe6b-5c90-e5d8f9a9274d.htm" />
+    <HelpKINode Title="events" Url="html/d298ded3-e585-3702-3659-83b2fc159454.htm" />
+    <HelpKINode Title="methods" Url="html/8e93ae41-48fd-9b65-9809-6a6dbc6506be.htm" />
+    <HelpKINode Title="properties" Url="html/8abe9147-7661-742b-0e0e-5d68d6a3283c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainWindow.InitializeComponent method" Url="html/7e9aceae-e6e0-257f-75bf-a20e1edf0a85.htm" />
+  <HelpKINode Title="MainWindow.MainWindow constructor" Url="html/8afb0ae8-6780-fe6b-5c90-e5d8f9a9274d.htm" />
+  <HelpKINode Title="MainWindowViewModel class">
+    <HelpKINode Title="MainWindowViewModel Class" Url="html/e39cfeb3-0ae2-0fab-da1d-db97791e90cb.htm" />
+    <HelpKINode Title="about MainWindowViewModel class" Url="html/e39cfeb3-0ae2-0fab-da1d-db97791e90cb.htm" />
+    <HelpKINode Title="constructor" Url="html/964385fb-81a7-f4b4-b1a8-0129fde9b996.htm" />
+    <HelpKINode Title="events" Url="html/ec00feb5-d909-176d-4b72-06c18e47e01c.htm" />
+    <HelpKINode Title="methods" Url="html/88e37529-d4d6-b028-ab01-e2aa1fbcdfaf.htm" />
+    <HelpKINode Title="properties" Url="html/03146002-9f8c-32b3-7fd7-a3fae065a3e1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainWindowViewModel.ChangeViewToLeftCommand property" Url="html/3491a469-0d59-6674-18ed-70d459d47c40.htm" />
+  <HelpKINode Title="MainWindowViewModel.ChangeViewToRightCommand property" Url="html/fd4fd812-e968-778a-9a47-a3fce1dec744.htm" />
+  <HelpKINode Title="MainWindowViewModel.MainWindowViewModel constructor" Url="html/964385fb-81a7-f4b4-b1a8-0129fde9b996.htm" />
+  <HelpKINode Title="MainWindowViewModel.Title property" Url="html/406f0bb1-e4a4-6e7a-8a2d-df42230d877b.htm" />
+  <HelpKINode Title="MicrosoftTextToSpeechModule class">
+    <HelpKINode Title="MicrosoftTextToSpeechModule Class" Url="html/dcd6d9fc-7666-0a09-e662-4dd4c02cda07.htm" />
+    <HelpKINode Title="about MicrosoftTextToSpeechModule class" Url="html/dcd6d9fc-7666-0a09-e662-4dd4c02cda07.htm" />
+    <HelpKINode Title="constructor" Url="html/a1966714-5a98-7c8c-5b44-d9ff1d218ce6.htm" />
+    <HelpKINode Title="methods" Url="html/26a8e5b8-de32-de3f-4b48-b04572fbfac7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MicrosoftTextToSpeechModule.Initialize method" Url="html/cccc0690-8e1d-2dc2-b356-f407474144a0.htm" />
+  <HelpKINode Title="MicrosoftTextToSpeechModule.MicrosoftTextToSpeechModule constructor" Url="html/a1966714-5a98-7c8c-5b44-d9ff1d218ce6.htm" />
+  <HelpKINode Title="MultiCharacterSuggestionSource class">
+    <HelpKINode Title="MultiCharacterSuggestionSource Class" Url="html/6ed76e04-dacc-d568-e923-8cbbde9a0b7f.htm" />
+    <HelpKINode Title="about MultiCharacterSuggestionSource class" Url="html/6ed76e04-dacc-d568-e923-8cbbde9a0b7f.htm" />
+    <HelpKINode Title="constructor" Url="html/d8a626db-1432-976d-7fc9-c0780c05ac40.htm" />
+    <HelpKINode Title="methods" Url="html/212676aa-ef0e-5a3f-4df8-a7721ddaefb0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MultiCharacterSuggestionSource.Add method" Url="html/3cbedde2-172f-19b0-a4fd-2df40cce2e74.htm" />
+  <HelpKINode Title="MultiCharacterSuggestionSource.ClearMultiCharacterBuffer method" Url="html/c6914cf4-9382-83ad-3352-691694edc4ed.htm" />
+  <HelpKINode Title="MultiCharacterSuggestionSource.GetSuggestions method" Url="html/6a2887c6-b678-fe9e-b27d-68b029f70703.htm" />
+  <HelpKINode Title="MultiCharacterSuggestionSource.LoadDictionarySortedByFrequency method" Url="html/d0286a7b-a283-04bc-1f55-fef687a50b4e.htm" />
+  <HelpKINode Title="MultiCharacterSuggestionSource.MultiCharacterSuggestionSource constructor" Url="html/d8a626db-1432-976d-7fc9-c0780c05ac40.htm" />
+  <HelpKINode Title="MultiCharacterSuggestionSource.RemoveLastMultiCharacter method" Url="html/5add5e56-18ae-eb90-404a-4a500bf1a107.htm" />
+  <HelpKINode Title="MultiKeyBoardModule class">
+    <HelpKINode Title="MultiKeyBoardModule Class" Url="html/a9857867-9b52-9ee3-6e79-a6e5d499fbbe.htm" />
+    <HelpKINode Title="about MultiKeyBoardModule class" Url="html/a9857867-9b52-9ee3-6e79-a6e5d499fbbe.htm" />
+    <HelpKINode Title="constructor" Url="html/e627c51a-02a5-806e-3c40-449eb41313ff.htm" />
+    <HelpKINode Title="methods" Url="html/a7b45991-b051-1fed-166d-6e6adad5923d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MultiKeyBoardModule.Initialize method" Url="html/c41226cf-7ad8-a8ee-5114-903f8df04b0c.htm" />
+  <HelpKINode Title="MultiKeyBoardModule.MultiKeyBoardModule constructor" Url="html/e627c51a-02a5-806e-3c40-449eb41313ff.htm" />
+  <HelpKINode Title="MultikeyTextModel class">
+    <HelpKINode Title="MultikeyTextModel Class" Url="html/5f40a276-0a28-da48-3ecc-8079e10a3156.htm" />
+    <HelpKINode Title="about MultikeyTextModel class" Url="html/5f40a276-0a28-da48-3ecc-8079e10a3156.htm" />
+    <HelpKINode Title="constructor" Url="html/48b558b7-e258-e9d2-fdf5-9f47dea9a50f.htm" />
+    <HelpKINode Title="methods" Url="html/8e65bbb9-4de2-9e3f-640f-c6c3e9d5b54b.htm" />
+    <HelpKINode Title="properties" Url="html/70c2b4dc-e6f3-6bb8-3a64-b103ca423663.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MultikeyTextModel.CurrentMultiCharacterText property" Url="html/dbe26ab3-7a64-750e-a936-d8d3c48cc5bb.htm" />
+  <HelpKINode Title="MultikeyTextModel.MultikeyTextModel constructor" Url="html/48b558b7-e258-e9d2-fdf5-9f47dea9a50f.htm" />
+  <HelpKINode Title="MultiTextUpdatedEvent class">
+    <HelpKINode Title="methods" Url="html/b2c1cd55-fe03-466a-fda1-2ec42121fb44.htm" />
+    <HelpKINode Title="properties" Url="html/45b7c981-9949-de0f-fd50-857d61b7c277.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NewCoordinateEvent class">
+    <HelpKINode Title="methods" Url="html/27b0d3e6-45cb-2c46-7d6e-8500fa957a0c.htm" />
+    <HelpKINode Title="properties" Url="html/70d45c83-6cc1-667f-9234-5f7b1e57c52e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NLogLogger class">
+    <HelpKINode Title="NLogLogger Class" Url="html/7636391b-7c5e-89c2-63d5-06caf877d0df.htm" />
+    <HelpKINode Title="about NLogLogger class" Url="html/7636391b-7c5e-89c2-63d5-06caf877d0df.htm" />
+    <HelpKINode Title="constructor" Url="html/0392d5f8-0493-a93f-eb05-5c3b829d95c5.htm" />
+    <HelpKINode Title="methods" Url="html/7a1a030d-ea7b-837e-c720-2ab4430cc0a2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NLogLogger.Log method" Url="html/7b89be1b-dcd4-1f41-984c-37c67085419f.htm" />
+  <HelpKINode Title="NLogLogger.NLogLogger constructor" Url="html/0392d5f8-0493-a93f-eb05-5c3b829d95c5.htm" />
+  <HelpKINode Title="OnPropertyChanged method">
+    <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.OnPropertyChanged Method " Url="html/d7d7196b-3ace-16a5-864b-71b1e5c2693a.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.OnPropertyChanged Method " Url="html/6c877bdf-cca3-89ad-591b-cc588c409501.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OnStartup method" Url="html/18ef7307-f8bd-f4d6-0a0f-f6256e0950f6.htm" />
+  <HelpKINode Title="PauseAnimation method" Url="html/e9e60703-63f2-d699-2e35-4b81d4613571.htm" />
+  <HelpKINode Title="PlayAnimation method" Url="html/bef62337-7198-05a4-06f0-f1de277eb6be.htm" />
+  <HelpKINode Title="Point property" Url="html/0b75dacc-6cac-f24e-8982-a0fd537a679a.htm" />
+  <HelpKINode Title="PointKeepAliveTimeSpan property">
+    <HelpKINode Title="Configuration.PointKeepAliveTimeSpan Property " Url="html/3028c0cb-b833-1eba-f20c-2f38eba4e695.htm" />
+    <HelpKINode Title="MaintainablePointCollection(T1, T2).PointKeepAliveTimeSpan Property " Url="html/60010a64-0792-375a-1f82-52796e97dc98.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrecededByNonwhitespaceFollowedByWhitespace property" Url="html/5bbfe028-b01d-ba6f-a353-83caa25c4011.htm" />
+  <HelpKINode Title="predict method">
+    <HelpKINode Title="Presage.predict Method " Url="html/5cffdabd-78cd-2d55-a6ee-36d629e2c3fd.htm" />
+    <HelpKINode Title="PresageClient.predict Method " Url="html/ff98659c-0274-72c5-0b0d-b6943b02c49a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="predictAsync method">
+    <HelpKINode Title="Presage.predictAsync Method " Url="html/3469a0f4-81f2-55bf-604f-422410ddfeb2.htm" />
+    <HelpKINode Title="PresageClient.predictAsync Method " Url="html/fd30c85d-5da1-1feb-4b83-6280c7d4f3f8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="prefix method">
+    <HelpKINode Title="Presage.prefix Method " Url="html/d7a00013-96a3-0b9f-a409-8c1a5cfd21f7.htm" />
+    <HelpKINode Title="PresageClient.prefix Method " Url="html/ee7ee6be-ce66-b0bc-275a-14c9ee2e8811.htm" />
+  </HelpKINode>
+  <HelpKINode Title="prefixAsync method">
+    <HelpKINode Title="Presage.prefixAsync Method " Url="html/debe8658-a96b-d866-f353-694e06752670.htm" />
+    <HelpKINode Title="PresageClient.prefixAsync Method " Url="html/e93bc903-0589-597d-cb43-833f349eac44.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Presage interface">
+    <HelpKINode Title="Presage Interface" Url="html/27f04068-ba3c-5da3-1d30-fa8c639ea9ef.htm" />
+    <HelpKINode Title="about Presage interface" Url="html/27f04068-ba3c-5da3-1d30-fa8c639ea9ef.htm" />
+    <HelpKINode Title="methods" Url="html/6f82261c-989a-09e8-b6cf-bac04002c95d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Presage.completion method" Url="html/ca04df52-0140-5f3e-f0d6-a97d5ef965c0.htm" />
+  <HelpKINode Title="Presage.completionAsync method" Url="html/6d458640-be55-0b69-4fcb-5a70e7fa4d22.htm" />
+  <HelpKINode Title="Presage.context method" Url="html/fbfebcfd-7da1-09f2-ce63-57098ad539ba.htm" />
+  <HelpKINode Title="Presage.contextAsync method" Url="html/8c45a7b6-dc88-466f-67e7-9773f518dc73.htm" />
+  <HelpKINode Title="Presage.context_change method" Url="html/970bbe00-2d37-a634-d89f-0a661878dc4b.htm" />
+  <HelpKINode Title="Presage.context_changeAsync method" Url="html/eff6db4a-7c68-f7ef-9557-34eade8fac26.htm" />
+  <HelpKINode Title="Presage.get_config method" Url="html/84867088-3eb1-87b2-6706-01b8bef9bb49.htm" />
+  <HelpKINode Title="Presage.get_configAsync method" Url="html/835025e0-4329-9e90-1fc7-bca9aea53dd8.htm" />
+  <HelpKINode Title="Presage.learn method" Url="html/059e9585-47e4-2522-3d88-a055c82d2aa1.htm" />
+  <HelpKINode Title="Presage.learnAsync method" Url="html/95d9ef46-f6b5-9914-9904-502bce4a5f28.htm" />
+  <HelpKINode Title="Presage.predict method" Url="html/5cffdabd-78cd-2d55-a6ee-36d629e2c3fd.htm" />
+  <HelpKINode Title="Presage.predictAsync method" Url="html/3469a0f4-81f2-55bf-604f-422410ddfeb2.htm" />
+  <HelpKINode Title="Presage.prefix method" Url="html/d7a00013-96a3-0b9f-a409-8c1a5cfd21f7.htm" />
+  <HelpKINode Title="Presage.prefixAsync method" Url="html/debe8658-a96b-d866-f353-694e06752670.htm" />
+  <HelpKINode Title="Presage.save_config method" Url="html/cd5ebbc4-da61-21e9-a6cd-5d873fc0bd20.htm" />
+  <HelpKINode Title="Presage.save_configAsync method" Url="html/81f1c794-2bea-30dc-61c5-fc4ae85460ce.htm" />
+  <HelpKINode Title="Presage.set_config method" Url="html/6f7a199c-cb7e-feaf-2de9-503ee2be043b.htm" />
+  <HelpKINode Title="Presage.set_configAsync method" Url="html/cb1d6a8c-76ea-afd4-cda4-6361d32e905a.htm" />
+  <HelpKINode Title="PresageChannel interface">
+    <HelpKINode Title="PresageChannel Interface" Url="html/c2a01c6b-f69c-f5c0-910b-26e5fa4184c0.htm" />
+    <HelpKINode Title="about PresageChannel interface" Url="html/c2a01c6b-f69c-f5c0-910b-26e5fa4184c0.htm" />
+    <HelpKINode Title="events" Url="html/bbf14388-172e-c78a-b080-43cdcea9916b.htm" />
+    <HelpKINode Title="methods" Url="html/0f4ce1a6-c0fc-a053-00d8-800879e386dd.htm" />
+    <HelpKINode Title="properties" Url="html/14ea663b-0854-facd-7a65-8266bd138a3f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PresageClient class">
+    <HelpKINode Title="PresageClient Class" Url="html/5e42e675-be77-adb7-0a35-f4e78e565de2.htm" />
+    <HelpKINode Title="about PresageClient class" Url="html/5e42e675-be77-adb7-0a35-f4e78e565de2.htm" />
+    <HelpKINode Title="constructor" Url="html/b10775e1-f619-1b0e-2d9f-cc580a6ef86e.htm" />
+    <HelpKINode Title="methods" Url="html/26e9876e-c196-f753-8407-f843491e1112.htm" />
+    <HelpKINode Title="properties" Url="html/f49a9435-ac4d-1f10-42dc-d8df90031488.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PresageClient.completion method" Url="html/cbec027c-4d74-fc1c-ab5d-2a4c5064dfa9.htm" />
+  <HelpKINode Title="PresageClient.completionAsync method" Url="html/f2c9c25b-e564-74f1-7224-e07381e5d072.htm" />
+  <HelpKINode Title="PresageClient.context method" Url="html/52372d33-d5f5-ce65-7f39-13b7f0f77d29.htm" />
+  <HelpKINode Title="PresageClient.contextAsync method" Url="html/b0f0caee-40ed-b7dc-ee98-20d3b618216d.htm" />
+  <HelpKINode Title="PresageClient.context_change method" Url="html/eacddf1a-c302-c3d1-ad3a-932f3d91cc2d.htm" />
+  <HelpKINode Title="PresageClient.context_changeAsync method" Url="html/cf261e4a-e601-6ca3-7deb-36eb6479bc3d.htm" />
+  <HelpKINode Title="PresageClient.get_config method" Url="html/6e6bebce-6fb4-313f-33e7-070d329966d8.htm" />
+  <HelpKINode Title="PresageClient.get_configAsync method" Url="html/59bb2cc1-204b-85e6-d174-6317a2bcdab7.htm" />
+  <HelpKINode Title="PresageClient.learn method" Url="html/e5e411f2-b8f6-aa2b-3113-60a574014d18.htm" />
+  <HelpKINode Title="PresageClient.learnAsync method" Url="html/52f0a760-6e8f-e843-3d00-12c9a39fc8d3.htm" />
+  <HelpKINode Title="PresageClient.predict method" Url="html/ff98659c-0274-72c5-0b0d-b6943b02c49a.htm" />
+  <HelpKINode Title="PresageClient.predictAsync method" Url="html/fd30c85d-5da1-1feb-4b83-6280c7d4f3f8.htm" />
+  <HelpKINode Title="PresageClient.prefix method" Url="html/ee7ee6be-ce66-b0bc-275a-14c9ee2e8811.htm" />
+  <HelpKINode Title="PresageClient.prefixAsync method" Url="html/e93bc903-0589-597d-cb43-833f349eac44.htm" />
+  <HelpKINode Title="PresageClient.PresageClient constructor" Url="html/b10775e1-f619-1b0e-2d9f-cc580a6ef86e.htm" />
+  <HelpKINode Title="PresageClient.save_config method" Url="html/b67f16a6-436c-cf13-d6f7-eb13346e4d82.htm" />
+  <HelpKINode Title="PresageClient.save_configAsync method" Url="html/13d99127-161a-6372-4dd7-6ac344cff59f.htm" />
+  <HelpKINode Title="PresageClient.set_config method" Url="html/41085804-1d0a-87e6-9190-52350a845e96.htm" />
+  <HelpKINode Title="PresageClient.set_configAsync method" Url="html/b92415ee-4762-e7b4-d673-3b7aadde36b1.htm" />
+  <HelpKINode Title="PresageSuggestionSource class">
+    <HelpKINode Title="PresageSuggestionSource Class" Url="html/974f76ce-81a4-43e3-e39f-39d4fd696821.htm" />
+    <HelpKINode Title="about PresageSuggestionSource class" Url="html/974f76ce-81a4-43e3-e39f-39d4fd696821.htm" />
+    <HelpKINode Title="constructor" Url="html/d3675560-e152-8952-0562-e2177019ad78.htm" />
+    <HelpKINode Title="methods" Url="html/cbb3851f-3b19-90e2-62eb-719054bbed8b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PresageSuggestionSource.GetSuggestions method" Url="html/9cd4a3f6-6ccf-12ee-d3f0-39ed2d663a0a.htm" />
+  <HelpKINode Title="PresageSuggestionSource.PresageSuggestionSource constructor" Url="html/d3675560-e152-8952-0562-e2177019ad78.htm" />
+  <HelpKINode Title="ProcessPoint method">
+    <HelpKINode Title="GazeSelectionService.ProcessPoint Method " Url="html/15911e26-6821-949d-bb46-5225abe4fc45.htm" />
+    <HelpKINode Title="IPointHandler.ProcessPoint Method " Url="html/4c080aec-8c86-b405-62a5-3d1ad9f8df6b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyChanged event">
+    <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.PropertyChanged Event" Url="html/9f6ff8c1-ceed-8f9c-463c-7de3955459fc.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.PropertyChanged Event" Url="html/ce841211-0eb2-a25f-b0ce-9108f90a5dca.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProvideMultiCharacterSuggestions method">
+    <HelpKINode Title="ISuggestionService.ProvideMultiCharacterSuggestions Method " Url="html/cd52241e-aaa1-2878-ba58-2ad7578800b3.htm" />
+    <HelpKINode Title="SuggestionService.ProvideMultiCharacterSuggestions Method " Url="html/91457959-8578-6353-c979-0c1973076688.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ProvideSuggestions method">
+    <HelpKINode Title="ISuggestionService.ProvideSuggestions Method " Url="html/9265eba2-90c9-5d6d-00bc-56e027196a48.htm" />
+    <HelpKINode Title="SuggestionService.ProvideSuggestions Method " Url="html/cf967880-9948-8b22-2cbc-e69a80b961a7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QwertySpanishMultiKeyboard class">
+    <HelpKINode Title="QwertySpanishMultiKeyboard Class" Url="html/46872b7e-2297-2eca-327a-c1ef6c7431ea.htm" />
+    <HelpKINode Title="about QwertySpanishMultiKeyboard class" Url="html/46872b7e-2297-2eca-327a-c1ef6c7431ea.htm" />
+    <HelpKINode Title="constructor" Url="html/b0b36c34-16e9-d18e-c79b-00a93feb12bc.htm" />
+    <HelpKINode Title="events" Url="html/5723f642-bd6a-c4f3-3715-3063a39ec838.htm" />
+    <HelpKINode Title="methods" Url="html/7e736505-807d-3432-e2ea-dbe4a2fc9c19.htm" />
+    <HelpKINode Title="properties" Url="html/3e68e1dd-49a3-84b5-a5db-02f8ed0a5801.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QwertySpanishMultiKeyboard property" Url="html/4e0bbd5c-c175-be2e-5efb-32d38adf72fb.htm" />
+  <HelpKINode Title="QwertySpanishMultiKeyboard.InitializeComponent method" Url="html/259401c9-6370-e3cd-a895-6e03d76c879b.htm" />
+  <HelpKINode Title="QwertySpanishMultiKeyboard.QwertySpanishMultiKeyboard constructor" Url="html/b0b36c34-16e9-d18e-c79b-00a93feb12bc.htm" />
+  <HelpKINode Title="QwertySpanishMultiKeyboardViewModel class">
+    <HelpKINode Title="QwertySpanishMultiKeyboardViewModel Class" Url="html/acd7a700-a1a7-562f-b36f-f0643e7428ae.htm" />
+    <HelpKINode Title="about QwertySpanishMultiKeyboardViewModel class" Url="html/acd7a700-a1a7-562f-b36f-f0643e7428ae.htm" />
+    <HelpKINode Title="constructor" Url="html/e53fa376-1fea-e63a-91a0-d6f4ea8aaae6.htm" />
+    <HelpKINode Title="events" Url="html/541d9fe4-e1e1-b11b-b605-80444c76a38e.htm" />
+    <HelpKINode Title="methods" Url="html/03d16e38-c5a4-2126-879c-44856ff5cad1.htm" />
+    <HelpKINode Title="properties" Url="html/ee64f9c2-5cb6-bd1b-e6ce-074966c6c32b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QwertySpanishMultiKeyboardViewModel.AddMultiCharacterCommand property" Url="html/889dad82-7ddb-625d-ea8e-a3420396cfbc.htm" />
+  <HelpKINode Title="QwertySpanishMultiKeyboardViewModel.QwertySpanishMultiKeyboardViewModel constructor" Url="html/e53fa376-1fea-e63a-91a0-d6f4ea8aaae6.htm" />
+  <HelpKINode Title="QwertySpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand property" Url="html/4478f4b9-fc7e-1da5-f18b-a502c5175f84.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboard class">
+    <HelpKINode Title="QwertySpanishSingleKeyboard Class" Url="html/0f99123a-2a96-088c-ea12-baa8e56a685c.htm" />
+    <HelpKINode Title="about QwertySpanishSingleKeyboard class" Url="html/0f99123a-2a96-088c-ea12-baa8e56a685c.htm" />
+    <HelpKINode Title="constructor" Url="html/e74cdc8c-582f-2492-575f-7a82ae798715.htm" />
+    <HelpKINode Title="events" Url="html/daf3c1df-1575-1140-efe3-efcf59511af0.htm" />
+    <HelpKINode Title="methods" Url="html/4d5ab955-b276-cbb1-cec0-c9cca07184b8.htm" />
+    <HelpKINode Title="properties" Url="html/dec42131-241a-2d63-28d1-6bf374c2917d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QwertySpanishSingleKeyboard property" Url="html/454b7a51-f45b-72d3-0f66-f80c386bdf28.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboard.InitializeComponent method" Url="html/25beeff5-f05d-a772-dec4-3391d457e868.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboard.QwertySpanishSingleKeyboard constructor" Url="html/e74cdc8c-582f-2492-575f-7a82ae798715.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel class">
+    <HelpKINode Title="QwertySpanishSingleKeyboardViewModel Class" Url="html/78c14fe1-963b-990f-54e1-ff81f69f5e78.htm" />
+    <HelpKINode Title="about QwertySpanishSingleKeyboardViewModel class" Url="html/78c14fe1-963b-990f-54e1-ff81f69f5e78.htm" />
+    <HelpKINode Title="constructor" Url="html/b113c7e7-df73-c81f-6033-3f3c305e7817.htm" />
+    <HelpKINode Title="events" Url="html/7007dc48-b68c-1821-5ffa-292f4369d46a.htm" />
+    <HelpKINode Title="methods" Url="html/69f9a3c1-c0ff-5e5e-ca8d-975ca1b71180.htm" />
+    <HelpKINode Title="properties" Url="html/40a9ef23-360a-3bb9-e6d6-e3ea706bcc1e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.IsShiftDown property" Url="html/e99971cb-73e3-1f2d-a88a-8c60bd8841ba.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.OnPropertyChanged method" Url="html/d7d7196b-3ace-16a5-864b-71b1e5c2693a.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.PropertyChanged event" Url="html/9f6ff8c1-ceed-8f9c-463c-7de3955459fc.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.QwertySpanishSingleKeyboardViewModel constructor" Url="html/b113c7e7-df73-c81f-6033-3f3c305e7817.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.SetShiftDownCommand property" Url="html/d5156259-2835-a140-02ce-44ee15b1216d.htm" />
+  <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.ToggleShiftDownCommand property" Url="html/0e892de3-9f54-73d4-113e-675c13e081bc.htm" />
+  <HelpKINode Title="RecentlySelected enumeration member" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="RegionNames class">
+    <HelpKINode Title="RegionNames Class" Url="html/e958f2d1-8949-1714-f304-e4ff2f71ae99.htm" />
+    <HelpKINode Title="about RegionNames class" Url="html/e958f2d1-8949-1714-f304-e4ff2f71ae99.htm" />
+    <HelpKINode Title="properties" Url="html/3ae0aca2-b594-f8f3-e80e-b51a5c565bcb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RegionNames.BoardViewRegion property" Url="html/9caefb40-b7a2-254c-6e37-dc7740db9e8f.htm" />
+  <HelpKINode Title="RegionNames.SuggestionRegion property" Url="html/753954f1-b85d-4106-15e0-2b705423c2a8.htm" />
+  <HelpKINode Title="RegionNames.TextViewRegion property" Url="html/c7df6986-775f-e1e2-dd83-74405a8c6d34.htm" />
+  <HelpKINode Title="RemoveLastCharacterCommand property">
+    <HelpKINode Title="Commands.RemoveLastCharacterCommand Property " Url="html/fe90df4c-8238-a973-124c-8969a4252f63.htm" />
+    <HelpKINode Title="TextViewModel.RemoveLastCharacterCommand Property " Url="html/fa771aef-12b5-569a-567d-10720965d60e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RemoveLastMultiCharacter method">
+    <HelpKINode Title="ISuggestionService.RemoveLastMultiCharacter Method " Url="html/023470aa-30ef-aa8c-8a82-efe099e9db0c.htm" />
+    <HelpKINode Title="MultiCharacterSuggestionSource.RemoveLastMultiCharacter Method " Url="html/5add5e56-18ae-eb90-404a-4a500bf1a107.htm" />
+    <HelpKINode Title="SuggestionService.RemoveLastMultiCharacter Method " Url="html/d119421b-47c2-4457-7b05-6f3921e848f0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RemoveLastMultiCharacterCommand property">
+    <HelpKINode Title="Commands.RemoveLastMultiCharacterCommand Property " Url="html/36c893c4-e5ec-f8d9-e5c5-be237e11afd8.htm" />
+    <HelpKINode Title="QwertySpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand Property " Url="html/4478f4b9-fc7e-1da5-f18b-a502c5175f84.htm" />
+    <HelpKINode Title="T9SpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand Property " Url="html/42de4ff8-54da-5f4f-a320-eac61f412777.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RemoveLastWord method" Url="html/e5010746-f66c-e928-7245-13839f06d150.htm" />
+  <HelpKINode Title="RemoveLastWordCommand property">
+    <HelpKINode Title="Commands.RemoveLastWordCommand Property " Url="html/2dd351b4-20c1-6a08-15ac-2a9b4eee6329.htm" />
+    <HelpKINode Title="TextViewModel.RemoveLastWordCommand Property " Url="html/1eb0ff7e-7207-2e96-cb1f-59a803d8ac52.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ResourceLocations class">
+    <HelpKINode Title="ResourceLocations Class" Url="html/238ff06d-8033-52cf-30c1-049694815ef0.htm" />
+    <HelpKINode Title="about ResourceLocations class" Url="html/238ff06d-8033-52cf-30c1-049694815ef0.htm" />
+    <HelpKINode Title="properties" Url="html/875bad85-6cfa-558e-6407-e8f951dc9282.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ResourceLocations.DefaultDictionaryLocation property" Url="html/e8fba160-eadf-b0c2-54d6-cf7c9f568b34.htm" />
+  <HelpKINode Title="ResourceLocations.SpanishDictionaryLocation property" Url="html/4ced68bc-52dd-6ce3-3996-a9776e457afd.htm" />
+  <HelpKINode Title="ResumeAnimation method" Url="html/05431361-a4f1-cd28-b7cd-e54108f36d67.htm" />
+  <HelpKINode Title="save_config method">
+    <HelpKINode Title="Presage.save_config Method " Url="html/cd5ebbc4-da61-21e9-a6cd-5d873fc0bd20.htm" />
+    <HelpKINode Title="PresageClient.save_config Method " Url="html/b67f16a6-436c-cf13-d6f7-eb13346e4d82.htm" />
+  </HelpKINode>
+  <HelpKINode Title="save_configAsync method">
+    <HelpKINode Title="Presage.save_configAsync Method " Url="html/81f1c794-2bea-30dc-61c5-fc4ae85460ce.htm" />
+    <HelpKINode Title="PresageClient.save_configAsync Method " Url="html/13d99127-161a-6372-4dd7-6ac344cff59f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Say method">
+    <HelpKINode Title="ITextToSpeechService.Say Method " Url="html/0bd7fe53-98fb-79a6-86ae-38c1f2c53029.htm" />
+    <HelpKINode Title="TextToSpeechService.Say Method " Url="html/e4f5a64e-a78c-1f18-d406-8bdb1258e2fc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SayCurrentText method">
+    <HelpKINode Title="ITextToSpeechService.SayCurrentText Method " Url="html/26207c70-dc02-41af-5ca6-27fd5d2eb881.htm" />
+    <HelpKINode Title="TextToSpeechService.SayCurrentText Method " Url="html/5f52046d-f5e0-c234-deb3-302fbe034e19.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SeenButWaiting enumeration member" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="Select method">
+    <HelpKINode Title="ISelectableControlViewModel.Select Method " Url="html/3ac82892-10e2-bf1e-ee40-c0892b512671.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.Select Method " Url="html/bcdc51ee-4b3a-4903-ffa9-d5b7c6dc588e.htm" />
+    <HelpKINode Title="SelectableControl.Select Method " Url="html/c38c40e7-1687-18bf-bdd4-260aa8ac8831.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectableButton class">
+    <HelpKINode Title="SelectableButton Class" Url="html/683ce8a9-fbb7-0220-a81d-479367a3cfb5.htm" />
+    <HelpKINode Title="about SelectableButton class" Url="html/683ce8a9-fbb7-0220-a81d-479367a3cfb5.htm" />
+    <HelpKINode Title="constructor" Url="html/54e614b2-9eee-22cc-545b-24d5eb1abf0e.htm" />
+    <HelpKINode Title="events" Url="html/bf4470c7-2d04-c5e6-828c-57d9e77b9fa8.htm" />
+    <HelpKINode Title="fields" Url="html/457ae349-ab3d-5925-a094-0f5d00e8226b.htm" />
+    <HelpKINode Title="methods" Url="html/7122f40b-5b8a-cdf0-3087-4606773433af.htm" />
+    <HelpKINode Title="properties" Url="html/bc5567e7-99e9-5bf7-da7c-4929efcee686.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectableButton.FontSize property" Url="html/8ac06381-6572-4ccc-ea3b-451577e347a3.htm" />
+  <HelpKINode Title="SelectableButton.FontSizeProperty field" Url="html/9a58b795-2489-3700-cf45-5e2a2735ff7d.htm" />
+  <HelpKINode Title="SelectableButton.InitializeComponent method" Url="html/37780fe6-2032-dfe3-d75c-6ac5d360679c.htm" />
+  <HelpKINode Title="SelectableButton.SelectableButton constructor" Url="html/54e614b2-9eee-22cc-545b-24d5eb1abf0e.htm" />
+  <HelpKINode Title="SelectableButton.Text property" Url="html/05c84dfe-b275-7795-d507-3173c03e090f.htm" />
+  <HelpKINode Title="SelectableButton.TextProperty field" Url="html/312bbd09-e23a-c53f-4306-3cccaf24ddc4.htm" />
+  <HelpKINode Title="SelectableButtonViewModel class">
+    <HelpKINode Title="SelectableButtonViewModel Class" Url="html/d2b7f69e-55a6-f3aa-72e7-8a9a1501b37e.htm" />
+    <HelpKINode Title="about SelectableButtonViewModel class" Url="html/d2b7f69e-55a6-f3aa-72e7-8a9a1501b37e.htm" />
+    <HelpKINode Title="constructor" Url="html/e33ef67b-8336-3768-4319-8aee2ee2f833.htm" />
+    <HelpKINode Title="events" Url="html/39371b39-58ef-fd1b-cb00-bd01402b6ee9.htm" />
+    <HelpKINode Title="methods" Url="html/bf4b3ec8-1387-62f7-cc59-75637a228b8b.htm" />
+    <HelpKINode Title="properties" Url="html/ece96dd5-ad9f-4771-da57-e6500f2e600a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectableButtonViewModel.Animation property" Url="html/5a9aa44b-acd3-321b-c4fc-e703e3ed5d93.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.AnimationBeginTime property" Url="html/f8cf0acc-5c7e-1cb4-af7b-fc4b71f4bf84.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.AnimationEndTime property" Url="html/37862f50-e676-329a-16d0-af8a2b78e332.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.ButtonText property" Url="html/da1cce22-0f58-a105-c05f-800bb94f1867.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.Command property" Url="html/f5bfcd38-f336-198c-a1d6-77d4202d7814.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.CommandParameter property" Url="html/954972e7-3f1d-6610-3df6-c956b0bc8cfd.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.CommandTarget property" Url="html/deb93759-558e-4856-d0e2-a86a8f28be65.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.CurrentGazeTimeSpan property" Url="html/94c9688a-bb4f-0910-56f1-b34d294291d3.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.FontSize property" Url="html/303a273b-d428-a2a3-9bc3-cab519fe4cf2.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.GazeKeepAliveTimeSpan property" Url="html/373d326b-36af-1033-f1a5-f705ec427f66.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.GazeTimeSpanBeforeAnimationBegins property" Url="html/91b1a353-8faf-6dd1-823f-bc6f5c17c02e.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.GazeTimeSpanBeforeCooldown property" Url="html/ac3d6e8e-fdd0-a0d3-e11c-363fa8cc9dab.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.GazeTimeSpanBeforeSelectionOccurs property" Url="html/b28fc6b5-9e9b-7f76-866f-b9eb936035bc.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.LastSeenTime property" Url="html/a9ff5646-73a7-3c87-fabc-c921cbb0159f.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.LastSelectedTime property" Url="html/fe16ba7e-5de8-2232-be3f-5f4a8700182a.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.OnPropertyChanged method" Url="html/6c877bdf-cca3-89ad-591b-cc588c409501.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.PropertyChanged event" Url="html/ce841211-0eb2-a25f-b0ce-9108f90a5dca.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.Select method" Url="html/bcdc51ee-4b3a-4903-ffa9-d5b7c6dc588e.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.SelectableButtonViewModel constructor" Url="html/e33ef67b-8336-3768-4319-8aee2ee2f833.htm" />
+  <HelpKINode Title="SelectableButtonViewModel.State property" Url="html/2ac74ae2-e67d-9ee0-c19a-18a80ea53c14.htm" />
+  <HelpKINode Title="SelectableControl class">
+    <HelpKINode Title="SelectableControl Class" Url="html/baece89b-65e1-dafa-93e1-3a41a8c980d4.htm" />
+    <HelpKINode Title="about SelectableControl class" Url="html/baece89b-65e1-dafa-93e1-3a41a8c980d4.htm" />
+    <HelpKINode Title="constructor" Url="html/49d69a1c-0024-3589-a32e-37282b6e75e4.htm" />
+    <HelpKINode Title="events" Url="html/e45d42f6-a90c-85bc-7b75-dcdf6f7e943a.htm" />
+    <HelpKINode Title="fields" Url="html/8887fa03-e488-dc90-2d94-20a0c37cb2de.htm" />
+    <HelpKINode Title="methods" Url="html/28c8b268-5f60-1c86-6e44-4ae1083a9e05.htm" />
+    <HelpKINode Title="properties" Url="html/1a01512d-248c-e715-4480-3d50cb706767.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectableControl.Animation property" Url="html/c65ef4c3-2ff4-2471-078b-d7fb35a7cdf1.htm" />
+  <HelpKINode Title="SelectableControl.AnimationProperty field" Url="html/33e2969f-192b-ae55-8147-018daaa3d01b.htm" />
+  <HelpKINode Title="SelectableControl.Command property" Url="html/de751d78-a437-e890-2e52-3fd19feb2f02.htm" />
+  <HelpKINode Title="SelectableControl.CommandParameter property" Url="html/36cef0a3-a6fc-a8c3-96f0-c7d794c599ab.htm" />
+  <HelpKINode Title="SelectableControl.CommandParameterProperty field" Url="html/2df226ce-be73-11f3-f88a-cb8ac1fddf21.htm" />
+  <HelpKINode Title="SelectableControl.CommandProperty field" Url="html/e2db5cf6-9da7-5adb-3b8a-c267fa358b17.htm" />
+  <HelpKINode Title="SelectableControl.CommandTarget property" Url="html/f9a53812-40e5-33b7-a161-b26267e08e69.htm" />
+  <HelpKINode Title="SelectableControl.CommandTargetProperty field" Url="html/cb23ec49-03ee-a989-ac8f-334b41cf00b8.htm" />
+  <HelpKINode Title="SelectableControl.CompareTo method" Url="html/69bc8be6-6cfc-7e4d-ba17-71bf76b771f6.htm" />
+  <HelpKINode Title="SelectableControl.PauseAnimation method" Url="html/e9e60703-63f2-d699-2e35-4b81d4613571.htm" />
+  <HelpKINode Title="SelectableControl.PlayAnimation method" Url="html/bef62337-7198-05a4-06f0-f1de277eb6be.htm" />
+  <HelpKINode Title="SelectableControl.ResumeAnimation method" Url="html/05431361-a4f1-cd28-b7cd-e54108f36d67.htm" />
+  <HelpKINode Title="SelectableControl.Select method" Url="html/c38c40e7-1687-18bf-bdd4-260aa8ac8831.htm" />
+  <HelpKINode Title="SelectableControl.SelectableControl constructor" Url="html/49d69a1c-0024-3589-a32e-37282b6e75e4.htm" />
+  <HelpKINode Title="SelectableControl.StopAnimation method" Url="html/3311c9cf-68fe-1643-aad4-42106e2e4b27.htm" />
+  <HelpKINode Title="SelectableControlUnderPoint method" Url="html/00345e13-7aa6-d0ad-ea20-7e7d45a76a00.htm" />
+  <HelpKINode Title="SelectableState enumeration" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="SelectAndUpdate method">
+    <HelpKINode Title="SelectionFilter(T).SelectAndUpdate Method " Url="html/6f818593-26be-2319-e066-760f05bccecc.htm" />
+    <HelpKINode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.SelectAndUpdate Method " Url="html/ffc3ca96-5281-21bd-5cda-72147178ee48.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectionFilter(Of T) class">
+    <HelpKINode Title="SelectionFilter(T) Class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm" />
+    <HelpKINode Title="about SelectionFilter(Of T) class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm" />
+    <HelpKINode Title="constructor" Url="html/30606ee0-5834-2ac6-1b5c-bc7cde6176bb.htm" />
+    <HelpKINode Title="methods" Url="html/d159d62e-ede4-a29e-a7bb-96a1ebf41a45.htm" />
+    <HelpKINode Title="properties" Url="html/1bf7db25-eb6c-5585-0400-35470e95d336.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectionFilter(Of T).SelectAndUpdate method" Url="html/6f818593-26be-2319-e066-760f05bccecc.htm" />
+  <HelpKINode Title="SelectionFilter(Of T).SelectionFilter constructor" Url="html/30606ee0-5834-2ac6-1b5c-bc7cde6176bb.htm" />
+  <HelpKINode Title="SelectionFilter(Of T).Window property" Url="html/5bae4023-4a29-b7c0-f4ce-371047e00127.htm" />
+  <HelpKINode Title="SelectionFilter&lt;T&gt; class">
+    <HelpKINode Title="SelectionFilter(T) Class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm" />
+    <HelpKINode Title="about SelectionFilter&lt;T&gt; class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm" />
+    <HelpKINode Title="constructor" Url="html/30606ee0-5834-2ac6-1b5c-bc7cde6176bb.htm" />
+    <HelpKINode Title="methods" Url="html/d159d62e-ede4-a29e-a7bb-96a1ebf41a45.htm" />
+    <HelpKINode Title="properties" Url="html/1bf7db25-eb6c-5585-0400-35470e95d336.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SelectionFilter&lt;T&gt;.SelectAndUpdate method" Url="html/6f818593-26be-2319-e066-760f05bccecc.htm" />
+  <HelpKINode Title="SelectionFilter&lt;T&gt;.SelectionFilter constructor" Url="html/30606ee0-5834-2ac6-1b5c-bc7cde6176bb.htm" />
+  <HelpKINode Title="SelectionFilter&lt;T&gt;.Window property" Url="html/5bae4023-4a29-b7c0-f4ce-371047e00127.htm" />
+  <HelpKINode Title="SetShiftDownCommand property">
+    <HelpKINode Title="Commands.SetShiftDownCommand Property " Url="html/64aaa46d-f290-93e8-47b2-284869b7f5dd.htm" />
+    <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.SetShiftDownCommand Property " Url="html/d5156259-2835-a140-02ce-44ee15b1216d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="set_config method">
+    <HelpKINode Title="Presage.set_config Method " Url="html/6f7a199c-cb7e-feaf-2de9-503ee2be043b.htm" />
+    <HelpKINode Title="PresageClient.set_config Method " Url="html/41085804-1d0a-87e6-9190-52350a845e96.htm" />
+  </HelpKINode>
+  <HelpKINode Title="set_configAsync method">
+    <HelpKINode Title="Presage.set_configAsync Method " Url="html/cb1d6a8c-76ea-afd4-cda4-6361d32e905a.htm" />
+    <HelpKINode Title="PresageClient.set_configAsync Method " Url="html/b92415ee-4762-e7b4-d673-3b7aadde36b1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SingleKeyBoardModule class">
+    <HelpKINode Title="SingleKeyBoardModule Class" Url="html/488aede7-14d7-8634-4e62-52969f448479.htm" />
+    <HelpKINode Title="about SingleKeyBoardModule class" Url="html/488aede7-14d7-8634-4e62-52969f448479.htm" />
+    <HelpKINode Title="constructor" Url="html/185462cf-2ee1-0394-bc08-95fb3f1602e3.htm" />
+    <HelpKINode Title="methods" Url="html/6b134d72-d3cd-50dd-8184-8bd689be6c2b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SingleKeyBoardModule.Initialize method" Url="html/ce74baf5-3663-b9d7-5f4d-936545c658a7.htm" />
+  <HelpKINode Title="SingleKeyBoardModule.SingleKeyBoardModule constructor" Url="html/185462cf-2ee1-0394-bc08-95fb3f1602e3.htm" />
+  <HelpKINode Title="SpanishDictionaryLocation property" Url="html/4ced68bc-52dd-6ce3-3996-a9776e457afd.htm" />
+  <HelpKINode Title="SpeechSynthesisCommand property">
+    <HelpKINode Title="Commands.SpeechSynthesisCommand Property " Url="html/523feb4f-e731-5fcf-90a5-993962d89408.htm" />
+    <HelpKINode Title="TextToSpeechService.SpeechSynthesisCommand Property " Url="html/eae07331-5c09-81fd-c114-992a7a8560b3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SplitStringPrefixAndLastWord method" Url="html/faa66eb9-911c-92fd-51dc-454b26fa1f38.htm" />
+  <HelpKINode Title="State property">
+    <HelpKINode Title="ISelectableControlViewModel.State Property " Url="html/c0df5c96-b062-823b-d278-d99f1c61060f.htm" />
+    <HelpKINode Title="SelectableButtonViewModel.State Property " Url="html/2ac74ae2-e67d-9ee0-c19a-18a80ea53c14.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StopAnimation method" Url="html/3311c9cf-68fe-1643-aad4-42106e2e4b27.htm" />
+  <HelpKINode Title="StringEditHelper class">
+    <HelpKINode Title="StringEditHelper Class" Url="html/81106df6-65f5-0f35-1dd6-632880fbb50e.htm" />
+    <HelpKINode Title="about StringEditHelper class" Url="html/81106df6-65f5-0f35-1dd6-632880fbb50e.htm" />
+    <HelpKINode Title="methods" Url="html/c1bd2cea-c854-e5ea-d0fa-459d1524858c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StringEditHelper.ConvertToDefaultEncodingFromUtf8 method" Url="html/19499663-746a-bcb9-107f-fd49654b8684.htm" />
+  <HelpKINode Title="StringEditHelper.ConvertToUtf8FromDefaultEncoding method" Url="html/9002df4f-99e6-3434-a067-55d021f179e5.htm" />
+  <HelpKINode Title="StringEditHelper.GetLastWord method" Url="html/48de14aa-cc59-80ec-8484-344b22b58003.htm" />
+  <HelpKINode Title="StringEditHelper.RemoveLastWord method" Url="html/e5010746-f66c-e928-7245-13839f06d150.htm" />
+  <HelpKINode Title="StringEditHelper.SplitStringPrefixAndLastWord method" Url="html/faa66eb9-911c-92fd-51dc-454b26fa1f38.htm" />
+  <HelpKINode Title="SuggestionBoardModule class">
+    <HelpKINode Title="SuggestionBoardModule Class" Url="html/7c865ad2-663d-ab16-c32d-575a1cd285a7.htm" />
+    <HelpKINode Title="about SuggestionBoardModule class" Url="html/7c865ad2-663d-ab16-c32d-575a1cd285a7.htm" />
+    <HelpKINode Title="constructor" Url="html/393cd454-a28f-f78f-96fa-cfe985994054.htm" />
+    <HelpKINode Title="methods" Url="html/66f3a5ea-9baa-2d93-c2e3-8eb7f39c54af.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SuggestionBoardModule.Initialize method" Url="html/1bad78ba-34a7-22ca-2ec5-61f6d2502a64.htm" />
+  <HelpKINode Title="SuggestionBoardModule.SuggestionBoardModule constructor" Url="html/393cd454-a28f-f78f-96fa-cfe985994054.htm" />
+  <HelpKINode Title="SuggestionRegion property" Url="html/753954f1-b85d-4106-15e0-2b705423c2a8.htm" />
+  <HelpKINode Title="Suggestions property" Url="html/9dcddfc5-2786-6e8e-7bb0-6693b8669a08.htm" />
+  <HelpKINode Title="SuggestionService class">
+    <HelpKINode Title="SuggestionService Class" Url="html/6096e61e-1697-c349-f1ed-55ef45d5b683.htm" />
+    <HelpKINode Title="about SuggestionService class" Url="html/6096e61e-1697-c349-f1ed-55ef45d5b683.htm" />
+    <HelpKINode Title="constructor" Url="html/bf6895b2-1c07-b7af-cec5-06c3951814db.htm" />
+    <HelpKINode Title="methods" Url="html/452450e2-9ab3-7973-47ce-6e784294c0fd.htm" />
+    <HelpKINode Title="properties" Url="html/177f8d5a-f89a-71c7-cf5e-d84ee9c7d69d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SuggestionService.AddMultiCharacterText method" Url="html/d91f6325-9e2f-1a3f-c268-e2850a6845f3.htm" />
+  <HelpKINode Title="SuggestionService.ClearMultiCharacterBuffer method" Url="html/aee94282-ded0-34c0-8a69-f102f21dca43.htm" />
+  <HelpKINode Title="SuggestionService.ProvideMultiCharacterSuggestions method" Url="html/91457959-8578-6353-c979-0c1973076688.htm" />
+  <HelpKINode Title="SuggestionService.ProvideSuggestions method" Url="html/cf967880-9948-8b22-2cbc-e69a80b961a7.htm" />
+  <HelpKINode Title="SuggestionService.RemoveLastMultiCharacter method" Url="html/d119421b-47c2-4457-7b05-6f3921e848f0.htm" />
+  <HelpKINode Title="SuggestionService.SuggestionService constructor" Url="html/bf6895b2-1c07-b7af-cec5-06c3951814db.htm" />
+  <HelpKINode Title="SuggestionService.WriteSuggestionCommand property" Url="html/d1ef6757-d136-f03f-b23a-97eb47886f15.htm" />
+  <HelpKINode Title="SuggestionsProviderModule class">
+    <HelpKINode Title="SuggestionsProviderModule Class" Url="html/c111ad83-9caa-3031-657d-093f84852ab4.htm" />
+    <HelpKINode Title="about SuggestionsProviderModule class" Url="html/c111ad83-9caa-3031-657d-093f84852ab4.htm" />
+    <HelpKINode Title="constructor" Url="html/c86857e9-42a0-064f-4ce5-04e8b5b61833.htm" />
+    <HelpKINode Title="methods" Url="html/822516e4-5dad-9a60-c6af-674bd6c51da2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SuggestionsProviderModule.Initialize method" Url="html/e5a43bf7-a3a9-83dc-a80e-bfc8d6addb67.htm" />
+  <HelpKINode Title="SuggestionsProviderModule.SuggestionsProviderModule constructor" Url="html/c86857e9-42a0-064f-4ce5-04e8b5b61833.htm" />
+  <HelpKINode Title="SwitchBindingExtension class">
+    <HelpKINode Title="SwitchBindingExtension Class" Url="html/855647da-251e-808c-ed10-3cc847afa8d4.htm" />
+    <HelpKINode Title="about SwitchBindingExtension class" Url="html/855647da-251e-808c-ed10-3cc847afa8d4.htm" />
+    <HelpKINode Title="constructor" Url="html/797ca62f-ee6e-37be-62ac-3b29b32215fc.htm" />
+    <HelpKINode Title="methods" Url="html/5dc27e5a-b464-c03c-5718-45fd66f7547d.htm" />
+    <HelpKINode Title="properties" Url="html/2345a21a-f7d3-9006-3ed3-5c9d603d6691.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SwitchBindingExtension.SwitchBindingExtension constructor" Url="html/797ca62f-ee6e-37be-62ac-3b29b32215fc.htm" />
+  <HelpKINode Title="SwitchBindingExtension.ValueIfFalse property" Url="html/a215d86f-5378-6019-8a31-a94aa3fc8e4f.htm" />
+  <HelpKINode Title="SwitchBindingExtension.ValueIfTrue property" Url="html/29809e97-2b07-2337-5b69-44ee344d82f1.htm" />
+  <HelpKINode Title="T9SpanishMultiKeyboard class">
+    <HelpKINode Title="T9SpanishMultiKeyboard Class" Url="html/bedf0fd0-f18e-a3c3-3002-6e4b31fd2438.htm" />
+    <HelpKINode Title="about T9SpanishMultiKeyboard class" Url="html/bedf0fd0-f18e-a3c3-3002-6e4b31fd2438.htm" />
+    <HelpKINode Title="constructor" Url="html/33303ffe-f04b-8283-1621-170e2ff065fc.htm" />
+    <HelpKINode Title="events" Url="html/680b91d6-b116-d02e-2510-008d5f8516c8.htm" />
+    <HelpKINode Title="methods" Url="html/0ae59038-b404-fec7-630b-004bd8688a40.htm" />
+    <HelpKINode Title="properties" Url="html/f8b46f0c-ab7e-2a63-79cd-1e81cbb77602.htm" />
+  </HelpKINode>
+  <HelpKINode Title="T9SpanishMultiKeyboard.InitializeComponent method" Url="html/471b8e48-dfab-5e02-470a-8ba3a4a0e855.htm" />
+  <HelpKINode Title="T9SpanishMultiKeyboard.T9SpanishMultiKeyboard constructor" Url="html/33303ffe-f04b-8283-1621-170e2ff065fc.htm" />
+  <HelpKINode Title="T9SpanishMultiKeyboardViewModel class">
+    <HelpKINode Title="T9SpanishMultiKeyboardViewModel Class" Url="html/3c656491-393d-af49-e535-daf4180fceec.htm" />
+    <HelpKINode Title="about T9SpanishMultiKeyboardViewModel class" Url="html/3c656491-393d-af49-e535-daf4180fceec.htm" />
+    <HelpKINode Title="constructor" Url="html/4bb93df1-8dec-3d0c-2c83-940e15451853.htm" />
+    <HelpKINode Title="events" Url="html/13d3f3cd-538d-4ae4-8ff4-6d48ac787c97.htm" />
+    <HelpKINode Title="methods" Url="html/ba130794-4e4b-8d7d-ff51-c15b6626db82.htm" />
+    <HelpKINode Title="properties" Url="html/fcc6bedc-1af7-b122-9db3-91706d26c81f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="T9SpanishMultiKeyboardViewModel.AddMultiCharacterCommand property" Url="html/425aed9c-183f-ba4e-2375-6eb4854e3150.htm" />
+  <HelpKINode Title="T9SpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand property" Url="html/42de4ff8-54da-5f4f-a320-eac61f412777.htm" />
+  <HelpKINode Title="T9SpanishMultiKeyboardViewModel.T9SpanishMultiKeyboardViewModel constructor" Url="html/4bb93df1-8dec-3d0c-2c83-940e15451853.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure namespace" Url="html/286db7cf-14fe-233d-c793-391d960cf449.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Commands class" Url="html/00f750a0-4985-ff18-f285-97c6f31a769a.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Configuration class" Url="html/1fb0914d-fd25-8b49-5652-22b870f76842.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Constants namespace" Url="html/71cc544a-e5c8-af40-1a07-3b749ad85438.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Constants.CharacterClasses class" Url="html/48bcb2a0-b912-b67e-7f85-b014f548d437.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Constants.RegionNames class" Url="html/e958f2d1-8949-1714-f304-e4ff2f71ae99.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Constants.ResourceLocations class" Url="html/238ff06d-8033-52cf-30c1-049694815ef0.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Constants.ViewNames class" Url="html/e968ff82-d673-e3be-8ba6-f590cbcf75f6.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Controls namespace" Url="html/48cabd92-d85a-4d63-d123-4a409107e79c.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel interface" Url="html/c8790639-e772-55b1-1b5c-4db68ac21b6d.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Controls.ITextModel interface" Url="html/a442dc5f-42a4-470b-a5e5-b111d81240cf.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Controls.SelectableButton class" Url="html/683ce8a9-fbb7-0220-a81d-479367a3cfb5.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel class" Url="html/d2b7f69e-55a6-f3aa-72e7-8a9a1501b37e.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Controls.SelectableControl class" Url="html/baece89b-65e1-dafa-93e1-3a41a8c980d4.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers namespace" Url="html/487a65bb-1c70-ec99-8a85-e1f7cccedd66.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers.IMaintainable interface" Url="html/8be10029-4324-9c9b-c0a0-6d7b8ecceef2.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection(Of T1, T2) class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers.MaintainablePointCollection&lt;T1, T2&gt; class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers.TimedControlsWithPoint class" Url="html/65bb0865-5f58-a5ef-deff-be20131e43bc.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers.TimedPoints class" Url="html/ba2e1329-5d9a-ee31-4c28-f93f289b6651.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.DataContainers.TimePointPair class" Url="html/5d572ab3-0c0d-a0d6-cba1-953a13c0b560.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Enums namespace" Url="html/02014a59-e93b-60d5-3f2b-a61b0bff5649.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Enums.SelectableState enumeration" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Events class" Url="html/cebefeae-293f-bc73-8c54-937f6f935560.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Events.MultiTextUpdatedEvent class" Url="html/42d5444d-b7ba-05cf-6b95-50064a5fb632.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Events.NewCoordinateEvent class" Url="html/a6986065-6556-1d20-e11a-bc73fc4606eb.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Events.TextUpdatedEvent class" Url="html/40f64f3c-bea0-d368-169d-a567be8d5c1f.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Helpers namespace" Url="html/b9281d5a-fec4-881d-bac9-b57157bad4a0.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Helpers.HitTestHelper class" Url="html/9a7946bd-a730-6781-276d-ecfc9375f78f.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Helpers.StringEditHelper class" Url="html/81106df6-65f5-0f35-1dd6-632880fbb50e.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.MarkupExtensions namespace" Url="html/e0a1d0a2-7857-b4d2-62ec-5c8ec35ab950.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension class" Url="html/855647da-251e-808c-ed10-3cc847afa8d4.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Models namespace" Url="html/0888f636-fba4-b2e0-3ddb-b5897fe57c08.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.Models.IMultiKeyTextModel interface" Url="html/bc4fb0bd-0795-9485-9317-f0b1d61ed537.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces namespace" Url="html/9c0bf44b-0482-fc87-1775-708489ee182e.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces.IControlActivationService interface" Url="html/e4ca2c28-f099-0bad-a8ff-75f56b72af61.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler interface" Url="html/6e9cf204-eeff-24bd-ba00-ba0e79a1b777.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService interface" Url="html/d50af1e4-5cc5-4b0b-1d7a-b7b85ba7b003.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionSource interface" Url="html/9a71f81d-a901-b57f-ace3-e6a67ffabb3e.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces.ITextToSpeechService interface" Url="html/88f9c1a6-0a43-2104-058a-866d71c12121.htm" />
+  <HelpKINode Title="TalkingKeyboard.Infrastructure.ServiceInterfaces.IWindowKnower interface" Url="html/c2b5a29b-ddbb-ca87-7de6-9b842b7cf532.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor namespace" Url="html/11a2fcf0-6c83-1aff-7ef6-bb7d05e209a9.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.ByGazeTimePointProcessorModule class" Url="html/61d2146c-5543-f40e-5482-df0966097335.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters namespace" Url="html/dc4e60bb-5ef1-28a3-f563-6d6b55e43ee3.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingFilter class" Url="html/e0ad38cd-b1bc-003b-0b51-652536523a57.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.AveragingLastNpointsWithinTimeSpanFilter class" Url="html/4eeba1bc-ce45-ba80-9380-f9877577203b.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter(Of T) class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.SelectionFilter&lt;T&gt; class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter class" Url="html/da25f287-cff0-fc91-4ad3-70c246ead06f.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService class" Url="html/1c5aa5e7-e87a-e02d-eb5a-768bf019ea2c.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CentralTextModule namespace" Url="html/9e5c9fce-af77-90ab-9c9d-9af8c12fd11d.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CentralTextModule.TextHolderModule class" Url="html/4b369f38-ff77-6cd7-7488-209e5c71b031.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CentralTextModule.ViewModels namespace" Url="html/a3ba4949-264e-670b-70f6-efbded9c7d17.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel class" Url="html/0a0359d3-3796-f3ab-0d35-79f24c58586a.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CentralTextModule.Views namespace" Url="html/57c29361-65da-a13f-c46f-1670e27c81cf.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CentralTextModule.Views.TextView class" Url="html/4dcc202e-9413-2cc8-ce94-38ba2aa5ddea.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CoordinateProvider namespace" Url="html/f3e4fc6d-52af-5071-a69a-44d416a30948.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CoordinateProvider.CoordinateProviderModule class" Url="html/1c76d641-c4d9-402b-bd06-0cd1adf842f9.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CoordinateProvider.Services namespace" Url="html/b172672f-c2cc-398f-513f-1aa95f4af9bf.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.CoordinateProvider.Services.EyeXGazeCoordinateService class" Url="html/dce33989-e1a4-3672-12b6-38562ac8a39a.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MicrosoftTextToSpeech namespace" Url="html/a5e0898d-64a2-b825-2bbe-53167f136544.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MicrosoftTextToSpeech.MicrosoftTextToSpeechModule class" Url="html/dcd6d9fc-7666-0a09-e662-4dd4c02cda07.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MicrosoftTextToSpeech.TextToSpeechService class" Url="html/c77fe28c-c3a0-e18c-655c-ddc0f6ade4d1.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard namespace" Url="html/92e5b6ae-c571-f4e1-a932-734205be449b.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.Model namespace" Url="html/374edb30-5c68-e795-5cfc-9ee8d5254664.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.Model.MultikeyTextModel class" Url="html/5f40a276-0a28-da48-3ecc-8079e10a3156.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.MultiKeyBoardModule class" Url="html/a9857867-9b52-9ee3-6e79-a6e5d499fbbe.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.ViewModels namespace" Url="html/de61d42c-2290-f801-5b47-0275d4f0c81f.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel class" Url="html/acd7a700-a1a7-562f-b36f-f0643e7428ae.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel class" Url="html/3c656491-393d-af49-e535-daf4180fceec.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.Views namespace" Url="html/446b66e1-b0d8-7a4f-ac24-ea6c8258fdba.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard class" Url="html/46872b7e-2297-2eca-327a-c1ef6c7431ea.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard class" Url="html/bedf0fd0-f18e-a3c3-3002-6e4b31fd2438.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SingleKeyBoard namespace" Url="html/5bee7555-2e14-8e3b-5995-e2672398d876.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SingleKeyBoard.SingleKeyBoardModule class" Url="html/488aede7-14d7-8634-4e62-52969f448479.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SingleKeyBoard.ViewModels namespace" Url="html/4c376c5b-698b-2f5d-cd70-d9a67bb8e8a6.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel class" Url="html/78c14fe1-963b-990f-54e1-ff81f69f5e78.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SingleKeyBoard.Views namespace" Url="html/32cd828c-0d00-438a-7281-b4a02b812cc7.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SingleKeyBoard.Views.QwertySpanishSingleKeyboard class" Url="html/0f99123a-2a96-088c-ea12-baa8e56a685c.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionBoard namespace" Url="html/7200d33e-0907-0e93-ab12-9ebca3f92e39.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionBoard.SuggestionBoardModule class" Url="html/7c865ad2-663d-ab16-c32d-575a1cd285a7.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionBoard.ViewModels namespace" Url="html/364520b1-c298-717b-0341-e31ca16b10d8.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionBoard.ViewModels.FourSuggestionsBoardViewModel class" Url="html/725ced41-545d-ecee-22ac-248156b42a6a.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionBoard.Views namespace" Url="html/3a64a1eb-6b4f-6d9c-8143-c9a8388e809a.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionBoard.Views.FourSuggestionsBoard class" Url="html/1a4cd892-2213-16fb-ecb1-f3fc479e6dca.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider namespace" Url="html/79400253-d60b-651c-52f2-9d623611b505.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.PresageService namespace" Url="html/0bcbd27d-d92f-6beb-f0a6-2e687f501759.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.PresageService.Presage interface" Url="html/27f04068-ba3c-5da3-1d30-fa8c639ea9ef.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.PresageService.PresageChannel interface" Url="html/c2a01c6b-f69c-f5c0-910b-26e5fa4184c0.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.PresageService.PresageClient class" Url="html/5e42e675-be77-adb7-0a35-f4e78e565de2.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService class" Url="html/6096e61e-1697-c349-f1ed-55ef45d5b683.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources namespace" Url="html/8152bc21-c93a-ee13-b66e-d4e3631d0b93.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.MultiCharacterSuggestionSource class" Url="html/6ed76e04-dacc-d568-e923-8cbbde9a0b7f.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.PresageSuggestionSource class" Url="html/974f76ce-81a4-43e3-e39f-39d4fd696821.htm" />
+  <HelpKINode Title="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionsProviderModule class" Url="html/c111ad83-9caa-3031-657d-093f84852ab4.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell namespace" Url="html/44fc18f7-db82-49eb-fc4b-94cc26adf292.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.App class" Url="html/07c7ad6c-9d44-5805-ce3c-b59e3b78e6c2.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.Logging namespace" Url="html/b2d26bf5-90ff-b68e-2590-a238d0d6d15b.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.Logging.NLogLogger class" Url="html/7636391b-7c5e-89c2-63d5-06caf877d0df.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.ViewModels namespace" Url="html/7706ab84-8a03-81a8-7f42-cd715e67e86c.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.ViewModels.MainWindowViewModel class" Url="html/e39cfeb3-0ae2-0fab-da1d-db97791e90cb.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.Views namespace" Url="html/fae7236b-2cf4-d1f7-e6a1-073a56869df1.htm" />
+  <HelpKINode Title="TalkingKeyboard.Shell.Views.MainWindow class" Url="html/21423ef9-4bf5-1e4b-c1ea-6fbfc04585fc.htm" />
+  <HelpKINode Title="Text property" Url="html/05c84dfe-b275-7795-d507-3173c03e090f.htm" />
+  <HelpKINode Title="TextHolderModule class">
+    <HelpKINode Title="TextHolderModule Class" Url="html/4b369f38-ff77-6cd7-7488-209e5c71b031.htm" />
+    <HelpKINode Title="about TextHolderModule class" Url="html/4b369f38-ff77-6cd7-7488-209e5c71b031.htm" />
+    <HelpKINode Title="constructor" Url="html/e0da380f-3307-90c0-9dd7-61cf298bd6f7.htm" />
+    <HelpKINode Title="methods" Url="html/1c83b83f-8f4d-1531-d8ea-a641fac4c42e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextHolderModule.Initialize method" Url="html/aa822637-9db9-4964-9f23-06a92e20db3e.htm" />
+  <HelpKINode Title="TextHolderModule.TextHolderModule constructor" Url="html/e0da380f-3307-90c0-9dd7-61cf298bd6f7.htm" />
+  <HelpKINode Title="TextProperty field" Url="html/312bbd09-e23a-c53f-4306-3cccaf24ddc4.htm" />
+  <HelpKINode Title="TextToSpeechService class">
+    <HelpKINode Title="TextToSpeechService Class" Url="html/c77fe28c-c3a0-e18c-655c-ddc0f6ade4d1.htm" />
+    <HelpKINode Title="about TextToSpeechService class" Url="html/c77fe28c-c3a0-e18c-655c-ddc0f6ade4d1.htm" />
+    <HelpKINode Title="constructor" Url="html/16b36c6e-dd68-0c85-9b9f-a87796eb8a1d.htm" />
+    <HelpKINode Title="events" Url="html/109f2638-220b-9a76-fa15-e260dabdbd54.htm" />
+    <HelpKINode Title="methods" Url="html/6a60b714-6d57-b766-124c-ab96bb670898.htm" />
+    <HelpKINode Title="properties" Url="html/6e9afb2d-c8ad-69b3-e5e2-45b6d5d64740.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextToSpeechService.CurrentText property" Url="html/876691df-dc5b-3c96-c189-f3a0e69e160f.htm" />
+  <HelpKINode Title="TextToSpeechService.Dispose method" Url="html/f7314f16-8fb2-409f-e875-f8241728776e.htm" />
+  <HelpKINode Title="TextToSpeechService.Say method" Url="html/e4f5a64e-a78c-1f18-d406-8bdb1258e2fc.htm" />
+  <HelpKINode Title="TextToSpeechService.SayCurrentText method" Url="html/5f52046d-f5e0-c234-deb3-302fbe034e19.htm" />
+  <HelpKINode Title="TextToSpeechService.SpeechSynthesisCommand property" Url="html/eae07331-5c09-81fd-c114-992a7a8560b3.htm" />
+  <HelpKINode Title="TextToSpeechService.TextToSpeechService constructor" Url="html/16b36c6e-dd68-0c85-9b9f-a87796eb8a1d.htm" />
+  <HelpKINode Title="TextUpdatedEvent class">
+    <HelpKINode Title="methods" Url="html/36c75e3d-d342-bb7a-a772-0715a362d0ac.htm" />
+    <HelpKINode Title="properties" Url="html/a20661e0-73f2-4bae-5a98-f6193ed52552.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextView class">
+    <HelpKINode Title="TextView Class" Url="html/4dcc202e-9413-2cc8-ce94-38ba2aa5ddea.htm" />
+    <HelpKINode Title="about TextView class" Url="html/4dcc202e-9413-2cc8-ce94-38ba2aa5ddea.htm" />
+    <HelpKINode Title="constructor" Url="html/3a3ea91d-ff0b-794b-ade2-cb5677f69c2a.htm" />
+    <HelpKINode Title="events" Url="html/100304e3-aacf-5ed1-2b71-137f22333f6d.htm" />
+    <HelpKINode Title="methods" Url="html/337fcc04-428c-5385-3f78-35e657d6d0e1.htm" />
+    <HelpKINode Title="properties" Url="html/43d00b45-d101-3e03-eeea-509feccdeaf4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextView.InitializeComponent method" Url="html/628be135-3cd4-0e8c-d2c1-07295e7f1820.htm" />
+  <HelpKINode Title="TextView.TextView constructor" Url="html/3a3ea91d-ff0b-794b-ade2-cb5677f69c2a.htm" />
+  <HelpKINode Title="TextViewModel class">
+    <HelpKINode Title="TextViewModel Class" Url="html/0a0359d3-3796-f3ab-0d35-79f24c58586a.htm" />
+    <HelpKINode Title="about TextViewModel class" Url="html/0a0359d3-3796-f3ab-0d35-79f24c58586a.htm" />
+    <HelpKINode Title="constructor" Url="html/9b142319-a78e-f00b-bc9d-d33b2445e001.htm" />
+    <HelpKINode Title="events" Url="html/531d0997-3fd7-15fe-710c-f6e00facfc66.htm" />
+    <HelpKINode Title="methods" Url="html/126c81d2-3b5f-6dea-51e2-2d9cca7ecbba.htm" />
+    <HelpKINode Title="properties" Url="html/230a45a1-c4f6-404a-c966-7062b932d36b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TextViewModel.AppendTextCommand property" Url="html/94e38d16-a450-5e15-5ef5-4e3d8e6913f9.htm" />
+  <HelpKINode Title="TextViewModel.CurrentText property" Url="html/9d785be7-7345-5c21-658c-926f5ee47f65.htm" />
+  <HelpKINode Title="TextViewModel.RemoveLastCharacterCommand property" Url="html/fa771aef-12b5-569a-567d-10720965d60e.htm" />
+  <HelpKINode Title="TextViewModel.RemoveLastWordCommand property" Url="html/1eb0ff7e-7207-2e96-cb1f-59a803d8ac52.htm" />
+  <HelpKINode Title="TextViewModel.TextViewModel constructor" Url="html/9b142319-a78e-f00b-bc9d-d33b2445e001.htm" />
+  <HelpKINode Title="TextViewRegion property" Url="html/c7df6986-775f-e1e2-dd83-74405a8c6d34.htm" />
+  <HelpKINode Title="Time property" Url="html/1b807833-4830-99a5-45cb-e7e0fffd11f4.htm" />
+  <HelpKINode Title="TimedControlsWithPoint class">
+    <HelpKINode Title="TimedControlsWithPoint Class" Url="html/65bb0865-5f58-a5ef-deff-be20131e43bc.htm" />
+    <HelpKINode Title="about TimedControlsWithPoint class" Url="html/65bb0865-5f58-a5ef-deff-be20131e43bc.htm" />
+    <HelpKINode Title="constructor" Url="html/293f1310-f2ed-1fd1-9bbb-5ea376b2f2df.htm" />
+    <HelpKINode Title="methods" Url="html/cf769a3f-bd47-682d-0b04-07a65c1396f8.htm" />
+    <HelpKINode Title="properties" Url="html/0f2ecee4-a0ad-cf3e-3dcf-88cb719326f4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimedControlsWithPoint.AddPoint method" Url="html/3cab97bd-d13e-6438-9f52-69dd51960067.htm" />
+  <HelpKINode Title="TimedControlsWithPoint.Maintain method" Url="html/2565168a-5b2b-bda3-764e-0c82dd604f93.htm" />
+  <HelpKINode Title="TimedControlsWithPoint.TimedControlsWithPoint constructor" Url="html/293f1310-f2ed-1fd1-9bbb-5ea376b2f2df.htm" />
+  <HelpKINode Title="TimedPoints class">
+    <HelpKINode Title="TimedPoints Class" Url="html/ba2e1329-5d9a-ee31-4c28-f93f289b6651.htm" />
+    <HelpKINode Title="about TimedPoints class" Url="html/ba2e1329-5d9a-ee31-4c28-f93f289b6651.htm" />
+    <HelpKINode Title="constructor" Url="html/eeffdbbc-a694-d48e-95da-1dd60c3f3104.htm" />
+    <HelpKINode Title="methods" Url="html/07cf5f5d-77cb-9101-96a6-612df5d9e11f.htm" />
+    <HelpKINode Title="properties" Url="html/6fb04a1f-7ef2-4645-adb3-5f06e528a1c2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimedPoints.AddPoint method" Url="html/3bc1097d-1d82-00bd-75ef-2a0ec273f714.htm" />
+  <HelpKINode Title="TimedPoints.Maintain method" Url="html/fc822ae7-349e-fdc7-830d-4d168a77eefe.htm" />
+  <HelpKINode Title="TimedPoints.TimedPoints constructor" Url="html/eeffdbbc-a694-d48e-95da-1dd60c3f3104.htm" />
+  <HelpKINode Title="TimePointPair class">
+    <HelpKINode Title="TimePointPair Class" Url="html/5d572ab3-0c0d-a0d6-cba1-953a13c0b560.htm" />
+    <HelpKINode Title="about TimePointPair class" Url="html/5d572ab3-0c0d-a0d6-cba1-953a13c0b560.htm" />
+    <HelpKINode Title="constructor" Url="html/efc23da3-ce28-f147-479b-f9136ea2a2a6.htm" />
+    <HelpKINode Title="methods" Url="html/567c1038-f73f-6c58-8f4c-a36cc320be9f.htm" />
+    <HelpKINode Title="properties" Url="html/3880051a-e968-fa2a-73dc-91d96cfa9ec0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimePointPair.Point property" Url="html/0b75dacc-6cac-f24e-8982-a0fd537a679a.htm" />
+  <HelpKINode Title="TimePointPair.Time property" Url="html/1b807833-4830-99a5-45cb-e7e0fffd11f4.htm" />
+  <HelpKINode Title="TimePointPair.TimePointPair constructor" Url="html/efc23da3-ce28-f147-479b-f9136ea2a2a6.htm" />
+  <HelpKINode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter class">
+    <HelpKINode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter Class" Url="html/da25f287-cff0-fc91-4ad3-70c246ead06f.htm" />
+    <HelpKINode Title="about TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter class" Url="html/da25f287-cff0-fc91-4ad3-70c246ead06f.htm" />
+    <HelpKINode Title="constructor" Url="html/073d4f61-eaf8-4f0c-12b7-39d13f3dbc00.htm" />
+    <HelpKINode Title="methods" Url="html/d9079262-a62d-5fb9-bfc3-a838918125f7.htm" />
+    <HelpKINode Title="properties" Url="html/021a6535-cf97-151f-825d-4e32207a7dcb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.SelectAndUpdate method" Url="html/ffc3ca96-5281-21bd-5cda-72147178ee48.htm" />
+  <HelpKINode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter.TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter constructor" Url="html/073d4f61-eaf8-4f0c-12b7-39d13f3dbc00.htm" />
+  <HelpKINode Title="Title property" Url="html/406f0bb1-e4a4-6e7a-8a2d-df42230d877b.htm" />
+  <HelpKINode Title="ToggleShiftDownCommand property">
+    <HelpKINode Title="Commands.ToggleShiftDownCommand Property " Url="html/add3002f-6641-1164-6bbb-8481079031ef.htm" />
+    <HelpKINode Title="QwertySpanishSingleKeyboardViewModel.ToggleShiftDownCommand Property " Url="html/0e892de3-9f54-73d4-113e-675c13e081bc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueIfFalse property" Url="html/a215d86f-5378-6019-8a31-a94aa3fc8e4f.htm" />
+  <HelpKINode Title="ValueIfTrue property" Url="html/29809e97-2b07-2337-5b69-44ee344d82f1.htm" />
+  <HelpKINode Title="ViewNames class">
+    <HelpKINode Title="ViewNames Class" Url="html/e968ff82-d673-e3be-8ba6-f590cbcf75f6.htm" />
+    <HelpKINode Title="about ViewNames class" Url="html/e968ff82-d673-e3be-8ba6-f590cbcf75f6.htm" />
+    <HelpKINode Title="properties" Url="html/7ce14b3d-5eb7-fbe3-9a8c-418961844995.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewNames.QwertySpanishMultiKeyboard property" Url="html/4e0bbd5c-c175-be2e-5efb-32d38adf72fb.htm" />
+  <HelpKINode Title="ViewNames.QwertySpanishSingleKeyboard property" Url="html/454b7a51-f45b-72d3-0f66-f80c386bdf28.htm" />
+  <HelpKINode Title="Whitespace property" Url="html/d6c815f6-058c-045b-5a54-95b7db148737.htm" />
+  <HelpKINode Title="Window property" Url="html/5bae4023-4a29-b7c0-f4ce-371047e00127.htm" />
+  <HelpKINode Title="WordSeparators property" Url="html/7c5dd27e-ce57-bbfd-9d00-1726fd624406.htm" />
+  <HelpKINode Title="WriteSuggestionCommand property">
+    <HelpKINode Title="Commands.WriteSuggestionCommand Property " Url="html/ae75d03f-7764-668f-bdf3-ee7e4e88ac62.htm" />
+    <HelpKINode Title="SuggestionService.WriteSuggestionCommand Property " Url="html/d1ef6757-d136-f03f-b23a-97eb47886f15.htm" />
+  </HelpKINode>
+</HelpKI>

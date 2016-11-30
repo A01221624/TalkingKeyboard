@@ -842,7 +842,11 @@
                 Interface for control activation services.
             </summary>
     </member>
-    <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler"></member>
+    <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler">
+      <summary>
+                Interface for coordinate point-based services.
+            </summary>
+    </member>
     <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler.ProcessPoint(System.Windows.Point)">
       <summary>
                 Processes the point.
@@ -919,14 +923,6 @@
       <summary>
                 Gets or sets the known windows.
             </summary>
-    </member>
-    <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
-      <summary>
-            GeneratedInternalTypeHelper
-            </summary>
-    </member>
-    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper" /> class.</summary>
     </member>
   </members>
 </doc>

@@ -1650,6 +1650,11 @@
             <seealso cref="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler" />
             <seealso cref="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IWindowKnower" />
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler">
+            <summary>
+                Interface for coordinate point-based services.
+            </summary>
+        </member>
         <member name="M:TalkingKeyboard.Infrastructure.ServiceInterfaces.IPointHandler.ProcessPoint(System.Windows.Point)">
             <summary>
                 Processes the point.

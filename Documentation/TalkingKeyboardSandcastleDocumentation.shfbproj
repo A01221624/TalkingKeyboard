@@ -22,7 +22,7 @@
     </DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>HtmlHelp1, MSHelpViewer</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
     <IndentHtml>True</IndentHtml>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -41,50 +41,58 @@
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="False" xmlns="" />
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure namespace provides auxiliary, base classes and interfaces which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Annotations" isDocumented="False" xmlns="" />
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Constants" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Constants namespace provides constants which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Controls" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Controls namespace provides controls which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.DataContainers" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.DataContainers namespace provides class models for holding and processing data which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Enums" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Enums namespace provides enumerators which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Helpers" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Helpers namespace provides helper classes which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.MarkupExtensions" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.MarkupExtensions namespace provides markup extensions which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Models" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Models namespace provides class models which may be used by several modules.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.ServiceInterfaces" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.ServiceInterfaces namespace provides interfaces for the services used by the modules so they can be used through dependency injection.</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure namespace provides auxiliary, base classes and interfaces which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Annotations" isDocumented="False" xmlns="" />
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Constants" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Constants namespace provides constants which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Controls" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Controls namespace provides controls which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.DataContainers" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.DataContainers namespace provides class models for holding and processing data which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Enums" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Enums namespace provides enumerators which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Helpers" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Helpers namespace provides helper classes which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.MarkupExtensions" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.MarkupExtensions namespace provides markup extensions which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.Models" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.Models namespace provides class models which may be used by several modules.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="TalkingKeyboard.Infrastructure.ServiceInterfaces" isDocumented="True" xmlns="">The Talkingkeyboard.Infrastructure.ServiceInterfaces namespace provides interfaces for the services used by the modules so they can be used through dependency injection.</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <ComponentConfigurations>
       <ComponentConfig id="API Token Resolution" enabled="True" xmlns="">
         <component id="API Token Resolution">{@TokenFiles}
 <replace elements="/*//token" item="string(.)" /></component>
       </ComponentConfig>
-<ComponentConfig id="IntelliSense Component" enabled="True" xmlns=""><component id="IntelliSense Component"><!-- Output options (optional)
+      <ComponentConfig id="IntelliSense Component" enabled="True" xmlns="">
+        <component id="IntelliSense Component">
+          <!-- Output options (optional)
   Attributes:
     Include namespaces (false by default)
     Namespaces comments filename ("Namespaces" if not specified or empty)
     Output folder (current folder if not specified or empty) -->
-<output includeNamespaces="false" namespacesFile="Namespaces" folder="{@OutputFolder}" /></component></ComponentConfig>
-<ComponentConfig id="Syntax Component" enabled="True" xmlns=""><component id="Syntax Component">
-  <syntax input="/document/reference" output="/document/syntax" renderReferenceLinks="true" />
-  <generators>
+          <output includeNamespaces="false" namespacesFile="Namespaces" folder="{@OutputFolder}" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="Syntax Component" enabled="True" xmlns="">
+        <component id="Syntax Component">
+          <syntax input="/document/reference" output="/document/syntax" renderReferenceLinks="true" />
+          <generators>
     {@SyntaxFilters}
 </generators>
-  <containerElement name="codeSnippetGroup" addNoExampleTabs="true" includeOnSingleSnippets="false" groupingEnabled="{@CodeSnippetGrouping}" />
-  <configurations>
-    <generator id="C#" />
-    <generator id="Visual Basic">
-      <includeLineContinuation value="false" />
-    </generator>
-    <generator id="Visual Basic Usage">
-      <includeLineContinuation value="false" />
-    </generator>
-    <generator id="Managed C++" />
-    <generator id="F#" />
-    <generator id="J#" />
-    <generator id="JScript" />
-    <generator id="JavaScript" />
-    <generator id="XAML Usage" />
-    <generator id="ASP.NET" />
-  </configurations>
-</component></ComponentConfig></ComponentConfigurations>
+          <containerElement name="codeSnippetGroup" addNoExampleTabs="true" includeOnSingleSnippets="false" groupingEnabled="{@CodeSnippetGrouping}" />
+          <configurations>
+            <generator id="C#" />
+            <generator id="Visual Basic">
+              <includeLineContinuation value="false" />
+            </generator>
+            <generator id="Visual Basic Usage">
+              <includeLineContinuation value="false" />
+            </generator>
+            <generator id="Managed C++" />
+            <generator id="F#" />
+            <generator id="J#" />
+            <generator id="JScript" />
+            <generator id="JavaScript" />
+            <generator id="XAML Usage" />
+            <generator id="ASP.NET" />
+          </configurations>
+        </component>
+      </ComponentConfig>
+    </ComponentConfigurations>
     <MissingTags>AutoDocumentCtors, AutoDocumentDispose</MissingTags>
     <RootNamespaceTitle>TalkingKeyboard</RootNamespaceTitle>
   </PropertyGroup>

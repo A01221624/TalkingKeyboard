@@ -1,0 +1,75 @@
+﻿<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" />
+    <script type="text/javascript" src="../scripts/branding.js"> </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>SuggestionService Class</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="SuggestionService class" />
+    <meta name="System.Keywords" content="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService class" />
+    <meta name="System.Keywords" content="SuggestionService class, about SuggestionService class" />
+    <meta name="Microsoft.Help.F1" content="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService" />
+    <meta name="Microsoft.Help.Id" content="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionService" />
+    <meta name="Description" content="Defines the SuggestionService class which provides suggestion services such as auto-complete." />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="BrandingAware" content="true" />
+    
+    <meta name="container" content="TalkingKeyboard.Modules.SuggestionsProvider" />
+    <meta name="file" content="6096e61e-1697-c349-f1ed-55ef45d5b683" />
+    <meta name="guid" content="6096e61e-1697-c349-f1ed-55ef45d5b683" />
+    
+    <link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/branding-Website.js"></script>
+  </head>
+  <body onload="OnLoad('cs')">
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <div class="pageHeader" id="PageHeader">TalkingKeyboard Documentation<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div>
+    <div class="pageBody">
+      <div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="23e36c4b-928c-6f79-5643-2a36e4d0ff31.htm" title="TalkingKeyboard Documentation" tocid="roottoc">TalkingKeyboard Documentation</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="23e36c4b-928c-6f79-5643-2a36e4d0ff31.htm" title="TalkingKeyboard" tocid="23e36c4b-928c-6f79-5643-2a36e4d0ff31">TalkingKeyboard</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="c5a8262c-254a-111b-d3f2-816819b0b745.htm" title="TalkingKeyboard.Modules Namespaces" tocid="c5a8262c-254a-111b-d3f2-816819b0b745">TalkingKeyboard.Modules Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="d873cc07-b124-a804-252b-0936af04fa93.htm" title="TalkingKeyboard.Modules.SuggestionsProvider Namespaces" tocid="d873cc07-b124-a804-252b-0936af04fa93">TalkingKeyboard.Modules.SuggestionsProvider Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="79400253-d60b-651c-52f2-9d623611b505.htm" title="TalkingKeyboard.Modules.SuggestionsProvider" tocid="79400253-d60b-651c-52f2-9d623611b505">TalkingKeyboard.Modules.SuggestionsProvider</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="6096e61e-1697-c349-f1ed-55ef45d5b683.htm" title="SuggestionService Class" tocid="6096e61e-1697-c349-f1ed-55ef45d5b683">SuggestionService Class</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="bf6895b2-1c07-b7af-cec5-06c3951814db.htm" title="SuggestionService Constructor " tocid="bf6895b2-1c07-b7af-cec5-06c3951814db">SuggestionService Constructor </a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="177f8d5a-f89a-71c7-cf5e-d84ee9c7d69d.htm" title="SuggestionService Properties" tocid="177f8d5a-f89a-71c7-cf5e-d84ee9c7d69d">SuggestionService Properties</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="452450e2-9ab3-7973-47ce-6e784294c0fd.htm" title="SuggestionService Methods" tocid="452450e2-9ab3-7973-47ce-6e784294c0fd">SuggestionService Methods</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent">
+        <table class="titleTable">
+          <tr>
+            <td class="titleColumn">SuggestionService Class</td>
+          </tr>
+        </table>
+        <span class="introStyle"></span>
+        <div class="summary">
+                Defines the SuggestionService class which provides suggestion services such as auto-complete.
+            </div>
+        <div class="collapsibleAreaRegion">
+          <span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0">
+            <img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Inheritance Hierarchy</span>
+        </div>
+        <div id="ID0RBSection" class="collapsibleSection">
+          <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">System<span id="LSTAAEC689D_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTAAEC689D_0?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Object</a>
+          <br />  <span class="selflink">TalkingKeyboard.Modules.SuggestionsProvider<span id="LSTAAEC689D_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTAAEC689D_1?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>SuggestionService</span><br /></div>
+        <p> </p>
+        <strong>Namespace:</strong> <a href="79400253-d60b-651c-52f2-9d623611b505.htm">TalkingKeyboard.Modules.SuggestionsProvider</a><br /><strong>Assembly:</strong> TalkingKeyboard.Modules.SuggestionsProvider (in TalkingKeyboard.Modules.SuggestionsProvider.dll) Version: 1.0.0.0 (1.0.0.0)<p>The <span class="selflink">SuggestionService</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Constructors</span></div><div id="ID1RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="bf6895b2-1c07-b7af-cec5-06c3951814db.htm">SuggestionService</a></td><td><div class="summary">
+                Initializes a new instance of the <span class="selflink">SuggestionService</span> class.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID2RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="d1ef6757-d136-f03f-b23a-97eb47886f15.htm">WriteSuggestionCommand</a></td><td><div class="summary">
+                Gets or sets the command for adding a suggestion.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID3RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="d91f6325-9e2f-1a3f-c268-e2850a6845f3.htm">AddMultiCharacterText</a></td><td><div class="summary">
+                Adds a multi-character to the buffer.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="aee94282-ded0-34c0-8a69-f102f21dca43.htm">ClearMultiCharacterBuffer</a></td><td><div class="summary">
+                Clears the multi character buffer.
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/bsc2ak47" target="_blank">Equals</a></td><td><div class="summary">Determines whether the specified object is equal to the current object.</div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/4k87zsw7" target="_blank">Finalize</a></td><td><div class="summary">Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/zdee4b3y" target="_blank">GetHashCode</a></td><td><div class="summary">Serves as the default hash function. </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/dfwy45w9" target="_blank">GetType</a></td><td><div class="summary">Gets the <a href="http://msdn2.microsoft.com/en-us/library/42892f65" target="_blank">Type</a> of the current instance.</div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/57ctke0a" target="_blank">MemberwiseClone</a></td><td><div class="summary">Creates a shallow copy of the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.</div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="91457959-8578-6353-c979-0c1973076688.htm">ProvideMultiCharacterSuggestions</a></td><td><div class="summary">
+                Provides suggestions according to the multi-key buffer.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="cf967880-9948-8b22-2cbc-e69a80b961a7.htm">ProvideSuggestions</a></td><td><div class="summary">
+                Gets the suggestions based on the current text.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="d119421b-47c2-4457-7b05-6f3921e848f0.htm">RemoveLastMultiCharacter</a></td><td><div class="summary">
+                Removes the last multi-character from the buffer.
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/7bxwbwt2" target="_blank">ToString</a></td><td><div class="summary">Returns a string that represents the current object.</div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID4RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="79400253-d60b-651c-52f2-9d623611b505.htm">TalkingKeyboard.Modules.SuggestionsProvider Namespace</a></div></div></div>
+    </div>
+    <div id="pageFooter" class="pageFooter">
+      <p>Copyright 2016 Fernando Ramírez Garibay</p> </div>
+  </body>
+</html>

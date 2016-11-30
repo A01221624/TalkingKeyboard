@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="a27e68de-9f39-4dd3-8ce4-499f39f4f217" Title="TalkingKeyboard" Url="html/23e36c4b-928c-6f79-5643-2a36e4d0ff31.htm">
+    <HelpTOCNode Id="ca0ec11e-3bdd-46a8-b98c-27c0efcac53d" Title="TalkingKeyboard.Infrastructure Namespaces" Url="html/2b786622-5093-761c-dcb8-4c7645ff203b.htm">
+      <HelpTOCNode Id="0dcd6732-7451-4383-869a-7be6367b59c3" Title="TalkingKeyboard.Infrastructure" Url="html/286db7cf-14fe-233d-c793-391d960cf449.htm">
+        <HelpTOCNode Id="38645a94-515c-41bd-82ef-486654fb1fb8" Title="Commands Class" Url="html/00f750a0-4985-ff18-f285-97c6f31a769a.htm">
+          <HelpTOCNode Id="575816f0-2da3-4679-8878-7f5473aca588" Title="Commands Properties" Url="html/67f3e6c6-21fa-d166-d49b-962809d540bb.htm">
+            <HelpTOCNode Title="AddMultiCharacterTextCommand Property " Url="html/40383bac-5f72-d972-af35-7aa532785cf8.htm" />
+            <HelpTOCNode Title="AppendTextCommand Property " Url="html/8602c120-e2c0-5b27-2d50-7063a4d35e69.htm" />
+            <HelpTOCNode Title="RemoveLastCharacterCommand Property " Url="html/fe90df4c-8238-a973-124c-8969a4252f63.htm" />
+            <HelpTOCNode Title="RemoveLastMultiCharacterCommand Property " Url="html/36c893c4-e5ec-f8d9-e5c5-be237e11afd8.htm" />
+            <HelpTOCNode Title="RemoveLastWordCommand Property " Url="html/2dd351b4-20c1-6a08-15ac-2a9b4eee6329.htm" />
+            <HelpTOCNode Title="SetShiftDownCommand Property " Url="html/64aaa46d-f290-93e8-47b2-284869b7f5dd.htm" />
+            <HelpTOCNode Title="SpeechSynthesisCommand Property " Url="html/523feb4f-e731-5fcf-90a5-993962d89408.htm" />
+            <HelpTOCNode Title="ToggleShiftDownCommand Property " Url="html/add3002f-6641-1164-6bbb-8481079031ef.htm" />
+            <HelpTOCNode Title="WriteSuggestionCommand Property " Url="html/ae75d03f-7764-668f-bdf3-ee7e4e88ac62.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="17126f48-ee87-4936-a1d7-5db75e9ffba7" Title="Configuration Class" Url="html/1fb0914d-fd25-8b49-5652-22b870f76842.htm">
+          <HelpTOCNode Id="16c5697f-5c4f-4502-8ce0-5d2efbc27b1d" Title="Configuration Properties" Url="html/724c39a9-3ed4-2123-4992-f0bb259daf28.htm">
+            <HelpTOCNode Title="DefaultDictionaryFilePath Property " Url="html/4b489894-2878-2f1b-8e01-3e2aa59b8bec.htm" />
+            <HelpTOCNode Title="GazeKeepAliveTimeSpan Property " Url="html/b6f65867-f33a-35cc-73a5-b68e3d103107.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeAnimationBegins Property " Url="html/1c0f8ad9-53cf-8893-c2fe-5012c9b96747.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeCooldownOccurs Property " Url="html/69706ef3-287c-6b91-882c-571a797452a0.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeSelectionOccurs Property " Url="html/1dc3957b-188e-c7d4-5e60-56c7d33dd1cc.htm" />
+            <HelpTOCNode Title="InitialRequiredGazeTime Property " Url="html/b3b160c4-a0dc-4b2f-6cfe-5c716f3d595a.htm" />
+            <HelpTOCNode Title="PointKeepAliveTimeSpan Property " Url="html/3028c0cb-b833-1eba-f20c-2f38eba4e695.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="ff9c3068-421f-4dc1-8a0c-e12d7b851adf" Title="Events Class" Url="html/cebefeae-293f-bc73-8c54-937f6f935560.htm">
+          <HelpTOCNode Title="Events Constructor " Url="html/9e084271-6f12-881f-4175-884852eafc9c.htm" />
+          <HelpTOCNode Title="Events Methods" Url="html/1ef1a22d-9ecd-cdb5-1406-3db87a52c0de.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f180ec8d-40e0-4eff-b4a2-5900af1c1697" Title="Events.MultiTextUpdatedEvent Class" Url="html/42d5444d-b7ba-05cf-6b95-50064a5fb632.htm">
+          <HelpTOCNode Title="Events.MultiTextUpdatedEvent Constructor " Url="html/9bc416ee-f20c-7554-6c97-ca1616cbc07f.htm" />
+          <HelpTOCNode Title="MultiTextUpdatedEvent Properties" Url="html/45b7c981-9949-de0f-fd50-857d61b7c277.htm" />
+          <HelpTOCNode Title="MultiTextUpdatedEvent Methods" Url="html/b2c1cd55-fe03-466a-fda1-2ec42121fb44.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="12fbd579-3ac6-4b52-9442-94a768c6b521" Title="Events.NewCoordinateEvent Class" Url="html/a6986065-6556-1d20-e11a-bc73fc4606eb.htm">
+          <HelpTOCNode Title="Events.NewCoordinateEvent Constructor " Url="html/a0743fec-cb2d-28d1-47cd-0f2c19915462.htm" />
+          <HelpTOCNode Title="NewCoordinateEvent Properties" Url="html/70d45c83-6cc1-667f-9234-5f7b1e57c52e.htm" />
+          <HelpTOCNode Title="NewCoordinateEvent Methods" Url="html/27b0d3e6-45cb-2c46-7d6e-8500fa957a0c.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="3cf37206-39f8-45bf-a43c-7255485d7ec9" Title="Events.TextUpdatedEvent Class" Url="html/40f64f3c-bea0-d368-169d-a567be8d5c1f.htm">
+          <HelpTOCNode Title="Events.TextUpdatedEvent Constructor " Url="html/4170e856-d3a5-5ed5-8b67-edbb407a0ff1.htm" />
+          <HelpTOCNode Title="TextUpdatedEvent Properties" Url="html/a20661e0-73f2-4bae-5a98-f6193ed52552.htm" />
+          <HelpTOCNode Title="TextUpdatedEvent Methods" Url="html/36c75e3d-d342-bb7a-a772-0715a362d0ac.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="85f98d66-c90d-498f-80d8-3a76134a110f" Title="TalkingKeyboard.Infrastructure.Constants" Url="html/71cc544a-e5c8-af40-1a07-3b749ad85438.htm">
+        <HelpTOCNode Id="10af095c-115a-462d-86de-e9fd29d101c5" Title="CharacterClasses Class" Url="html/48bcb2a0-b912-b67e-7f85-b014f548d437.htm">
+          <HelpTOCNode Id="0b2c0381-00fd-4701-848a-1f03bf4b3aa6" Title="CharacterClasses Properties" Url="html/472416e9-cee7-ce6c-652f-b8a582c4149f.htm">
+            <HelpTOCNode Title="AccentLookup Property " Url="html/5993268c-5bf7-8fd3-d758-18ad52f02d32.htm" />
+            <HelpTOCNode Title="Accents Property " Url="html/5d1c0de0-04dd-a983-0fc8-966e1aa5f804.htm" />
+            <HelpTOCNode Title="ClosingCharacters Property " Url="html/d2c9808f-c542-7dc5-6dba-c2f41422ff0b.htm" />
+            <HelpTOCNode Title="ColonsAndCommas Property " Url="html/81301af0-3ccd-a74e-248a-697512a8f58d.htm" />
+            <HelpTOCNode Title="FollowedByUppercase Property " Url="html/67395a4c-9538-fecf-c547-d07bb9fda0e7.htm" />
+            <HelpTOCNode Title="PrecededByNonwhitespaceFollowedByWhitespace Property " Url="html/5bbfe028-b01d-ba6f-a353-83caa25c4011.htm" />
+            <HelpTOCNode Title="Whitespace Property " Url="html/d6c815f6-058c-045b-5a54-95b7db148737.htm" />
+            <HelpTOCNode Title="WordSeparators Property " Url="html/7c5dd27e-ce57-bbfd-9d00-1726fd624406.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="034a2849-5129-4155-84e7-44a2ec5ca838" Title="RegionNames Class" Url="html/e958f2d1-8949-1714-f304-e4ff2f71ae99.htm">
+          <HelpTOCNode Id="3e26dbda-23c4-4392-aa21-9f016ec2787b" Title="RegionNames Properties" Url="html/3ae0aca2-b594-f8f3-e80e-b51a5c565bcb.htm">
+            <HelpTOCNode Title="BoardViewRegion Property " Url="html/9caefb40-b7a2-254c-6e37-dc7740db9e8f.htm" />
+            <HelpTOCNode Title="SuggestionRegion Property " Url="html/753954f1-b85d-4106-15e0-2b705423c2a8.htm" />
+            <HelpTOCNode Title="TextViewRegion Property " Url="html/c7df6986-775f-e1e2-dd83-74405a8c6d34.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="ee2785f0-a2f5-47d9-9397-89fcbdf0d450" Title="ResourceLocations Class" Url="html/238ff06d-8033-52cf-30c1-049694815ef0.htm">
+          <HelpTOCNode Id="74c8cc62-3aef-4b6f-851a-7e61a61cf178" Title="ResourceLocations Properties" Url="html/875bad85-6cfa-558e-6407-e8f951dc9282.htm">
+            <HelpTOCNode Title="DefaultDictionaryLocation Property " Url="html/e8fba160-eadf-b0c2-54d6-cf7c9f568b34.htm" />
+            <HelpTOCNode Title="SpanishDictionaryLocation Property " Url="html/4ced68bc-52dd-6ce3-3996-a9776e457afd.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="baa83413-015a-4d50-9775-efc6664ab423" Title="ViewNames Class" Url="html/e968ff82-d673-e3be-8ba6-f590cbcf75f6.htm">
+          <HelpTOCNode Id="1d1101c7-09b8-4df4-9069-7201e1c29b76" Title="ViewNames Properties" Url="html/7ce14b3d-5eb7-fbe3-9a8c-418961844995.htm">
+            <HelpTOCNode Title="QwertySpanishMultiKeyboard Property " Url="html/4e0bbd5c-c175-be2e-5efb-32d38adf72fb.htm" />
+            <HelpTOCNode Title="QwertySpanishSingleKeyboard Property " Url="html/454b7a51-f45b-72d3-0f66-f80c386bdf28.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c61a2b6c-7346-4667-ae67-9aab923963f2" Title="TalkingKeyboard.Infrastructure.Controls" Url="html/48cabd92-d85a-4d63-d123-4a409107e79c.htm">
+        <HelpTOCNode Id="9f62d28b-1f6a-4f07-8da8-269c9168c3cc" Title="ISelectableControlViewModel Interface" Url="html/c8790639-e772-55b1-1b5c-4db68ac21b6d.htm">
+          <HelpTOCNode Id="4a952808-c4c1-4f48-acc7-df99a3053761" Title="ISelectableControlViewModel Properties" Url="html/18ca8861-ebf3-4da8-e55b-4875951dc391.htm">
+            <HelpTOCNode Title="Animation Property " Url="html/e679a0e4-2a7f-f08d-363f-1b9182d9039a.htm" />
+            <HelpTOCNode Title="CurrentGazeTimeSpan Property " Url="html/1d8a0b14-a2e7-940e-f9e5-72421d8654c0.htm" />
+            <HelpTOCNode Title="GazeKeepAliveTimeSpan Property " Url="html/bf6427e8-68b5-e7fb-f549-55da1c9e6f4c.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeAnimationBegins Property " Url="html/724103f6-3e84-008f-2f36-7abdde38c3fd.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeCooldown Property " Url="html/ebfbe3ee-1d62-2c8a-deac-570dabdfebb7.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeSelectionOccurs Property " Url="html/b21a1757-5b3c-4beb-b22e-62d64ff3023f.htm" />
+            <HelpTOCNode Title="LastSeenTime Property " Url="html/51acdadc-a3c7-18d9-84e5-7be418009820.htm" />
+            <HelpTOCNode Title="LastSelectedTime Property " Url="html/ebe3fdf8-a1c4-4ec1-66c9-dfc6860990d8.htm" />
+            <HelpTOCNode Title="State Property " Url="html/c0df5c96-b062-823b-d278-d99f1c61060f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0d9a5dc9-bbc2-44d5-b7d7-dfa703c46b34" Title="ISelectableControlViewModel Methods" Url="html/d423648d-d3e7-543a-a190-e45f7aa15859.htm">
+            <HelpTOCNode Title="Select Method " Url="html/3ac82892-10e2-bf1e-ee40-c0892b512671.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="e0ceb514-0a28-4185-a092-fd661d60af21" Title="ITextModel Interface" Url="html/a442dc5f-42a4-470b-a5e5-b111d81240cf.htm">
+          <HelpTOCNode Id="64c17643-a8e5-4848-9255-aac16e1530d4" Title="ITextModel Properties" Url="html/11458566-338e-a88a-3cb7-b4432a65159b.htm">
+            <HelpTOCNode Title="CurrentText Property " Url="html/c53458c2-d453-c1dc-3981-7ce7bae4dc45.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="dd52bef1-d0f2-4a23-beec-c7276463cf70" Title="SelectableButton Class" Url="html/683ce8a9-fbb7-0220-a81d-479367a3cfb5.htm">
+          <HelpTOCNode Title="SelectableButton Constructor " Url="html/54e614b2-9eee-22cc-545b-24d5eb1abf0e.htm" />
+          <HelpTOCNode Id="0ec50bbe-3c5e-412a-aff4-8feb562a2b7e" Title="SelectableButton Properties" Url="html/bc5567e7-99e9-5bf7-da7c-4929efcee686.htm">
+            <HelpTOCNode Title="FontSize Property " Url="html/8ac06381-6572-4ccc-ea3b-451577e347a3.htm" />
+            <HelpTOCNode Title="Text Property " Url="html/05c84dfe-b275-7795-d507-3173c03e090f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="b3962e77-46bc-4ce4-aae1-c247d0c1ac06" Title="SelectableButton Methods" Url="html/7122f40b-5b8a-cdf0-3087-4606773433af.htm">
+            <HelpTOCNode Title="InitializeComponent Method " Url="html/37780fe6-2032-dfe3-d75c-6ac5d360679c.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="SelectableButton Events" Url="html/bf4470c7-2d04-c5e6-828c-57d9e77b9fa8.htm" />
+          <HelpTOCNode Id="0992bf73-535c-4cf9-b709-aaaadf1987bf" Title="SelectableButton Fields" Url="html/457ae349-ab3d-5925-a094-0f5d00e8226b.htm">
+            <HelpTOCNode Title="FontSizeProperty Field" Url="html/9a58b795-2489-3700-cf45-5e2a2735ff7d.htm" />
+            <HelpTOCNode Title="TextProperty Field" Url="html/312bbd09-e23a-c53f-4306-3cccaf24ddc4.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="c05e6cfe-9476-4969-86ef-e6cb79364190" Title="SelectableButtonViewModel Class" Url="html/d2b7f69e-55a6-f3aa-72e7-8a9a1501b37e.htm">
+          <HelpTOCNode Title="SelectableButtonViewModel Constructor " Url="html/e33ef67b-8336-3768-4319-8aee2ee2f833.htm" />
+          <HelpTOCNode Id="ee7cb114-6ad6-4f3d-8072-f78cea06364c" Title="SelectableButtonViewModel Properties" Url="html/ece96dd5-ad9f-4771-da57-e6500f2e600a.htm">
+            <HelpTOCNode Title="Animation Property " Url="html/5a9aa44b-acd3-321b-c4fc-e703e3ed5d93.htm" />
+            <HelpTOCNode Title="AnimationBeginTime Property " Url="html/f8cf0acc-5c7e-1cb4-af7b-fc4b71f4bf84.htm" />
+            <HelpTOCNode Title="AnimationEndTime Property " Url="html/37862f50-e676-329a-16d0-af8a2b78e332.htm" />
+            <HelpTOCNode Title="ButtonText Property " Url="html/da1cce22-0f58-a105-c05f-800bb94f1867.htm" />
+            <HelpTOCNode Title="Command Property " Url="html/f5bfcd38-f336-198c-a1d6-77d4202d7814.htm" />
+            <HelpTOCNode Title="CommandParameter Property " Url="html/954972e7-3f1d-6610-3df6-c956b0bc8cfd.htm" />
+            <HelpTOCNode Title="CommandTarget Property " Url="html/deb93759-558e-4856-d0e2-a86a8f28be65.htm" />
+            <HelpTOCNode Title="CurrentGazeTimeSpan Property " Url="html/94c9688a-bb4f-0910-56f1-b34d294291d3.htm" />
+            <HelpTOCNode Title="FontSize Property " Url="html/303a273b-d428-a2a3-9bc3-cab519fe4cf2.htm" />
+            <HelpTOCNode Title="GazeKeepAliveTimeSpan Property " Url="html/373d326b-36af-1033-f1a5-f705ec427f66.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeAnimationBegins Property " Url="html/91b1a353-8faf-6dd1-823f-bc6f5c17c02e.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeCooldown Property " Url="html/ac3d6e8e-fdd0-a0d3-e11c-363fa8cc9dab.htm" />
+            <HelpTOCNode Title="GazeTimeSpanBeforeSelectionOccurs Property " Url="html/b28fc6b5-9e9b-7f76-866f-b9eb936035bc.htm" />
+            <HelpTOCNode Title="LastSeenTime Property " Url="html/a9ff5646-73a7-3c87-fabc-c921cbb0159f.htm" />
+            <HelpTOCNode Title="LastSelectedTime Property " Url="html/fe16ba7e-5de8-2232-be3f-5f4a8700182a.htm" />
+            <HelpTOCNode Title="State Property " Url="html/2ac74ae2-e67d-9ee0-c19a-18a80ea53c14.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="50444e55-b21a-4066-a710-05ac654b6d2b" Title="SelectableButtonViewModel Methods" Url="html/bf4b3ec8-1387-62f7-cc59-75637a228b8b.htm">
+            <HelpTOCNode Title="OnPropertyChanged Method " Url="html/6c877bdf-cca3-89ad-591b-cc588c409501.htm" />
+            <HelpTOCNode Title="Select Method " Url="html/bcdc51ee-4b3a-4903-ffa9-d5b7c6dc588e.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0e3cb994-cbbe-40b7-9c8d-190cca3f573a" Title="SelectableButtonViewModel Events" Url="html/39371b39-58ef-fd1b-cb00-bd01402b6ee9.htm">
+            <HelpTOCNode Title="PropertyChanged Event" Url="html/ce841211-0eb2-a25f-b0ce-9108f90a5dca.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="656b4d2b-aec8-461a-9716-c60e0405944a" Title="SelectableControl Class" Url="html/baece89b-65e1-dafa-93e1-3a41a8c980d4.htm">
+          <HelpTOCNode Title="SelectableControl Constructor " Url="html/49d69a1c-0024-3589-a32e-37282b6e75e4.htm" />
+          <HelpTOCNode Id="8e8fa436-76b5-4e49-ace4-3bc4f09b6efd" Title="SelectableControl Properties" Url="html/1a01512d-248c-e715-4480-3d50cb706767.htm">
+            <HelpTOCNode Title="Animation Property " Url="html/c65ef4c3-2ff4-2471-078b-d7fb35a7cdf1.htm" />
+            <HelpTOCNode Title="Command Property " Url="html/de751d78-a437-e890-2e52-3fd19feb2f02.htm" />
+            <HelpTOCNode Title="CommandParameter Property " Url="html/36cef0a3-a6fc-a8c3-96f0-c7d794c599ab.htm" />
+            <HelpTOCNode Title="CommandTarget Property " Url="html/f9a53812-40e5-33b7-a161-b26267e08e69.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="18a3f174-c0f4-4e15-9022-9a30309076d7" Title="SelectableControl Methods" Url="html/28c8b268-5f60-1c86-6e44-4ae1083a9e05.htm">
+            <HelpTOCNode Title="CompareTo Method " Url="html/69bc8be6-6cfc-7e4d-ba17-71bf76b771f6.htm" />
+            <HelpTOCNode Title="PauseAnimation Method " Url="html/e9e60703-63f2-d699-2e35-4b81d4613571.htm" />
+            <HelpTOCNode Title="PlayAnimation Method " Url="html/bef62337-7198-05a4-06f0-f1de277eb6be.htm" />
+            <HelpTOCNode Title="ResumeAnimation Method " Url="html/05431361-a4f1-cd28-b7cd-e54108f36d67.htm" />
+            <HelpTOCNode Title="Select Method " Url="html/c38c40e7-1687-18bf-bdd4-260aa8ac8831.htm" />
+            <HelpTOCNode Title="StopAnimation Method " Url="html/3311c9cf-68fe-1643-aad4-42106e2e4b27.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="SelectableControl Events" Url="html/e45d42f6-a90c-85bc-7b75-dcdf6f7e943a.htm" />
+          <HelpTOCNode Id="e79ba3c7-ec89-459b-b070-3a5f653cbee9" Title="SelectableControl Fields" Url="html/8887fa03-e488-dc90-2d94-20a0c37cb2de.htm">
+            <HelpTOCNode Title="AnimationProperty Field" Url="html/33e2969f-192b-ae55-8147-018daaa3d01b.htm" />
+            <HelpTOCNode Title="CommandParameterProperty Field" Url="html/2df226ce-be73-11f3-f88a-cb8ac1fddf21.htm" />
+            <HelpTOCNode Title="CommandProperty Field" Url="html/e2db5cf6-9da7-5adb-3b8a-c267fa358b17.htm" />
+            <HelpTOCNode Title="CommandTargetProperty Field" Url="html/cb23ec49-03ee-a989-ac8f-334b41cf00b8.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="abec2847-513d-4e04-85d5-19c1d33f7cbc" Title="TalkingKeyboard.Infrastructure.DataContainers" Url="html/487a65bb-1c70-ec99-8a85-e1f7cccedd66.htm">
+        <HelpTOCNode Id="c128644a-f495-47f1-aef8-f13276adce74" Title="IMaintainable Interface" Url="html/8be10029-4324-9c9b-c0a0-6d7b8ecceef2.htm">
+          <HelpTOCNode Id="9b7a0b06-c37a-47c3-936a-7e868e57b810" Title="IMaintainable Methods" Url="html/f104f382-377f-8285-9d82-d9bf1995a3de.htm">
+            <HelpTOCNode Title="Maintain Method " Url="html/dda78fed-a47c-88f1-3def-0270b9aa152b.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="4433397f-e6f6-416e-9c40-79016ca367c3" Title="MaintainablePointCollection(T1, T2) Class" Url="html/eb048185-24a9-b629-ed3d-851e7ff3c443.htm">
+          <HelpTOCNode Id="222eb655-c3c0-4bcb-a85e-9a8dc79344f4" Title="MaintainablePointCollection(T1, T2) Constructor " Url="html/cdff0a70-8d0f-1ca3-ed27-42a24bd7b91e.htm">
+            <HelpTOCNode Title="MaintainablePointCollection(T1, T2) Constructor " Url="html/a0c0cd86-5236-3338-94cd-d3c089f0f584.htm" />
+            <HelpTOCNode Title="MaintainablePointCollection(T1, T2) Constructor (TimeSpan)" Url="html/b01cb2fa-6a24-f17e-02cb-1535aeb00a65.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3f2ddfa7-6538-4b44-866a-522b9dc32f4d" Title="MaintainablePointCollection(T1, T2) Properties" Url="html/f4e97a54-0df3-4258-5f90-a87ee0d32047.htm">
+            <HelpTOCNode Title="LastMaintainedTime Property " Url="html/e3f7874a-d638-8f01-1ceb-62155df37226.htm" />
+            <HelpTOCNode Title="PointKeepAliveTimeSpan Property " Url="html/60010a64-0792-375a-1f82-52796e97dc98.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4728c83a-c641-46e7-9a0c-c923ee54330b" Title="MaintainablePointCollection(T1, T2) Methods" Url="html/ad614cff-501c-c725-c115-d19d7560efd1.htm">
+            <HelpTOCNode Title="AddPoint Method " Url="html/805f2c98-a3bd-438c-dcfe-47c5c508715c.htm" />
+            <HelpTOCNode Title="Maintain Method " Url="html/fcb97a78-4b19-83a5-5b03-164e59203385.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3ed90889-a3cb-4f39-bef2-145164b0c286" Title="TimedControlsWithPoint Class" Url="html/65bb0865-5f58-a5ef-deff-be20131e43bc.htm">
+          <HelpTOCNode Title="TimedControlsWithPoint Constructor " Url="html/293f1310-f2ed-1fd1-9bbb-5ea376b2f2df.htm" />
+          <HelpTOCNode Title="TimedControlsWithPoint Properties" Url="html/0f2ecee4-a0ad-cf3e-3dcf-88cb719326f4.htm" />
+          <HelpTOCNode Id="52775aea-cb2e-4599-b81d-61f2e9252061" Title="TimedControlsWithPoint Methods" Url="html/cf769a3f-bd47-682d-0b04-07a65c1396f8.htm">
+            <HelpTOCNode Title="AddPoint Method " Url="html/3cab97bd-d13e-6438-9f52-69dd51960067.htm" />
+            <HelpTOCNode Title="Maintain Method " Url="html/2565168a-5b2b-bda3-764e-0c82dd604f93.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="695d37ab-c2db-4fe0-af56-7bec1bdc369b" Title="TimedPoints Class" Url="html/ba2e1329-5d9a-ee31-4c28-f93f289b6651.htm">
+          <HelpTOCNode Title="TimedPoints Constructor " Url="html/eeffdbbc-a694-d48e-95da-1dd60c3f3104.htm" />
+          <HelpTOCNode Title="TimedPoints Properties" Url="html/6fb04a1f-7ef2-4645-adb3-5f06e528a1c2.htm" />
+          <HelpTOCNode Id="4889d60c-f72b-4ee3-bb0d-0e5b9c1aec33" Title="TimedPoints Methods" Url="html/07cf5f5d-77cb-9101-96a6-612df5d9e11f.htm">
+            <HelpTOCNode Title="AddPoint Method " Url="html/3bc1097d-1d82-00bd-75ef-2a0ec273f714.htm" />
+            <HelpTOCNode Title="Maintain Method " Url="html/fc822ae7-349e-fdc7-830d-4d168a77eefe.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="95b1fce9-2044-4b7d-8feb-68069a10e8a2" Title="TimePointPair Class" Url="html/5d572ab3-0c0d-a0d6-cba1-953a13c0b560.htm">
+          <HelpTOCNode Id="03ba69a9-acd6-4842-ab73-fe4cf312b58c" Title="TimePointPair Constructor " Url="html/efc23da3-ce28-f147-479b-f9136ea2a2a6.htm">
+            <HelpTOCNode Title="TimePointPair Constructor (Point)" Url="html/9afcaf36-9816-d573-7418-172dbacf3dca.htm" />
+            <HelpTOCNode Title="TimePointPair Constructor (DateTime, Point)" Url="html/12aac541-49a6-b5f5-5b51-4138e60b6eea.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ccbdd367-0acb-49cc-8647-15f97afab61f" Title="TimePointPair Properties" Url="html/3880051a-e968-fa2a-73dc-91d96cfa9ec0.htm">
+            <HelpTOCNode Title="Point Property " Url="html/0b75dacc-6cac-f24e-8982-a0fd537a679a.htm" />
+            <HelpTOCNode Title="Time Property " Url="html/1b807833-4830-99a5-45cb-e7e0fffd11f4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="TimePointPair Methods" Url="html/567c1038-f73f-6c58-8f4c-a36cc320be9f.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b05473a3-70de-48bd-a02a-05a4d54cc6a1" Title="TalkingKeyboard.Infrastructure.Enums" Url="html/02014a59-e93b-60d5-3f2b-a61b0bff5649.htm">
+        <HelpTOCNode Title="SelectableState Enumeration" Url="html/dd83c2b5-9a88-19bc-9973-d7c3941b48cc.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="213950c9-e480-4e9e-9f56-d20f282c410a" Title="TalkingKeyboard.Infrastructure.Helpers" Url="html/b9281d5a-fec4-881d-bac9-b57157bad4a0.htm">
+        <HelpTOCNode Id="fbad2b98-288e-44ca-8bba-ea26551df48b" Title="HitTestHelper Class" Url="html/9a7946bd-a730-6781-276d-ecfc9375f78f.htm">
+          <HelpTOCNode Id="eef4a63c-7a71-4137-9e29-ad086168d712" Title="HitTestHelper Methods" Url="html/36860c07-b9f9-45e2-4a65-bfb95c4d37d6.htm">
+            <HelpTOCNode Title="FindSelectableControlSeen Method " Url="html/43837077-e90e-4e79-2ecd-ecfd076d8fba.htm" />
+            <HelpTOCNode Title="SelectableControlUnderPoint Method " Url="html/00345e13-7aa6-d0ad-ea20-7e7d45a76a00.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="f61d912d-194d-498e-a1fa-cc75e308d204" Title="StringEditHelper Class" Url="html/81106df6-65f5-0f35-1dd6-632880fbb50e.htm">
+          <HelpTOCNode Id="05b76a3c-3f09-4918-b704-ad5e9e3ae83e" Title="StringEditHelper Methods" Url="html/c1bd2cea-c854-e5ea-d0fa-459d1524858c.htm">
+            <HelpTOCNode Title="ConvertToDefaultEncodingFromUtf8 Method " Url="html/19499663-746a-bcb9-107f-fd49654b8684.htm" />
+            <HelpTOCNode Title="ConvertToUtf8FromDefaultEncoding Method " Url="html/9002df4f-99e6-3434-a067-55d021f179e5.htm" />
+            <HelpTOCNode Title="GetLastWord Method " Url="html/48de14aa-cc59-80ec-8484-344b22b58003.htm" />
+            <HelpTOCNode Title="RemoveLastWord Method " Url="html/e5010746-f66c-e928-7245-13839f06d150.htm" />
+            <HelpTOCNode Title="SplitStringPrefixAndLastWord Method " Url="html/faa66eb9-911c-92fd-51dc-454b26fa1f38.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="010c613f-604e-46c6-92fa-be21adb1fd00" Title="TalkingKeyboard.Infrastructure.MarkupExtensions" Url="html/e0a1d0a2-7857-b4d2-62ec-5c8ec35ab950.htm">
+        <HelpTOCNode Id="dd077c35-f236-4436-b476-2bcdda4aa7eb" Title="SwitchBindingExtension Class" Url="html/855647da-251e-808c-ed10-3cc847afa8d4.htm">
+          <HelpTOCNode Id="ac816ee1-a6bb-4f6d-9881-521d9dc12042" Title="SwitchBindingExtension Constructor " Url="html/797ca62f-ee6e-37be-62ac-3b29b32215fc.htm">
+            <HelpTOCNode Title="SwitchBindingExtension Constructor " Url="html/93dd36f7-0764-438e-ea88-2601cd85c4da.htm" />
+            <HelpTOCNode Title="SwitchBindingExtension Constructor (String)" Url="html/3857d09e-7b50-4102-83c6-ea082ae75fce.htm" />
+            <HelpTOCNode Title="SwitchBindingExtension Constructor (String, Object, Object)" Url="html/e9623444-5256-4a0f-dfd2-624cf5bd9547.htm" />
+            <HelpTOCNode Title="SwitchBindingExtension Constructor (RelativeSource, String, Object, Object)" Url="html/6e70f226-42b9-6e19-20cd-76f9a4af2b61.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1d18298c-dd42-4aeb-9232-abef639834c9" Title="SwitchBindingExtension Properties" Url="html/2345a21a-f7d3-9006-3ed3-5c9d603d6691.htm">
+            <HelpTOCNode Title="ValueIfFalse Property " Url="html/a215d86f-5378-6019-8a31-a94aa3fc8e4f.htm" />
+            <HelpTOCNode Title="ValueIfTrue Property " Url="html/29809e97-2b07-2337-5b69-44ee344d82f1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="SwitchBindingExtension Methods" Url="html/5dc27e5a-b464-c03c-5718-45fd66f7547d.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f94d9d35-4cb5-483d-916b-fc13956cbb84" Title="TalkingKeyboard.Infrastructure.Models" Url="html/0888f636-fba4-b2e0-3ddb-b5897fe57c08.htm">
+        <HelpTOCNode Id="0265d7b2-e7a6-46cd-9ebb-b7f5d75c19e2" Title="IMultiKeyTextModel Interface" Url="html/bc4fb0bd-0795-9485-9317-f0b1d61ed537.htm">
+          <HelpTOCNode Id="6571af33-6b69-46e3-9586-7890ddc88baa" Title="IMultiKeyTextModel Properties" Url="html/5a3ed331-eb8a-3601-93ca-1d1db52678e9.htm">
+            <HelpTOCNode Title="CurrentMultiCharacterText Property " Url="html/4fb826da-ffc8-4bca-2ebd-14e2dbbf79ba.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b4b8d37c-80e7-4bf9-88e5-a100e0978574" Title="TalkingKeyboard.Infrastructure.ServiceInterfaces" Url="html/9c0bf44b-0482-fc87-1775-708489ee182e.htm">
+        <HelpTOCNode Id="2706dac9-e7d7-468c-bddf-d7ff8e84051e" Title="IControlActivationService Interface" Url="html/e4ca2c28-f099-0bad-a8ff-75f56b72af61.htm">
+          <HelpTOCNode Title="IControlActivationService Properties" Url="html/b840c49f-fc1f-781d-6b9c-114a29ccc357.htm" />
+          <HelpTOCNode Title="IControlActivationService Methods" Url="html/fd8fb97f-dfa3-a1ed-6876-5027e625a715.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7009fb9c-73ff-4e1c-8239-935f6146cd27" Title="IPointHandler Interface" Url="html/6e9cf204-eeff-24bd-ba00-ba0e79a1b777.htm">
+          <HelpTOCNode Id="d2780bc4-9462-4ad8-adfa-4bb7e0ec892f" Title="IPointHandler Methods" Url="html/813c267b-879b-070d-18c1-8a7bb6aab0c0.htm">
+            <HelpTOCNode Title="ProcessPoint Method " Url="html/4c080aec-8c86-b405-62a5-3d1ad9f8df6b.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="9b449261-f538-414a-9a12-f918363f4a4f" Title="ISuggestionService Interface" Url="html/d50af1e4-5cc5-4b0b-1d7a-b7b85ba7b003.htm">
+          <HelpTOCNode Id="abefbbde-f461-4d8e-8a59-3dc17e347035" Title="ISuggestionService Methods" Url="html/e5302348-9de4-8df0-6502-b3e30528cf5a.htm">
+            <HelpTOCNode Title="AddMultiCharacterText Method " Url="html/6148e330-6af6-f02c-c30b-d5ca275619a2.htm" />
+            <HelpTOCNode Title="ClearMultiCharacterBuffer Method " Url="html/146a2035-207a-d2aa-bcaa-db8d787ea177.htm" />
+            <HelpTOCNode Title="ProvideMultiCharacterSuggestions Method " Url="html/cd52241e-aaa1-2878-ba58-2ad7578800b3.htm" />
+            <HelpTOCNode Title="ProvideSuggestions Method " Url="html/9265eba2-90c9-5d6d-00bc-56e027196a48.htm" />
+            <HelpTOCNode Title="RemoveLastMultiCharacter Method " Url="html/023470aa-30ef-aa8c-8a82-efe099e9db0c.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="43a81e29-0c62-4450-8a07-505a65ea61b6" Title="ISuggestionSource Interface" Url="html/9a71f81d-a901-b57f-ace3-e6a67ffabb3e.htm">
+          <HelpTOCNode Id="2490c467-d09e-4d8d-a74e-7e26f5eb886c" Title="ISuggestionSource Methods" Url="html/b555b37c-d4d7-9dcb-6dc7-b4ccf87fe361.htm">
+            <HelpTOCNode Title="GetSuggestions Method " Url="html/bdec7958-d7d0-b18a-98c2-e44073d45320.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="d313fdd4-b8f3-4bd3-99f6-9865d8a0ce6d" Title="ITextToSpeechService Interface" Url="html/88f9c1a6-0a43-2104-058a-866d71c12121.htm">
+          <HelpTOCNode Id="b42d09c7-d516-4579-bd70-c07f70a2140b" Title="ITextToSpeechService Methods" Url="html/d823cea9-0987-b34e-a79a-9558c49ca305.htm">
+            <HelpTOCNode Title="Say Method " Url="html/0bd7fe53-98fb-79a6-86ae-38c1f2c53029.htm" />
+            <HelpTOCNode Title="SayCurrentText Method " Url="html/26207c70-dc02-41af-5ca6-27fd5d2eb881.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="bb222ced-785b-46cc-b45d-7375f2bda82c" Title="IWindowKnower Interface" Url="html/c2b5a29b-ddbb-ca87-7de6-9b842b7cf532.htm">
+          <HelpTOCNode Id="03051d86-b737-4e6f-b543-390f317785be" Title="IWindowKnower Properties" Url="html/f5e4e7a3-9c22-a7fb-624b-a9ec4b886434.htm">
+            <HelpTOCNode Title="KnownWindows Property " Url="html/2fe6db4c-9446-5351-6cd6-16c263fd62b9.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d233b0ae-9725-431e-96f7-4036758a0604" Title="TalkingKeyboard.Modules Namespaces" Url="html/c5a8262c-254a-111b-d3f2-816819b0b745.htm">
+      <HelpTOCNode Id="22c974c4-7e43-47e6-9758-ac752257b864" Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor Namespaces" Url="html/bc45bdd2-9cb0-7e3d-9729-cd8f88971a89.htm">
+        <HelpTOCNode Id="0258461d-cd1e-43fc-b1b0-c15b99dc5e52" Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor" Url="html/11a2fcf0-6c83-1aff-7ef6-bb7d05e209a9.htm">
+          <HelpTOCNode Id="9c09d5b3-a407-4832-9445-9b3fb3cf8927" Title="ByGazeTimePointProcessorModule Class" Url="html/61d2146c-5543-f40e-5482-df0966097335.htm">
+            <HelpTOCNode Title="ByGazeTimePointProcessorModule Constructor " Url="html/966726b6-1a6d-da51-81ed-7080e59b0339.htm" />
+            <HelpTOCNode Id="96d8c6cb-8202-4236-8720-b336f834422a" Title="ByGazeTimePointProcessorModule Methods" Url="html/7e4b1dd6-4ed8-2784-79b7-afde2cbb39bf.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/4955344b-bfed-70f6-56fa-7a0f492f9a99.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="b0e19c87-e44f-4d39-a6d7-8f4087d5695c" Title="GazeSelectionService Class" Url="html/1c5aa5e7-e87a-e02d-eb5a-768bf019ea2c.htm">
+            <HelpTOCNode Title="GazeSelectionService Constructor " Url="html/22af11b5-1d8a-2714-8969-f63b719f1a0a.htm" />
+            <HelpTOCNode Id="0481a2a8-62bb-41d8-bd87-98c5798f36cd" Title="GazeSelectionService Properties" Url="html/4941512c-717f-edec-634e-51be326f4411.htm">
+              <HelpTOCNode Title="KnownWindows Property " Url="html/9259ede5-7ff7-b478-c79e-92c2ec47b8af.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="0c2d9d36-b0d0-44d8-bd25-dc70f9d1f6b7" Title="GazeSelectionService Methods" Url="html/96fc7677-15f1-efc5-d565-5b13abc5d083.htm">
+              <HelpTOCNode Title="ProcessPoint Method " Url="html/15911e26-6821-949d-bb46-5225abe4fc45.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="d50c40b8-7b40-4ee6-9677-7004b82d3378" Title="TalkingKeyboard.Modules.ByGazeTimePointProcessor.Filters" Url="html/dc4e60bb-5ef1-28a3-f563-6d6b55e43ee3.htm">
+          <HelpTOCNode Id="31b7d486-9938-4cc4-91ce-39f197ef86b0" Title="AveragingFilter Class" Url="html/e0ad38cd-b1bc-003b-0b51-652536523a57.htm">
+            <HelpTOCNode Title="AveragingFilter Constructor " Url="html/b0f7dfd9-5d0c-f0fc-5cc7-3bf82ce61690.htm" />
+            <HelpTOCNode Id="451a0a13-5e4a-4ba6-9859-ac05ea9c170b" Title="AveragingFilter Methods" Url="html/68b9c89e-1c49-1a97-b09c-0ee73c63a37c.htm">
+              <HelpTOCNode Title="Filter Method " Url="html/af494124-59e6-fb76-6817-a7f7290a6f04.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="9612fd31-585a-4977-a35d-d7931eed78ba" Title="AveragingLastNpointsWithinTimeSpanFilter Class" Url="html/4eeba1bc-ce45-ba80-9380-f9877577203b.htm">
+            <HelpTOCNode Title="AveragingLastNpointsWithinTimeSpanFilter Constructor " Url="html/445b413f-165f-3592-a833-898313c5865e.htm" />
+            <HelpTOCNode Id="ef5c76ec-f2d8-4102-9feb-cd7b0664d401" Title="AveragingLastNpointsWithinTimeSpanFilter Methods" Url="html/74e2f2ac-bd9f-4084-9bec-ce77aaa17199.htm">
+              <HelpTOCNode Title="Filter Method " Url="html/7ff7f173-1bb7-cf72-f0db-e8a420f41c6e.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="12b0c9d2-a506-45e4-bc75-c88bbe30ea24" Title="SelectionFilter(T) Class" Url="html/b1199cc9-150f-5ce4-f065-fa0de48d0c43.htm">
+            <HelpTOCNode Title="SelectionFilter(T) Constructor " Url="html/30606ee0-5834-2ac6-1b5c-bc7cde6176bb.htm" />
+            <HelpTOCNode Id="d2e2cfb7-08e5-435f-86c1-b2f6e9c9e6b0" Title="SelectionFilter(T) Properties" Url="html/1bf7db25-eb6c-5585-0400-35470e95d336.htm">
+              <HelpTOCNode Title="Window Property " Url="html/5bae4023-4a29-b7c0-f4ce-371047e00127.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="c52370fd-226d-4c6f-8183-6f6a2f9a5d2d" Title="SelectionFilter(T) Methods" Url="html/d159d62e-ede4-a29e-a7bb-96a1ebf41a45.htm">
+              <HelpTOCNode Title="SelectAndUpdate Method " Url="html/6f818593-26be-2319-e066-760f05bccecc.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="ec3c2ab2-e895-4cf7-b62a-a198cbb7c04a" Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter Class" Url="html/da25f287-cff0-fc91-4ad3-70c246ead06f.htm">
+            <HelpTOCNode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter Constructor " Url="html/073d4f61-eaf8-4f0c-12b7-39d13f3dbc00.htm" />
+            <HelpTOCNode Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter Properties" Url="html/021a6535-cf97-151f-825d-4e32207a7dcb.htm" />
+            <HelpTOCNode Id="c96f611a-a425-4083-aa2e-9e9c990a099f" Title="TimeSpanWithMinimumSelectionsDuringTimeFrameSelectionFilter Methods" Url="html/d9079262-a62d-5fb9-bfc3-a838918125f7.htm">
+              <HelpTOCNode Title="SelectAndUpdate Method " Url="html/ffc3ca96-5281-21bd-5cda-72147178ee48.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="667c3c4d-a682-4117-b00d-a9c4f90ca8c3" Title="TalkingKeyboard.Modules.CentralTextModule Namespaces" Url="html/9535fb75-b4f1-f89a-9891-a6dcfbfdd86a.htm">
+        <HelpTOCNode Id="0d18b2b3-2675-4685-b73d-e7bf26d9cc60" Title="TalkingKeyboard.Modules.CentralTextModule" Url="html/9e5c9fce-af77-90ab-9c9d-9af8c12fd11d.htm">
+          <HelpTOCNode Id="445afbae-8041-4016-813e-1b2bbbebbc51" Title="TextHolderModule Class" Url="html/4b369f38-ff77-6cd7-7488-209e5c71b031.htm">
+            <HelpTOCNode Title="TextHolderModule Constructor " Url="html/e0da380f-3307-90c0-9dd7-61cf298bd6f7.htm" />
+            <HelpTOCNode Id="181e6398-5e79-48ec-87dd-a2cfd882f783" Title="TextHolderModule Methods" Url="html/1c83b83f-8f4d-1531-d8ea-a641fac4c42e.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/aa822637-9db9-4964-9f23-06a92e20db3e.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="1d658cb6-36e4-4582-bada-a636278a4dc7" Title="TalkingKeyboard.Modules.CentralTextModule.ViewModels" Url="html/a3ba4949-264e-670b-70f6-efbded9c7d17.htm">
+          <HelpTOCNode Id="d331d69e-cea8-41f7-903c-873ac2d7e572" Title="TextViewModel Class" Url="html/0a0359d3-3796-f3ab-0d35-79f24c58586a.htm">
+            <HelpTOCNode Title="TextViewModel Constructor " Url="html/9b142319-a78e-f00b-bc9d-d33b2445e001.htm" />
+            <HelpTOCNode Id="3549d535-c24e-4092-b269-9587de1202fc" Title="TextViewModel Properties" Url="html/230a45a1-c4f6-404a-c966-7062b932d36b.htm">
+              <HelpTOCNode Title="AppendTextCommand Property " Url="html/94e38d16-a450-5e15-5ef5-4e3d8e6913f9.htm" />
+              <HelpTOCNode Title="CurrentText Property " Url="html/9d785be7-7345-5c21-658c-926f5ee47f65.htm" />
+              <HelpTOCNode Title="RemoveLastCharacterCommand Property " Url="html/fa771aef-12b5-569a-567d-10720965d60e.htm" />
+              <HelpTOCNode Title="RemoveLastWordCommand Property " Url="html/1eb0ff7e-7207-2e96-cb1f-59a803d8ac52.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="TextViewModel Methods" Url="html/126c81d2-3b5f-6dea-51e2-2d9cca7ecbba.htm" />
+            <HelpTOCNode Title="TextViewModel Events" Url="html/531d0997-3fd7-15fe-710c-f6e00facfc66.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="5981776e-9729-4708-9660-ca6a6d0859e7" Title="TalkingKeyboard.Modules.CentralTextModule.Views" Url="html/57c29361-65da-a13f-c46f-1670e27c81cf.htm">
+          <HelpTOCNode Id="ec5674a6-a3b1-46d8-b28d-2164ff313aac" Title="TextView Class" Url="html/4dcc202e-9413-2cc8-ce94-38ba2aa5ddea.htm">
+            <HelpTOCNode Title="TextView Constructor " Url="html/3a3ea91d-ff0b-794b-ade2-cb5677f69c2a.htm" />
+            <HelpTOCNode Title="TextView Properties" Url="html/43d00b45-d101-3e03-eeea-509feccdeaf4.htm" />
+            <HelpTOCNode Id="ae9d18b0-061b-4ff8-ae39-34643920c5fd" Title="TextView Methods" Url="html/337fcc04-428c-5385-3f78-35e657d6d0e1.htm">
+              <HelpTOCNode Title="InitializeComponent Method " Url="html/628be135-3cd4-0e8c-d2c1-07295e7f1820.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="TextView Events" Url="html/100304e3-aacf-5ed1-2b71-137f22333f6d.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="277f61c9-2a25-4209-93ac-14fe03fd6c9a" Title="TalkingKeyboard.Modules.CoordinateProvider Namespaces" Url="html/46e75e50-292c-e5dc-fcea-624d8f869298.htm">
+        <HelpTOCNode Id="9120a0f3-9485-403d-bbf0-aba5c504c668" Title="TalkingKeyboard.Modules.CoordinateProvider" Url="html/f3e4fc6d-52af-5071-a69a-44d416a30948.htm">
+          <HelpTOCNode Id="0ec9454b-b884-4605-8dbe-c3ae790d3832" Title="CoordinateProviderModule Class" Url="html/1c76d641-c4d9-402b-bd06-0cd1adf842f9.htm">
+            <HelpTOCNode Title="CoordinateProviderModule Constructor " Url="html/e95b1f60-f05e-5b09-6d85-14594cf8d403.htm" />
+            <HelpTOCNode Id="070f2931-206e-470f-b1e9-f3b3a38d49ed" Title="CoordinateProviderModule Methods" Url="html/f590dc79-5a1f-fdeb-8601-d8affabd7c5c.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/e4a0a381-2614-859c-fabe-d5a2bd709b1e.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="0f0e3fd3-dd1a-4c7c-9dea-db769ac8ca21" Title="TalkingKeyboard.Modules.CoordinateProvider.Services" Url="html/b172672f-c2cc-398f-513f-1aa95f4af9bf.htm">
+          <HelpTOCNode Id="359c107e-64d5-41ff-8edc-957449122c3d" Title="EyeXGazeCoordinateService Class" Url="html/dce33989-e1a4-3672-12b6-38562ac8a39a.htm">
+            <HelpTOCNode Title="EyeXGazeCoordinateService Constructor " Url="html/bd01b3aa-31f8-ffe8-c82b-0d11ea89b152.htm" />
+            <HelpTOCNode Id="793b77d4-33f3-4d99-b824-067049445281" Title="EyeXGazeCoordinateService Properties" Url="html/cc4561e1-d3da-fa62-edc4-f5eac7377ff3.htm">
+              <HelpTOCNode Title="EyeXHost Property " Url="html/5d3d80df-01a0-653a-7236-75e952e4b299.htm" />
+              <HelpTOCNode Title="GazePointDataStream Property " Url="html/1f563155-5f37-aa70-8f3c-46a2853694e7.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="7c81907a-0fc9-4380-815b-738c7a779aa4" Title="EyeXGazeCoordinateService Methods" Url="html/354c7949-b57d-d8e4-9f2f-7cbb03fa021d.htm">
+              <HelpTOCNode Id="b3eea7a0-7a5b-4eb2-8ca6-658dfa44f4c5" Title="Dispose Method " Url="html/993db6bd-2686-c628-ac0c-3231d7f12dc4.htm">
+                <HelpTOCNode Title="Dispose Method " Url="html/d925e5b7-063d-8ec1-5f2b-463ce0781354.htm" />
+                <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/8630cbd8-eda1-dfec-df0a-ee29aaf6375a.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="Finalize Method " Url="html/5b902469-5e52-e4b8-62b7-62c0e18f5d6d.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="737b2d78-2c9a-4197-8904-cb3084f91800" Title="TalkingKeyboard.Modules.MicrosoftTextToSpeech" Url="html/a5e0898d-64a2-b825-2bbe-53167f136544.htm">
+        <HelpTOCNode Id="720e8907-7ec0-4415-99b2-0a3899df7c39" Title="MicrosoftTextToSpeechModule Class" Url="html/dcd6d9fc-7666-0a09-e662-4dd4c02cda07.htm">
+          <HelpTOCNode Title="MicrosoftTextToSpeechModule Constructor " Url="html/a1966714-5a98-7c8c-5b44-d9ff1d218ce6.htm" />
+          <HelpTOCNode Id="442b6c2b-3a8c-470a-b16f-dbe9c8a51b48" Title="MicrosoftTextToSpeechModule Methods" Url="html/26a8e5b8-de32-de3f-4b48-b04572fbfac7.htm">
+            <HelpTOCNode Title="Initialize Method " Url="html/cccc0690-8e1d-2dc2-b356-f407474144a0.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="948ca9d9-f5a0-4e92-8e0a-8f7910e23ee1" Title="TextToSpeechService Class" Url="html/c77fe28c-c3a0-e18c-655c-ddc0f6ade4d1.htm">
+          <HelpTOCNode Title="TextToSpeechService Constructor " Url="html/16b36c6e-dd68-0c85-9b9f-a87796eb8a1d.htm" />
+          <HelpTOCNode Id="e000bf6a-6eaa-4155-a5fb-1ae79d8b99fb" Title="TextToSpeechService Properties" Url="html/6e9afb2d-c8ad-69b3-e5e2-45b6d5d64740.htm">
+            <HelpTOCNode Title="CurrentText Property " Url="html/876691df-dc5b-3c96-c189-f3a0e69e160f.htm" />
+            <HelpTOCNode Title="SpeechSynthesisCommand Property " Url="html/eae07331-5c09-81fd-c114-992a7a8560b3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="72cff7ef-9f03-42db-bcd7-d01a1b0e0949" Title="TextToSpeechService Methods" Url="html/6a60b714-6d57-b766-124c-ab96bb670898.htm">
+            <HelpTOCNode Id="8d72a481-034b-46fb-b80a-310a21a9650b" Title="Dispose Method " Url="html/f7314f16-8fb2-409f-e875-f8241728776e.htm">
+              <HelpTOCNode Title="Dispose Method " Url="html/2ca5a072-fe14-c825-47fe-efc390f65eb0.htm" />
+              <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/9234cdaf-6c99-75b0-24e0-e696b785713e.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="Say Method " Url="html/e4f5a64e-a78c-1f18-d406-8bdb1258e2fc.htm" />
+            <HelpTOCNode Title="SayCurrentText Method " Url="html/5f52046d-f5e0-c234-deb3-302fbe034e19.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="TextToSpeechService Events" Url="html/109f2638-220b-9a76-fa15-e260dabdbd54.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="efe67bda-b0ca-4b11-8374-e4dfc4ab1dac" Title="TalkingKeyboard.Modules.MultiKeyBoard Namespaces" Url="html/fbee016b-aef7-c8dd-129c-55b0c2233dda.htm">
+        <HelpTOCNode Id="f203131c-549a-4491-88c2-e29dc745798a" Title="TalkingKeyboard.Modules.MultiKeyBoard" Url="html/92e5b6ae-c571-f4e1-a932-734205be449b.htm">
+          <HelpTOCNode Id="8029edbd-3468-4a6b-9514-11459a74517f" Title="MultiKeyBoardModule Class" Url="html/a9857867-9b52-9ee3-6e79-a6e5d499fbbe.htm">
+            <HelpTOCNode Title="MultiKeyBoardModule Constructor " Url="html/e627c51a-02a5-806e-3c40-449eb41313ff.htm" />
+            <HelpTOCNode Id="03df6242-11dc-46bb-8ed3-10e0d6711fe8" Title="MultiKeyBoardModule Methods" Url="html/a7b45991-b051-1fed-166d-6e6adad5923d.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/c41226cf-7ad8-a8ee-5114-903f8df04b0c.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="4e64db9f-f26f-435f-bd97-2a3ced9bcca8" Title="TalkingKeyboard.Modules.MultiKeyBoard.Model" Url="html/374edb30-5c68-e795-5cfc-9ee8d5254664.htm">
+          <HelpTOCNode Id="fc18c1b5-1fa2-488a-93f5-4cdd2d00bcd0" Title="MultikeyTextModel Class" Url="html/5f40a276-0a28-da48-3ecc-8079e10a3156.htm">
+            <HelpTOCNode Title="MultikeyTextModel Constructor " Url="html/48b558b7-e258-e9d2-fdf5-9f47dea9a50f.htm" />
+            <HelpTOCNode Id="69f13f1b-b729-4c3a-891a-5e1840b29f4c" Title="MultikeyTextModel Properties" Url="html/70c2b4dc-e6f3-6bb8-3a64-b103ca423663.htm">
+              <HelpTOCNode Title="CurrentMultiCharacterText Property " Url="html/dbe26ab3-7a64-750e-a936-d8d3c48cc5bb.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="MultikeyTextModel Methods" Url="html/8e65bbb9-4de2-9e3f-640f-c6c3e9d5b54b.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="c93053fe-06e6-4dc4-9be2-f99e62fb6578" Title="TalkingKeyboard.Modules.MultiKeyBoard.ViewModels" Url="html/de61d42c-2290-f801-5b47-0275d4f0c81f.htm">
+          <HelpTOCNode Id="c75e1e04-5f94-427c-8110-be81fa4dd46a" Title="QwertySpanishMultiKeyboardViewModel Class" Url="html/acd7a700-a1a7-562f-b36f-f0643e7428ae.htm">
+            <HelpTOCNode Title="QwertySpanishMultiKeyboardViewModel Constructor " Url="html/e53fa376-1fea-e63a-91a0-d6f4ea8aaae6.htm" />
+            <HelpTOCNode Id="d8984ddc-d084-4229-9d7c-ad3d2d1e00ad" Title="QwertySpanishMultiKeyboardViewModel Properties" Url="html/ee64f9c2-5cb6-bd1b-e6ce-074966c6c32b.htm">
+              <HelpTOCNode Title="AddMultiCharacterCommand Property " Url="html/889dad82-7ddb-625d-ea8e-a3420396cfbc.htm" />
+              <HelpTOCNode Title="RemoveLastMultiCharacterCommand Property " Url="html/4478f4b9-fc7e-1da5-f18b-a502c5175f84.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="QwertySpanishMultiKeyboardViewModel Methods" Url="html/03d16e38-c5a4-2126-879c-44856ff5cad1.htm" />
+            <HelpTOCNode Title="QwertySpanishMultiKeyboardViewModel Events" Url="html/541d9fe4-e1e1-b11b-b605-80444c76a38e.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="15630e55-a41d-4684-aacb-0534845fe56f" Title="T9SpanishMultiKeyboardViewModel Class" Url="html/3c656491-393d-af49-e535-daf4180fceec.htm">
+            <HelpTOCNode Title="T9SpanishMultiKeyboardViewModel Constructor " Url="html/4bb93df1-8dec-3d0c-2c83-940e15451853.htm" />
+            <HelpTOCNode Id="32933771-2eef-4228-9607-fe4874d6020b" Title="T9SpanishMultiKeyboardViewModel Properties" Url="html/fcc6bedc-1af7-b122-9db3-91706d26c81f.htm">
+              <HelpTOCNode Title="AddMultiCharacterCommand Property " Url="html/425aed9c-183f-ba4e-2375-6eb4854e3150.htm" />
+              <HelpTOCNode Title="RemoveLastMultiCharacterCommand Property " Url="html/42de4ff8-54da-5f4f-a320-eac61f412777.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="T9SpanishMultiKeyboardViewModel Methods" Url="html/ba130794-4e4b-8d7d-ff51-c15b6626db82.htm" />
+            <HelpTOCNode Title="T9SpanishMultiKeyboardViewModel Events" Url="html/13d3f3cd-538d-4ae4-8ff4-6d48ac787c97.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="d52b6273-2a5b-4de1-99e4-62d26b0339e1" Title="TalkingKeyboard.Modules.MultiKeyBoard.Views" Url="html/446b66e1-b0d8-7a4f-ac24-ea6c8258fdba.htm">
+          <HelpTOCNode Id="d8bff6a8-980d-49af-a9a2-144c2f538014" Title="QwertySpanishMultiKeyboard Class" Url="html/46872b7e-2297-2eca-327a-c1ef6c7431ea.htm">
+            <HelpTOCNode Title="QwertySpanishMultiKeyboard Constructor " Url="html/b0b36c34-16e9-d18e-c79b-00a93feb12bc.htm" />
+            <HelpTOCNode Title="QwertySpanishMultiKeyboard Properties" Url="html/3e68e1dd-49a3-84b5-a5db-02f8ed0a5801.htm" />
+            <HelpTOCNode Id="2c28934f-c2bf-4995-984b-daee31e573cd" Title="QwertySpanishMultiKeyboard Methods" Url="html/7e736505-807d-3432-e2ea-dbe4a2fc9c19.htm">
+              <HelpTOCNode Title="InitializeComponent Method " Url="html/259401c9-6370-e3cd-a895-6e03d76c879b.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="QwertySpanishMultiKeyboard Events" Url="html/5723f642-bd6a-c4f3-3715-3063a39ec838.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3f8bf2f2-1113-49cc-be7a-a2654944941b" Title="T9SpanishMultiKeyboard Class" Url="html/bedf0fd0-f18e-a3c3-3002-6e4b31fd2438.htm">
+            <HelpTOCNode Title="T9SpanishMultiKeyboard Constructor " Url="html/33303ffe-f04b-8283-1621-170e2ff065fc.htm" />
+            <HelpTOCNode Title="T9SpanishMultiKeyboard Properties" Url="html/f8b46f0c-ab7e-2a63-79cd-1e81cbb77602.htm" />
+            <HelpTOCNode Id="6cfd7bef-43ab-476f-b8b6-b5b16cbcd9eb" Title="T9SpanishMultiKeyboard Methods" Url="html/0ae59038-b404-fec7-630b-004bd8688a40.htm">
+              <HelpTOCNode Title="InitializeComponent Method " Url="html/471b8e48-dfab-5e02-470a-8ba3a4a0e855.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="T9SpanishMultiKeyboard Events" Url="html/680b91d6-b116-d02e-2510-008d5f8516c8.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d90962a9-c17f-4266-a302-7aef96c800ec" Title="TalkingKeyboard.Modules.SingleKeyBoard Namespaces" Url="html/5c4a3dcb-be5f-c328-cbbd-225a048c17c6.htm">
+        <HelpTOCNode Id="5688ad01-47c1-4a29-a19e-eed87decd09c" Title="TalkingKeyboard.Modules.SingleKeyBoard" Url="html/5bee7555-2e14-8e3b-5995-e2672398d876.htm">
+          <HelpTOCNode Id="38eddd8d-da9d-4a54-8155-7aeab349cca3" Title="SingleKeyBoardModule Class" Url="html/488aede7-14d7-8634-4e62-52969f448479.htm">
+            <HelpTOCNode Title="SingleKeyBoardModule Constructor " Url="html/185462cf-2ee1-0394-bc08-95fb3f1602e3.htm" />
+            <HelpTOCNode Id="36a0cdfd-05c5-4773-9399-ce03016828e6" Title="SingleKeyBoardModule Methods" Url="html/6b134d72-d3cd-50dd-8184-8bd689be6c2b.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/ce74baf5-3663-b9d7-5f4d-936545c658a7.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="766ab5e6-ea7c-4507-8dd9-8a275c6839d9" Title="TalkingKeyboard.Modules.SingleKeyBoard.ViewModels" Url="html/4c376c5b-698b-2f5d-cd70-d9a67bb8e8a6.htm">
+          <HelpTOCNode Id="890e56d2-52a8-4afc-9fcb-207dcd378aef" Title="QwertySpanishSingleKeyboardViewModel Class" Url="html/78c14fe1-963b-990f-54e1-ff81f69f5e78.htm">
+            <HelpTOCNode Title="QwertySpanishSingleKeyboardViewModel Constructor " Url="html/b113c7e7-df73-c81f-6033-3f3c305e7817.htm" />
+            <HelpTOCNode Id="628962d9-92a6-4d33-901b-a9a88341e348" Title="QwertySpanishSingleKeyboardViewModel Properties" Url="html/40a9ef23-360a-3bb9-e6d6-e3ea706bcc1e.htm">
+              <HelpTOCNode Title="IsShiftDown Property " Url="html/e99971cb-73e3-1f2d-a88a-8c60bd8841ba.htm" />
+              <HelpTOCNode Title="SetShiftDownCommand Property " Url="html/d5156259-2835-a140-02ce-44ee15b1216d.htm" />
+              <HelpTOCNode Title="ToggleShiftDownCommand Property " Url="html/0e892de3-9f54-73d4-113e-675c13e081bc.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="81d682a6-82b3-4fd2-9b75-4c9b076dff59" Title="QwertySpanishSingleKeyboardViewModel Methods" Url="html/69f9a3c1-c0ff-5e5e-ca8d-975ca1b71180.htm">
+              <HelpTOCNode Title="OnPropertyChanged Method " Url="html/d7d7196b-3ace-16a5-864b-71b1e5c2693a.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="08eaa551-2cf2-4ed2-8279-e604400b85b7" Title="QwertySpanishSingleKeyboardViewModel Events" Url="html/7007dc48-b68c-1821-5ffa-292f4369d46a.htm">
+              <HelpTOCNode Title="PropertyChanged Event" Url="html/9f6ff8c1-ceed-8f9c-463c-7de3955459fc.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="987df97d-217a-4cfb-8e9f-f281630febbc" Title="TalkingKeyboard.Modules.SingleKeyBoard.Views" Url="html/32cd828c-0d00-438a-7281-b4a02b812cc7.htm">
+          <HelpTOCNode Id="042bd2d6-26e0-4122-8bfc-ad8e0c800585" Title="QwertySpanishSingleKeyboard Class" Url="html/0f99123a-2a96-088c-ea12-baa8e56a685c.htm">
+            <HelpTOCNode Title="QwertySpanishSingleKeyboard Constructor " Url="html/e74cdc8c-582f-2492-575f-7a82ae798715.htm" />
+            <HelpTOCNode Title="QwertySpanishSingleKeyboard Properties" Url="html/dec42131-241a-2d63-28d1-6bf374c2917d.htm" />
+            <HelpTOCNode Id="df6b3dec-1853-44df-956c-a0ae2887b51c" Title="QwertySpanishSingleKeyboard Methods" Url="html/4d5ab955-b276-cbb1-cec0-c9cca07184b8.htm">
+              <HelpTOCNode Title="InitializeComponent Method " Url="html/25beeff5-f05d-a772-dec4-3391d457e868.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="QwertySpanishSingleKeyboard Events" Url="html/daf3c1df-1575-1140-efe3-efcf59511af0.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="192b6bd7-734b-458d-b180-bc50b68c0369" Title="TalkingKeyboard.Modules.SuggestionBoard Namespaces" Url="html/0c8b86fd-62a8-b3df-7910-e0d1c04b1edd.htm">
+        <HelpTOCNode Id="6a05625b-f38f-46b9-bddd-5bcc85d142a4" Title="TalkingKeyboard.Modules.SuggestionBoard" Url="html/7200d33e-0907-0e93-ab12-9ebca3f92e39.htm">
+          <HelpTOCNode Id="1632dafb-d719-44a6-ab21-93b8f928d2c9" Title="SuggestionBoardModule Class" Url="html/7c865ad2-663d-ab16-c32d-575a1cd285a7.htm">
+            <HelpTOCNode Title="SuggestionBoardModule Constructor " Url="html/393cd454-a28f-f78f-96fa-cfe985994054.htm" />
+            <HelpTOCNode Id="4e5f117f-f3c2-4e2a-a391-9fec2f610735" Title="SuggestionBoardModule Methods" Url="html/66f3a5ea-9baa-2d93-c2e3-8eb7f39c54af.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/1bad78ba-34a7-22ca-2ec5-61f6d2502a64.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="7c9e1171-a19c-4ad3-b43e-99e55339c6b9" Title="TalkingKeyboard.Modules.SuggestionBoard.ViewModels" Url="html/364520b1-c298-717b-0341-e31ca16b10d8.htm">
+          <HelpTOCNode Id="c67c7c1c-9213-443d-a447-c18abaa6815b" Title="FourSuggestionsBoardViewModel Class" Url="html/725ced41-545d-ecee-22ac-248156b42a6a.htm">
+            <HelpTOCNode Title="FourSuggestionsBoardViewModel Constructor " Url="html/49808ded-8894-92ca-f2be-52eb7a9b3dc4.htm" />
+            <HelpTOCNode Id="85d7c5e4-9a29-4611-bf12-6b16c1ec2476" Title="FourSuggestionsBoardViewModel Properties" Url="html/c10bcf21-6e28-1bae-f871-42d64ed75e71.htm">
+              <HelpTOCNode Title="Suggestions Property " Url="html/9dcddfc5-2786-6e8e-7bb0-6693b8669a08.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="FourSuggestionsBoardViewModel Methods" Url="html/94be6a8d-cb85-9d4a-9c21-ea976f5bb2cc.htm" />
+            <HelpTOCNode Title="FourSuggestionsBoardViewModel Events" Url="html/2185175b-feb5-b15f-3730-cd3cce7c55e9.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="c93fd472-a512-46bd-a206-44bd7ba7161a" Title="TalkingKeyboard.Modules.SuggestionBoard.Views" Url="html/3a64a1eb-6b4f-6d9c-8143-c9a8388e809a.htm">
+          <HelpTOCNode Id="b41b66f1-6c10-4e05-8047-c8de23d86644" Title="FourSuggestionsBoard Class" Url="html/1a4cd892-2213-16fb-ecb1-f3fc479e6dca.htm">
+            <HelpTOCNode Title="FourSuggestionsBoard Constructor " Url="html/4c525943-2d77-a8c2-bfca-3b89a9ae4a0a.htm" />
+            <HelpTOCNode Title="FourSuggestionsBoard Properties" Url="html/e6a4cf28-0553-0aee-4852-79946a5af4bb.htm" />
+            <HelpTOCNode Id="6fe5d160-60de-4241-8b1d-613e435f2022" Title="FourSuggestionsBoard Methods" Url="html/3e56165f-4b8b-7439-9500-3385fac7a65b.htm">
+              <HelpTOCNode Title="InitializeComponent Method " Url="html/ee377479-6123-aa39-c476-d0d97214f452.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="FourSuggestionsBoard Events" Url="html/53e26989-311b-fcaa-e5b1-554cf12b6629.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ce597c44-870e-42b9-b066-6ab6e8091fee" Title="TalkingKeyboard.Modules.SuggestionsProvider Namespaces" Url="html/d873cc07-b124-a804-252b-0936af04fa93.htm">
+        <HelpTOCNode Id="aef2c5c4-c3bb-4ffa-936c-aac5b0ea67a5" Title="TalkingKeyboard.Modules.SuggestionsProvider" Url="html/79400253-d60b-651c-52f2-9d623611b505.htm">
+          <HelpTOCNode Id="39ef8266-93ef-4d37-83c1-3a26eff46c9c" Title="SuggestionService Class" Url="html/6096e61e-1697-c349-f1ed-55ef45d5b683.htm">
+            <HelpTOCNode Title="SuggestionService Constructor " Url="html/bf6895b2-1c07-b7af-cec5-06c3951814db.htm" />
+            <HelpTOCNode Id="a859dc70-599a-4f4d-9e74-00880d91f799" Title="SuggestionService Properties" Url="html/177f8d5a-f89a-71c7-cf5e-d84ee9c7d69d.htm">
+              <HelpTOCNode Title="WriteSuggestionCommand Property " Url="html/d1ef6757-d136-f03f-b23a-97eb47886f15.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="26f1a299-e5c5-4856-9eeb-b27292b1e782" Title="SuggestionService Methods" Url="html/452450e2-9ab3-7973-47ce-6e784294c0fd.htm">
+              <HelpTOCNode Title="AddMultiCharacterText Method " Url="html/d91f6325-9e2f-1a3f-c268-e2850a6845f3.htm" />
+              <HelpTOCNode Title="ClearMultiCharacterBuffer Method " Url="html/aee94282-ded0-34c0-8a69-f102f21dca43.htm" />
+              <HelpTOCNode Title="ProvideMultiCharacterSuggestions Method " Url="html/91457959-8578-6353-c979-0c1973076688.htm" />
+              <HelpTOCNode Title="ProvideSuggestions Method " Url="html/cf967880-9948-8b22-2cbc-e69a80b961a7.htm" />
+              <HelpTOCNode Title="RemoveLastMultiCharacter Method " Url="html/d119421b-47c2-4457-7b05-6f3921e848f0.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="54483e72-2cf2-4a0c-b6a7-e07b5252e894" Title="SuggestionsProviderModule Class" Url="html/c111ad83-9caa-3031-657d-093f84852ab4.htm">
+            <HelpTOCNode Title="SuggestionsProviderModule Constructor " Url="html/c86857e9-42a0-064f-4ce5-04e8b5b61833.htm" />
+            <HelpTOCNode Id="5dc1ca1c-12ee-4a44-a79c-75bc5b22163a" Title="SuggestionsProviderModule Methods" Url="html/822516e4-5dad-9a60-c6af-674bd6c51da2.htm">
+              <HelpTOCNode Title="Initialize Method " Url="html/e5a43bf7-a3a9-83dc-a80e-bfc8d6addb67.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="021aee8b-66a1-438a-a1cd-69f5285f005c" Title="TalkingKeyboard.Modules.SuggestionsProvider.PresageService" Url="html/0bcbd27d-d92f-6beb-f0a6-2e687f501759.htm">
+          <HelpTOCNode Id="ece99810-66ee-43c2-9030-fbbd5eeadc9c" Title="Presage Interface" Url="html/27f04068-ba3c-5da3-1d30-fa8c639ea9ef.htm">
+            <HelpTOCNode Id="51b5b80c-e6e4-4be2-90d1-e214634066da" Title="Presage Methods" Url="html/6f82261c-989a-09e8-b6cf-bac04002c95d.htm">
+              <HelpTOCNode Title="completion Method " Url="html/ca04df52-0140-5f3e-f0d6-a97d5ef965c0.htm" />
+              <HelpTOCNode Title="completionAsync Method " Url="html/6d458640-be55-0b69-4fcb-5a70e7fa4d22.htm" />
+              <HelpTOCNode Title="context Method " Url="html/fbfebcfd-7da1-09f2-ce63-57098ad539ba.htm" />
+              <HelpTOCNode Title="context_change Method " Url="html/970bbe00-2d37-a634-d89f-0a661878dc4b.htm" />
+              <HelpTOCNode Title="context_changeAsync Method " Url="html/eff6db4a-7c68-f7ef-9557-34eade8fac26.htm" />
+              <HelpTOCNode Title="contextAsync Method " Url="html/8c45a7b6-dc88-466f-67e7-9773f518dc73.htm" />
+              <HelpTOCNode Title="get_config Method " Url="html/84867088-3eb1-87b2-6706-01b8bef9bb49.htm" />
+              <HelpTOCNode Title="get_configAsync Method " Url="html/835025e0-4329-9e90-1fc7-bca9aea53dd8.htm" />
+              <HelpTOCNode Title="learn Method " Url="html/059e9585-47e4-2522-3d88-a055c82d2aa1.htm" />
+              <HelpTOCNode Title="learnAsync Method " Url="html/95d9ef46-f6b5-9914-9904-502bce4a5f28.htm" />
+              <HelpTOCNode Title="predict Method " Url="html/5cffdabd-78cd-2d55-a6ee-36d629e2c3fd.htm" />
+              <HelpTOCNode Title="predictAsync Method " Url="html/3469a0f4-81f2-55bf-604f-422410ddfeb2.htm" />
+              <HelpTOCNode Title="prefix Method " Url="html/d7a00013-96a3-0b9f-a409-8c1a5cfd21f7.htm" />
+              <HelpTOCNode Title="prefixAsync Method " Url="html/debe8658-a96b-d866-f353-694e06752670.htm" />
+              <HelpTOCNode Title="save_config Method " Url="html/cd5ebbc4-da61-21e9-a6cd-5d873fc0bd20.htm" />
+              <HelpTOCNode Title="save_configAsync Method " Url="html/81f1c794-2bea-30dc-61c5-fc4ae85460ce.htm" />
+              <HelpTOCNode Title="set_config Method " Url="html/6f7a199c-cb7e-feaf-2de9-503ee2be043b.htm" />
+              <HelpTOCNode Title="set_configAsync Method " Url="html/cb1d6a8c-76ea-afd4-cda4-6361d32e905a.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="063b1644-598d-48e8-b4de-1d6c3b6cb7ac" Title="PresageChannel Interface" Url="html/c2a01c6b-f69c-f5c0-910b-26e5fa4184c0.htm">
+            <HelpTOCNode Title="PresageChannel Properties" Url="html/14ea663b-0854-facd-7a65-8266bd138a3f.htm" />
+            <HelpTOCNode Title="PresageChannel Methods" Url="html/0f4ce1a6-c0fc-a053-00d8-800879e386dd.htm" />
+            <HelpTOCNode Title="PresageChannel Events" Url="html/bbf14388-172e-c78a-b080-43cdcea9916b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="696903ce-d4aa-47db-a7c4-c5244337fe19" Title="PresageClient Class" Url="html/5e42e675-be77-adb7-0a35-f4e78e565de2.htm">
+            <HelpTOCNode Id="d9935ae3-3be2-4886-932f-07b5393cd5b8" Title="PresageClient Constructor " Url="html/b10775e1-f619-1b0e-2d9f-cc580a6ef86e.htm">
+              <HelpTOCNode Title="PresageClient Constructor " Url="html/ca9ba234-de39-5595-c50b-59cbebd0d56f.htm" />
+              <HelpTOCNode Title="PresageClient Constructor (String)" Url="html/4989dfb7-8c39-337d-5dd1-2ef9a4d008ef.htm" />
+              <HelpTOCNode Title="PresageClient Constructor (Binding, EndpointAddress)" Url="html/5321b344-0a50-6d6e-1faf-bd38803777c5.htm" />
+              <HelpTOCNode Title="PresageClient Constructor (String, EndpointAddress)" Url="html/18d7bf81-b7ba-d927-1d70-ea4c5e8221b9.htm" />
+              <HelpTOCNode Title="PresageClient Constructor (String, String)" Url="html/a9744511-2cbc-08e6-cdc1-20cff5a4f0ba.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="PresageClient Properties" Url="html/f49a9435-ac4d-1f10-42dc-d8df90031488.htm" />
+            <HelpTOCNode Id="9d4e3bdf-81e4-4014-8590-e801534f96b7" Title="PresageClient Methods" Url="html/26e9876e-c196-f753-8407-f843491e1112.htm">
+              <HelpTOCNode Title="completion Method " Url="html/cbec027c-4d74-fc1c-ab5d-2a4c5064dfa9.htm" />
+              <HelpTOCNode Title="completionAsync Method " Url="html/f2c9c25b-e564-74f1-7224-e07381e5d072.htm" />
+              <HelpTOCNode Title="context Method " Url="html/52372d33-d5f5-ce65-7f39-13b7f0f77d29.htm" />
+              <HelpTOCNode Title="context_change Method " Url="html/eacddf1a-c302-c3d1-ad3a-932f3d91cc2d.htm" />
+              <HelpTOCNode Title="context_changeAsync Method " Url="html/cf261e4a-e601-6ca3-7deb-36eb6479bc3d.htm" />
+              <HelpTOCNode Title="contextAsync Method " Url="html/b0f0caee-40ed-b7dc-ee98-20d3b618216d.htm" />
+              <HelpTOCNode Title="get_config Method " Url="html/6e6bebce-6fb4-313f-33e7-070d329966d8.htm" />
+              <HelpTOCNode Title="get_configAsync Method " Url="html/59bb2cc1-204b-85e6-d174-6317a2bcdab7.htm" />
+              <HelpTOCNode Title="learn Method " Url="html/e5e411f2-b8f6-aa2b-3113-60a574014d18.htm" />
+              <HelpTOCNode Title="learnAsync Method " Url="html/52f0a760-6e8f-e843-3d00-12c9a39fc8d3.htm" />
+              <HelpTOCNode Title="predict Method " Url="html/ff98659c-0274-72c5-0b0d-b6943b02c49a.htm" />
+              <HelpTOCNode Title="predictAsync Method " Url="html/fd30c85d-5da1-1feb-4b83-6280c7d4f3f8.htm" />
+              <HelpTOCNode Title="prefix Method " Url="html/ee7ee6be-ce66-b0bc-275a-14c9ee2e8811.htm" />
+              <HelpTOCNode Title="prefixAsync Method " Url="html/e93bc903-0589-597d-cb43-833f349eac44.htm" />
+              <HelpTOCNode Title="save_config Method " Url="html/b67f16a6-436c-cf13-d6f7-eb13346e4d82.htm" />
+              <HelpTOCNode Title="save_configAsync Method " Url="html/13d99127-161a-6372-4dd7-6ac344cff59f.htm" />
+              <HelpTOCNode Title="set_config Method " Url="html/41085804-1d0a-87e6-9190-52350a845e96.htm" />
+              <HelpTOCNode Title="set_configAsync Method " Url="html/b92415ee-4762-e7b4-d673-3b7aadde36b1.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="ad3d3749-10b6-4d30-93b3-921216838bcc" Title="TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources" Url="html/8152bc21-c93a-ee13-b66e-d4e3631d0b93.htm">
+          <HelpTOCNode Id="d065f820-8c68-4d34-9f51-9872b819365c" Title="MultiCharacterSuggestionSource Class" Url="html/6ed76e04-dacc-d568-e923-8cbbde9a0b7f.htm">
+            <HelpTOCNode Title="MultiCharacterSuggestionSource Constructor " Url="html/d8a626db-1432-976d-7fc9-c0780c05ac40.htm" />
+            <HelpTOCNode Id="6db112ce-a1c3-4417-a17c-2b925a8473b4" Title="MultiCharacterSuggestionSource Methods" Url="html/212676aa-ef0e-5a3f-4df8-a7721ddaefb0.htm">
+              <HelpTOCNode Title="Add Method " Url="html/3cbedde2-172f-19b0-a4fd-2df40cce2e74.htm" />
+              <HelpTOCNode Title="ClearMultiCharacterBuffer Method " Url="html/c6914cf4-9382-83ad-3352-691694edc4ed.htm" />
+              <HelpTOCNode Title="GetSuggestions Method " Url="html/6a2887c6-b678-fe9e-b27d-68b029f70703.htm" />
+              <HelpTOCNode Title="LoadDictionarySortedByFrequency Method " Url="html/d0286a7b-a283-04bc-1f55-fef687a50b4e.htm" />
+              <HelpTOCNode Title="RemoveLastMultiCharacter Method " Url="html/5add5e56-18ae-eb90-404a-4a500bf1a107.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="8fa880c1-623d-49b4-9f25-68170f135391" Title="PresageSuggestionSource Class" Url="html/974f76ce-81a4-43e3-e39f-39d4fd696821.htm">
+            <HelpTOCNode Title="PresageSuggestionSource Constructor " Url="html/d3675560-e152-8952-0562-e2177019ad78.htm" />
+            <HelpTOCNode Id="fdd41e1d-82eb-4845-b544-4f8741737f17" Title="PresageSuggestionSource Methods" Url="html/cbb3851f-3b19-90e2-62eb-719054bbed8b.htm">
+              <HelpTOCNode Title="GetSuggestions Method " Url="html/9cd4a3f6-6ccf-12ee-d3f0-39ed2d663a0a.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bbb4afd7-0e77-44ca-8d30-e7dfe5d6e874" Title="TalkingKeyboard.Shell Namespaces" Url="html/a6525724-9cb1-099b-29e2-e172c0ba7dc6.htm">
+      <HelpTOCNode Id="f1f30ad9-f1f1-4cce-8ef9-929d2f8aac31" Title="TalkingKeyboard.Shell" Url="html/44fc18f7-db82-49eb-fc4b-94cc26adf292.htm">
+        <HelpTOCNode Id="8743643b-a038-4481-9c4b-42b2e313b161" Title="App Class" Url="html/07c7ad6c-9d44-5805-ce3c-b59e3b78e6c2.htm">
+          <HelpTOCNode Title="App Constructor " Url="html/b3e401a0-e777-1a2d-e08c-7f7972229129.htm" />
+          <HelpTOCNode Title="App Properties" Url="html/c9b3d8d4-7e26-a106-6cd8-d557ac3e7e47.htm" />
+          <HelpTOCNode Id="3ece862e-bed9-4ea3-8907-b6bc0524ae9b" Title="App Methods" Url="html/078d2745-bdda-a02b-d6f7-29e2c1d1163e.htm">
+            <HelpTOCNode Title="InitializeComponent Method " Url="html/533bdd9d-5647-076c-3fac-404d94b2cb6d.htm" />
+            <HelpTOCNode Title="Main Method " Url="html/954fc648-a24d-8995-d83a-42841465e2c5.htm" />
+            <HelpTOCNode Title="OnStartup Method " Url="html/18ef7307-f8bd-f4d6-0a0f-f6256e0950f6.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="App Events" Url="html/4cb7778e-ef62-7759-6ae3-86c851952341.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="43ec3c03-1e8d-4716-ae37-b2283b8c7943" Title="TalkingKeyboard.Shell.Logging" Url="html/b2d26bf5-90ff-b68e-2590-a238d0d6d15b.htm">
+        <HelpTOCNode Id="809af6e2-cad7-4e05-bc0f-379a290ac52d" Title="NLogLogger Class" Url="html/7636391b-7c5e-89c2-63d5-06caf877d0df.htm">
+          <HelpTOCNode Title="NLogLogger Constructor " Url="html/0392d5f8-0493-a93f-eb05-5c3b829d95c5.htm" />
+          <HelpTOCNode Id="890e39da-3c8a-47c3-a763-1ab7cb09f07f" Title="NLogLogger Methods" Url="html/7a1a030d-ea7b-837e-c720-2ab4430cc0a2.htm">
+            <HelpTOCNode Title="Log Method " Url="html/7b89be1b-dcd4-1f41-984c-37c67085419f.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="82ebaa97-0100-49ab-b869-0471e66cb21e" Title="TalkingKeyboard.Shell.ViewModels" Url="html/7706ab84-8a03-81a8-7f42-cd715e67e86c.htm">
+        <HelpTOCNode Id="bfa98354-641d-415b-9cd4-bbbadf8bb5c2" Title="MainWindowViewModel Class" Url="html/e39cfeb3-0ae2-0fab-da1d-db97791e90cb.htm">
+          <HelpTOCNode Title="MainWindowViewModel Constructor " Url="html/964385fb-81a7-f4b4-b1a8-0129fde9b996.htm" />
+          <HelpTOCNode Id="22f84586-9070-4962-adff-a7aa32e86e22" Title="MainWindowViewModel Properties" Url="html/03146002-9f8c-32b3-7fd7-a3fae065a3e1.htm">
+            <HelpTOCNode Title="ChangeViewToLeftCommand Property " Url="html/3491a469-0d59-6674-18ed-70d459d47c40.htm" />
+            <HelpTOCNode Title="ChangeViewToRightCommand Property " Url="html/fd4fd812-e968-778a-9a47-a3fce1dec744.htm" />
+            <HelpTOCNode Title="Title Property " Url="html/406f0bb1-e4a4-6e7a-8a2d-df42230d877b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MainWindowViewModel Methods" Url="html/88e37529-d4d6-b028-ab01-e2aa1fbcdfaf.htm" />
+          <HelpTOCNode Title="MainWindowViewModel Events" Url="html/ec00feb5-d909-176d-4b72-06c18e47e01c.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="6a3a0f4e-d1c8-4a91-bbb0-6a2b3bce673b" Title="TalkingKeyboard.Shell.Views" Url="html/fae7236b-2cf4-d1f7-e6a1-073a56869df1.htm">
+        <HelpTOCNode Id="d44d4e12-eec6-4c0c-a88b-accaeeda385d" Title="MainWindow Class" Url="html/21423ef9-4bf5-1e4b-c1ea-6fbfc04585fc.htm">
+          <HelpTOCNode Title="MainWindow Constructor " Url="html/8afb0ae8-6780-fe6b-5c90-e5d8f9a9274d.htm" />
+          <HelpTOCNode Title="MainWindow Properties" Url="html/8abe9147-7661-742b-0e0e-5d68d6a3283c.htm" />
+          <HelpTOCNode Id="0ec91bca-707b-4545-a6e1-6bd03c86a2c9" Title="MainWindow Methods" Url="html/8e93ae41-48fd-9b65-9809-6a6dbc6506be.htm">
+            <HelpTOCNode Title="InitializeComponent Method " Url="html/7e9aceae-e6e0-257f-75bf-a20e1edf0a85.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MainWindow Events" Url="html/d298ded3-e585-3702-3659-83b2fc159454.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

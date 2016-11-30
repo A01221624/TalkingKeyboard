@@ -69,6 +69,31 @@
                 Gets or sets the command for removing the last multi-character.
             </summary>
     </member>
+    <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel">
+      <summary>
+                This class contains the logic related to edition of the multi-character buffer. Note that the view-model currently
+                communicates directly with the suggestion service, this is a design decision for the current version of the
+                application; an alternative would be to modify the model instance and expose an interface for the suggestion
+                service to consume the necessary information.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.#ctor(Prism.Events.IEventAggregator,TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService)">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel" /> class.
+            </summary>
+      <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
+      <param name="suggestionService">The suggestion service (obtained through DI).</param>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.AddMultiCharacterCommand">
+      <summary>
+                Gets or sets the add multi-character command.
+            </summary>
+    </member>
+    <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand">
+      <summary>
+                Gets or sets the command for removing the last multi-character.
+            </summary>
+    </member>
     <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard">
       <summary>
                 This class describes a Spanish keyboard with multiple-character keys arranged in the QWERTY layout. No logic is
@@ -81,6 +106,22 @@
             </summary>
     </member>
     <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard">
+      <summary>
+                This class describes a Spanish keyboard with multiple-character keys arranged in the QWERTY layout. No logic is
+                handled in this class and can be fully edited in a designer-oriented program.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard.#ctor">
+      <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard" /> class.
+            </summary>
+    </member>
+    <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard.InitializeComponent">
       <summary>
             InitializeComponent
             </summary>
