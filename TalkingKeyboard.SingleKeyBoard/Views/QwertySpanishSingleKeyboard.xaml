@@ -173,6 +173,8 @@
 
         <sc:SelectableButton Text="⌫" Grid.Column="11" Grid.Row="0"
                              Command="{x:Static infrastructure:Commands.RemoveLastCharacterCommand}" />
+        <sc:SelectableButton Text="⏪" Grid.Column="11" Grid.Row="3"
+                             Command="{x:Static infrastructure:Commands.RemoveLastWordCommand}" />
         <sc:SelectableButton Text="⏎" Grid.Column="10" Grid.Row="1"
                              Command="{x:Static infrastructure:Commands.AppendTextCommand}"
                              CommandParameter="{x:Static system:Environment.NewLine}" Grid.ColumnSpan="2" />
