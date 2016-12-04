@@ -29,16 +29,26 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private IInputElement commandTarget;
         private TimeSpan currentGazeTimeSpan = TimeSpan.Zero;
         private double fontSize = 40;
+        private TimeSpan gazeCoolDownTimeSpan = Configuration.GazeCoolDownTimeSpan;
         private TimeSpan gazeKeepAliveTimeSpan = Configuration.GazeKeepAliveTimeSpan;
         private TimeSpan gazeTimeSpanBeforeAnimationBegins = Configuration.GazeTimeSpanBeforeAnimationBegins;
 
-        private TimeSpan gazeTimeSpanBeforeCooldown =
-            Configuration.GazeTimeSpanBeforeCooldownOccurs;
+        private TimeSpan gazeTimeSpanBeforeCooldown = Configuration.GazeTimeSpanBeforeCooldownOccurs;
 
         private TimeSpan gazeTimeSpanBeforeSelectionOccurs = Configuration.GazeTimeSpanBeforeSelectionOccurs;
         private DateTime lastSeenTime = DateTime.MinValue;
         private DateTime lastSelectedTime = DateTime.MinValue;
         private SelectableState state = SelectableState.Idle;
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="SelectableButtonViewModel" /> class.
+        /// </summary>
+        /// <param name="selectableButtonModel">The selectable button model.</param>
+        public SelectableButtonViewModel(ISelectableButtonModel selectableButtonModel)
+        {
+            this.SelectableButtonModel = selectableButtonModel;
+            this.SelectableButtonModel.PropertyChanged += this.SelectableButtonModelOnPropertyChanged;
+        }
 
         /// <summary>
         ///     The property changed.
@@ -57,7 +67,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
 
             set
             {
-                if (object.Equals(value, this.animation))
+                if (value.Equals(this.animation))
                 {
                     return;
                 }
@@ -96,7 +106,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this.animationEndTime;
+                return this.GazeTimeSpanBeforeSelectionOccurs;
             }
 
             set
@@ -145,7 +155,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
 
             set
             {
-                if (object.Equals(value, this.command))
+                if (value.Equals(this.command))
                 {
                     return;
                 }
@@ -167,7 +177,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
 
             set
             {
-                if (object.Equals(value, this.commandParameter))
+                if (value.Equals(this.commandParameter))
                 {
                     return;
                 }
@@ -189,7 +199,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
 
             set
             {
-                if (object.Equals(value, this.commandTarget))
+                if (value.Equals(this.commandTarget))
                 {
                     return;
                 }
@@ -246,6 +256,28 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
+        ///     Gets or sets the gaze cool down time span.
+        /// </summary>
+        public TimeSpan GazeCoolDownTimeSpan
+        {
+            get
+            {
+                return this.gazeCoolDownTimeSpan;
+            }
+
+            set
+            {
+                if (value.Equals(this.gazeCoolDownTimeSpan))
+                {
+                    return;
+                }
+
+                this.gazeCoolDownTimeSpan = value;
+                this.OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
         ///     Gets or sets the gaze keep alive time span.
         /// </summary>
         public TimeSpan GazeKeepAliveTimeSpan
@@ -296,7 +328,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this.gazeTimeSpanBeforeCooldown;
+                return this.GazeTimeSpanBeforeSelectionOccurs + this.GazeCoolDownTimeSpan;
             }
 
             set
@@ -318,7 +350,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             get
             {
-                return this.gazeTimeSpanBeforeSelectionOccurs;
+                return this.SelectableButtonModel.RequiredGazeTimeSpan + this.GazeTimeSpanBeforeAnimationBegins;
             }
 
             set
@@ -378,6 +410,14 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
+        ///     Gets the selectable button model.
+        /// </summary>
+        /// <value>
+        ///     The selectable button model.
+        /// </value>
+        public ISelectableButtonModel SelectableButtonModel { get; }
+
+        /// <summary>
         ///     Gets or sets the state.
         /// </summary>
         public SelectableState State
@@ -400,7 +440,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        ///     <inheritdoc/>
+        ///     <inheritdoc />
         /// </summary>
         /// <exception cref="NotImplementedException">
         ///     TODO: Consider changing the selection to the ViewModel.
@@ -411,15 +451,25 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
-        /// Call on property changed.
+        ///     Call on property changed.
         /// </summary>
         /// <param name="propertyName">
-        /// Name of property which changed.
+        ///     Name of property which changed.
         /// </param>
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void SelectableButtonModelOnPropertyChanged(
+            object sender,
+            PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            if (propertyChangedEventArgs.PropertyName == "RequiredGazeTimeSpan")
+            {
+                this.OnPropertyChanged(nameof(this.AnimationEndTime));
+            }
         }
     }
 }

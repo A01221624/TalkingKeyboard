@@ -34,6 +34,8 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         private readonly ConcurrentDictionary<SelectableControl, SelectableButtonViewModel> dataPerControl;
         private readonly TimedPoints timedPoints;
 
+
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="GazeSelectionService" /> class.
         /// </summary>

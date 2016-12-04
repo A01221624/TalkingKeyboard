@@ -5,17 +5,21 @@
                    xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                    xmlns:controls="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
                    xmlns:const="clr-namespace:TalkingKeyboard.Infrastructure.Constants;assembly=TalkingKeyboard.Infrastructure"
+                   xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
                    prism:ViewModelLocator.AutoWireViewModel="True"
 
                    Title="{Binding Title}"
                    Height="900" Width="1280"
                    WindowStartupLocation="CenterScreen"
-                   ShowTitleBar="True"
-                   ShowMinButton="True"
-                   ShowMaxRestoreButton="True"
+                   ShowTitleBar="False"
+                   ShowMinButton="False"
+                   ShowMaxRestoreButton="False"
                    ShowCloseButton="True"
                    ResizeMode="CanResizeWithGrip"
-                   ShowIconOnTitleBar="True"
+                   WindowStyle="None"
+                   WindowState="Maximized"
+                   IgnoreTaskbarOnMaximize="True"
+                   ShowIconOnTitleBar="False"
                    metro:ControlsHelper.ContentCharacterCasing="Normal">
     <Window.Resources>
         <ResourceDictionary>
@@ -104,20 +108,30 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
+            <controls:SelectableButton
+            x:Name="IncreaseSelectionSpeedButton"
+                Grid.Column="12"
+                Text="+"
+            Command="{x:Static infrastructure:Commands.IncreaseSelectionSpeedCommand}"
+                Margin="1,22,-51,10" Grid.RowSpan="2"/>
+            <controls:SelectableButton
+            x:Name="DecreaseSelectionSpeedButton"
+                Grid.Column="12" Grid.Row="2"
+                Text="-"
+            Command="{x:Static infrastructure:Commands.DecreaseSelectionSpeedCommand}"
+                Margin="1,10,-50,10" Grid.RowSpan="2">
+            </controls:SelectableButton>
             <ContentControl
-                prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}"
-                Grid.Column="1" Grid.Row="1"
-                Grid.ColumnSpan="11" Grid.RowSpan="2" />
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}" Grid.Row="1"
+                Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="10,0,10,10" />
             <ContentControl
-                prism:RegionManager.RegionName="{x:Static const:RegionNames.BoardViewRegion}"
-                Grid.Column="1" Grid.Row="4"
-                Grid.ColumnSpan="11" Grid.RowSpan="7">
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.BoardViewRegion}" Grid.Row="4"
+                Grid.ColumnSpan="13" Grid.RowSpan="8" Margin="32,0,10,10">
                 <!--<Canvas Background="Aquamarine" />-->
             </ContentControl>
             <ContentControl
-                prism:RegionManager.RegionName="{x:Static const:RegionNames.SuggestionRegion}"
-                Grid.Column="1" Grid.Row="12"
-                Grid.ColumnSpan="11" Grid.RowSpan="2">
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.SuggestionRegion}" Grid.Row="12"
+                Grid.ColumnSpan="13" Grid.RowSpan="3" Margin="10">
                 <!--<Canvas Background="Aquamarine" />-->
             </ContentControl>
         </Grid>

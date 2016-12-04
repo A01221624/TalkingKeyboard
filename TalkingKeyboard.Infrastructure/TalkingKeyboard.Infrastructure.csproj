@@ -76,11 +76,13 @@
     <Compile Include="Constants\RegionNames.cs" />
     <Compile Include="Constants\ResourceLocations.cs" />
     <Compile Include="Constants\ViewNames.cs" />
+    <Compile Include="Controls\ISelectableButtonModel.cs" />
     <Compile Include="Controls\ISelectableControlViewModel.cs" />
     <Compile Include="Controls\ITextModel.cs" />
     <Compile Include="Controls\SelectableButton.xaml.cs">
       <DependentUpon>SelectableButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SelectableButtonModel.cs" />
     <Compile Include="Controls\SelectableButtonViewModel.cs" />
     <Compile Include="Controls\SelectableControl.cs" />
     <Compile Include="DataContainers\IMaintainable.cs" />

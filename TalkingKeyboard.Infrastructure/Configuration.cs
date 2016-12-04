@@ -79,6 +79,6 @@ namespace TalkingKeyboard.Infrastructure
         /// <value>
         ///     The gaze cool-down time span.
         /// </value>
-        private static TimeSpan GazeCoolDownTimeSpan => TimeSpan.FromMilliseconds(200);
+        public static TimeSpan GazeCoolDownTimeSpan => TimeSpan.FromMilliseconds(200);
     }
 }

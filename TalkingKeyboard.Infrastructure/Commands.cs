@@ -56,5 +56,15 @@ namespace TalkingKeyboard.Infrastructure
         ///     Gets or sets the toggle shift down command.
         /// </summary>
         public static CompositeCommand ToggleShiftDownCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the increase selection speed command.
+        /// </summary>
+        public static CompositeCommand IncreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the decrease selection speed command.
+        /// </summary>
+        public static CompositeCommand DecreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
     }
 }

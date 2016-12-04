@@ -6,6 +6,9 @@
 //   Defines the Bootstrapper type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
+using TalkingKeyboard.Infrastructure.Controls;
+
 namespace TalkingKeyboard.Shell
 {
     using System.Diagnostics.CodeAnalysis;
@@ -71,6 +74,8 @@ namespace TalkingKeyboard.Shell
         /// </remarks>
         protected override DependencyObject CreateShell()
         {
+            this.Container.RegisterType<ISelectableButtonModel, SelectableButtonModel>(new ContainerControlledLifetimeManager());
+            this.Container.Resolve<ISelectableButtonModel>();
             return this.Container.Resolve<MainWindow>();
         }
 
