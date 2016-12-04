@@ -72,10 +72,12 @@
   <ItemGroup>
     <Compile Include="Commands.cs" />
     <Compile Include="Configuration.cs" />
+    <Compile Include="Constants\ButtonLabels.cs" />
     <Compile Include="Constants\CharacterClasses.cs" />
     <Compile Include="Constants\RegionNames.cs" />
     <Compile Include="Constants\ResourceLocations.cs" />
     <Compile Include="Constants\ViewNames.cs" />
+    <Compile Include="Controls\AlwaysSelectableButton.cs" />
     <Compile Include="Controls\ISelectableButtonModel.cs" />
     <Compile Include="Controls\ISelectableControlViewModel.cs" />
     <Compile Include="Controls\ITextModel.cs" />

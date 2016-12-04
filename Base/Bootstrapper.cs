@@ -7,19 +7,18 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using TalkingKeyboard.Infrastructure.Controls;
-
 namespace TalkingKeyboard.Shell
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Windows;
 
     using Microsoft.Practices.Unity;
-
+    
     using Prism.Logging;
     using Prism.Modularity;
     using Prism.Unity;
-
+    
+    using TalkingKeyboard.Infrastructure.Controls;
     using TalkingKeyboard.Modules.ByGazeTimePointProcessor;
     using TalkingKeyboard.Modules.CentralTextModule;
     using TalkingKeyboard.Modules.CoordinateProvider;

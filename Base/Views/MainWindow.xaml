@@ -121,9 +121,17 @@
             Command="{x:Static infrastructure:Commands.DecreaseSelectionSpeedCommand}"
                 Margin="1,10,-50,10" Grid.RowSpan="2">
             </controls:SelectableButton>
+            <controls:SelectableButton
+            x:Name="ToggleSelectionEnabledButton"
+                Grid.Column="0" Grid.Row="1"
+                Text="{x:Static const:ButtonLabels.RestGaze}"
+            Command="{x:Static infrastructure:Commands.ToggleSelectionEnabledCommand}"
+                Grid.ColumnSpan="2" Margin="10,10,10,10" Grid.RowSpan="2">
+            </controls:SelectableButton>
             <ContentControl
-                prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}" Grid.Row="1"
-                Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="10,0,10,10" />
+                prism:RegionManager.RegionName="{x:Static const:RegionNames.TextViewRegion}"
+                Grid.Row="1" Grid.Column="2"
+                Grid.ColumnSpan="10" Grid.RowSpan="3" Margin="10,0,10,10" />
             <ContentControl
                 prism:RegionManager.RegionName="{x:Static const:RegionNames.BoardViewRegion}" Grid.Row="4"
                 Grid.ColumnSpan="13" Grid.RowSpan="8" Margin="32,0,10,10">

@@ -8,6 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Shell.ViewModels
 {
+    using System;
     using System.Collections.Generic;
     using System.Windows.Input;
 
@@ -15,6 +16,7 @@ namespace TalkingKeyboard.Shell.ViewModels
     using Prism.Mvvm;
     using Prism.Regions;
 
+    using TalkingKeyboard.Infrastructure;
     using TalkingKeyboard.Infrastructure.Constants;
 
     /// <summary>
@@ -27,6 +29,7 @@ namespace TalkingKeyboard.Shell.ViewModels
         private readonly IRegionManager regionManager;
         private int currentViewIndex; // Must be set to index of initial board.
         private string title = "TalkingKeyboard";
+        private bool isSelectionEnabled = true;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MainWindowViewModel" /> class.
@@ -66,6 +69,53 @@ namespace TalkingKeyboard.Shell.ViewModels
                                                             RegionNames.BoardViewRegion,
                                                             this.knownBoards[this.currentViewIndex]);
                                                     });
+            this.ToggleSelectionEnabledCommand = new DelegateCommand(() => IsSelectionEnabled = !IsSelectionEnabled);
+            Commands.ToggleSelectionEnabledCommand.RegisterCommand(this.ToggleSelectionEnabledCommand);
+
+            this.DummyCommand =
+                new DelegateCommand(this.DummyMethod, () => this.IsSelectionEnabled).ObservesProperty(
+                    () => this.IsSelectionEnabled);
+            Commands.AppendTextCommand.RegisterCommand(this.DummyCommand);
+
+        }
+
+        private void DummyMethod()
+        {
+            return;
+        }
+
+        /// <summary>
+        /// Gets or sets the toggle selection enabled command.
+        /// </summary>
+        /// <value>
+        /// The toggle selection enabled command.
+        /// </value>
+        public ICommand ToggleSelectionEnabledCommand { get; set; }
+
+        /// <summary>
+        /// Gets or sets a dummy command used to determine if selection is enabled.
+        /// </summary>
+        /// <value>
+        /// The dummy command.
+        /// </value>
+        public ICommand DummyCommand { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is selection enabled.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if this instance is selection enabled; otherwise, <c>false</c>.
+        /// </value>
+        public bool IsSelectionEnabled
+        {
+            get
+            {
+                return this.isSelectionEnabled;
+            }
+            set
+            {
+                this.isSelectionEnabled = value;
+            }
         }
 
         /// <summary>

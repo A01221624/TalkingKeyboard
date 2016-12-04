@@ -66,5 +66,7 @@ namespace TalkingKeyboard.Infrastructure
         ///     Gets or sets the decrease selection speed command.
         /// </summary>
         public static CompositeCommand DecreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
+
+        public static CompositeCommand ToggleSelectionEnabledCommand { get; set; } = new CompositeCommand();
     }
 }

@@ -12,6 +12,8 @@ namespace TalkingKeyboard.Infrastructure.Controls
     using System.Windows.Input;
     using System.Windows.Media.Animation;
 
+    using Prism.Commands;
+
     using TalkingKeyboard.Infrastructure.Annotations;
     using TalkingKeyboard.Infrastructure.Enums;
 
@@ -39,6 +41,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private DateTime lastSeenTime = DateTime.MinValue;
         private DateTime lastSelectedTime = DateTime.MinValue;
         private SelectableState state = SelectableState.Idle;
+        private bool isSelectable = true;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="SelectableButtonViewModel" /> class.
@@ -48,7 +51,36 @@ namespace TalkingKeyboard.Infrastructure.Controls
         {
             this.SelectableButtonModel = selectableButtonModel;
             this.SelectableButtonModel.PropertyChanged += this.SelectableButtonModelOnPropertyChanged;
+
+            this.ToggleIsSelectableCommand = new DelegateCommand(() => this.IsSelectable = !this.IsSelectable);
+            Commands.ToggleSelectionEnabledCommand.RegisterCommand(this.ToggleIsSelectableCommand);
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is selectable.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this instance is selectable; otherwise, <c>false</c>.
+        /// </value>
+        public bool IsSelectable
+        {
+            get
+            {
+                return this.isSelectable;
+            }
+            set
+            {
+                this.isSelectable = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets the toggle is selectable command.
+        /// </summary>
+        /// <value>
+        /// The toggle is selectable command.
+        /// </value>
+        public ICommand ToggleIsSelectableCommand { get; }
 
         /// <summary>
         ///     The property changed.

@@ -204,6 +204,13 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             SelectableButtonViewModel data,
             Window window)
         {
+            var buttonText = string.Empty;
+            window.Dispatcher.Invoke(() => buttonText = (seenControl as SelectableButton)?.Text);
+            if (!data.IsSelectable && buttonText != Infrastructure.Constants.ButtonLabels.RestGaze)
+            {
+                return;
+            }
+
             switch (data.State)
             {
                 case SelectableState.Idle:
