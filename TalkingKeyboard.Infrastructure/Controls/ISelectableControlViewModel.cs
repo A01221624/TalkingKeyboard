@@ -48,6 +48,14 @@ namespace TalkingKeyboard.Infrastructure.Controls
         TimeSpan GazeTimeSpanBeforeSelectionOccurs { get; set; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether this instance is selectable.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this instance is selectable; otherwise, <c>false</c>.
+        /// </value>
+        bool IsSelectable { get; set; }
+
+        /// <summary>
         /// Gets or sets the last seen time.
         /// </summary>
         DateTime LastSeenTime { get; set; }

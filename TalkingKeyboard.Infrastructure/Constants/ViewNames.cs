@@ -24,5 +24,10 @@ namespace TalkingKeyboard.Infrastructure.Constants
         ///     The qwerty Spanish single keyboard.
         /// </summary>
         public static string QwertySpanishSingleKeyboard => "QwertySpanishSingleKeyboard";
+
+        /// <summary>
+        ///     The simple image keyboard.
+        /// </summary>
+        public static string SimpleImageBoard => "SimpleImageBoard";
     }
 }

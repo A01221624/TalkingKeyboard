@@ -86,6 +86,10 @@
     <Compile Include="Controls\SelectableButtonModel.cs" />
     <Compile Include="Controls\SelectableButtonViewModel.cs" />
     <Compile Include="Controls\SelectableControl.cs" />
+    <Compile Include="Controls\SelectableImage.xaml.cs">
+      <DependentUpon>SelectableImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectableImageViewModel.cs" />
     <Compile Include="DataContainers\IMaintainable.cs" />
     <Compile Include="DataContainers\MaintainablePointCollection.cs" />
     <Compile Include="DataContainers\TimedControlsWithPoint.cs" />
@@ -96,6 +100,7 @@
     <Compile Include="Helpers\HitTestHelper.cs" />
     <Compile Include="Helpers\StringEditHelper.cs" />
     <Compile Include="MarkupExtensions\SwitchBindingExtension.cs" />
+    <Compile Include="Models\IImageBoardViewModel.cs" />
     <Compile Include="Models\IMultiKeyboardViewModel.cs" />
     <Compile Include="Models\IMultiKeyTextModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -120,6 +125,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\SelectableButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectableImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

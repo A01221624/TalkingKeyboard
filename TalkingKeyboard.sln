@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.Mic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.SuggestionsProvider", "TalkingKeyboard.Modules.SuggestionsProvider\TalkingKeyboard.Modules.SuggestionsProvider.csproj", "{07652BA6-87A4-4F7B-BA17-D0844027CB98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingKeyboard.Modules.ImageBoard", "TalkingKeyboard.Modules.ImageBoard\TalkingKeyboard.Modules.ImageBoard.csproj", "{A8905A4C-9E72-4D42-95B2-108D30085936}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07652BA6-87A4-4F7B-BA17-D0844027CB98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8905A4C-9E72-4D42-95B2-108D30085936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8905A4C-9E72-4D42-95B2-108D30085936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8905A4C-9E72-4D42-95B2-108D30085936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8905A4C-9E72-4D42-95B2-108D30085936}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,5 +99,6 @@ Global
 		{3A25A2A8-EF5B-4490-9457-50BE3AC5EBA1} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
 		{666C8BF7-6B1E-499C-9759-283620AD19D0} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
 		{07652BA6-87A4-4F7B-BA17-D0844027CB98} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
+		{A8905A4C-9E72-4D42-95B2-108D30085936} = {F682E76A-ECC4-49AE-B125-9AB299ECDB20}
 	EndGlobalSection
 EndGlobal

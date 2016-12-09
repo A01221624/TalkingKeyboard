@@ -31,7 +31,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
     public class GazeSelectionService : IControlActivationService
     {
         private readonly AveragingFilter averagingFilter;
-        private readonly ConcurrentDictionary<SelectableControl, SelectableButtonViewModel> dataPerControl;
+        private readonly ConcurrentDictionary<SelectableControl, ISelectableControlViewModel> dataPerControl;
         private readonly TimedPoints timedPoints;
 
 
@@ -44,7 +44,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         {
             this.timedPoints = new TimedPoints(Configuration.PointKeepAliveTimeSpan);
             this.averagingFilter = new AveragingLastNpointsWithinTimeSpanFilter(3, TimeSpan.FromMilliseconds(75));
-            this.dataPerControl = new ConcurrentDictionary<SelectableControl, SelectableButtonViewModel>();
+            this.dataPerControl = new ConcurrentDictionary<SelectableControl, ISelectableControlViewModel>();
             this.KnownWindows.Add(Application.Current.MainWindow);
 
             eventAggregator.GetEvent<Events.NewCoordinateEvent>().Subscribe(this.ProcessPoint);
@@ -109,10 +109,10 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
                     continue;
                 }
 
-                SelectableButtonViewModel data;
+                ISelectableControlViewModel data;
                 if (!this.dataPerControl.TryGetValue(seenControl, out data))
                 {
-                    window.Dispatcher.Invoke(() => data = seenControl.DataContext as SelectableButtonViewModel);
+                    window.Dispatcher.Invoke(() => data = seenControl.DataContext as ISelectableControlViewModel);
                     if (data == null)
                     {
                         continue;
@@ -137,7 +137,7 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         /// </exception>
         private void StateMachineUpdateForOtherControls(
             SelectableControl control,
-            SelectableButtonViewModel data,
+            ISelectableControlViewModel data,
             Window window)
         {
             switch (data.State)
@@ -201,12 +201,14 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
         /// </exception>
         private void StateMachineUpdateForSeenControl(
             SelectableControl seenControl,
-            SelectableButtonViewModel data,
+            ISelectableControlViewModel data,
             Window window)
         {
             var buttonText = string.Empty;
             window.Dispatcher.Invoke(() => buttonText = (seenControl as SelectableButton)?.Text);
-            if (!data.IsSelectable && buttonText != Infrastructure.Constants.ButtonLabels.RestGaze)
+            if (!data.IsSelectable &&
+                buttonText != null &&
+                buttonText != Infrastructure.Constants.ButtonLabels.RestGaze)
             {
                 return;
             }

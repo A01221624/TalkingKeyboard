@@ -42,7 +42,8 @@ namespace TalkingKeyboard.Shell.ViewModels
                                    {
                                         ViewNames.T9SpanishMultiKeyboard,
                                        ViewNames.QwertySpanishMultiKeyboard,
-                                       ViewNames.QwertySpanishSingleKeyboard
+                                       ViewNames.QwertySpanishSingleKeyboard,
+                                       ViewNames.SimpleImageBoard
                                    };
 
             this.ChangeViewToLeftCommand = new DelegateCommand(

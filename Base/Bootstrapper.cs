@@ -22,6 +22,7 @@ namespace TalkingKeyboard.Shell
     using TalkingKeyboard.Modules.ByGazeTimePointProcessor;
     using TalkingKeyboard.Modules.CentralTextModule;
     using TalkingKeyboard.Modules.CoordinateProvider;
+    using TalkingKeyboard.Modules.ImageBoard;
     using TalkingKeyboard.Modules.MicrosoftTextToSpeech;
     using TalkingKeyboard.Modules.MultiKeyBoard;
     using TalkingKeyboard.Modules.SingleKeyBoard;
@@ -39,6 +40,7 @@ namespace TalkingKeyboard.Shell
             moduleCatalog.AddModule(typeof(TextHolderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionsProviderModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(CoordinateProviderModule), InitializationMode.WhenAvailable);
+            moduleCatalog.AddModule(typeof(ImageBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(MultiKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SingleKeyBoardModule), InitializationMode.WhenAvailable);
             moduleCatalog.AddModule(typeof(SuggestionBoardModule), InitializationMode.WhenAvailable);
