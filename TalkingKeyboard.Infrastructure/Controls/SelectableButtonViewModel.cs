@@ -57,6 +57,15 @@ namespace TalkingKeyboard.Infrastructure.Controls
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="SelectableButtonViewModel"/> class.
+        /// </summary>
+        public SelectableButtonViewModel()
+        {
+            this.ToggleIsSelectableCommand = new DelegateCommand(() => this.IsSelectable = !this.IsSelectable);
+            Commands.ToggleSelectionEnabledCommand.RegisterCommand(this.ToggleIsSelectableCommand);
+        }
+
+        /// <summary>
         /// Gets or sets a value indicating whether this instance is selectable.
         /// </summary>
         /// <value>

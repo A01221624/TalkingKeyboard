@@ -46,6 +46,12 @@ namespace TalkingKeyboard.Infrastructure.Controls
             Commands.ToggleSelectionEnabledCommand.RegisterCommand(this.ToggleIsSelectableCommand);
         }
 
+        public SelectableImageViewModel()
+        {
+            this.ToggleIsSelectableCommand = new DelegateCommand(() => this.IsSelectable = !this.IsSelectable);
+            Commands.ToggleSelectionEnabledCommand.RegisterCommand(this.ToggleIsSelectableCommand);
+        }
+
         /// <summary>
         /// Gets or sets a value indicating whether this instance is selectable.
         /// </summary>
