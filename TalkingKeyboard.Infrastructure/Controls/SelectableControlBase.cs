@@ -40,6 +40,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
         private DateTime lastSeenTime = DateTime.MinValue;
         private DateTime lastSelectedTime = DateTime.MinValue;
         private SelectableState state = SelectableState.Idle;
+        private bool isSelectable = true;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectableControlBase"/> class.
@@ -340,7 +341,32 @@ namespace TalkingKeyboard.Infrastructure.Controls
         /// <value>
         ///     <c>true</c> if this instance is selectable; otherwise, <c>false</c>.
         /// </value>
-        public bool IsSelectable { get; set; } = true;
+        public bool IsSelectable
+        {
+            get
+            {
+                return this.isSelectable;
+            }
+
+            set
+            {
+                if (value == this.isSelectable)
+                {
+                    return;
+                }
+
+                this.isSelectable = value;
+                this.OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether this instance is always selectable.
+        /// </summary>
+        /// <value>
+        ///     <c>true</c> if this instance is always selectable; otherwise, <c>false</c>.
+        /// </value>
+        public bool IsAlwaysSelectable { get; set; } = false;
 
         /// <summary>
         ///     Gets or sets the last seen time.

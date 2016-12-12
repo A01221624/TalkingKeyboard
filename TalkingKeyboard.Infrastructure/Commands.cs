@@ -18,9 +18,19 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand AddMultiCharacterTextCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
-        ///     Gets or sets the add suggestion command.
+        ///     Gets or sets the set text command.
         /// </summary>
-        public static CompositeCommand WriteSuggestionCommand { get; set; } = new CompositeCommand();
+        public static CompositeCommand AppendTextCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the decrease selection speed command.
+        /// </summary>
+        public static CompositeCommand DecreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the increase selection speed command.
+        /// </summary>
+        public static CompositeCommand IncreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
         ///     Gets or sets the remove last character command.
@@ -43,14 +53,14 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand SetShiftDownCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
-        ///     Gets or sets the set text command.
-        /// </summary>
-        public static CompositeCommand AppendTextCommand { get; set; } = new CompositeCommand();
-
-        /// <summary>
         ///     Gets or sets the speech synthesis command.
         /// </summary>
         public static CompositeCommand SpeechSynthesisCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the toggle selection enabled command.
+        /// </summary>
+        public static CompositeCommand ToggleSelectionEnabledCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
         ///     Gets or sets the toggle shift down command.
@@ -58,15 +68,8 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand ToggleShiftDownCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
-        ///     Gets or sets the increase selection speed command.
+        ///     Gets or sets the add suggestion command.
         /// </summary>
-        public static CompositeCommand IncreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
-
-        /// <summary>
-        ///     Gets or sets the decrease selection speed command.
-        /// </summary>
-        public static CompositeCommand DecreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
-
-        public static CompositeCommand ToggleSelectionEnabledCommand { get; set; } = new CompositeCommand();
+        public static CompositeCommand WriteSuggestionCommand { get; set; } = new CompositeCommand();
     }
 }

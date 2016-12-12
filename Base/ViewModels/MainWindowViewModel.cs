@@ -27,7 +27,6 @@ namespace TalkingKeyboard.Shell.ViewModels
         private readonly List<string> knownBoards;
         private readonly IRegionManager regionManager;
         private int currentViewIndex; // Must be set to index of initial board.
-        private bool isSelectionEnabled = true;
         private string title = "TalkingKeyboard";
 
         /// <summary>
@@ -69,14 +68,6 @@ namespace TalkingKeyboard.Shell.ViewModels
                                                             RegionNames.BoardViewRegion,
                                                             this.knownBoards[this.currentViewIndex]);
                                                     });
-            this.ToggleSelectionEnabledCommand =
-                new DelegateCommand(() => this.IsSelectionEnabled = !this.IsSelectionEnabled);
-            Commands.ToggleSelectionEnabledCommand.RegisterCommand(this.ToggleSelectionEnabledCommand);
-
-            this.DummyCommand =
-                new DelegateCommand(this.DummyMethod, () => this.IsSelectionEnabled).ObservesProperty(
-                    () => this.IsSelectionEnabled);
-            Commands.AppendTextCommand.RegisterCommand(this.DummyCommand);
         }
 
         /// <summary>
@@ -104,25 +95,6 @@ namespace TalkingKeyboard.Shell.ViewModels
         public ICommand DummyCommand { get; set; }
 
         /// <summary>
-        ///     Gets or sets a value indicating whether this instance is selection enabled.
-        /// </summary>
-        /// <value>
-        ///     <c>true</c> if this instance is selection enabled; otherwise, <c>false</c>.
-        /// </value>
-        public bool IsSelectionEnabled
-        {
-            get
-            {
-                return this.isSelectionEnabled;
-            }
-
-            set
-            {
-                this.SetProperty(ref this.isSelectionEnabled, value);
-            }
-        }
-
-        /// <summary>
         ///     Gets or sets the title of the window.
         /// </summary>
         /// <value>
@@ -139,18 +111,6 @@ namespace TalkingKeyboard.Shell.ViewModels
             {
                 this.SetProperty(ref this.title, value);
             }
-        }
-
-        /// <summary>
-        ///     Gets or sets the toggle selection enabled command.
-        /// </summary>
-        /// <value>
-        ///     The toggle selection enabled command.
-        /// </value>
-        public ICommand ToggleSelectionEnabledCommand { get; set; }
-
-        private void DummyMethod()
-        {
         }
     }
 }

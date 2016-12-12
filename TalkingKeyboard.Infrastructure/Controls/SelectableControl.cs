@@ -64,6 +64,13 @@ namespace TalkingKeyboard.Infrastructure.Controls
             typeof(SelectableControl),
             new PropertyMetadata(default(IInputElement)));
 
+        public static readonly DependencyProperty IsAlwaysSelectableProperty =
+            DependencyProperty.Register(
+                "IsAlwaysSelectable",
+                typeof(bool),
+                typeof(SelectableControl),
+                new PropertyMetadata(default(bool)));
+
         /// <summary>
         ///     Gets or sets the animation.
         /// </summary>
@@ -141,6 +148,22 @@ namespace TalkingKeyboard.Infrastructure.Controls
             set
             {
                 this.SetValue(CommandTargetProperty, value);
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether is always selectable.
+        /// </summary>
+        public bool IsAlwaysSelectable
+        {
+            get
+            {
+                return (bool)this.GetValue(IsAlwaysSelectableProperty);
+            }
+
+            set
+            {
+                this.SetValue(IsAlwaysSelectableProperty, value);
             }
         }
 

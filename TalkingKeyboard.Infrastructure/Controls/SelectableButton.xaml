@@ -35,6 +35,7 @@
                 Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}, FallbackValue=40, Mode=OneWay}"
                 FontFamily="Calibri Light" 
+                IsEnabled="{Binding IsSelectable, FallbackValue=True}"
                 />
         <ed:Arc x:Name="arc"
                 Grid.Column="1"

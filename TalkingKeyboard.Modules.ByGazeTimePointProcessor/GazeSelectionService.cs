@@ -204,11 +204,10 @@ namespace TalkingKeyboard.Modules.ByGazeTimePointProcessor
             ISelectableControlViewModel data,
             Window window)
         {
-            var buttonText = string.Empty;
-            window.Dispatcher.Invoke(() => buttonText = (seenControl as SelectableButton)?.Text);
+            bool isAlwaysSelectable = false;
+            window.Dispatcher.Invoke(() => isAlwaysSelectable = seenControl.IsAlwaysSelectable);
             if (!data.IsSelectable &&
-                buttonText != null &&
-                buttonText != Infrastructure.Constants.ButtonLabels.RestGaze)
+                !isAlwaysSelectable)
             {
                 return;
             }
