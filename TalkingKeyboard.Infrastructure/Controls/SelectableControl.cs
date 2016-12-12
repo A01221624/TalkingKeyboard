@@ -10,6 +10,7 @@ namespace TalkingKeyboard.Infrastructure.Controls
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
+    using System.Windows.Media;
     using System.Windows.Media.Animation;
 
     /// <summary>
@@ -25,6 +26,15 @@ namespace TalkingKeyboard.Infrastructure.Controls
             typeof(Storyboard),
             typeof(SelectableControl),
             new PropertyMetadata(default(Storyboard)));
+
+        /// <summary>
+        ///     The background property
+        /// </summary>
+        public static new readonly DependencyProperty BackgroundProperty = DependencyProperty.Register(
+            "Background",
+            typeof(Brush),
+            typeof(SelectableControl),
+            new PropertyMetadata(default(Brush)));
 
         /// <summary>
         ///     The command parameter property
@@ -67,6 +77,22 @@ namespace TalkingKeyboard.Infrastructure.Controls
             set
             {
                 this.SetValue(AnimationProperty, value);
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a brush that describes the background of a control.
+        /// </summary>
+        public new Brush Background
+        {
+            get
+            {
+                return (Brush)this.GetValue(BackgroundProperty);
+            }
+
+            set
+            {
+                this.SetValue(BackgroundProperty, value);
             }
         }
 

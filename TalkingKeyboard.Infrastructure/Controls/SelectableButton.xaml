@@ -29,11 +29,13 @@
     </local:SelectableControl.Resources>
     <Grid>
         <Button Name="Button"
+                Background="{Binding Background, FallbackValue=#FF2F2F2F, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 Command="{Binding Command, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 CommandParameter="{Binding CommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}, FallbackValue=40, Mode=OneWay}"
-                FontFamily="Calibri Light" />
+                FontFamily="Calibri Light" 
+                />
         <ed:Arc x:Name="arc"
                 Grid.Column="1"
                 Grid.Row="1"

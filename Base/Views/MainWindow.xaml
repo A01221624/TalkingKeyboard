@@ -6,6 +6,7 @@
                    xmlns:controls="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
                    xmlns:const="clr-namespace:TalkingKeyboard.Infrastructure.Constants;assembly=TalkingKeyboard.Infrastructure"
                    xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
+                   xmlns:markupExtensions="clr-namespace:TalkingKeyboard.Infrastructure.MarkupExtensions;assembly=TalkingKeyboard.Infrastructure"
                    prism:ViewModelLocator.AutoWireViewModel="True"
 
                    Title="{Binding Title}"
@@ -126,6 +127,7 @@
                 Grid.Column="0" Grid.Row="1"
                 Text="{x:Static const:ButtonLabels.RestGaze}"
             Command="{x:Static infrastructure:Commands.ToggleSelectionEnabledCommand}"
+               Background="{markupExtensions:SwitchBinding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type metro:MetroWindow}}, Path=DataContext.IsSelectionEnabled, ValueIfTrue=#FF2F2F2F, ValueIfFalse=#93C572}"
                 Grid.ColumnSpan="2" Margin="10,10,10,10" Grid.RowSpan="2">
             </controls:SelectableButton>
             <ContentControl

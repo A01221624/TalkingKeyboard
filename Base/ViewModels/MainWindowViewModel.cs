@@ -115,7 +115,7 @@ namespace TalkingKeyboard.Shell.ViewModels
             }
             set
             {
-                this.isSelectionEnabled = value;
+                this.SetProperty(ref this.isSelectionEnabled, value);
             }
         }
 
