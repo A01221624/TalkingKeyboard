@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace TalkingKeyboard.Infrastructure.Controls
 {
-    public interface ISelectableButtonModel : INotifyPropertyChanged
+    public interface ISelectableControlModel : INotifyPropertyChanged
     {
         /// <summary>
         /// Gets or sets the required gaze time span.

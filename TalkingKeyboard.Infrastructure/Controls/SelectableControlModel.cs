@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SelectableButtonModel.cs" company="Numeral">
+// <copyright file="SelectableControlModel.cs" company="Numeral">
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
@@ -17,14 +17,14 @@ namespace TalkingKeyboard.Infrastructure.Controls
     /// <summary>
     ///     The selectable button model.
     /// </summary>
-    public class SelectableButtonModel : ISelectableButtonModel
+    public class SelectableControlModel : ISelectableControlModel
     {
         private TimeSpan requiredGazeTimeSpan = Configuration.InitialRequiredGazeTime;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="SelectableButtonModel" /> class.
+        ///     Initializes a new instance of the <see cref="SelectableControlModel" /> class.
         /// </summary>
-        public SelectableButtonModel()
+        public SelectableControlModel()
         {
             this.IncreaseSelectionSpeedCommand =
                 new DelegateCommand(() => { this.RequiredGazeTimeSpan -= TimeSpan.FromMilliseconds(100); });

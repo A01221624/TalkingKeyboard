@@ -75,8 +75,8 @@ namespace TalkingKeyboard.Shell
         /// </remarks>
         protected override DependencyObject CreateShell()
         {
-            this.Container.RegisterType<ISelectableButtonModel, SelectableButtonModel>(new ContainerControlledLifetimeManager());
-            this.Container.Resolve<ISelectableButtonModel>();
+            this.Container.RegisterType<ISelectableControlModel, SelectableControlModel>(new ContainerControlledLifetimeManager());
+            this.Container.Resolve<ISelectableControlModel>();
             return this.Container.Resolve<MainWindow>();
         }
 
