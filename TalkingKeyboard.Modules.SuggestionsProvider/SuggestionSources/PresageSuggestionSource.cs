@@ -8,6 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
 {
+    using System;
     using System.Collections.ObjectModel;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
@@ -29,17 +30,14 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
          Justification = "Web addresses exempt of spell-check.")]
     public class PresageSuggestionSource : ISuggestionSource
     {
-        private readonly PresageChannel channel;
+        private PresageChannel channel;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="PresageSuggestionSource" /> class.
         /// </summary>
         public PresageSuggestionSource()
         {
-            var binding = new NetNamedPipeBinding();
-            var address = new EndpointAddress("net.pipe://localhost/PresageService/v1/presage");
-            var channelFactory = new ChannelFactory<PresageChannel>(binding, address);
-            this.channel = channelFactory.CreateChannel();
+            this.InitializeChannel();
         }
 
         /// <summary>
@@ -71,18 +69,41 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources
                 return new ObservableCollection<string>();
             }
 
+            if ((this.channel.State != CommunicationState.Opened) && (this.channel.State != CommunicationState.Opening))
+            {
+                this.InitializeChannel();
+            }
+
             string prefix, lastWord;
             StringEditHelper.SplitStringPrefixAndLastWord(currentText, out prefix, out lastWord);
 
             prefix = StringEditHelper.ConvertToDefaultEncodingFromUtf8(prefix);
             lastWord = StringEditHelper.ConvertToDefaultEncodingFromUtf8(lastWord);
 
-            var result =
-                this.channel.predict(prefix, lastWord)
-                    .Select(StringEditHelper.ConvertToUtf8FromDefaultEncoding)
-                    .ToList();
+            try
+            {
+                var result =
+                    this.channel.predict(prefix, lastWord)
+                        .Select(StringEditHelper.ConvertToUtf8FromDefaultEncoding)
+                        .ToList();
 
-            return new ObservableCollection<string>(result);
+                return new ObservableCollection<string>(result);
+            }
+            catch (Exception)
+            {
+                return new ObservableCollection<string>();
+            }
+        }
+
+        /// <summary>
+        ///     Initializes the presage WCF channel.
+        /// </summary>
+        private void InitializeChannel()
+        {
+            var binding = new NetNamedPipeBinding();
+            var address = new EndpointAddress("net.pipe://localhost/PresageService/v1/presage");
+            var channelFactory = new ChannelFactory<PresageChannel>(binding, address);
+            this.channel = channelFactory.CreateChannel();
         }
     }
 }

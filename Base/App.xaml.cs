@@ -5,6 +5,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace TalkingKeyboard.Shell
 {
+    using System;
+    using System.Diagnostics;
     using System.Windows;
 
     /// <summary>
@@ -21,6 +23,27 @@ namespace TalkingKeyboard.Shell
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            var pname = Process.GetProcessesByName("presage_wcf_service_system_tray");
+            if (pname.Length == 0)
+            {
+                try
+                {
+                    var presageProcess = new Process();
+                    var path = Environment.ExpandEnvironmentVariables("%ProgramW6432%")
+                               + "\\presage\\bin\\presage_wcf_service_system_tray.exe";
+                    presageProcess.StartInfo.FileName = path;
+                    presageProcess.EnableRaisingEvents = false;
+
+                    presageProcess.Start();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine(
+                        "Could not find presage in the default folder (%PROGRAMFILES%\\presage)." +
+                        "Have you installed it? It is used for providing auto-completion.");
+                }
+            }
 
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
