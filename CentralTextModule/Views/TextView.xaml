@@ -4,5 +4,9 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <TextBox FontSize="25"
-             Text="{Binding CurrentText, FallbackValue=Hola mundo}" />
+             Text="{Binding CurrentText, FallbackValue=Hola mundo}"
+             IsReadOnly="True"
+             IsReadOnlyCaretVisible="False"
+             TextWrapping="Wrap"
+             />
 </UserControl>
