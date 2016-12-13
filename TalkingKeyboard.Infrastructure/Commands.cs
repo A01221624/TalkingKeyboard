@@ -23,6 +23,11 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand AppendTextCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
+        ///     Gets or sets the clear text command.
+        /// </summary>
+        public static CompositeCommand ClearTextCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
         ///     Gets or sets the decrease selection speed command.
         /// </summary>
         public static CompositeCommand DecreaseSelectionSpeedCommand { get; set; } = new CompositeCommand();
@@ -46,6 +51,11 @@ namespace TalkingKeyboard.Infrastructure
         ///     Gets or sets the remove last word command.
         /// </summary>
         public static CompositeCommand RemoveLastWordCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the remove last word without trim command.
+        /// </summary>
+        public static CompositeCommand RemoveLastWordWithoutTrimCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
         ///     Gets or sets the set shift down command.

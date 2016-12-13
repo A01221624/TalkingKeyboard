@@ -187,6 +187,8 @@
                              Command="{x:Static infrastructure:Commands.SpeechSynthesisCommand}"
                              CommandParameter="Hola" Grid.ColumnSpan="2"
                              Grid.Column="0" Margin="10,10,0,10" />
+        <sc:SelectableButton Text="×" Grid.Column="10" Grid.Row="3"
+                             Command="{x:Static infrastructure:Commands.ClearTextCommand}" Margin="0,10,19,10" />
 
     </Grid>
 </UserControl>

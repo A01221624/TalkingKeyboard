@@ -13,40 +13,59 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <sc:SelectableImage
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <sc:SelectableImage
             Grid.Column="0" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
 			Source="{Binding DataContext.ImagePaths[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
 			CommandParameter="{Binding DataContext.ImageNames[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
-        <sc:SelectableImage
+            <sc:SelectableImage
             Grid.Column="2" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
 			Source="{Binding DataContext.ImagePaths[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
 			CommandParameter="{Binding DataContext.ImageNames[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
-        <sc:SelectableImage
+            <sc:SelectableImage
             Grid.Column="1" Grid.Row="1" 
 			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
 			Source="{Binding DataContext.ImagePaths[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
 			CommandParameter="{Binding DataContext.ImageNames[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
-        <sc:SelectableImage
+            <sc:SelectableImage
             Grid.Column="0" Grid.Row="2" 
 			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
 			Source="{Binding DataContext.ImagePaths[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
 			CommandParameter="{Binding DataContext.ImageNames[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
-        <sc:SelectableImage
+            <sc:SelectableImage
             Grid.Column="2" Grid.Row="2" 
 			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
 			Source="{Binding DataContext.ImagePaths[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
 			CommandParameter="{Binding DataContext.ImageNames[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
 
+        </Grid>
+        <Grid Grid.Column="1"
+              Margin="10 10 10 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <sc:SelectableButton Text="⏪" Grid.Row="1"
+        	Command="{x:Static infrastructure:Commands.RemoveLastWordCommand}" Margin="10,15,5,10" />
+            <sc:SelectableButton Text="×" Grid.Row="2"
+        	Command="{x:Static infrastructure:Commands.ClearTextCommand}" Margin="10,15,5,10" />
+        </Grid>
     </Grid>
 </UserControl>

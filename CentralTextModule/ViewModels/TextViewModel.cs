@@ -38,6 +38,7 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
         {
             this.eventAggregator = eventAggregator;
             this.AppendTextCommand = new DelegateCommand<string>(this.AppendText);
+            this.ClearTextCommand = new DelegateCommand(() => this.CurrentText = string.Empty);
             this.RemoveLastCharacterCommand =
                 new DelegateCommand(
                     () =>
@@ -47,10 +48,20 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
                                 : this.CurrentText,
                     () => this.CurrentText.Length > 0).ObservesProperty(() => this.CurrentText);
             this.RemoveLastWordCommand =
+                new DelegateCommand(
+                    () =>
+                        {
+                            this.CurrentText =
+                                StringEditHelper.RemoveLastWord(this.CurrentText.TrimEnd(CharacterClasses.Whitespace));
+                        });
+            this.RemoveLastWordWithoutTrimCommand =
                 new DelegateCommand(() => { this.CurrentText = StringEditHelper.RemoveLastWord(this.CurrentText); });
+
             Commands.AppendTextCommand.RegisterCommand(this.AppendTextCommand);
+            Commands.ClearTextCommand.RegisterCommand(this.ClearTextCommand);
             Commands.RemoveLastCharacterCommand.RegisterCommand(this.RemoveLastCharacterCommand);
             Commands.RemoveLastWordCommand.RegisterCommand(this.RemoveLastWordCommand);
+            Commands.RemoveLastWordWithoutTrimCommand.RegisterCommand(this.RemoveLastWordWithoutTrimCommand);
         }
 
         /// <summary>
@@ -60,6 +71,14 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
         ///     The command for adding a string to the current text.
         /// </value>
         public ICommand AppendTextCommand { get; }
+
+        /// <summary>
+        ///     Gets or sets the clear text command.
+        /// </summary>
+        /// <value>
+        ///     The clear text command.
+        /// </value>
+        public ICommand ClearTextCommand { get; set; }
 
         /// <summary>
         ///     Gets or sets the current text.
@@ -93,6 +112,14 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
         ///     The command for removing the last word from the current text.
         /// </value>
         public ICommand RemoveLastWordCommand { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the remove last word without trim command.
+        /// </summary>
+        /// <value>
+        ///     The remove last word without trim command.
+        /// </value>
+        public ICommand RemoveLastWordWithoutTrimCommand { get; set; }
 
         /// <summary>
         ///     Appends a string to the current text.

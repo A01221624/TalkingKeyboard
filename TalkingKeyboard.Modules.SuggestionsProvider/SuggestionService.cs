@@ -162,7 +162,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
             var lastWord = StringEditHelper.GetLastWord(currentText);
             if (s.ToLower().StartsWith(lastWord.ToLower()))
             {
-                Commands.RemoveLastWordCommand.Execute(null);
+                Commands.RemoveLastWordWithoutTrimCommand.Execute(null);
             }
 
             Commands.AppendTextCommand.Execute(s + " ");
