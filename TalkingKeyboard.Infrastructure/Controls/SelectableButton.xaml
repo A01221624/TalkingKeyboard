@@ -10,6 +10,7 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="300"
     xmlns:prism="http://prismlibrary.com/"
+    xmlns:markupExtensions="clr-namespace:TalkingKeyboard.Infrastructure.MarkupExtensions"
     prism:ViewModelLocator.AutoWireViewModel="True"
     metro:ButtonHelper.PreserveTextCase="True"
     FontSize="{Binding FontSize, Mode=TwoWay}">
@@ -26,6 +27,7 @@
                 <DiscreteObjectKeyFrame KeyTime="{Binding Path=AnimationEndTime}" Value="{x:Static Visibility.Hidden}" />
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <markupExtensions:OverridableBooleanConverter x:Key="OverridableBooleanConverter"></markupExtensions:OverridableBooleanConverter>
     </local:SelectableControl.Resources>
     <Grid>
         <Button Name="Button"
@@ -35,8 +37,16 @@
                 Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}}"
                 FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableButton}}, FallbackValue=40, Mode=OneWay}"
                 FontFamily="Calibri Light" 
-                IsEnabled="{Binding IsSelectable, FallbackValue=True}"
-                />
+                >
+            <Button.IsEnabled>
+                <MultiBinding Converter="{StaticResource OverridableBooleanConverter}">
+                    <Binding Path="IsSelectable"></Binding>
+                    <Binding Path="IsAlwaysSelectable"
+                        RelativeSource="{RelativeSource FindAncestor, 
+                        AncestorType={x:Type local:SelectableButton}}"/>
+                </MultiBinding>
+            </Button.IsEnabled>
+        </Button>
         <ed:Arc x:Name="arc"
                 Grid.Column="1"
                 Grid.Row="1"
