@@ -56,7 +56,7 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel">
+        <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel">
             <summary>
                 This class contains the logic related to edition of the multi-character buffer. Note that the view-model currently
                 communicates directly with the suggestion service, this is a design decision for the current version of the
@@ -65,14 +65,14 @@
             </summary>
             <seealso cref="T:Prism.Mvvm.BindableBase" />
         </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.#ctor(Prism.Events.IEventAggregator,TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService)">
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel.#ctor(Prism.Events.IEventAggregator,TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService)">
             <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel" /> class.
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel" /> class.
             </summary>
             <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
             <param name="suggestionService">The suggestion service (obtained through DI).</param>
         </member>
-        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.AddMultiCharacterCommand">
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel.AddMultiCharacterCommand">
             <summary>
                 Gets or sets the add multi-character command.
             </summary>
@@ -80,7 +80,7 @@
                 The add multi-character command.
             </value>
         </member>
-        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand">
+        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel.RemoveLastMultiCharacterCommand">
             <summary>
                 Gets or sets the command for removing the last multi-character.
             </summary>
@@ -88,56 +88,13 @@
                 The command for removing the last multi-character.
             </value>
         </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.AddMultiCharacter(System.String)">
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel.AddMultiCharacter(System.String)">
             <summary>
                 Adds a multi-character.
             </summary>
             <param name="s">The s.</param>
         </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.T9SpanishMultiKeyboardViewModel.RemoveLastMultiCharacter">
-            <summary>
-                Removes the last multi-character.
-            </summary>
-        </member>
-        <member name="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel">
-            <summary>
-                This class contains the logic related to edition of the multi-character buffer. Note that the view-model currently
-                communicates directly with the suggestion service, this is a design decision for the current version of the
-                application; an alternative would be to modify the model instance and expose an interface for the suggestion
-                service to consume the necessary information.
-            </summary>
-            <seealso cref="T:Prism.Mvvm.BindableBase" />
-        </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.#ctor(Prism.Events.IEventAggregator,TalkingKeyboard.Infrastructure.ServiceInterfaces.ISuggestionService)">
-            <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel" /> class.
-            </summary>
-            <param name="eventAggregator">Provides pub/sub events (obtained through DI).</param>
-            <param name="suggestionService">The suggestion service (obtained through DI).</param>
-        </member>
-        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.AddMultiCharacterCommand">
-            <summary>
-                Gets or sets the add multi-character command.
-            </summary>
-            <value>
-                The add multi-character command.
-            </value>
-        </member>
-        <member name="P:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.RemoveLastMultiCharacterCommand">
-            <summary>
-                Gets or sets the command for removing the last multi-character.
-            </summary>
-            <value>
-                The command for removing the last multi-character.
-            </value>
-        </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.AddMultiCharacter(System.String)">
-            <summary>
-                Adds a multi-character.
-            </summary>
-            <param name="s">The s.</param>
-        </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.QwertySpanishMultiKeyboardViewModel.RemoveLastMultiCharacter">
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.ViewModels.MultiKeyboardViewModel.RemoveLastMultiCharacter">
             <summary>
                 Removes the last multi-character.
             </summary>
@@ -151,10 +108,13 @@
             T9SpanishMultiKeyboard
             </summary>
         </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard.#ctor">
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard.#ctor(TalkingKeyboard.Infrastructure.Models.IMultiKeyboardViewModel)">
             <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard" /> class.
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard"/> class.
             </summary>
+            <param name="viewModel">
+            The view-model for multi-character keyboards.
+            </param>
         </member>
         <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.T9SpanishMultiKeyboard.InitializeComponent">
             <summary>
@@ -170,10 +130,13 @@
             QwertySpanishMultiKeyboard
             </summary>
         </member>
-        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.#ctor">
+        <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.#ctor(TalkingKeyboard.Infrastructure.Models.IMultiKeyboardViewModel)">
             <summary>
-                Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard" /> class.
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard"/> class.
             </summary>
+            <param name="viewModel">
+            The view-model for multi-character keyboards.
+            </param>
         </member>
         <member name="M:TalkingKeyboard.Modules.MultiKeyBoard.Views.QwertySpanishMultiKeyboard.InitializeComponent">
             <summary>

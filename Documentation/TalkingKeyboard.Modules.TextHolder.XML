@@ -61,6 +61,14 @@
                 The command for adding a string to the current text.
             </value>
         </member>
+        <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.ClearTextCommand">
+            <summary>
+                Gets or sets the clear text command.
+            </summary>
+            <value>
+                The clear text command.
+            </value>
+        </member>
         <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.CurrentText">
             <summary>
                 Gets or sets the current text.
@@ -80,6 +88,14 @@
             </summary>
             <value>
                 The command for removing the last word from the current text.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.RemoveLastWordWithoutTrimCommand">
+            <summary>
+                Gets or sets the remove last word without trim command.
+            </summary>
+            <value>
+                The remove last word without trim command.
             </value>
         </member>
         <member name="M:TalkingKeyboard.Modules.CentralTextModule.ViewModels.TextViewModel.AppendText(System.String)">

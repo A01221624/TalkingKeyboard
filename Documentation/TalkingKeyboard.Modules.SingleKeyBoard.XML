@@ -65,6 +65,14 @@
                 <c>true</c> if this instance has shift down; otherwise, <c>false</c>.
             </value>
         </member>
+        <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.ResetShiftDownCommand">
+            <summary>
+                Gets or sets the command for resetting shift down.
+            </summary>
+            <value>
+                The command for resetting shift down.
+            </value>
+        </member>
         <member name="P:TalkingKeyboard.Modules.SingleKeyBoard.ViewModels.QwertySpanishSingleKeyboardViewModel.SetShiftDownCommand">
             <summary>
                 Gets or sets the command for setting shift down.

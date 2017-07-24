@@ -109,6 +109,14 @@
                 The command for switching to the view on the right.
             </value>
         </member>
+        <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.DummyCommand">
+            <summary>
+                Gets or sets a dummy command used to determine if selection is enabled.
+            </summary>
+            <value>
+                The dummy command.
+            </value>
+        </member>
         <member name="P:TalkingKeyboard.Shell.ViewModels.MainWindowViewModel.Title">
             <summary>
                 Gets or sets the title of the window.

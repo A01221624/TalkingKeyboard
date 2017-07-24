@@ -173,7 +173,7 @@
             </remarks>
             <param name="p">The point to be processed.</param>
         </member>
-        <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.StateMachineUpdateForOtherControls(TalkingKeyboard.Infrastructure.Controls.SelectableControl,TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel,System.Windows.Window)">
+        <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.StateMachineUpdateForOtherControls(TalkingKeyboard.Infrastructure.Controls.SelectableControl,TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel,System.Windows.Window)">
             <summary>
                 Processes the machine update for controls which weren't seen with the current (latest) point.
             </summary>
@@ -185,7 +185,7 @@
                 but this module has not been updated).
             </exception>
         </member>
-        <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.StateMachineUpdateForSeenControl(TalkingKeyboard.Infrastructure.Controls.SelectableControl,TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel,System.Windows.Window)">
+        <member name="M:TalkingKeyboard.Modules.ByGazeTimePointProcessor.GazeSelectionService.StateMachineUpdateForSeenControl(TalkingKeyboard.Infrastructure.Controls.SelectableControl,TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel,System.Windows.Window)">
             <summary>
                 Processes the machine update for the control which was seen with the current (latest) point.
             </summary>

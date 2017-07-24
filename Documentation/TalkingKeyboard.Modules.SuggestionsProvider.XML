@@ -155,6 +155,11 @@
                 </para>
             </remarks>
         </member>
+        <member name="M:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionSources.PresageSuggestionSource.InitializeChannel">
+            <summary>
+                Initializes the presage WCF channel.
+            </summary>
+        </member>
         <member name="T:TalkingKeyboard.Modules.SuggestionsProvider.SuggestionsProviderModule">
             <summary>
                 Class for initializing the module for providing suggestions based on the context (current text, current multi-text,

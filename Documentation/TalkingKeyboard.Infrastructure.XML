@@ -14,9 +14,24 @@
                 Gets or sets the add multi-character text command.
             </summary>
         </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Commands.WriteSuggestionCommand">
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.AppendTextCommand">
             <summary>
-                Gets or sets the add suggestion command.
+                Gets or sets the set text command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.ClearTextCommand">
+            <summary>
+                Gets or sets the clear text command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.DecreaseSelectionSpeedCommand">
+            <summary>
+                Gets or sets the decrease selection speed command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.IncreaseSelectionSpeedCommand">
+            <summary>
+                Gets or sets the increase selection speed command.
             </summary>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.Commands.RemoveLastCharacterCommand">
@@ -34,14 +49,14 @@
                 Gets or sets the remove last word command.
             </summary>
         </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.RemoveLastWordWithoutTrimCommand">
+            <summary>
+                Gets or sets the remove last word without trim command.
+            </summary>
+        </member>
         <member name="P:TalkingKeyboard.Infrastructure.Commands.SetShiftDownCommand">
             <summary>
                 Gets or sets the set shift down command.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Commands.AppendTextCommand">
-            <summary>
-                Gets or sets the set text command.
             </summary>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.Commands.SpeechSynthesisCommand">
@@ -49,9 +64,19 @@
                 Gets or sets the speech synthesis command.
             </summary>
         </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.ToggleSelectionEnabledCommand">
+            <summary>
+                Gets or sets the toggle selection enabled command.
+            </summary>
+        </member>
         <member name="P:TalkingKeyboard.Infrastructure.Commands.ToggleShiftDownCommand">
             <summary>
                 Gets or sets the toggle shift down command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Commands.WriteSuggestionCommand">
+            <summary>
+                Gets or sets the add suggestion command.
             </summary>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Configuration">
@@ -124,6 +149,19 @@
             </summary>
             <value>
                 The gaze cool-down time span.
+            </value>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Constants.ButtonLabels">
+            <summary>
+                Constants for the labels on special buttons.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ButtonLabels.RestGaze">
+            <summary>
+                Gets the rest gaze label.
+            </summary>
+            <value>
+                The rest gaze label.
             </value>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Constants.CharacterClasses">
@@ -219,10 +257,28 @@
                 The qwerty Spanish multi keyboard.
             </summary>
         </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ViewNames.T9SpanishMultiKeyboard">
+            <summary>
+                The T9 Spanish multi keyboard.
+            </summary>
+        </member>
         <member name="P:TalkingKeyboard.Infrastructure.Constants.ViewNames.QwertySpanishSingleKeyboard">
             <summary>
                 The qwerty Spanish single keyboard.
             </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Constants.ViewNames.SimpleImageBoard">
+            <summary>
+                The simple image keyboard.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlModel.RequiredGazeTimeSpan">
+            <summary>
+            Gets or sets the required gaze time span.
+            </summary>
+            <value>
+            The required gaze time span.
+            </value>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel">
             <summary>
@@ -258,6 +314,14 @@
             <summary>
             Gets or sets the gaze time span before selection occurs.
             </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.IsSelectable">
+            <summary>
+            Gets or sets a value indicating whether this instance is selectable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is selectable; otherwise, <c>false</c>.
+            </value>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.Controls.ISelectableControlViewModel.LastSeenTime">
             <summary>
@@ -330,29 +394,66 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel">
+            <summary>
+                The selectable button model.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel" /> class.
+            </summary>
+        </member>
+        <member name="E:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel.PropertyChanged">
+            <summary>
+                The property changed.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel.DecreaseSelectionSpeedCommand">
+            <summary>
+                Gets the command for decreasing the selection speed.
+            </summary>
+            <value>
+                The command for decreasing the selection speed.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel.IncreaseSelectionSpeedCommand">
+            <summary>
+                Gets the command for increasing the selection speed.
+            </summary>
+            <value>
+                The command for increasing the selection speed.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel.RequiredGazeTimeSpan">
+            <summary>
+                Gets or sets the required gaze time span.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlModel.OnPropertyChanged(System.String)">
+            <summary>
+                Call on property changed.
+            </summary>
+            <param name="propertyName">
+                Name of property which changed.
+            </param>
+        </member>
         <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel">
             <summary>
                 The selectable button view model.
             </summary>
         </member>
-        <member name="E:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.PropertyChanged">
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.#ctor(TalkingKeyboard.Infrastructure.Controls.ISelectableControlModel)">
             <summary>
-                The property changed.
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel" /> class.
             </summary>
+            <param name="selectableControlModel">
+                The selectable button model.
+            </param>
         </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.Animation">
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.#ctor">
             <summary>
-                Gets or sets the animation.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.AnimationBeginTime">
-            <summary>
-                Gets or sets the animation begin time.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.AnimationEndTime">
-            <summary>
-                Gets or sets the animation end time.
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel" /> class.
             </summary>
         </member>
         <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.ButtonText">
@@ -360,81 +461,10 @@
                 Gets or sets the button text.
             </summary>
         </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.Command">
-            <summary>
-                Gets or sets the command.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.CommandParameter">
-            <summary>
-                Gets or sets the command parameter.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.CommandTarget">
-            <summary>
-                Gets or sets the command target.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.CurrentGazeTimeSpan">
-            <summary>
-                Gets or sets the current gaze time span.
-            </summary>
-        </member>
         <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.FontSize">
             <summary>
                 Gets or sets the font size.
             </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeKeepAliveTimeSpan">
-            <summary>
-                Gets or sets the gaze keep alive time span.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeTimeSpanBeforeAnimationBegins">
-            <summary>
-                Gets or sets the gaze time span before animation begins.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeTimeSpanBeforeCooldown">
-            <summary>
-                Gets or sets the gaze time span before cool-down.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.GazeTimeSpanBeforeSelectionOccurs">
-            <summary>
-                Gets or sets the gaze time span before selection occurs.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.LastSeenTime">
-            <summary>
-                Gets or sets the last seen time.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.LastSelectedTime">
-            <summary>
-                Gets or sets the last selected time.
-            </summary>
-        </member>
-        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.State">
-            <summary>
-                Gets or sets the state.
-            </summary>
-        </member>
-        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.Select">
-            <summary>
-                <inheritdoc/>
-            </summary>
-            <exception cref="T:System.NotImplementedException">
-                TODO: Consider changing the selection to the ViewModel.
-            </exception>
-        </member>
-        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableButtonViewModel.OnPropertyChanged(System.String)">
-            <summary>
-            Call on property changed.
-            </summary>
-            <param name="propertyName">
-            Name of property which changed.
-            </param>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableControl">
             <summary>
@@ -444,6 +474,11 @@
         <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.AnimationProperty">
             <summary>
                 The animation property
+            </summary>
+        </member>
+        <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.BackgroundProperty">
+            <summary>
+                The background property
             </summary>
         </member>
         <member name="F:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandParameterProperty">
@@ -466,6 +501,11 @@
                 Gets or sets the animation.
             </summary>
         </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.Background">
+            <summary>
+                Gets or sets a brush that describes the background of a control.
+            </summary>
+        </member>
         <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.Command">
             <summary>
                 Gets or sets the command.
@@ -479,6 +519,11 @@
         <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CommandTarget">
             <summary>
                 Gets or sets the command target.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControl.IsAlwaysSelectable">
+            <summary>
+                Gets or sets a value indicating whether is always selectable.
             </summary>
         </member>
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.CompareTo(System.Object)">
@@ -515,6 +560,199 @@
         <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControl.StopAnimation">
             <summary>
                 Stops the animation.
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase">
+            <summary>
+            The selectable control base.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.#ctor(TalkingKeyboard.Infrastructure.Controls.ISelectableControlModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase"/> class.
+            </summary>
+            <param name="selectableControlModel">
+            The selectable control model.
+            </param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase"/> class.
+            </summary>
+        </member>
+        <member name="E:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.PropertyChanged">
+            <summary>
+                The property changed.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.Animation">
+            <summary>
+                Gets or sets the animation.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.AnimationBeginTime">
+            <summary>
+                Gets or sets the animation begin time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.AnimationEndTime">
+            <summary>
+                Gets or sets the animation end time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.Command">
+            <summary>
+                Gets or sets the command.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.CommandParameter">
+            <summary>
+                Gets or sets the command parameter.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.CommandTarget">
+            <summary>
+                Gets or sets the command target.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.CurrentGazeTimeSpan">
+            <summary>
+                Gets or sets the current gaze time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.GazeCoolDownTimeSpan">
+            <summary>
+                Gets or sets the gaze cool down time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.GazeKeepAliveTimeSpan">
+            <summary>
+                Gets or sets the gaze keep alive time span.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.GazeTimeSpanBeforeAnimationBegins">
+            <summary>
+                Gets or sets the gaze time span before animation begins.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.GazeTimeSpanBeforeCooldown">
+            <summary>
+                Gets or sets the gaze time span before cool-down.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.GazeTimeSpanBeforeSelectionOccurs">
+            <summary>
+                Gets or sets the gaze time span before selection occurs.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.IsSelectable">
+            <summary>
+                Gets or sets a value indicating whether this instance is selectable.
+            </summary>
+            <value>
+                <c>true</c> if this instance is selectable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.IsAlwaysSelectable">
+            <summary>
+                Gets or sets a value indicating whether this instance is always selectable.
+            </summary>
+            <value>
+                <c>true</c> if this instance is always selectable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.LastSeenTime">
+            <summary>
+                Gets or sets the last seen time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.LastSelectedTime">
+            <summary>
+                Gets or sets the last selected time.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.SelectableControlModel">
+            <summary>
+                Gets the selectable button model.
+            </summary>
+            <value>
+                The selectable button model.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.State">
+            <summary>
+                Gets or sets the state.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.ToggleIsSelectableCommand">
+            <summary>
+                Gets the toggle is selectable command.
+            </summary>
+            <value>
+                The toggle is selectable command.
+            </value>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.Select">
+            <summary>
+                <inheritdoc />
+            </summary>
+            <exception cref="T:System.NotImplementedException">
+                TODO: Consider changing the selection to the ViewModel.
+            </exception>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.OnPropertyChanged(System.String)">
+            <summary>
+            Call on property changed.
+            </summary>
+            <param name="propertyName">
+            Name of property which changed.
+            </param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableControlBase.SelectableButtonModelOnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            The selectable button model on property changed.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="propertyChangedEventArgs">
+            The property changed event args.
+            </param>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableImage">
+            <summary>
+            Interaction logic for SelectableImage
+            </summary>
+            <summary>
+            SelectableImage
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableImage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Controls.SelectableImageViewModel">
+            <summary>
+                The selectable image view model.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableImageViewModel.#ctor(TalkingKeyboard.Infrastructure.Controls.ISelectableControlModel)">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableImageViewModel" /> class.
+            </summary>
+            <param name="selectableControlModel">
+                The selectable control model.
+            </param>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.Controls.SelectableImageViewModel.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:TalkingKeyboard.Infrastructure.Controls.SelectableImageViewModel" /> class.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Controls.SelectableImageViewModel.Source">
+            <summary>
+                Gets or sets the image path.
             </summary>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.DataContainers.IMaintainable">
@@ -809,6 +1047,31 @@
             The string encoded with the UTF8 encoding.
             </returns>
         </member>
+        <member name="T:TalkingKeyboard.Infrastructure.MarkupExtensions.OverridableBooleanConverter">
+            <summary>
+                The override-able boolean converter.
+            </summary>
+        </member>
+        <member name="M:TalkingKeyboard.Infrastructure.MarkupExtensions.OverridableBooleanConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+                Takes two boolean values, override-able and override-r and returns the override-able value unless overridden as
+                true.
+            </summary>
+            <param name="values">
+                The array of values that the source bindings in the
+                <see cref="T:System.Windows.Data.MultiBinding" /> produces. The value
+                <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the source binding has no value to
+                provide for conversion.
+                This converter expects exactly two boolean values.
+            </param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+                The override-able value unless it has been overridden as true.
+            </returns>
+            <exception cref="T:System.ArgumentException">Only two booleans are expected.</exception>
+        </member>
         <member name="T:TalkingKeyboard.Infrastructure.MarkupExtensions.SwitchBindingExtension">
             <summary>
                 This class contains a markup extension which binds two possible strings and selects one based on a boolean.
@@ -911,6 +1174,40 @@
             <remarks>
                 Current scope has no use for this.
             </remarks>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Models.IImageBoardViewModel">
+            <summary>
+                Defines the interface for the image view-model. This is used for inter-module communication.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Models.IImageBoardViewModel.AddImageTextCommand">
+            <summary>
+                Gets or sets the add image text command.
+            </summary>
+            <value>
+                The add image text command.
+            </value>
+        </member>
+        <member name="T:TalkingKeyboard.Infrastructure.Models.IMultiKeyboardViewModel">
+            <summary>
+             Defines the interface for the multi-character text view-model. This is used for inter-module communication.
+            </summary>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Models.IMultiKeyboardViewModel.AddMultiCharacterCommand">
+            <summary>
+                Gets or sets the add multi-character command.
+            </summary>
+            <value>
+                The add multi-character command.
+            </value>
+        </member>
+        <member name="P:TalkingKeyboard.Infrastructure.Models.IMultiKeyboardViewModel.RemoveLastMultiCharacterCommand">
+            <summary>
+                Gets or sets the command for removing the last multi-character.
+            </summary>
+            <value>
+                The command for removing the last multi-character.
+            </value>
         </member>
         <member name="T:TalkingKeyboard.Infrastructure.Models.IMultiKeyTextModel">
             <summary>
