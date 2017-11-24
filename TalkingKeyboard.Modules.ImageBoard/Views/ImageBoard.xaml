@@ -5,12 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:prism="http://prismlibrary.com/"    
              xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
-             xmlns:markupExtensions="clr-namespace:TalkingKeyboard.Infrastructure.MarkupExtensions;assembly=TalkingKeyboard.Infrastructure"
              xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
-             xmlns:local="clr-namespace:TalkingKeyboard.Modules.ImageBoard.Views" x:Class="TalkingKeyboard.Modules.ImageBoard.Views.ImageBoard"
+             xmlns:local="clr-namespace:TalkingKeyboard.Modules.ImageBoard.Views"
+             xmlns:markupExtensions="clr-namespace:TalkingKeyboard.Infrastructure.MarkupExtensions;assembly=TalkingKeyboard.Infrastructure"
+             x:Class="TalkingKeyboard.Modules.ImageBoard.Views.ImageBoard"
              mc:Ignorable="d"         
              d:DesignHeight="400" d:DesignWidth="700"
              prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+        <markupExtensions:IsNullConverter  x:Key="IsNullConverter"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="90*" />
@@ -29,29 +33,84 @@
             </Grid.RowDefinitions>
             <sc:SelectableImage
             Grid.Column="0" Grid.Row="0" 
-			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
-			Source="{Binding DataContext.ImagePaths[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ImageNames[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
+			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+			Source="{Binding DataContext.ButtonProperties[0].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+			CommandParameter="{Binding DataContext.ButtonProperties[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
             <sc:SelectableImage
             Grid.Column="2" Grid.Row="0" 
-			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
-			Source="{Binding DataContext.ImagePaths[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ImageNames[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
+			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+			Source="{Binding DataContext.ButtonProperties[1].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+			CommandParameter="{Binding DataContext.ButtonProperties[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
             <sc:SelectableImage
             Grid.Column="1" Grid.Row="1" 
-			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
-			Source="{Binding DataContext.ImagePaths[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ImageNames[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
+			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+			Source="{Binding DataContext.ButtonProperties[2].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+			CommandParameter="{Binding DataContext.ButtonProperties[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
             <sc:SelectableImage
             Grid.Column="0" Grid.Row="2" 
-			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
-			Source="{Binding DataContext.ImagePaths[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ImageNames[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
+			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+			Source="{Binding DataContext.ButtonProperties[3].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+			CommandParameter="{Binding DataContext.ButtonProperties[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
             <sc:SelectableImage
             Grid.Column="2" Grid.Row="2" 
-			Command="{x:Static infrastructure:Commands.AppendTextCommand}"
-			Source="{Binding DataContext.ImagePaths[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ImageNames[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" />
+			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+			Source="{Binding DataContext.ButtonProperties[4].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+			CommandParameter="{Binding DataContext.ButtonProperties[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}">
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
 
         </Grid>
         <Grid Grid.Column="1"
@@ -62,10 +121,17 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+
+            <sc:SelectableButton Text="⇧" Grid.Row="0"
+            Command="{x:Static infrastructure:Commands.ReturnImageMenuCommand}" Margin="10,15,5,10" />
             <sc:SelectableButton Text="⏪" Grid.Row="1"
         	Command="{x:Static infrastructure:Commands.RemoveLastWordCommand}" Margin="10,15,5,10" />
             <sc:SelectableButton Text="×" Grid.Row="2"
         	Command="{x:Static infrastructure:Commands.ClearTextCommand}" Margin="10,15,5,10" />
+            <sc:SelectableButton Text="🔊" Grid.Row="3"
+                                 Command="{x:Static infrastructure:Commands.SpeechSynthesisCommand}"
+                                 CommandParameter="Hola" Margin="10,15,5,10" />
         </Grid>
     </Grid>
 </UserControl>
+

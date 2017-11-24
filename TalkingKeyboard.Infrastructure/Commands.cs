@@ -23,6 +23,11 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand AppendTextCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
+        ///     Gets or sets the append text or navigate images command.
+        /// </summary>
+        public static CompositeCommand AppendTextOrNavigateImagesCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
         ///     Gets or sets the clear text command.
         /// </summary>
         public static CompositeCommand ClearTextCommand { get; set; } = new CompositeCommand();
@@ -56,6 +61,11 @@ namespace TalkingKeyboard.Infrastructure
         ///     Gets or sets the remove last word without trim command.
         /// </summary>
         public static CompositeCommand RemoveLastWordWithoutTrimCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the return image menu command.
+        /// </summary>
+        public static CompositeCommand ReturnImageMenuCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
         ///     Gets or sets the set shift down command.
