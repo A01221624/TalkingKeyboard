@@ -3,6 +3,10 @@
 //   Copyright 2016 Fernando Ramírez Garibay
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+
+using System.IO;
+using Microsoft.Win32;
+
 namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
 {
     using System.Collections.Generic;
@@ -56,12 +60,24 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
                         });
             this.RemoveLastWordWithoutTrimCommand =
                 new DelegateCommand(() => { this.CurrentText = StringEditHelper.RemoveLastWord(this.CurrentText); });
+            this.SaveTextCommand =
+                new DelegateCommand(() =>
+                {
+                    var saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Text file (*.txt)|*.txt|All(*.*)|*";
+                    if (saveFileDialog.ShowDialog() == true)
+                    {
+                        File.WriteAllText(saveFileDialog.FileName, this.CurrentText);
+                    }
+                    this.CurrentText = StringEditHelper.RemoveLastWord(this.CurrentText);
+                });
 
             Commands.AppendTextCommand.RegisterCommand(this.AppendTextCommand);
             Commands.ClearTextCommand.RegisterCommand(this.ClearTextCommand);
             Commands.RemoveLastCharacterCommand.RegisterCommand(this.RemoveLastCharacterCommand);
             Commands.RemoveLastWordCommand.RegisterCommand(this.RemoveLastWordCommand);
             Commands.RemoveLastWordWithoutTrimCommand.RegisterCommand(this.RemoveLastWordWithoutTrimCommand);
+            Commands.SaveTextCommand.RegisterCommand(this.SaveTextCommand);
         }
 
         /// <summary>
@@ -120,6 +136,14 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
         ///     The remove last word without trim command.
         /// </value>
         public ICommand RemoveLastWordWithoutTrimCommand { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the save text command.
+        /// </summary>
+        /// <value>
+        ///     The save text command.
+        /// </value>
+        public ICommand SaveTextCommand { get; set; }
 
         /// <summary>
         ///     Appends a string to the current text.

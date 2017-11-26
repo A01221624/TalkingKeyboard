@@ -91,5 +91,10 @@ namespace TalkingKeyboard.Infrastructure
         ///     Gets or sets the add suggestion command.
         /// </summary>
         public static CompositeCommand WriteSuggestionCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
+        ///     Gets or sets the add save text command.
+        /// </summary>
+        public static CompositeCommand SaveTextCommand { get; set; } = new CompositeCommand();
     }
 }

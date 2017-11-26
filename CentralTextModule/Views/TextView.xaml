@@ -2,11 +2,23 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:sc="clr-namespace:TalkingKeyboard.Infrastructure.Controls;assembly=TalkingKeyboard.Infrastructure"
+             xmlns:markupExtensions="clr-namespace:TalkingKeyboard.Infrastructure.MarkupExtensions;assembly=TalkingKeyboard.Infrastructure"
+             xmlns:infrastructure="clr-namespace:TalkingKeyboard.Infrastructure;assembly=TalkingKeyboard.Infrastructure"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <TextBox FontSize="25"
-             Text="{Binding CurrentText, FallbackValue=Hola mundo}"
-             IsReadOnly="True"
-             IsReadOnlyCaretVisible="False"
-             TextWrapping="Wrap"
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.85*" />
+            <ColumnDefinition Width="0.15*" />
+        </Grid.ColumnDefinitions>
+        <TextBox FontSize="25"
+			Text="{Binding CurrentText, FallbackValue=Hola mundo}"
+			IsReadOnly="True"
+			IsReadOnlyCaretVisible="False"
+			TextWrapping="Wrap"
+                 Grid.Column="0"
              />
+        <sc:SelectableButton Text="💾" Grid.Column="1"
+                             Command="{x:Static infrastructure:Commands.SaveTextCommand}" />
+    </Grid>
 </UserControl>
