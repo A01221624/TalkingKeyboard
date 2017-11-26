@@ -17,18 +17,39 @@ namespace TalkingKeyboard.Modules.ImageBoard.ViewModels
     using TalkingKeyboard.Infrastructure.Models;
     public class ImageBoardViewModel : BindableBase, IImageBoardViewModel
     {
-        private const string ImagesFolder = "images";
-        private string LimitPath = Path.GetFullPath(ImagesFolder);
+        private static readonly List<string> ImagesFolderAlternativeList = new List<string>
+        {
+            "images",
+            "Images",
+            "IMAGES",
+            "imágenes",
+            "Imágenes",
+            "IMÁGENES",
+            "imagenes",
+            "Imagenes",
+            "IMAGENES"
+        };
+        private readonly string limitPath;
         private string currentPath;
 
         public ImageBoardViewModel()
             : base()
         {
             this.ButtonProperties = new ObservableCollection<ImageButtonProperties>();
-            currentPath = LimitPath;
-            LoadFolder(ImagesFolder);
+            limitPath = findImagesPath();
+            if (limitPath == null)
+            {
+                throw new Exception("Images folder must exist.");
+            }
+            currentPath = limitPath;
+            LoadFolder(currentPath);
             RegisterCommands();
 
+        }
+
+        private string findImagesPath()
+        {
+            return ImagesFolderAlternativeList.Select(Path.GetFullPath).FirstOrDefault(Directory.Exists);
         }
 
         private ImageButtonProperties LoadImageButton(string path)
@@ -121,8 +142,8 @@ namespace TalkingKeyboard.Modules.ImageBoard.ViewModels
         {
             string path = Path.GetFullPath(currentPath)
                 .ToLowerInvariant()
-                .Equals(Path.GetFullPath(LimitPath)
-                    .ToLowerInvariant()) ? Path.GetFullPath(LimitPath) : Path.GetFullPath(Directory.GetParent(currentPath).FullName);
+                .Equals(Path.GetFullPath(limitPath)
+                    .ToLowerInvariant()) ? Path.GetFullPath(limitPath) : Path.GetFullPath(Directory.GetParent(currentPath).FullName);
             LoadFolder(path);
         }
     }
