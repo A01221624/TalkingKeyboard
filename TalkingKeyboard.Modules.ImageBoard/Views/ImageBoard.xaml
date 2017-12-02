@@ -25,9 +25,10 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -35,7 +36,7 @@
             Grid.Column="0" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
 			Source="{Binding DataContext.ButtonProperties[0].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ButtonProperties[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+			CommandParameter="{Binding DataContext.ButtonProperties[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
                 <sc:SelectableImage.Style>
                     <Style TargetType="{x:Type sc:SelectableImage}">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -48,10 +49,10 @@
                 </sc:SelectableImage.Style>
             </sc:SelectableImage>
             <sc:SelectableImage
-            Grid.Column="2" Grid.Row="0" 
+            Grid.Column="1" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
 			Source="{Binding DataContext.ButtonProperties[1].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ButtonProperties[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+			CommandParameter="{Binding DataContext.ButtonProperties[1], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
                 <sc:SelectableImage.Style>
                     <Style TargetType="{x:Type sc:SelectableImage}">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -64,10 +65,10 @@
                 </sc:SelectableImage.Style>
             </sc:SelectableImage>
             <sc:SelectableImage
-            Grid.Column="1" Grid.Row="1" 
+            Grid.Column="2" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
 			Source="{Binding DataContext.ButtonProperties[2].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ButtonProperties[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+			CommandParameter="{Binding DataContext.ButtonProperties[2], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
                 <sc:SelectableImage.Style>
                     <Style TargetType="{x:Type sc:SelectableImage}">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -80,10 +81,10 @@
                 </sc:SelectableImage.Style>
             </sc:SelectableImage>
             <sc:SelectableImage
-            Grid.Column="0" Grid.Row="2" 
+            Grid.Column="3" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
 			Source="{Binding DataContext.ButtonProperties[3].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ButtonProperties[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" >
+			CommandParameter="{Binding DataContext.ButtonProperties[3], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
                 <sc:SelectableImage.Style>
                     <Style TargetType="{x:Type sc:SelectableImage}">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -96,10 +97,10 @@
                 </sc:SelectableImage.Style>
             </sc:SelectableImage>
             <sc:SelectableImage
-            Grid.Column="2" Grid.Row="2" 
+            Grid.Column="4" Grid.Row="0" 
 			Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
 			Source="{Binding DataContext.ButtonProperties[4].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
-			CommandParameter="{Binding DataContext.ButtonProperties[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}">
+			CommandParameter="{Binding DataContext.ButtonProperties[4], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
                 <sc:SelectableImage.Style>
                     <Style TargetType="{x:Type sc:SelectableImage}">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -111,7 +112,86 @@
                     </Style>
                 </sc:SelectableImage.Style>
             </sc:SelectableImage>
-
+            <sc:SelectableImage
+                Grid.Column="0" Grid.Row="1" 
+                Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+                Source="{Binding DataContext.ButtonProperties[5].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+                CommandParameter="{Binding DataContext.ButtonProperties[5], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[0], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
+            <sc:SelectableImage
+                Grid.Column="1" Grid.Row="1" 
+                Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+                Source="{Binding DataContext.ButtonProperties[6].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+                CommandParameter="{Binding DataContext.ButtonProperties[6], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[6], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
+            <sc:SelectableImage
+                Grid.Column="2" Grid.Row="1" 
+                Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+                Source="{Binding DataContext.ButtonProperties[7].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+                CommandParameter="{Binding DataContext.ButtonProperties[7], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[7], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
+            <sc:SelectableImage
+                Grid.Column="3" Grid.Row="1" 
+                Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+                Source="{Binding DataContext.ButtonProperties[8].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+                CommandParameter="{Binding DataContext.ButtonProperties[8], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[8], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
+            <sc:SelectableImage
+                Grid.Column="4" Grid.Row="1" 
+                Command="{x:Static infrastructure:Commands.AppendTextOrNavigateImagesCommand}"
+                Source="{Binding DataContext.ButtonProperties[9].ImagePath, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}"
+                CommandParameter="{Binding DataContext.ButtonProperties[9], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}}" Margin="25">
+                <sc:SelectableImage.Style>
+                    <Style TargetType="{x:Type sc:SelectableImage}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext.ButtonProperties[9], RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImageBoard}}, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </sc:SelectableImage.Style>
+            </sc:SelectableImage>
         </Grid>
         <Grid Grid.Column="1"
               Margin="10 10 10 10">
