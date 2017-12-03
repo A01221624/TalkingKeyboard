@@ -6,6 +6,10 @@
 //   Defines the MainWindowViewModel type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
+using System.Windows;
+using MahApps.Metro;
+
 namespace TalkingKeyboard.Shell.ViewModels
 {
     using System.Collections.Generic;
@@ -27,6 +31,7 @@ namespace TalkingKeyboard.Shell.ViewModels
         private readonly List<string> knownBoards;
         private readonly IRegionManager regionManager;
         private int currentViewIndex; // Must be set to index of initial board.
+        private int currentFriendlySpeed = 11;
         private string title = "TalkingKeyboard";
 
         /// <summary>
@@ -68,6 +73,29 @@ namespace TalkingKeyboard.Shell.ViewModels
                                                             RegionNames.BoardViewRegion,
                                                             this.knownBoards[this.currentViewIndex]);
                                                     });
+            this.IncreaseSelectionSpeedCommand =
+                new DelegateCommand(() => { this.UserFriendlySpeedValue += 1; });
+            Commands.IncreaseSelectionSpeedCommand.RegisterCommand(this.IncreaseSelectionSpeedCommand);
+            this.DecreaseSelectionSpeedCommand =
+                new DelegateCommand(() => { this.UserFriendlySpeedValue -= 1; });
+            Commands.DecreaseSelectionSpeedCommand.RegisterCommand(this.DecreaseSelectionSpeedCommand);
+        }
+
+        public int UserFriendlySpeedValue
+        {
+            get
+            {
+                return this.currentFriendlySpeed;
+            }
+
+            set
+            {
+                if (value < 1 || value > 14)
+                {
+                    return;
+                }
+                this.SetProperty(ref this.currentFriendlySpeed, value);
+            }
         }
 
         /// <summary>
@@ -85,6 +113,24 @@ namespace TalkingKeyboard.Shell.ViewModels
         ///     The command for switching to the view on the right.
         /// </value>
         public ICommand ChangeViewToRightCommand { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the command to run when speed is increased.
+        ///     This is just the part which updates the speed label.
+        /// </summary>
+        /// <value>
+        ///     The command to run when speed is increased.
+        /// </value>
+        public ICommand IncreaseSelectionSpeedCommand { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the command to run when speed is decreased.
+        ///     This is just the part which updates the speed label.
+        /// </summary>
+        /// <value>
+        ///     The command to run when speed is decreased.
+        /// </value>
+        public ICommand DecreaseSelectionSpeedCommand { get; set; }
 
         /// <summary>
         ///     Gets or sets a dummy command used to determine if selection is enabled.
