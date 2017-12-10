@@ -61,9 +61,17 @@ namespace TalkingKeyboard.Modules.ImageBoard.ViewModels
 
         private ImageButtonProperties LoadFolderButton(string path)
         {
-            var imagePath = path + "\\portada.png";
-            imagePath = Path.GetFullPath(imagePath);
-            return new ImageButtonProperties(true, "", imagePath, path);
+            var fileList = Directory.GetFiles(path).ToList();
+
+            foreach (var e in fileList)
+            {
+                if (e.Contains("portada"))
+                {
+                    var imagePath = Path.GetFullPath(e);
+                    return new ImageButtonProperties(true, "", imagePath, path);
+                }
+            }
+            return null;
         }
 
         private void LoadFolder(string path)
