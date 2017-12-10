@@ -83,6 +83,11 @@ namespace TalkingKeyboard.Infrastructure
         public static CompositeCommand ToggleSelectionEnabledCommand { get; set; } = new CompositeCommand();
 
         /// <summary>
+        ///     Gets or sets the toggle theme command.
+        /// </summary>
+        public static CompositeCommand ToggleThemeCommand { get; set; } = new CompositeCommand();
+
+        /// <summary>
         ///     Gets or sets the toggle shift down command.
         /// </summary>
         public static CompositeCommand ToggleShiftDownCommand { get; set; } = new CompositeCommand();

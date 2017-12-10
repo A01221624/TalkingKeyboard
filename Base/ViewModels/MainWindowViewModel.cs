@@ -7,6 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Windows;
 using MahApps.Metro;
 
@@ -73,6 +74,23 @@ namespace TalkingKeyboard.Shell.ViewModels
                                                             RegionNames.BoardViewRegion,
                                                             this.knownBoards[this.currentViewIndex]);
                                                     });
+            this.ToggleThemeCommand = new DelegateCommand(() =>
+            {
+                Tuple<AppTheme, Accent> appStyle = ThemeManager.DetectAppStyle(Application.Current);
+
+                if (appStyle.Item1.Name == "BaseLight")
+                {
+                    ThemeManager.ChangeAppStyle(Application.Current,
+                        appStyle.Item2,
+                        ThemeManager.GetAppTheme("BaseDark"));
+                }
+                else
+                {
+                    ThemeManager.ChangeAppStyle(Application.Current,
+                        appStyle.Item2,
+                        ThemeManager.GetAppTheme("BaseLight"));
+                }
+            });
             this.IncreaseSelectionSpeedCommand =
                 new DelegateCommand(() => { this.UserFriendlySpeedValue += 1; });
             Commands.IncreaseSelectionSpeedCommand.RegisterCommand(this.IncreaseSelectionSpeedCommand);
@@ -131,6 +149,14 @@ namespace TalkingKeyboard.Shell.ViewModels
         ///     The command to run when speed is decreased.
         /// </value>
         public ICommand DecreaseSelectionSpeedCommand { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the command for toggling the UI theme.
+        /// </summary>
+        /// <value>
+        ///     The command for toggling the UI theme.
+        /// </value>
+        public ICommand ToggleThemeCommand { get; set; }
 
         /// <summary>
         ///     Gets or sets a dummy command used to determine if selection is enabled.

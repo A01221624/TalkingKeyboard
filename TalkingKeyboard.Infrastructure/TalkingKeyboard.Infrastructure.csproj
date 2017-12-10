@@ -80,9 +80,13 @@
     <Compile Include="Controls\ISelectableControlModel.cs" />
     <Compile Include="Controls\ISelectableControlViewModel.cs" />
     <Compile Include="Controls\ITextModel.cs" />
+    <Compile Include="Controls\SelectableToggableButton.xaml.cs">
+      <DependentUpon>SelectableToggableButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SelectableButton.xaml.cs">
       <DependentUpon>SelectableButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SelectableToggableButtonViewModel.cs" />
     <Compile Include="Controls\SelectableControlModel.cs" />
     <Compile Include="Controls\SelectableButtonViewModel.cs" />
     <Compile Include="Controls\SelectableControl.cs" />
@@ -128,6 +132,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\SelectableToggableButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\SelectableButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
