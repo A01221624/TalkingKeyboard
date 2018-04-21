@@ -204,10 +204,10 @@
 
             <sc:SelectableButton Text="⇧" Grid.Row="0"
             Command="{x:Static infrastructure:Commands.ReturnImageMenuCommand}" Margin="10,15,5,10" />
-            <sc:SelectableButton Text="⏪" Grid.Row="1"
+            <sc:SelectableButton Text="⌫" Grid.Row="1"
+        	Command="{x:Static infrastructure:Commands.RemoveLastCharacterCommand}" Margin="10,15,5,10" />
+            <sc:SelectableButton Text="⏪" Grid.Row="2"
         	Command="{x:Static infrastructure:Commands.RemoveLastWordCommand}" Margin="10,15,5,10" />
-            <sc:SelectableButton Text="×" Grid.Row="2"
-        	Command="{x:Static infrastructure:Commands.ClearTextCommand}" Margin="10,15,5,10" />
             <sc:SelectableButton Text="🔊" Grid.Row="3"
                                  Command="{x:Static infrastructure:Commands.SpeechSynthesisCommand}"
                                  CommandParameter="Hola" Margin="10,15,5,10" />
