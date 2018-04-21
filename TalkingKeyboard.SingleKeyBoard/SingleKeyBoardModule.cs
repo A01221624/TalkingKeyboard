@@ -45,6 +45,12 @@ namespace TalkingKeyboard.Modules.SingleKeyBoard
             this.regionManager.RegisterViewWithRegion(
                 RegionNames.BoardViewRegion,
                 () => this.unityContainer.Resolve<QwertySpanishSingleKeyboard>());
+
+            this.unityContainer.RegisterTypeForNavigation<NumericKeyboard>(
+                ViewNames.NumericKeyboard);
+            this.regionManager.RegisterViewWithRegion(
+                RegionNames.BoardViewRegion,
+                () => this.unityContainer.Resolve<NumericKeyboard>());
         }
     }
 }

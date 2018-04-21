@@ -31,7 +31,7 @@ namespace TalkingKeyboard.Shell.ViewModels
     {
         private readonly List<string> knownBoards;
         private readonly IRegionManager regionManager;
-        private int currentViewIndex; // Must be set to index of initial board.
+        private int currentViewIndex = 0; // Must be set to index of initial board.
         private int currentFriendlySpeed = 11;
         private string title = "TalkingKeyboard";
 
@@ -44,10 +44,10 @@ namespace TalkingKeyboard.Shell.ViewModels
             this.regionManager = regionManager;
             this.knownBoards = new List<string>
                                    {
-                                       ViewNames.T9SpanishMultiKeyboard,
+                                       ViewNames.SimpleImageBoard,
+                                       ViewNames.NumericKeyboard,
                                        ViewNames.QwertySpanishMultiKeyboard,
-                                       ViewNames.QwertySpanishSingleKeyboard,
-                                       ViewNames.SimpleImageBoard
+                                       ViewNames.QwertySpanishSingleKeyboard
                                    };
 
             this.ChangeViewToLeftCommand = new DelegateCommand(

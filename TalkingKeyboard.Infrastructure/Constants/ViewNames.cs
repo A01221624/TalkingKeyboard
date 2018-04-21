@@ -16,6 +16,11 @@ namespace TalkingKeyboard.Infrastructure.Constants
         public static string QwertySpanishMultiKeyboard => "QwertySpanishMultiKeyboard";
 
         /// <summary>
+        ///     The qwerty Spanish multi keyboard.
+        /// </summary>
+        public static string NumericKeyboard => "NumericKeyboard";
+
+        /// <summary>
         ///     The T9 Spanish multi keyboard.
         /// </summary>
         public static string T9SpanishMultiKeyboard => "T9SpanishMultiKeyboard";
