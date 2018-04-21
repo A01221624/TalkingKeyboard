@@ -36,6 +36,7 @@
                 CommandParameter="{Binding CommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableToggableButton}}}"
                 Content="{Binding Text, FallbackValue=Button, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableToggableButton}}}"
                 FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableToggableButton}}, FallbackValue=40, Mode=OneWay}"
+                IsChecked="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SelectableToggableButton}}, Mode=OneWay}"
                 FontFamily="Calibri Light" 
                 Style="{DynamicResource MetroCircleToggleButtonStyle}"
                 >
