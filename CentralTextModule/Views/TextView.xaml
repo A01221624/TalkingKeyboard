@@ -18,7 +18,8 @@
 			TextWrapping="Wrap"
                  Grid.Column="0"
              />
-        <sc:SelectableButton Text="💾" Grid.Column="1"
-                             Command="{x:Static infrastructure:Commands.SaveTextCommand}" />
+        <Button Content="💾" Grid.Column="1"
+                FontSize="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.FontSize, FallbackValue=40, Mode=OneWay}"
+                Command="{x:Static infrastructure:Commands.SaveTextCommand}" />
     </Grid>
 </UserControl>

@@ -31,8 +31,8 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
     {
         private readonly IEventAggregator eventAggregator;
         private string accentBuffer = string.Empty;
-
         private string currentText = string.Empty;
+        private double fontSize = 40;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="TextViewModel" /> class.
@@ -110,6 +110,30 @@ namespace TalkingKeyboard.Modules.CentralTextModule.ViewModels
             {
                 this.SetProperty(ref this.currentText, value);
                 this.eventAggregator.GetEvent<Events.TextUpdatedEvent>().Publish();
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets the font size.
+        /// </summary>
+        public double FontSize
+        {
+            get
+            {
+                return this.fontSize;
+            }
+
+            set
+            {
+                {
+                    if (value.Equals(this.fontSize))
+                    {
+                        return;
+                    }
+                }
+
+                this.fontSize = value;
+                this.OnPropertyChanged();
             }
         }
 
