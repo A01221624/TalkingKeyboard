@@ -82,7 +82,7 @@
                              Grid.Column="11" Margin="0,10,11,10" />
         <sc:SelectableButton Text="⏪" Grid.Column="11" Grid.Row="1"
         	Command="{x:Static infrastructure:Commands.RemoveLastWordCommand}" Margin="0,10,20,10" />
-        <sc:SelectableButton Text="⤺" Grid.Column="11" Grid.Row="2"
+        <sc:SelectableButton Text="↩" Grid.Column="11" Grid.Row="2"
         	Command="{x:Static infrastructure:Commands.RemoveLastMultiCharacterCommand}" Margin="0,10,20,10" />
 
     </Grid>
