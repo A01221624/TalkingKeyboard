@@ -85,7 +85,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         public ObservableCollection<string> ProvideMultiCharacterSuggestions()
         {
             var suggestions = this.multiCharacterSource.GetSuggestions();
-            return this.AddSpaceAndUppercaseIfNecessary(suggestions);
+            return this.AddUppercaseIfNecessary(suggestions);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         public ObservableCollection<string> ProvideSuggestions()
         {
             var suggestions = this.presageSource.GetSuggestions(this.textModel.CurrentText);
-            return this.AddSpaceAndUppercaseIfNecessary(suggestions);
+            return this.AddUppercaseIfNecessary(suggestions);
         }
 
         /// <summary>
@@ -110,6 +110,44 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         public void RemoveLastMultiCharacter()
         {
             this.multiCharacterSource.RemoveLastMultiCharacter();
+        }
+
+        private ObservableCollection<string> AddSpaceIfNecessary(ObservableCollection<string> collection)
+        {
+            var currentPrefix = StringEditHelper.RemoveLastWord(this.textModel.CurrentText);
+            var needsSpace = (currentPrefix.Length > 0)
+                             && !CharacterClasses.Whitespace.Contains(currentPrefix[currentPrefix.Length - 1]);
+            var result = collection.Select(
+                s =>
+                {
+                    if (needsSpace)
+                    {
+                        s = " " + s;
+                    }
+
+                    return s;
+                });
+            return new ObservableCollection<string>(result);
+        }
+
+        private ObservableCollection<string> AddUppercaseIfNecessary(ObservableCollection<string> collection)
+        {
+            var currentPrefix = StringEditHelper.RemoveLastWord(this.textModel.CurrentText);
+            var trimmedPrefix = currentPrefix.Trim();
+            var needsUppercase = (this.textModel.CurrentText.Trim().Length == 0) || (trimmedPrefix.Length == 0)
+                                 || CharacterClasses.FollowedByUppercase.Contains(
+                                     trimmedPrefix[trimmedPrefix.Length - 1]);
+            var result = collection.Select(
+                s =>
+                {
+                    if (needsUppercase)
+                    {
+                        s = s.Length > 1 ? char.ToUpper(s[0]) + s.Substring(1) : s.ToUpper();
+                    }
+
+                    return s;
+                });
+            return new ObservableCollection<string>(result);
         }
 
         /// <summary>
@@ -122,29 +160,9 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
         /// </returns>
         private ObservableCollection<string> AddSpaceAndUppercaseIfNecessary(ObservableCollection<string> collection)
         {
-            var currentPrefix = StringEditHelper.RemoveLastWord(this.textModel.CurrentText);
-            var trimmedPrefix = currentPrefix.Trim();
-            var needsSpace = (currentPrefix.Length > 0)
-                             && !CharacterClasses.Whitespace.Contains(currentPrefix[currentPrefix.Length - 1]);
-            var needsUppercase = (this.textModel.CurrentText.Trim().Length == 0) || (trimmedPrefix.Length == 0)
-                                 || CharacterClasses.FollowedByUppercase.Contains(
-                                     trimmedPrefix[trimmedPrefix.Length - 1]);
-            var result = collection.Select(
-                s =>
-                    {
-                        if (needsUppercase)
-                        {
-                            s = s.Length > 1 ? char.ToUpper(s[0]) + s.Substring(1) : s.ToUpper();
-                        }
-
-                        if (needsSpace)
-                        {
-                            s = " " + s;
-                        }
-
-                        return s;
-                    });
-            return new ObservableCollection<string>(result);
+            collection = AddSpaceIfNecessary(collection);
+            collection = AddUppercaseIfNecessary(collection);
+            return new ObservableCollection<string>(collection);
         }
 
         /// <summary>
@@ -163,6 +181,10 @@ namespace TalkingKeyboard.Modules.SuggestionsProvider
             if (s.ToLower().StartsWith(lastWord.ToLower()))
             {
                 Commands.RemoveLastWordWithoutTrimCommand.Execute(null);
+            }
+            else if (!StringEditHelper.EndsWithWhitespace(currentText))
+            {
+                Commands.AppendTextCommand.Execute(" ");
             }
 
             Commands.AppendTextCommand.Execute(s + " ");

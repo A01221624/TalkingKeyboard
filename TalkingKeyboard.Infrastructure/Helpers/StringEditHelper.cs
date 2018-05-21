@@ -6,6 +6,9 @@
 //   Defines the StringEditHelper type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
+using System.Collections;
+
 namespace TalkingKeyboard.Infrastructure.Helpers
 {
     using System.Text;
@@ -91,6 +94,16 @@ namespace TalkingKeyboard.Infrastructure.Helpers
         {
             var bytes = Encoding.Default.GetBytes(s);
             return Encoding.UTF8.GetString(bytes);
+        }
+
+        /// <summary>
+        ///     Checks if the string ends with a whitespace.
+        /// </summary>
+        /// <param name="s">String to check if it ends with a whitespace.</param>
+        /// <returns>True if the string ends with a whitespace.</returns>
+        public static bool EndsWithWhitespace(string s)
+        {
+            return ((IList) CharacterClasses.Whitespace).Contains(s[s.Length - 1]);
         }
     }
 }
